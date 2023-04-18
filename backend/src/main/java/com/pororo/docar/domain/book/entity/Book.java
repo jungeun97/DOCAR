@@ -2,6 +2,7 @@ package com.pororo.docar.domain.book.entity;
 
 import com.pororo.docar.domain.bookshelf.entity.Bookshelf;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
+import com.pororo.docar.domain.checkoutBook.entity.CheckoutBook;
 import com.pororo.docar.domain.tmpBook.entity.TmpBook;
 import lombok.*;
 
@@ -47,6 +48,10 @@ public class Book {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tmp_book_id")
     private TmpBook tmpBook;
+
+    @Builder.Default
+    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    private CheckoutBook checkoutBook = new CheckoutBook();
 
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {
