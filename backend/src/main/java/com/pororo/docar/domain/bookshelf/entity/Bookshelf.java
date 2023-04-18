@@ -4,6 +4,7 @@ import com.pororo.docar.domain.book.entity.Book;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,4 +21,8 @@ public class Bookshelf {
 
     @Column(length = 100, nullable = false)
     private String qr_url;
+
+    @Builder.Default
+    @OneToMany(mappedBy = "bookshelf", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Book> books = new ArrayList<>();
 }
