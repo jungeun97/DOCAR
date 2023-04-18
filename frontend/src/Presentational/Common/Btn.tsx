@@ -1,24 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WrapBtn = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  color: white;
-`;
-
-interface Props {
-  text: string;
-  go: () => void;
+interface BtnProps {
+  message: string;
 }
 
-function Btn({ text, go }: Props) {
-  return <WrapBtn onClick={go}>{text}</WrapBtn>;
+const redColor = '#8088A2';
+const transition = 'all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5)';
+const submitButtonBorderRadius = '60px';
+
+const ButtonStyle = styled.button`
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid ${redColor};
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: ${submitButtonBorderRadius};
+  color: ${redColor};
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  transition: ${transition};
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: ${redColor};
+  }
+`;
+
+function Btn(props: BtnProps) {
+  return <ButtonStyle>{props.message}</ButtonStyle>;
 }
 
 export default Btn;
