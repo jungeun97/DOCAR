@@ -1,4 +1,5 @@
 import React from 'react';
+import MainPage from './Presentational/Pages/MainPage';
 import './App.css';
 import Router from './Router';
 
