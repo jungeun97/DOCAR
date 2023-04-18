@@ -1,9 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import MainPage from './Presentational/Pages/MainPage';
 import './App.css';
+import Router from './Router';
 
 function App() {
-  return <div className="App">123</div>;
+  return (
+    <div className="App">
+      <Router />
+    </div>
+  );
 }
 
 export default App;
