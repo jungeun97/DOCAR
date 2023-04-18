@@ -1,4 +1,4 @@
-package com.pororo.docar.domain.cartBook.entity;
+package com.pororo.docar.domain.tmpBook.entity;
 
 import com.pororo.docar.domain.book.entity.Book;
 import lombok.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartBook {
+public class TmpBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,6 +25,6 @@ public class CartBook {
     private Long site;
 
     @Builder.Default
-    @OneToMany(mappedBy = "cartBook", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "tmpBook", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> books = new ArrayList<>();
 }
