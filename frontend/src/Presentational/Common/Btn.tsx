@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface BtnProps {
   message: string;
+  go: () => void;
 }
 
 const redColor = '#8088A2';
@@ -33,7 +34,7 @@ const ButtonStyle = styled.button`
 `;
 
 function Btn(props: BtnProps) {
-  return <ButtonStyle>{props.message}</ButtonStyle>;
+  return <ButtonStyle onClick={props.go}>{props.message}</ButtonStyle>;
 }
 
 export default Btn;
