@@ -18,8 +18,8 @@ function MainPage() {
     <MainStyle.WrapMain>
       {/* MainPage입니당 */}
       <MainStyle.WrapBtn>
-        <Btn text="반납" go={ToReturn} />
-        <Btn text="정리" go={ToCleanup} />
+        <Btn message="반납" go={ToReturn} />
+        <Btn message="정리" go={ToCleanup} />
       </MainStyle.WrapBtn>
     </MainStyle.WrapMain>
   );

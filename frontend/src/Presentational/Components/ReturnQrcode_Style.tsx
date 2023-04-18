@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WrapLogin = styled.div`
+export const WrapReturn = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -9,9 +9,5 @@ export const WrapLogin = styled.div`
   align-items: center;
 `;
 
+export const ReturnDiv = styled.div``;
 export const Img = styled.img``;
-
-export const Span = styled.span``;
-
-export const Option = styled.div``;
-
