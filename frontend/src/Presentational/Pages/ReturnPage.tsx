@@ -9,16 +9,14 @@ function ReturnPage() {
     setIsReturn(!isReturn);
   };
 
+  if (isReturn) {
+    return <ReturnBooks />;
+  }
+
   return (
     <>
-      {isReturn ? (
-        <ReturnBooks />
-      ) : (
-        <>
-          <ReturnQrcode />
-          <button onClick={ReturnMode}>반납모드 변경</button>
-        </>
-      )}
+      <ReturnQrcode />
+      <button onClick={ReturnMode}>반납모드 변경</button>
     </>
   );
 }
