@@ -1,6 +1,7 @@
 package com.pororo.docar.domain.book.entity;
 
 import com.pororo.docar.domain.bookshelf.entity.Bookshelf;
+import com.pororo.docar.domain.cartBook.entity.CartBook;
 import lombok.*;
 
 import javax.persistence.*;
@@ -38,6 +39,10 @@ public class Book {
     @JoinColumn(name = "bookshelf_id")
     private Bookshelf bookshelf;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cart_book_id")
+    private CartBook cartBook;
+
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {
             this.bookshelf.getBooks().remove(this);
@@ -45,5 +50,14 @@ public class Book {
 
         this.bookshelf = bookshelf;
         this.bookshelf.getBooks().add(this);
+    }
+
+    public void setCartBook(CartBook cartBook) {
+        if (this.cartBook != null) {
+            this.cartBook.getBooks().remove(this);
+        }
+
+        this.cartBook = cartBook;
+        this.cartBook.getBooks().add(this);
     }
 }
