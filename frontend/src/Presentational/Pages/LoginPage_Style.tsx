@@ -20,7 +20,8 @@ export const Img = styled.img`
       transform: translatey(-20px);
     }
   }
-  animation: up-down 1.4s infinite ease-in-out alternate;
+  margin-bottom: 50px;
+  /* animation: up-down 1.4s infinite ease-in-out alternate; */
 `;
 
 export const Span = styled.span``;
@@ -43,18 +44,20 @@ export const WrapPin = styled.form`
   background-color: white;
   border-radius: 10px;
   width: 600px;
-  height: 330px;
+  height: 350px;
+  margin-bottom: 40px;
 `;
 export const PinTitle = styled.div`
   font-size: 36px;
   margin-bottom: 20px;
+  animation: up-down 1.4s infinite ease-in-out alternate;
 `;
 
 export const WrapIdpw = styled.div`
   display: flex;
   align-items: center;
-  width: 400px;
-  height: 40px;
+  width: 420px;
+  height: 45px;
   border-radius: 10px;
   margin-bottom: 10px;
   border: 5px solid gray;
@@ -62,7 +65,7 @@ export const WrapIdpw = styled.div`
 
 export const PwInput = styled.input`
   width: 350px;
-  height: 35px;
+  height: 40px;
   color: black;
   /* background-color: violet; */
   font-size: 24px;
@@ -90,8 +93,8 @@ export const BtnLogin = styled.div`
   align-items: center;
   /* font-weight: 30px; */
   font-size: 36px;
-  width: 400px;
-  height: 60px;
+  width: 425px;
+  height: 80px;
   background-color: skyblue;
   border-radius: 10px;
   margin-top: 20px;

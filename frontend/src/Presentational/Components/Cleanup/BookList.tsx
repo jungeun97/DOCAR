@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BookItem from './BookItem';
 import * as BookStyle from './BookList_Style';
 import axios from 'axios';
-import Btn from './../../Common/Btn';
+import BottomBtn from './../../Common/BottomBtn';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {
@@ -25,6 +25,8 @@ function BookList() {
     GetBooks();
   }, []);
 
+  const id = 1;
+
   return (
     <>
       <BookStyle.Title>카트 도서 목록</BookStyle.Title>
@@ -34,10 +36,10 @@ function BookList() {
         ))}
       </BookStyle.WrapBooks>
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
-      <Btn
+      <BottomBtn
         message="이동하기"
         go={() => {
-          navigate('1');
+          navigate(`${id}`);
         }}
       />
     </>
