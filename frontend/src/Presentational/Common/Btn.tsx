@@ -26,7 +26,10 @@ const ButtonStyle = styled.button`
   position: relative;
   transition: ${transition};
 
-  &:hover,
+  &:hover {
+    color: white;
+    background-color: ${redColor};
+  }
   &:focus {
     color: white;
     background-color: ${redColor};
