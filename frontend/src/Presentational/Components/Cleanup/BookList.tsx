@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import BookItem from './BookItem';
 import * as BookStyle from './BookList_Style';
+import axios from 'axios';
+import Btn from './../../Common/Btn';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   books: [];
 }
 
-function BookList({ books }: Props) {
+function BookList() {
+  const [books, setBooks] = useState<[]>([]);
+  const navigate = useNavigate();
+  const [route, setRoute] = useState<number[]>([1, 2, 3]);
+
+  const GetBooks = () => {
+    axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
+      console.log(res.data);
+      setBooks(res.data);
+    });
+  };
+
+  useEffect(() => {
+    GetBooks();
+  }, []);
+
   return (
     <>
       <BookStyle.Title>카트 도서 목록</BookStyle.Title>
@@ -15,6 +33,13 @@ function BookList({ books }: Props) {
           <BookItem book={book} />
         ))}
       </BookStyle.WrapBooks>
+      {/* 여기서 이동할 때 이동해야할 책장 경로 */}
+      <Btn
+        message="이동하기"
+        go={() => {
+          navigate('1');
+        }}
+      />
     </>
   );
 }

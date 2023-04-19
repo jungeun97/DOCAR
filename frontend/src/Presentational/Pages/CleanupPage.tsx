@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import * as CleanupStyle from './CleanupPage_Style';
 import axios from 'axios';
+import { useNavigate, Outlet } from 'react-router-dom';
 import BookList from './../Components/Cleanup/BookList';
 import Bookshelf from './../Components/Cleanup/Bookshelf';
 
 function CleanupPage() {
   const [books, setBooks] = useState<[]>([]);
+  const navigate = useNavigate();
 
   const GetBooks = () => {
     axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
@@ -22,10 +24,11 @@ function CleanupPage() {
     <CleanupStyle.WrapClean>
       {/* <CleanupStyle.Title>카트 도서 목록</CleanupStyle.Title> */}
       {/* <CleanupStyle.WrapBooks> */}
-      <BookList books={books} />
+      {/* <BookList /> */}
       {/* </CleanupStyle.WrapBooks> */}
-      이동하기
-      <Bookshelf />
+      {/* 이동하기 */}
+      {/* <Bookshelf /> */}
+      <Outlet />
     </CleanupStyle.WrapClean>
   );
 }
