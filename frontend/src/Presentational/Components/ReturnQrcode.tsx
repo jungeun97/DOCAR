@@ -5,9 +5,9 @@ import qrcode from '../../Resources/Images/qrcode.png';
 function ReturnQrcode() {
   return (
     <ReturnQrStyle.WrapReturn>
-      <ReturnQrStyle.ReturnDiv>
+      <ReturnQrStyle.ReturnText>
         반납할 책의 QR을 찍어 주세요.
-      </ReturnQrStyle.ReturnDiv>
+      </ReturnQrStyle.ReturnText>
       <ReturnQrStyle.Img src={qrcode} />
     </ReturnQrStyle.WrapReturn>
   );
