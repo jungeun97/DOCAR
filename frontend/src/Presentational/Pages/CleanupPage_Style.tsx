@@ -6,4 +6,24 @@ export const WrapClean = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
 `;
+
+// export const WrapBooks = styled.div`
+//   width: 80%;
+//   height: 70%;
+//   border: 1px solid pink;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   overflow: scroll;
+// `;
+
+// export const Title = styled.div`
+//   font-size: 24px;
+//   font-weight: bold;
+//   `;
+
+
