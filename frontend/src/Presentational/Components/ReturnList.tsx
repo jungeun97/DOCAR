@@ -1,38 +1,32 @@
 import React from 'react';
-import * as DetailStyle from './ReturnDetail_Style';
-import BookImage from '../../Resources/Images/BookImage.jpg';
+import * as ListStyle from './ReturnList_Style';
+import Btn from '../Common/Btn';
+import BookData from './BookData.json';
 
-function ReturnList() {
+interface ReturnList {
+  ReturnComplete: () => void;
+}
+
+function ReturnList(props: ReturnList) {
   return (
-    <>
-      <DetailStyle.BookDiv>
-        <DetailStyle.BookImg src={BookImage} />
-        <DetailStyle.BookTextDiv>
-          <DetailStyle.BookName>
-            24단계 실습으로 정복하는 쿠버네티스
-          </DetailStyle.BookName>
-          <DetailStyle.BookWriter>이정훈 저</DetailStyle.BookWriter>
-        </DetailStyle.BookTextDiv>
-      </DetailStyle.BookDiv>
-      <DetailStyle.BookDiv>
-        <DetailStyle.BookImg src={BookImage} />
-        <DetailStyle.BookTextDiv>
-          <DetailStyle.BookName>
-            24단계 실습으로 정복하는 쿠버네티스
-          </DetailStyle.BookName>
-          <DetailStyle.BookWriter>이정훈 저</DetailStyle.BookWriter>
-        </DetailStyle.BookTextDiv>
-      </DetailStyle.BookDiv>
-      <DetailStyle.BookDiv>
-        <DetailStyle.BookImg src={BookImage} />
-        <DetailStyle.BookTextDiv>
-          <DetailStyle.BookName>
-            24단계 실습으로 정복하는 쿠버네티스
-          </DetailStyle.BookName>
-          <DetailStyle.BookWriter>이정훈 저</DetailStyle.BookWriter>
-        </DetailStyle.BookTextDiv>
-      </DetailStyle.BookDiv>
-    </>
+    <ListStyle.WrapList>
+      <ListStyle.ListTitle>반납 책 목록</ListStyle.ListTitle>
+      <ListStyle.ListDiv>
+        {BookData.map((book) => (
+          <ListStyle.BookDiv key={book.id}>
+            <ListStyle.BookImg src={book.imgurl} />
+            <ListStyle.BookTextDiv>
+              <ListStyle.BookName>{book.title}</ListStyle.BookName>
+              <ListStyle.BookWriter>{book.writer}</ListStyle.BookWriter>
+            </ListStyle.BookTextDiv>
+          </ListStyle.BookDiv>
+        ))}
+      </ListStyle.ListDiv>
+      <Btn
+        message="위 사항이 맞다면 버튼을 눌러주세요."
+        go={props.ReturnComplete}
+      />
+    </ListStyle.WrapList>
   );
 }
 
