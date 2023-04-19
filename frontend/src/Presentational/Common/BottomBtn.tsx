@@ -23,7 +23,8 @@ const ButtonStyle = styled.button`
   color: ${redColor};
   font-weight: 100;
   letter-spacing: 0.01em;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
   transition: ${transition};
   /* font-family: 'GmarketSansMedium'; */
 
@@ -37,8 +38,8 @@ const ButtonStyle = styled.button`
   }
 `;
 
-function Btn(props: BtnProps) {
+function BottomBtn(props: BtnProps) {
   return <ButtonStyle onClick={props.go}>{props.message}</ButtonStyle>;
 }
 
-export default Btn;
+export default BottomBtn;
