@@ -5,7 +5,9 @@ interface Props {
 }
 
 function BookItem({ book }: Props) {
-  return <div>{book.id}</div>;
+  return <div>
+    <input type="checkbox" />
+    {book.id}</div>;
 }
 
 export default BookItem;

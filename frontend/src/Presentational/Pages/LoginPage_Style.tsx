@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { AiOutlineUser, AiFillLock } from 'react-icons/ai';
 
 export const WrapLogin = styled.div`
@@ -6,17 +6,28 @@ export const WrapLogin = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+
+  @keyframes up-down {
+    from {
+      transform: translatey(0px);
+    }
+    to {
+      transform: translatey(-20px);
+    }
+  }
+  animation: up-down 1.4s infinite ease-in-out alternate;
+`;
 
 export const Span = styled.span``;
 
 export const Option = styled.div`
-  width: 400px;
-  height: 50px;
+  /* width: 400px; */
+  /* height: 50px; */
   background-color: blue;
   display: flex;
   justify-content: center;
@@ -29,12 +40,14 @@ export const WrapPin = styled.form`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: violet;
+  background-color: white;
+  border-radius: 10px;
   width: 600px;
-  height: 300px;
+  height: 330px;
 `;
 export const PinTitle = styled.div`
   font-size: 36px;
+  margin-bottom: 20px;
 `;
 
 export const WrapIdpw = styled.div`
@@ -44,14 +57,14 @@ export const WrapIdpw = styled.div`
   height: 40px;
   border-radius: 10px;
   margin-bottom: 10px;
-  border: 5px solid yellow;
+  border: 5px solid gray;
 `;
 
 export const PwInput = styled.input`
   width: 350px;
   height: 35px;
   color: black;
-  background-color: violet;
+  /* background-color: violet; */
   font-size: 24px;
   outline: none;
   border: none;
@@ -81,4 +94,5 @@ export const BtnLogin = styled.div`
   height: 60px;
   background-color: skyblue;
   border-radius: 10px;
+  margin-top: 20px;
 `;

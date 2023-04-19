@@ -25,6 +25,7 @@ const ButtonStyle = styled.button`
   letter-spacing: 0.01em;
   position: relative;
   transition: ${transition};
+  /* font-family: 'GmarketSansMedium'; */
 
   &:hover {
     color: white;
