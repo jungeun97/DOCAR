@@ -11,7 +11,7 @@ function ReturnList(props: ReturnList) {
   return (
     <ListStyle.WrapList>
       <ListStyle.ListTitle>반납 책 목록</ListStyle.ListTitle>
-      <ListStyle.ListDiv>
+      {/* <ListStyle.ListDiv>
         {BookData.map((book) => (
           <ListStyle.BookDiv key={book.id}>
             <ListStyle.BookImg src={book.imgurl} />
@@ -21,7 +21,35 @@ function ReturnList(props: ReturnList) {
             </ListStyle.BookTextDiv>
           </ListStyle.BookDiv>
         ))}
-      </ListStyle.ListDiv>
+      </ListStyle.ListDiv> */}
+
+      {/* 헤더 부분 */}
+      <ListStyle.Table>
+        <ListStyle.Thead>
+          <ListStyle.TableTr2>
+            <ListStyle.ThImg>표지</ListStyle.ThImg>
+            <ListStyle.ThTitle>제목</ListStyle.ThTitle>
+            <ListStyle.ThWriter>저자</ListStyle.ThWriter>
+          </ListStyle.TableTr2>
+        </ListStyle.Thead>
+        {/* 바디 부분 */}
+        <ListStyle.Tbody>
+          {BookData.map((book) => (
+            <ListStyle.TableTr>
+              <ListStyle.ThImg>
+                <ListStyle.BookImg src={book.imgurl} />
+              </ListStyle.ThImg>
+              <ListStyle.ThTitle>
+                <ListStyle.BookName>{book.title}</ListStyle.BookName>
+              </ListStyle.ThTitle>
+              <ListStyle.ThWriter>
+                <ListStyle.BookWriter>{book.writer}</ListStyle.BookWriter>
+              </ListStyle.ThWriter>
+            </ListStyle.TableTr>
+          ))}
+        </ListStyle.Tbody>
+      </ListStyle.Table>
+
       <Btn
         message="위 사항이 맞다면 버튼을 눌러주세요."
         go={props.ReturnComplete}
