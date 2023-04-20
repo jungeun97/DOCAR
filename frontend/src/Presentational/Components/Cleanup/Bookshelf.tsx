@@ -8,6 +8,8 @@ import Btn from './../../Common/Btn';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import BookTable from './../BookTable';
+import BookTableBack from './../BookTableBack';
 
 type recipeParams = {
   params: string;
@@ -24,7 +26,6 @@ function Bookshelf() {
     });
   };
   const MySwal = withReactContent(Swal);
-  
 
   // 다음 책장으로 가는 모달
   const setModal = () => {
@@ -52,17 +53,20 @@ function Bookshelf() {
       // showConfirmButton: false,
       showCancelButton: true,
       showConfirmButton: true,
-      cancelButtonText: '원위치로',
-      confirmButtonText: '다음 책장으로 이동',
+      // width: '1000px',
+      // height: '400px',
+      cancelButtonText: '취소',
+      confirmButtonText: '반납 및 이동',
       html: (
         <>
-          {books && (
+          {/* {books && (
             <BookStyle.WrapBooks>
               {books.map((book) => (
                 <BookItem book={book} />
               ))}
             </BookStyle.WrapBooks>
-          )}
+          )} */}
+          <BookTableBack />
         </>
       ),
     });
@@ -81,13 +85,14 @@ function Bookshelf() {
         }}
       />
       <BookStyle.Title>{id}번 책장 반납도서</BookStyle.Title>
-      {books && (
+      {/* {books && (
         <BookStyle.WrapBooks>
           {books.map((book) => (
             <BookItem book={book} />
           ))}
         </BookStyle.WrapBooks>
-      )}
+      )} */}
+      <BookTable />
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <BottomBtn
         message={`정리 완료`}

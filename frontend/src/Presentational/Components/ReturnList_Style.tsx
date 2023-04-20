@@ -58,7 +58,7 @@ export const BookWriter = styled.div`
 export const Table = styled.table`
   /* tr태그에 border를 적용시키기 위해 아래 코드 추가  */
   border-collapse: collapse;
-  border: 5px solid skyblue;
+  border: 2px solid skyblue;
 `;
 
 export const Thead = styled.thead`
@@ -68,6 +68,12 @@ export const Thead = styled.thead`
 export const Tbody = styled.tbody`
   display: block;
   height: 300px;
+  overflow: auto;
+`;
+
+export const Tbody2 = styled.tbody`
+  display: block;
+  height: 225px;
   overflow: auto;
 `;
 
@@ -82,8 +88,14 @@ export const TableTr = styled.tr`
 // 상단 고정 행
 export const TableTr2 = styled.tr`
   height: 30px;
-  background-color: red;
-  /* border-bottom: 1px solid black; */
+  background-color: skyblue;
+  border-bottom: 1px solid black;
+`;
+
+export const TableTr3 = styled.tr`
+  height: 40px;
+  /* background-color: blue; */
+  border-bottom: 1px solid black;
 `;
 
 // Tbody에 들어가는 셀, th는 가운데 정렬, td는 왼쪽 정렬
@@ -92,12 +104,23 @@ export const ThImg = styled.th`
   /* display: flex; */
   /* align-items: center; */
   padding: 10px;
+  /* border: 5px solid yellowgreen; */
 `;
 
 export const ThTitle = styled.th`
   width: 250px;
 `;
 
+export const ThTitle2 = styled.th`
+  width: 250px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+`;
+
 export const ThWriter = styled.th`
   width: 200px;
+`;
+
+export const ThCheck = styled.th`
+  width: 50px;
 `;

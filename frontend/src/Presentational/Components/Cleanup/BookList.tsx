@@ -4,6 +4,7 @@ import * as BookStyle from './BookList_Style';
 import axios from 'axios';
 import BottomBtn from './../../Common/BottomBtn';
 import { useNavigate } from 'react-router-dom';
+import BookTable from './../BookTable';
 
 interface Props {
   books: [];
@@ -30,11 +31,12 @@ function BookList() {
   return (
     <>
       <BookStyle.Title>카트 도서 목록</BookStyle.Title>
-      <BookStyle.WrapBooks>
+      {/* <BookStyle.WrapBooks>
         {books.map((book) => (
           <BookItem book={book} />
         ))}
-      </BookStyle.WrapBooks>
+      </BookStyle.WrapBooks> */}
+      <BookTable />
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <BottomBtn
         message="이동하기"
