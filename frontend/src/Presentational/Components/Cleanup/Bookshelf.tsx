@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BookItem from './BookItem';
 import * as BookStyle from './BookList_Style';
-import BottomBtn from './../../Common/BottomBtn';
-import ResetBtn from './../../Common/ResetBtn';
 import Btn from './../../Common/Btn';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -141,11 +139,14 @@ function Bookshelf() {
 
   return (
     <BookStyle.WrapClean>
-      <ResetBtn
-        message="종료하기"
+      <Btn
+        message="원위치로"
         go={() => {
           setCheckModal();
         }}
+        position="absolute"
+        top="-20px"
+        right="18px"
       />
       <BookStyle.Title>{id}번 책장 반납도서</BookStyle.Title>
       {/* {books && (
@@ -158,11 +159,13 @@ function Bookshelf() {
       <BookTable />
 
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
-      <BottomBtn
+      <Btn
         message={`정리완료`}
         go={() => {
           setModal();
         }}
+        position="absolute"
+        bottom="20px"
       />
       {/* 모달 띄어서 다음 책장으로 이동시키기 */}
     </BookStyle.WrapClean>
