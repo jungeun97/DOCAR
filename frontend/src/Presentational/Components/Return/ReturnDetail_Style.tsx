@@ -5,14 +5,19 @@ export const WrapDetail = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+`;
+
+export const BookDetailDiv = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 `;
 
 export const BookDiv = styled.div`
   display: flex;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-right: 1.3rem;
@@ -22,15 +27,15 @@ export const BookDiv = styled.div`
 `;
 
 export const BookImg = styled.img`
-  width: 9rem;
-  height: 13rem;
+  width: 7.5rem;
+  height: 10rem;
   margin-top: 1rem;
 `;
 
 export const BookTextDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 15rem;
+  width: 13rem;
   padding: 20px;
   justify-content: center;
   text-align: center;
@@ -44,7 +49,13 @@ export const BookName = styled.span`
 
 export const BookWriter = styled.span``;
 
-export const DetailText = styled.div`
+export const PositionText = styled.div`
   font-size: 1.5rem;
+  font-weight: bold;
+  width: 10rem;
+`;
+
+export const DetailText = styled.div`
+  font-size: 1.25rem;
   font-weight: bold;
 `;
