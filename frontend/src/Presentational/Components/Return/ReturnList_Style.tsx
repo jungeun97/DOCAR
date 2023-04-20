@@ -44,6 +44,13 @@ export const BookName = styled.div`
 
 export const BookWriter = styled.div``;
 
+export const TableDiv = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  border-radius: 10px;
+`;
+
 // 미스터리액트
 // Table = Thead + Tbody ;; Thead는 상단 고정 Tbody는 scroll
 export const Table = styled.table`
@@ -66,7 +73,7 @@ export const Tbody = styled.tbody`
 export const TableTr = styled.tr`
   height: 100px;
   background-color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #f5f5f5;
 `;
 
 // 상단 고정 행
