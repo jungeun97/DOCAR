@@ -41,17 +41,17 @@ public class Book {
     @JoinColumn(name = "bookshelf_id")
     private Bookshelf bookshelf;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cart_book_id")
-    private CartBook cartBook;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tmp_book_id")
-    private TmpBook tmpBook;
-
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
     private CheckoutBook checkoutBook = new CheckoutBook();
+
+    @Builder.Default
+    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    private CartBook cartBook = new CartBook();
+
+    @Builder.Default
+    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    private TmpBook tmpBook = new TmpBook();
 
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {
@@ -60,23 +60,5 @@ public class Book {
 
         this.bookshelf = bookshelf;
         this.bookshelf.getBooks().add(this);
-    }
-
-    public void setCartBook(CartBook cartBook) {
-        if (this.cartBook != null) {
-            this.cartBook.getBooks().remove(this);
-        }
-
-        this.cartBook = cartBook;
-        this.cartBook.getBooks().add(this);
-    }
-
-    public void setTmpBook(TmpBook tmpBook) {
-        if (this.tmpBook != null) {
-            this.tmpBook.getBooks().remove(this);
-        }
-
-        this.tmpBook = tmpBook;
-        this.tmpBook.getBooks().add(this);
     }
 }
