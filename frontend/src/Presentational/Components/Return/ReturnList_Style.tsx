@@ -27,7 +27,7 @@ export const BookDiv = styled.div`
 `;
 
 export const BookImg = styled.img`
-  height: 100px;
+  height: 80px;
   border-radius: 0.3rem;
 `;
 
@@ -86,5 +86,5 @@ export const ThTitle = styled.th`
 `;
 
 export const ThWriter = styled.th`
-  width: 200px;
+  width: 150px;
 `;

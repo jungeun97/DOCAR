@@ -40,6 +40,7 @@ function ReturnList(props: ReturnList) {
       <Btn
         message="위 사항이 맞다면 버튼을 눌러주세요."
         go={props.ReturnComplete}
+        position="relative"
       />
     </ListStyle.WrapList>
   );
