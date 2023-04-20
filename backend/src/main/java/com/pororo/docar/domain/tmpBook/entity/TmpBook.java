@@ -4,8 +4,6 @@ import com.pororo.docar.domain.book.entity.Book;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Builder
@@ -24,7 +22,12 @@ public class TmpBook {
     @Column
     private Long site;
 
-    @Builder.Default
-    @OneToMany(mappedBy = "tmpBook", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Book> books = new ArrayList<>();
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "book_id")
+    private Book book;
+
+    public void setBook(Book book) {
+        this.book = book;
+        this.book.setTmpBook(this);
+    }
 }
