@@ -12,8 +12,8 @@ public class OpenApiConfig {
     public OpenAPI openAPI() {
         Info info = new Info()
                 .version("v0.0.1")
-                .title("별 헤는 밤 - Rest API")
-                .description("별 헤는 밤 Rest API 문서입니다.");
+                .title("도카 - Rest API")
+                .description("도카 Rest API 문서입니다.");
 
         return new OpenAPI()
                 .info(info);
