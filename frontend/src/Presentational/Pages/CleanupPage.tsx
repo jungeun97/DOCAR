@@ -24,11 +24,11 @@ function CleanupPage() {
     <CleanupStyle.WrapClean>
       {/* <CleanupStyle.Title>카트 도서 목록</CleanupStyle.Title> */}
       {/* <CleanupStyle.WrapBooks> */}
-      {/* <BookList /> */}
+      <BookList />
       {/* </CleanupStyle.WrapBooks> */}
       {/* 이동하기 */}
       {/* <Bookshelf /> */}
-      <Outlet />
+
     </CleanupStyle.WrapClean>
   );
 }
