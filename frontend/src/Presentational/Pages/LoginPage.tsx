@@ -3,7 +3,7 @@ import * as LoginStyle from './LoginPage_Style';
 import qrcode from '../../Resources/Images/qrcode.png';
 import { AiOutlineUser } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import BottomBtn from './../Common/BottomBtn';
+import Btn from '../Common/Btn';
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -25,7 +25,12 @@ function LoginPage() {
         <>
           <LoginStyle.PinTitle>사원증의 QR을 찍어주세요</LoginStyle.PinTitle>
           <LoginStyle.Img src={qrcode} />
-          <BottomBtn message='PIN 번호로 로그인' go={ChangeLogin} />
+          <Btn
+            message="PIN 번호로 로그인"
+            go={ChangeLogin}
+            position="absolute"
+            bottom="20px"
+          />
         </>
       ) : (
         <>
@@ -45,11 +50,20 @@ function LoginPage() {
                 onChange={onChage}
               />
             </LoginStyle.WrapIdpw>
-            <LoginStyle.BtnLogin onClick={()=>{
-              navigate('/cleanup')
-            }}>Sign In</LoginStyle.BtnLogin>
+            <LoginStyle.BtnLogin
+              onClick={() => {
+                navigate('/cleanup');
+              }}
+            >
+              Sign In
+            </LoginStyle.BtnLogin>
           </LoginStyle.WrapPin>
-          <BottomBtn message='QR로 로그인' go={ChangeLogin} />
+          <Btn
+            message="QR로 로그인"
+            go={ChangeLogin}
+            position="absolute"
+            bottom="20px"
+          />
         </>
       )}
     </LoginStyle.WrapLogin>
