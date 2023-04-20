@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReturnQrStyle from './ReturnQrcode_Style';
-import qrcode from '../../Resources/Images/qrcode.png';
+import qrcode from '../../../Resources/Images/qrcode.png';
 
 function ReturnQrcode() {
   return (

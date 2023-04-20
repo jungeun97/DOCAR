@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ReturnBooks from '../Components/ReturnBooks';
-import ReturnQrcode from '../Components/ReturnQrcode';
+import ReturnBooks from '../Components/Return/ReturnBooks';
+import ReturnQrcode from '../Components/Return/ReturnQrcode';
 
 function ReturnPage() {
   const [isReturn, setIsReturn] = useState(false);
