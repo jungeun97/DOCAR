@@ -69,6 +69,12 @@ export const Tbody = styled.tbody`
   overflow: auto;
 `;
 
+export const Tbody2 = styled.tbody`
+  display: block;
+  height: 225px;
+  overflow: auto;
+`;
+
 // tr = 하나의 행
 export const TableTr = styled.tr`
   height: 100px;
@@ -82,6 +88,12 @@ export const TableTr2 = styled.tr`
   background-color: #cfd0d0;
 `;
 
+export const TableTr3 = styled.tr`
+  height: 40px;
+  /* background-color: blue; */
+  border-bottom: 1px solid black;
+`;
+
 // Tbody에 들어가는 셀, th는 가운데 정렬, td는 왼쪽 정렬
 export const ThImg = styled.th`
   width: 150px;
@@ -92,6 +104,16 @@ export const ThTitle = styled.th`
   width: 250px;
 `;
 
+export const ThTitle2 = styled.th`
+  width: 250px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+`;
+
 export const ThWriter = styled.th`
   width: 150px;
+`;
+
+export const ThCheck = styled.th`
+  width: 50px;
 `;
