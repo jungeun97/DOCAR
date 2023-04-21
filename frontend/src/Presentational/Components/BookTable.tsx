@@ -1,34 +1,33 @@
 import React from 'react';
-import * as ListStyle from '../Components/Return/ReturnList_Style';
+import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
 function BookTable() {
   return (
-    <ListStyle.Table>
-      <ListStyle.Thead>
-        <ListStyle.TableTr2>
-          <ListStyle.ThImg>표지</ListStyle.ThImg>
-          <ListStyle.ThTitle>제목</ListStyle.ThTitle>
-          <ListStyle.ThWriter>저자</ListStyle.ThWriter>
-        </ListStyle.TableTr2>
-      </ListStyle.Thead>
-      {/* 바디 부분 */}
-      <ListStyle.Tbody>
+    <TableStyle.Table>
+      <TableStyle.Thead>
+        <TableStyle.TableTr2>
+          <TableStyle.ThImg>표지</TableStyle.ThImg>
+          <TableStyle.ThTitle>제목</TableStyle.ThTitle>
+          <TableStyle.ThWriter>저자</TableStyle.ThWriter>
+        </TableStyle.TableTr2>
+      </TableStyle.Thead>
+      <TableStyle.Tbody>
         {BookData.map((book) => (
-          <ListStyle.TableTr>
-            <ListStyle.ThImg>
-              <ListStyle.BookImg src={book.imgurl} />
-            </ListStyle.ThImg>
-            <ListStyle.ThTitle>
-              <ListStyle.BookName>{book.title}</ListStyle.BookName>
-            </ListStyle.ThTitle>
-            <ListStyle.ThWriter>
-              <ListStyle.BookWriter>{book.writer}</ListStyle.BookWriter>
-            </ListStyle.ThWriter>
-          </ListStyle.TableTr>
+          <TableStyle.TableTr>
+            <TableStyle.ThImg>
+              <TableStyle.BookImg src={book.imgurl} />
+            </TableStyle.ThImg>
+            <TableStyle.ThTitle>
+              <TableStyle.BookName>{book.title}</TableStyle.BookName>
+            </TableStyle.ThTitle>
+            <TableStyle.ThWriter>
+              <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
+            </TableStyle.ThWriter>
+          </TableStyle.TableTr>
         ))}
-      </ListStyle.Tbody>
-    </ListStyle.Table>
+      </TableStyle.Tbody>
+    </TableStyle.Table>
   );
 }
 
