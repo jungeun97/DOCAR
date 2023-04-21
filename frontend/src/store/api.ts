@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 
-const API_URL = 'https://j8d109.p.ssafy.io/api/';
+const API_URL = 'https://k8d101.p.ssafy.io/api/';
 
 const API: AxiosInstance = axios.create({
   baseURL: API_URL,
