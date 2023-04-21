@@ -13,8 +13,8 @@ function BookTable() {
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
-        {BookData.map((book) => (
-          <TableStyle.TableTr>
+        {BookData.map((book, idx) => (
+          <TableStyle.TableTr key={idx}>
             <TableStyle.ThImg>
               <TableStyle.BookImg src={book.imgurl} />
             </TableStyle.ThImg>

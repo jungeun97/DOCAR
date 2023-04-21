@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ReturnBooks from '../Components/Return/ReturnBooks';
 import ReturnQrcode from '../Components/Return/ReturnQrcode';
+import { useRecoilState } from 'recoil';
+import { isReturnState } from '../../store/atoms';
 
 function ReturnPage() {
-  const [isReturn, setIsReturn] = useState(false);
+  const [isReturn, setIsReturn] = useRecoilState(isReturnState);
 
   const ReturnMode = () => {
     setIsReturn(!isReturn);
@@ -13,12 +15,7 @@ function ReturnPage() {
     return <ReturnBooks />;
   }
 
-  return (
-    <>
-      <ReturnQrcode />
-      <button onClick={ReturnMode}>반납모드 변경</button>
-    </>
-  );
+  return <ReturnQrcode ReturnMode={ReturnMode} />;
 }
 
 export default ReturnPage;

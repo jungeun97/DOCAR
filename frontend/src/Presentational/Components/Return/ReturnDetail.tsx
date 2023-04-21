@@ -1,13 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as DetailStyle from './ReturnDetail_Style';
 import BookImage from '../../../Resources/Images/BookImage.jpg';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
+import API from '../../../store/api';
 
 interface ReturnDetail {
   ReturnState: () => void;
 }
 
 function ReturnDetail(props: ReturnDetail) {
+  const [distance, setDistance] = useState(0);
+  const [seosorData, setSensorData] = useState(0);
+  const [qrUrl, setQrUrl] = useState('');
+
+  const MySwal = withReactContent(Swal);
+
+  const ChangeDistance = () => {
+    setDistance(distance + 1);
+  };
+
+  const handleReturn = () => {
+    if (seosorData !== distance) {
+      setDistance(seosorData);
+      // 반납 처리 API 호출
+      // API.post('return', { qr_url: qrUrl })
+      //   .then((response) => {
+      //     console.log(response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error(error);
+      //   });
+      console.log('반납 완료');
+    } else {
+      setModal();
+    }
+  };
+
+  const setModal = () => {
+    MySwal.fire({
+      title: '책 반납 실패',
+      text: '이전의 책을 선반에 올려놓은 뒤 다시 시도해주세요.',
+      icon: 'error',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: '확인',
+      reverseButtons: true,
+    });
+  };
+
   return (
     <DetailStyle.WrapDetail>
       <DetailStyle.BookDetailDiv>
@@ -22,6 +64,8 @@ function ReturnDetail(props: ReturnDetail) {
         </DetailStyle.BookDiv>
         <DetailStyle.PositionText>
           2번째 선반에 책을 넣으세요.
+          <button onClick={ChangeDistance}>책장에 책 넣기</button>
+          <button onClick={handleReturn}>바코드 인식</button>
         </DetailStyle.PositionText>
       </DetailStyle.BookDetailDiv>
       <DetailStyle.DetailText>
