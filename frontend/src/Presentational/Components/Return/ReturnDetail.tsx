@@ -7,7 +7,7 @@ import Btn from '../../Common/Btn';
 import API from '../../../store/api';
 
 interface ReturnDetail {
-  ReturnState: () => void;
+  ClickedReturnBtn: () => void;
 }
 
 function ReturnDetail(props: ReturnDetail) {
@@ -32,7 +32,7 @@ function ReturnDetail(props: ReturnDetail) {
       //   .catch((error) => {
       //     console.error(error);
       //   });
-      console.log('반납 완료');
+      console.log('책 반납 처리');
     } else {
       setModal();
     }
@@ -76,7 +76,7 @@ function ReturnDetail(props: ReturnDetail) {
       </DetailStyle.DetailText>
       <Btn
         message="반납완료"
-        go={props.ReturnState}
+        go={props.ClickedReturnBtn}
         position="absolute"
         bottom="20px"
         right="20px"

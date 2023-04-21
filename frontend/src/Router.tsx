@@ -14,12 +14,12 @@ function Router() {
         <Route element={<Layout />}>
           <Route path="/" element={<MainPage />} />
           <Route path="/return" element={<ReturnPage />} />
-          <Route path="/cleanup" element={<CleanupPage />} />
-          <Route path="/cleanup/end" element={<EndCleanup />} />
-          {/* <Route index element={<BookList />} /> */}
-          <Route path="/cleanup/:id" element={<Bookshelf />} />
           <Route path="/login" element={<LoginPage />} />
         </Route>
+        <Route path="/cleanup" element={<CleanupPage />} />
+        <Route path="/cleanup/end" element={<EndCleanup />} />
+        {/* <Route index element={<BookList />} /> */}
+        <Route path="/cleanup/:id" element={<Bookshelf />} />
       </Routes>
     </BrowserRouter>
   );

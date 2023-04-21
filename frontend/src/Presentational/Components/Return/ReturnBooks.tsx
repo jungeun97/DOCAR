@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReturnDetail from './ReturnDetail';
 import ReturnList from './ReturnList';
 import * as BooksStyle from './ReturnBooks_Style';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import API from '../../../store/api';
+import { useNavigate } from 'react-router-dom';
 
 function ReturnBooks() {
-  const [isReturn, setIsReturn] = useState(false);
-  const [isComplete, setIsComplete] = useState(false);
+  // const [isComplete, setIsComplete] = useState(false);
+  const [clickedBtn, setClickedBtn] = useState(false);
 
-  const ReturnState = () => {
-    setIsReturn(!isReturn);
+  const navigate = useNavigate();
+  const MySwal = withReactContent(Swal);
+
+  const ClickedReturnBtn = () => {
+    setClickedBtn(true);
   };
 
   const ReturnComplete = () => {
-    setIsComplete(true);
+    setModal();
     // API.post('returnsuccess')
     //   .then((response) => {
     //     console.log(response.data);
@@ -23,22 +29,24 @@ function ReturnBooks() {
     //   });
   };
 
-  if (isComplete) {
-    return (
-      <BooksStyle.WrapBooks>
-        <BooksStyle.CompleteText>
-          반납이 완료되었습니다.
-        </BooksStyle.CompleteText>
-        <BooksStyle.CompleteText>감사합니다.</BooksStyle.CompleteText>
-      </BooksStyle.WrapBooks>
-    );
-  }
+  const setModal = () => {
+    MySwal.fire({
+      title: '반납이 완료되었습니다.',
+      text: '감사합니다.',
+      icon: 'success',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: '확인',
+      reverseButtons: true,
+    }).then(() => {
+      navigate(`/`);
+    });
+  };
 
-  if (isReturn) {
+  if (clickedBtn) {
     return <ReturnList ReturnComplete={ReturnComplete} />;
   }
-
-  return <ReturnDetail ReturnState={ReturnState} />;
+  return <ReturnDetail ClickedReturnBtn={ClickedReturnBtn} />;
 }
 
 export default ReturnBooks;

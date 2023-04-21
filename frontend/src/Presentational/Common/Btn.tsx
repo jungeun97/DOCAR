@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface BtnProps {
   message: string;
-  go: () => void;
+  go?: () => void;
   position?: string;
   top?: string;
   right?: string;
