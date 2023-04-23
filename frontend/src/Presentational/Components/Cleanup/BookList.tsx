@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import BookItem from './BookItem';
 import * as BookStyle from './BookList_Style';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Btn from '../../Common/Btn';
 import BookTable from './../BookTable';
+import BookData from '../BookData.json';
 
 interface Props {
-  books: [];
+  id: number;
+  title: string;
+  imgurl: string;
+  writer: string;
 }
 
 function BookList() {
-  const [books, setBooks] = useState<[]>([]);
   const navigate = useNavigate();
-  const [route, setRoute] = useState<number[]>([1, 2, 3]);
+  const [books, setBooks] = useState<Props[]>([]);
 
-  const GetBooks = () => {
-    axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
-      console.log(res.data);
-      setBooks(res.data);
-    });
+  // 페이지 네이션
+  const [page, setPage] = useState(1); // 페이지
+  const limit = 3; // 몇개 볼거?
+  const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
+
+  const booksData = (books: Props[]) => {
+    if (books) {
+      let result = books.slice(offset, offset + limit);
+      console.log(123);
+      console.log(result);
+      setBooks(result);
+      // return result;
+    }
   };
 
   useEffect(() => {
-    GetBooks();
-  }, []);
+    booksData(BookData)
+  }, [])
 
   const id = 1;
 
@@ -36,7 +46,8 @@ function BookList() {
           <BookItem book={book} />
         ))}
       </BookStyle.WrapBooks> */}
-      <BookTable />
+      {/* <BookTable /> */}
+      <BookTable books={books} />
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <Btn
         message="이동하기"
@@ -44,7 +55,7 @@ function BookList() {
           navigate(`${id}`);
         }}
         position="absolute"
-        bottom="20px"
+        bottom="10px"
       />
     </>
   );

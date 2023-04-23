@@ -156,7 +156,7 @@ function Bookshelf() {
           ))}
         </BookStyle.WrapBooks>
       )} */}
-      <BookTable />
+      {/* <BookTable /> */}
 
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <Btn
@@ -165,7 +165,7 @@ function Bookshelf() {
           setModal();
         }}
         position="absolute"
-        bottom="20px"
+        bottom="10px"
       />
       {/* 모달 띄어서 다음 책장으로 이동시키기 */}
     </BookStyle.WrapClean>
