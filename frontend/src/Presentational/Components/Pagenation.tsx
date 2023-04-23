@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 interface Type {
@@ -17,29 +17,34 @@ const NonSelectedBtn = styled.button`
 `;
 
 function Pagenation({ totalPosts, limit, page, setPage }: Type) {
+  // 총 페이지
   const numPages = Math.ceil(totalPosts / limit);
   console.log('총 페이지');
   console.log(numPages);
-  const showedLecture = new Array(numPages).fill(0);
+  
+  // 페이지 블록 구하기
+  const block = Math.ceil(page / 5);
+  const start = (block - 1) * 5 + 1;
+  const end = Math.min(start + 4, numPages);
 
   return (
     <div>
       <button onClick={() => setPage(page - 1)} disabled={page === 1}>
         &lt;
       </button>
-      {showedLecture.map((item, index) => (
-        <>
-          {index + 1 === page ? (
-            <SelectedBtn key={index + 1} onClick={() => setPage(index + 1)} >{index+1}</SelectedBtn>
-          ) : (
-            <NonSelectedBtn
-              key={index + 1}
-              onClick={() => setPage(index + 1)}
-            >{index+1}</NonSelectedBtn>
-          )}
-        </>
-      ))}
-
+      {Array(end - start + 1)
+        .fill(0)
+        .map((_, i) => (
+          <button
+            key={start + i}
+            onClick={() => setPage(start + i)}
+            style={{
+              backgroundColor: start + i === page ? 'red' : 'blue'
+            }}
+          >
+            {start + i}
+          </button>
+        ))}
       <button onClick={() => setPage(page + 1)} disabled={page === numPages}>
         &gt;
       </button>
