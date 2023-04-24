@@ -21,7 +21,9 @@ function CleanupPage() {
 
   return (
     <CleanupStyle.WrapClean>
-      <BookList />
+      {/* <BookList /> */}
+      <Outlet />
+      {/* <div>123</div> */}
     </CleanupStyle.WrapClean>
   );
 }

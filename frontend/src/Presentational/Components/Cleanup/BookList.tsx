@@ -34,12 +34,12 @@ function BookList() {
   };
 
   useEffect(() => {
-    booksData(BookData)
-  }, [])
+    booksData(BookData);
+  }, []);
 
   useEffect(() => {
-    booksData(BookData)
-  }, [page])
+    booksData(BookData);
+  }, [page]);
 
   const id = 1;
 
@@ -47,16 +47,22 @@ function BookList() {
     <>
       <BookStyle.Title>카트 도서 목록</BookStyle.Title>
       <BookTable books={books} />
-      <Pagenation limit={limit} page={page} totalPosts={BookData.length} setPage={setPage}/>
+      <Pagenation
+        limit={limit}
+        page={page}
+        totalPosts={BookData.length}
+        setPage={setPage}
+      />
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
-      {/* <Btn
+      <Btn
         message="이동하기"
         go={() => {
           navigate(`${id}`);
         }}
         position="absolute"
         bottom="10px"
-      /> */}
+        right="18px"
+      />
     </>
   );
 }
