@@ -29,7 +29,7 @@ function LoginPage() {
             message="PIN 번호로 로그인"
             go={ChangeLogin}
             position="absolute"
-            bottom="20px"
+            bottom="10px"
           />
         </>
       ) : (
@@ -62,7 +62,7 @@ function LoginPage() {
             message="QR로 로그인"
             go={ChangeLogin}
             position="absolute"
-            bottom="20px"
+            bottom="10px"
           />
         </>
       )}

@@ -1,8 +1,20 @@
 import React from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
+import axios from 'axios';
 
-function BookTable() {
+interface Props {
+  id: number;
+  title: string;
+  imgurl: string;
+  writer: string;
+}
+
+interface BookTableProps {
+  books: Props[];
+}
+
+function BookTable({ books }: BookTableProps) {
   return (
     <TableStyle.Table>
       <TableStyle.Thead>
@@ -13,7 +25,7 @@ function BookTable() {
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
-        {BookData.map((book, idx) => (
+        {books.map((book, idx) => (
           <TableStyle.TableTr key={idx}>
             <TableStyle.ThImg>
               <TableStyle.BookImg src={book.imgurl} />

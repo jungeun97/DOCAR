@@ -8,6 +8,7 @@ export const WrapLogin = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border: 3px solid red; */
 `;
 
 export const Img = styled.img`
