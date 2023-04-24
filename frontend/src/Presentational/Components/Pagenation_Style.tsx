@@ -1,18 +1,31 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const WrapBtn = styled.div`
-  width: 100%;
-  height: 100%;
+export const WrapPagenation = styled.div`
+  margin-top: 10px;
+  width: 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
+  justify-content: space-around;
 `;
 
 export const SelectedBtn = styled.button`
-  background-color: red;
+  width: 50px;
+  height: 50px;
+  /* border: none; */
+  border-radius: 10px;
+  background-color: gray;
 `;
 export const NonSelectedBtn = styled.button`
-  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  /* background-color: blue; */
+  /* border: none; */
+`;
+
+export const NextPreBtn = styled.button`
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  /* border: none; */
+  /* background-color: blue; */
 `;

@@ -45,7 +45,7 @@ export const TableTr3 = styled.tr`
 // Tbody에 들어가는 셀, th는 가운데 정렬, td는 왼쪽 정렬
 export const ThImg = styled.th`
   width: 150px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 export const ThTitle = styled.th`

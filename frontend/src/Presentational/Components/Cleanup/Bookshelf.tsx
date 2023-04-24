@@ -10,23 +10,51 @@ import BookTable from './../BookTable';
 import BookTableBack from './../BookTableBack';
 import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
+import BookData from '../BookData.json';
+import Pagenation from './../Pagenation';
 
-type recipeParams = {
-  params: string;
-};
+interface Props {
+  id: number;
+  title: string;
+  imgurl: string;
+  writer: string;
+}
 
 function Bookshelf() {
-  const [books, setBooks] = useState<[]>([]);
+  const [books, setBooks] = useState<Props[]>([]);
   const { id } = useParams() as { id: string };
+
+  // 페이지 네이션
+  const [page, setPage] = useState(1); // 페이지
+  const limit = 3; // 몇개 볼거?
+  const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
+
+  const booksData = (books: Props[]) => {
+    if (books) {
+      let result = books.slice(offset, offset + limit);
+      console.log(123);
+      console.log(result);
+      setBooks(result);
+      // return result;
+    }
+  };
+
+  useEffect(() => {
+    booksData(BookData);
+  }, []);
+
+  useEffect(() => {
+    booksData(BookData);
+  }, [page]);
 
   const navigate = useNavigate();
 
-  const GetBooks = () => {
-    axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
-      setBooks(res.data);
-      console.log(res.data);
-    });
-  };
+  // const GetBooks = () => {
+  //   axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
+  //     setBooks(res.data);
+  //     console.log(res.data);
+  //   });
+  // };
 
   const MySwal = withReactContent(Swal);
 
@@ -134,10 +162,6 @@ function Bookshelf() {
     });
   };
 
-  useEffect(() => {
-    GetBooks();
-  }, []);
-
   return (
     <BookStyle.WrapClean>
       <Btn
@@ -157,9 +181,13 @@ function Bookshelf() {
           ))}
         </BookStyle.WrapBooks>
       )} */}
-      
-      {/* <BookTable /> */}
-
+      <BookTable books={books} />
+      <Pagenation
+        limit={limit}
+        page={page}
+        totalPosts={BookData.length}
+        setPage={setPage}
+      />
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <Btn
         message={`정리완료`}
@@ -168,6 +196,7 @@ function Bookshelf() {
         }}
         position="absolute"
         bottom="10px"
+        right="5px"
       />
       {/* 모달 띄어서 다음 책장으로 이동시키기 */}
     </BookStyle.WrapClean>
