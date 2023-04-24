@@ -27,6 +27,6 @@ public class TmpBookController {
                 .map(book -> new TmpBookInfo(book))
                 .collect(Collectors.toList());
         ApiResponse<List<TmpBookInfo>> response = new ApiResponse<>(true, "Success", tmpBookInfoList);
-        return ResponseEntity.ok().body(response);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
