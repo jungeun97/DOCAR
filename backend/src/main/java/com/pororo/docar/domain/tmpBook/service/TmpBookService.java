@@ -31,7 +31,6 @@ public class TmpBookService {
                     .floor(tmpBook.getFloor())
                     .site(tmpBook.getSite())
                     .book(tmpBook.getBook())
-//                    .user(tmpBook.getUser())
                     .build();
             cartBookRepository.save(cartBook);
         }
