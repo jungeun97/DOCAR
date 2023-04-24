@@ -35,9 +35,9 @@ public class TmpBookController {
     @Operation(summary = "책 최종 반납")
     @PostMapping("/returns")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<ApiResponse<Void>> returnBooks() {
+    public ResponseEntity<ApiResponse> returnBooks() {
         tmpBookService.insertCartBooks();
-        ApiResponse<Void> response = new ApiResponse<>(true, "반납이 완료되었습니다.");
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+        ApiResponse response = new ApiResponse<>(true, "반납이 완료되었습니다.");
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

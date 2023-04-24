@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional()
+@Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class TmpBookService {
     private final TmpBookRepository tmpBookRepository;
@@ -22,6 +22,7 @@ public class TmpBookService {
         return tmpBookRepository.findAll();
     }
 
+    @Transactional
     public void insertCartBooks() {
         List<TmpBook> tmpBooks = tmpBookRepository.findAll();
 
