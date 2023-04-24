@@ -11,14 +11,13 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
           <Route path="/" element={<MainPage />} />
+        <Route element={<Layout />}>
           <Route path="/return" element={<ReturnPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Route>
         <Route path="/cleanup" element={<CleanupPage />} />
         <Route path="/cleanup/end" element={<EndCleanup />} />
-        {/* <Route index element={<BookList />} /> */}
         <Route path="/cleanup/:id" element={<Bookshelf />} />
       </Routes>
     </BrowserRouter>

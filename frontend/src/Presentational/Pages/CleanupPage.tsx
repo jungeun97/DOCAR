@@ -3,7 +3,6 @@ import * as CleanupStyle from './CleanupPage_Style';
 import axios from 'axios';
 import { useNavigate, Outlet } from 'react-router-dom';
 import BookList from './../Components/Cleanup/BookList';
-import Bookshelf from './../Components/Cleanup/Bookshelf';
 
 function CleanupPage() {
   const [books, setBooks] = useState<[]>([]);
@@ -22,13 +21,7 @@ function CleanupPage() {
 
   return (
     <CleanupStyle.WrapClean>
-      {/* <CleanupStyle.Title>카트 도서 목록</CleanupStyle.Title> */}
-      {/* <CleanupStyle.WrapBooks> */}
       <BookList />
-      {/* </CleanupStyle.WrapBooks> */}
-      {/* 이동하기 */}
-      {/* <Bookshelf /> */}
-
     </CleanupStyle.WrapClean>
   );
 }

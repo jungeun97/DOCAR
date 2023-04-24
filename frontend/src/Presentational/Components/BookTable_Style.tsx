@@ -14,7 +14,7 @@ export const Thead = styled.thead`
 export const Tbody = styled.tbody`
   display: block;
   height: 300px;
-  overflow: auto;
+  /* overflow: auto; */
 `;
 
 export const Tbody2 = styled.tbody`

@@ -23,7 +23,7 @@ function ReturnList(props: ReturnList) {
   return (
     <ListStyle.WrapList>
       <ListStyle.ListTitle>반납 책 목록</ListStyle.ListTitle>
-      <BookTable />
+      {/* <BookTable /> */}
       <Btn
         message="위 사항이 맞다면 버튼을 눌러주세요."
         go={props.ReturnComplete}

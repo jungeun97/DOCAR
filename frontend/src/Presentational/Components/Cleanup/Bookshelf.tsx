@@ -77,7 +77,7 @@ function Bookshelf() {
     });
   };
 
-  // 중간에 탈주하는 모달
+  // 중간에 원위치로 돌아가는 모달
   const setCheckModal = () => {
     MySwal.fire({
       title: '현재 정리된 책을 체크해주세요',
@@ -93,9 +93,8 @@ function Bookshelf() {
         </>
       ),
     }).then((result) => {
+      // 확인 버튼을 누르면 반납된 책들만 보여준다.
       if (result.isConfirmed) {
-        // 확인 버튼을 눌렀을 때,
-        // 확인 버튼을 누르면 axios로 다음 책장을 받는다.
         MySwal.fire({
           title: '반납된 책이 맞습니까?',
           timerProgressBar: true,
@@ -156,7 +155,8 @@ function Bookshelf() {
           ))}
         </BookStyle.WrapBooks>
       )} */}
-      <BookTable />
+      
+      {/* <BookTable /> */}
 
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <Btn
@@ -165,7 +165,7 @@ function Bookshelf() {
           setModal();
         }}
         position="absolute"
-        bottom="20px"
+        bottom="10px"
       />
       {/* 모달 띄어서 다음 책장으로 이동시키기 */}
     </BookStyle.WrapClean>
