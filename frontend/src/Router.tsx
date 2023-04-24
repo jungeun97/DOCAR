@@ -18,7 +18,6 @@ function Router() {
         </Route>
         <Route path="/cleanup" element={<CleanupPage />} />
         <Route path="/cleanup/end" element={<EndCleanup />} />
-        {/* <Route index element={<BookList />} /> */}
         <Route path="/cleanup/:id" element={<Bookshelf />} />
       </Routes>
     </BrowserRouter>
