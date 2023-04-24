@@ -49,14 +49,14 @@ function BookList() {
       <BookTable books={books} />
       <Pagenation limit={limit} page={page} totalPosts={BookData.length} setPage={setPage}/>
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
-      {/* <Btn
+      <Btn
         message="이동하기"
         go={() => {
           navigate(`${id}`);
         }}
         position="absolute"
         bottom="10px"
-      /> */}
+      />
     </>
   );
 }
