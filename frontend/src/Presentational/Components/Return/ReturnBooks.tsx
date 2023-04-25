@@ -6,19 +6,22 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import API from '../../../store/api';
 import { useNavigate } from 'react-router-dom';
+import { isReturnState } from '../../../store/atoms';
+import { useRecoilState } from 'recoil';
 
 function ReturnBooks() {
-  // const [isComplete, setIsComplete] = useState(false);
-  const [clickedBtn, setClickedBtn] = useState(false);
+  const [isComplete, setIsComplete] = useState(false);
+  const [isReturn, setIsReturn] = useRecoilState(isReturnState);
 
   const navigate = useNavigate();
   const MySwal = withReactContent(Swal);
 
   const ClickedReturnBtn = () => {
-    setClickedBtn(true);
+    setIsComplete(true);
   };
 
   const ReturnComplete = () => {
+    setIsReturn(false);
     setModal();
     // API.post('returnsuccess')
     //   .then((response) => {
@@ -43,7 +46,7 @@ function ReturnBooks() {
     });
   };
 
-  if (clickedBtn) {
+  if (isComplete) {
     return <ReturnList ReturnComplete={ReturnComplete} />;
   }
   return <ReturnDetail ClickedReturnBtn={ClickedReturnBtn} />;

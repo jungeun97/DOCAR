@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import * as ListStyle from './ReturnList_Style';
-import BookData from '../BookData.json';
 import Btn from '../../Common/Btn';
 import BookTable from '../BookTable';
 import API from '../../../store/api';
