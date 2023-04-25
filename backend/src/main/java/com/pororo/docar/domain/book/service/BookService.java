@@ -30,8 +30,6 @@ public class BookService {
             String apiUrl = "https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=ttbchn98011431002&itemIdType=ISBN&ItemId=" + isbnCode + "&output=js&Version=20131101&OptResult=packing";
             BookApiResponse response = restTemplate.getForObject(apiUrl, BookApiResponse.class);
             BookApiResponse.Item item = response.getItem().get(0);
-            System.out.println("==========================item: " + item.getTitle());
-            System.out.println("==========================item: " + item.getAuthor());
             Book book = Book.builder()
                     .name(item.getTitle())
                     .author(item.getAuthor())
@@ -39,6 +37,9 @@ public class BookService {
                     .depth(item.getSubInfo().getPacking().getSizeDepth())
                     .title_url(item.getCover())
                     .qr_url("바보")
+                    .bookshelf(bookshelfRepository.findById(1L).orElseThrow(
+                            () -> new ResourceNotFoundException("안됨")
+                    ))
                     .build();
             bookList.add(book);
 
