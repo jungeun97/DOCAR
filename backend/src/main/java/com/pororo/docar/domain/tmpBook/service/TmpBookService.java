@@ -1,6 +1,7 @@
 package com.pororo.docar.domain.tmpBook.service;
 
-import com.pororo.docar.domain.book.entity.Book;
+import com.pororo.docar.common.exception.ResourceAlreadyExistsException;
+import com.pororo.docar.common.exception.ResourceNotFoundException;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
 import com.pororo.docar.domain.tmpBook.entity.TmpBook;
@@ -25,6 +26,9 @@ public class TmpBookService {
     @Transactional
     public void insertCartBooks() {
         List<TmpBook> tmpBooks = tmpBookRepository.findAll();
+        if (tmpBooks.isEmpty()) {
+            throw new ResourceNotFoundException("임시 도서 목록이 비어있습니다.");
+        }
 
         for (TmpBook tmpBook : tmpBooks) {
             Long bookId = tmpBook.getBook().getId();
@@ -37,10 +41,8 @@ public class TmpBookService {
                 cartBookRepository.save(cartBook);
                 tmpBookRepository.deleteAll();
             } else {
-                throw new RuntimeException("이미 카트에 존재하는 도서입니다.");
+                throw new ResourceAlreadyExistsException("이미 카트에 존재하는 책 입니다.");
             }
         }
-
     }
-
 }
