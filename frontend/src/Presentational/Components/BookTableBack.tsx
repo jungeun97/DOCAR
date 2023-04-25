@@ -7,7 +7,7 @@ function BookTableBack() {
     <TableStyle.Table>
       <TableStyle.Thead>
         <TableStyle.TableTr2>
-          <TableStyle.ThCheck>체1크</TableStyle.ThCheck>
+          <TableStyle.ThCheck><input type="checkbox" /></TableStyle.ThCheck>
           <TableStyle.ThTitle2>제목</TableStyle.ThTitle2>
           <TableStyle.ThWriter>저자</TableStyle.ThWriter>
         </TableStyle.TableTr2>

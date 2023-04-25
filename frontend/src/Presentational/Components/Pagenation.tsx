@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import * as PageStyle from './Pagenation_Style';
 
 interface Type {
   totalPosts: number;
@@ -35,15 +36,20 @@ function Pagenation({ totalPosts, limit, page, setPage }: Type) {
       {Array(end - start + 1)
         .fill(0)
         .map((_, i) => (
-          <button
-            key={start + i}
-            onClick={() => setPage(start + i)}
-            style={{
-              backgroundColor: start + i === page ? 'red' : 'blue'
-            }}
-          >
-            {start + i}
-          </button>
+          <>
+          {start + i === page ? <SelectedBtn  key={start + i}
+          onClick={() => setPage(start + i)}>{start + i}</SelectedBtn>:<NonSelectedBtn  key={start + i}
+          onClick={() => setPage(start + i)}>{start + i}</NonSelectedBtn>}
+          </>
+          // <button
+          //   key={start + i}
+          //   onClick={() => setPage(start + i)}
+          //   style={{
+          //     backgroundColor: start + i === page ? 'red' : 'blue'
+          //   }}
+          // >
+          //   {start + i}
+          // </button>
         ))}
       <button onClick={() => setPage(page + 1)} disabled={page === numPages}>
         &gt;

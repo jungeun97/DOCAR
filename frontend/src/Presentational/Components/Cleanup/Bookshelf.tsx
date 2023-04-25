@@ -8,6 +8,8 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import BookTable from './../BookTable';
 import BookTableBack from './../BookTableBack';
+import BookTableCheck from './../BookTableCheck';
+import BookTableChecked from './../BookTableChecked';
 
 type recipeParams = {
   params: string;
@@ -89,7 +91,7 @@ function Bookshelf() {
       allowOutsideClick: false,
       html: (
         <>
-          <BookTableBack />
+          <BookTableCheck />
         </>
       ),
     }).then((result) => {
@@ -105,7 +107,7 @@ function Bookshelf() {
           allowOutsideClick: false,
           html: (
             <>
-              <BookTableBack />
+              <BookTableChecked />
             </>
           ),
         }).then((result) => {
