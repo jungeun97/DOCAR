@@ -27,14 +27,20 @@ public class TmpBookService {
         List<TmpBook> tmpBooks = tmpBookRepository.findAll();
 
         for (TmpBook tmpBook : tmpBooks) {
-            CartBook cartBook = CartBook.builder()
-                    .floor(tmpBook.getFloor())
-                    .site(tmpBook.getSite())
-                    .book(tmpBook.getBook())
-                    .build();
-            cartBookRepository.save(cartBook);
+            Long bookId = tmpBook.getBook().getId();
+            if (!(cartBookRepository.findByBookId(bookId).isPresent())) {
+                CartBook cartBook = CartBook.builder()
+                        .floor(tmpBook.getFloor())
+                        .site(tmpBook.getSite())
+                        .book(tmpBook.getBook())
+                        .build();
+                cartBookRepository.save(cartBook);
+                tmpBookRepository.deleteAll();
+            } else {
+                throw new RuntimeException("이미 카트에 존재하는 도서입니다.");
+            }
         }
 
-        tmpBookRepository.deleteAll();
     }
+
 }
