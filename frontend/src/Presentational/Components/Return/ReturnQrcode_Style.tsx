@@ -10,9 +10,18 @@ export const WrapReturn = styled.div`
 `;
 
 export const ReturnText = styled.div`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+`;
+
+export const ImgDiv = styled.div``;
+
+export const barcodeImg = styled.img`
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 80px;
+  margin-right: 50px;
 `;
 
 export const Img = styled.img`
@@ -26,12 +35,12 @@ export const Img = styled.img`
       transform: rotate(0deg);
     }
     75% {
-      transform: rotate(10deg);
+      transform: rotate(5deg);
     }
     100% {
-      transform: rotate(-10deg);
+      transform: rotate(-5deg);
     }
   }
-  margin-bottom: 50px;
   animation: left-right 1s infinite ease-in-out alternate;
+  margin-bottom: 50px;
 `;

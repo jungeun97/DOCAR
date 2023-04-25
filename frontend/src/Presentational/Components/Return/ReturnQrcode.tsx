@@ -1,6 +1,7 @@
 import React from 'react';
 import * as ReturnQrStyle from './ReturnQrcode_Style';
-import qrcode from '../../../Resources/Images/qrcode.png';
+import scanner from '../../../Resources/Images/scanner.png';
+import barcode from '../../../Resources/Images/barcode.png';
 
 interface ReturnQrcode {
   ReturnMode: () => void;
@@ -9,10 +10,13 @@ interface ReturnQrcode {
 function ReturnQrcode(props: ReturnQrcode) {
   return (
     <ReturnQrStyle.WrapReturn>
+      <ReturnQrStyle.ImgDiv>
+        <ReturnQrStyle.barcodeImg src={barcode} onClick={props.ReturnMode} />
+        <ReturnQrStyle.Img src={scanner} onClick={props.ReturnMode} />
+      </ReturnQrStyle.ImgDiv>
       <ReturnQrStyle.ReturnText>
-        반납할 책의 QR을 찍어 주세요.
+        반납할 책의 바코드를 찍어 주세요.
       </ReturnQrStyle.ReturnText>
-      <ReturnQrStyle.Img src={qrcode} onClick={props.ReturnMode} />
     </ReturnQrStyle.WrapReturn>
   );
 }
