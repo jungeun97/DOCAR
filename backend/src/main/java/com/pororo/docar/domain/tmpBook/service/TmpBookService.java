@@ -1,5 +1,6 @@
 package com.pororo.docar.domain.tmpBook.service;
 
+import com.pororo.docar.common.exception.ResourceAlreadyExistsException;
 import com.pororo.docar.domain.book.entity.Book;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
@@ -37,7 +38,7 @@ public class TmpBookService {
                 cartBookRepository.save(cartBook);
                 tmpBookRepository.deleteAll();
             } else {
-                throw new RuntimeException("이미 카트에 존재하는 도서입니다.");
+                throw new ResourceAlreadyExistsException("이미 카트에 존재하는 책 입니다.");
             }
         }
 
