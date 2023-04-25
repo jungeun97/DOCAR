@@ -35,14 +35,14 @@ function LoginPage() {
       ) : (
         <>
           <LoginStyle.WrapPin>
-            <LoginStyle.PinTitle>Login</LoginStyle.PinTitle>
+            <LoginStyle.PinTitle>LOGIN</LoginStyle.PinTitle>
             <LoginStyle.WrapIdpw>
               <LoginStyle.IdIcon />
-              <LoginStyle.PwInput placeholder="admin" disabled />
+              <LoginStyle.LoginInput placeholder="admin" disabled />
             </LoginStyle.WrapIdpw>
             <LoginStyle.WrapIdpw>
               <LoginStyle.PwIcon />
-              <LoginStyle.PwInput
+              <LoginStyle.LoginInput
                 type="password"
                 placeholder="password"
                 name="pw"
@@ -50,13 +50,13 @@ function LoginPage() {
                 onChange={onChage}
               />
             </LoginStyle.WrapIdpw>
-            <LoginStyle.BtnLogin
+            <LoginStyle.WrapBtn
               onClick={() => {
                 navigate('/cleanup');
               }}
             >
               Sign In
-            </LoginStyle.BtnLogin>
+            </LoginStyle.WrapBtn>
           </LoginStyle.WrapPin>
           <Btn
             message="QR로 로그인"
