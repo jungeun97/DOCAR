@@ -2,10 +2,10 @@ package com.pororo.docar.domain.tmpBook.controller;
 
 import com.pororo.docar.common.dto.ApiResponse;
 import com.pororo.docar.domain.tmpBook.dto.TmpBookInfo;
-import com.pororo.docar.domain.tmpBook.entity.TmpBook;
-import com.pororo.docar.domain.tmpBook.repository.TmpBookRepository;
 import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -35,7 +35,9 @@ public class TmpBookController {
 
     @Operation(summary = "책 최종 반납")
     @PostMapping("/returns")
-    @ResponseStatus(HttpStatus.CREATED)
+    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "201", description = "책 최종 반납이 완료됨")
+    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "409", description = "같은 도서가 이미 반납되었습니다.")
+    @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "404", description = "임시 도서 목록이 비어있습니다.")
     public ResponseEntity<ApiResponse> returnBooks() {
         try {
             tmpBookService.insertCartBooks();
@@ -46,6 +48,7 @@ public class TmpBookController {
             return new ResponseEntity<>(response, HttpStatus.CONFLICT);
         }
     }
+
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ApiResponse> handleDataIntegrityViolationException(DataIntegrityViolationException e) {
