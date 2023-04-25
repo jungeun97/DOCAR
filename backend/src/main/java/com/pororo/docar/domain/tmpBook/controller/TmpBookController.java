@@ -8,6 +8,7 @@ import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,8 +37,19 @@ public class TmpBookController {
     @PostMapping("/returns")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<ApiResponse> returnBooks() {
-        tmpBookService.insertCartBooks();
-        ApiResponse response = new ApiResponse<>(true, "반납이 완료되었습니다.");
-        return new ResponseEntity<>(response, HttpStatus.CREATED);
+        try {
+            tmpBookService.insertCartBooks();
+            ApiResponse response = new ApiResponse<>(true, "반납이 완료되었습니다.");
+            return new ResponseEntity<>(response, HttpStatus.CREATED);
+        } catch (DataIntegrityViolationException e) {
+            ApiResponse response = new ApiResponse<>(false, "같은 도서가 이미 반납되었습니다.");
+            return new ResponseEntity<>(response, HttpStatus.CONFLICT);
+        }
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ApiResponse> handleDataIntegrityViolationException(DataIntegrityViolationException e) {
+        ApiResponse response = new ApiResponse<>(false, "데이터 입력에 문제가 발생했습니다.");
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
