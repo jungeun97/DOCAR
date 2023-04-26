@@ -18,8 +18,7 @@ public class BookDto {
     static class Items {
         public String name;
         public String author;
-        public String qr_url;
-        public String title_url;
+        public String cover;
         public int depth;
         public String isbn;
         public Long bookshelf;
