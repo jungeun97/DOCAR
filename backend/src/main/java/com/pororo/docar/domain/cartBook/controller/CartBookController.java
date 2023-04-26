@@ -27,12 +27,12 @@ public class CartBookController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-//    @DeleteMapping("/cartbooks")
-//    public ResponseEntity<ApiResponse> deleteCartBooks() {
-//        cartBookService.deleteSetBooks();
-//        ApiResponse result = new ApiResponse(true, "다음 책장으로 이동하세요");
-//        return new ResponseEntity<>(result, HttpStatus.OK);
-//    }
+    @DeleteMapping("/cartbooks")
+    public ResponseEntity<ApiResponse> deleteCartBooks() {
+        cartBookService.deleteSetBooks();
+        ApiResponse result = new ApiResponse(true, "다음 책장으로 이동하세요");
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
     @PostMapping("/cartbooks")
     public ResponseEntity<ApiResponse<List<BookSetList>>> setBooks() {
