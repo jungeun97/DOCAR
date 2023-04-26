@@ -76,21 +76,21 @@ public class CartBookService {
         return setList;
     }
 
-//    @Transactional
-//    public void deleteSetBooks() {
-//        List<TmpBook> setBookList = tmpBookRepository.findAll();
-//        List<CartBook> doneBookList = cartBookRepository.findAll();
-//
-//        for (TmpBook tmpBook : setBookList) {
-//            for (CartBook cartBook : doneBookList) {
-//                Long id = tmpBook.getBook().getId();
-//                if (id == cartBook.getBook().getId()) {
-//                    cartBookRepository.delete(cartBook);
-//                }
-//            }
-//        }
-//        tmpBookRepository.deleteAll();
-//    }
+    @Transactional
+    public void deleteSetBooks() {
+        List<TmpBook> setBookList = tmpBookRepository.findAll();
+        List<CartBook> doneBookList = cartBookRepository.findAll();
+
+        for (TmpBook tmpBook : setBookList) {
+            for (CartBook cartBook : doneBookList) {
+                Long id = tmpBook.getBook().getId();
+                if (id == cartBook.getBook().getId()) {
+                    cartBookRepository.delete(cartBook);
+                }
+            }
+        }
+        tmpBookRepository.deleteAll();
+    }
 
 
 
