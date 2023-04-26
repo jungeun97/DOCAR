@@ -20,7 +20,7 @@ public class Bookshelf {
     private Long id;
 
     @Column(length = 100, nullable = false)
-    private String qr_url;
+    private String qrUrl;
 
     @Builder.Default
     @OneToMany(mappedBy = "bookshelf", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
