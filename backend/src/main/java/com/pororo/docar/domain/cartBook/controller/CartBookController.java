@@ -20,6 +20,7 @@ import java.util.List;
 public class CartBookController {
     private final CartBookService cartBookService;
 
+
     @GetMapping("/cartbooks")
     public ResponseEntity<ApiResponse<List<BookSetList>>> getBooks() {
         List<BookSetList> bookSetList = cartBookService.getBooks();
@@ -38,7 +39,13 @@ public class CartBookController {
     public ResponseEntity<ApiResponse<List<BookSetList>>> setBooks() {
         List<BookSetList> bookSetLists = cartBookService.getBooksByBookshelf();
         ApiResponse<List<BookSetList>> result = new ApiResponse<>(true, "정리를 시작하세요", bookSetLists);
-        return new ResponseEntity<>(result, HttpStatus.CREATED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/turtlebot")
+    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false) List<Long> bookIds) {
+        cartBookService.goHome(bookIds);
+        ApiResponse result = new ApiResponse(true, "원 위치로 이동합니다");
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 }
