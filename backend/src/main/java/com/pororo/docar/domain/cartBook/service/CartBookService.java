@@ -1,5 +1,6 @@
 package com.pororo.docar.domain.cartBook.service;
 
+import com.pororo.docar.common.exception.ResourceNotFoundException;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
@@ -46,7 +47,6 @@ public class CartBookService {
         orderList.add(2L);
         Long idx = orderList.remove(0);
 
-        System.out.println(idx);
         List<CartBook> bookList = cartBookRepository.findAll();
         for (CartBook cartBook : bookList) {
             if (cartBook.getBook().getBookshelf().getId() == idx) {
@@ -58,12 +58,10 @@ public class CartBookService {
                 list.add(tmpBook);
             }
         }
-        System.out.println(list);
         tmpBookRepository.saveAll(list);
 
         List<BookSetList> setList = new ArrayList<>();
         List<TmpBook> setBookList = tmpBookRepository.findAll();
-        System.out.println(setBookList);
 
         for (TmpBook tmpBook : setBookList) {
             CartBook cartBook = CartBook.builder()
@@ -100,7 +98,7 @@ public class CartBookService {
 
     public CartBook getBookById(Long id) {
         return cartBookRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Id를 확인해주세요."));
+                .orElseThrow(() -> new ResourceNotFoundException("Id를 확인해주세요."));
     }
 
 
