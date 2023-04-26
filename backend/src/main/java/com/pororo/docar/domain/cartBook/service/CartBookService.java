@@ -72,7 +72,6 @@ public class CartBookService {
             System.out.println(cartBook);
             setList.add(new BookSetList().entityToDto(cartBook));
         }
-        System.out.println(setList);
         return setList;
     }
 
@@ -92,9 +91,22 @@ public class CartBookService {
         tmpBookRepository.deleteAll();
     }
 
+    @Transactional
+    public void goHome(List<Long> bookIds) {
+        List<CartBook> doneBookList = cartBookRepository.findAll();
+        if (!bookIds.isEmpty()) {
+           for (Long idx : bookIds) {
+               for (CartBook cartBook : doneBookList) {
+                   if (idx == cartBook.getBook().getId()) {
+                       cartBookRepository.delete(cartBook);
+                   }
+               }
+           }
+        }
+        tmpBookRepository.deleteAll();
+    }
 
-
-    ///////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public CartBook getBookById(Long id) {
         return cartBookRepository.findById(id)
