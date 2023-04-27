@@ -117,7 +117,7 @@ public class TmpBookService {
         tmpBookRepository.save(tmpBook);
 
         // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.deleteByBookId(book.getId());
+        checkoutBookRepository.delete(checkoutBook);
         return new TmpBookInfo(tmpBook);
     }
 
