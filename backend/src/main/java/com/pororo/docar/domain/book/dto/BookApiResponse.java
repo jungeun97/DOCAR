@@ -1,4 +1,4 @@
-package com.pororo.docar.domain.book.service;
+package com.pororo.docar.domain.book.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -46,15 +46,12 @@ public class BookApiResponse {
         public static class SubInfo {
             private Packing packing;
 
-            // 게터/세터 메서드
             @Getter
             @Setter
             @NoArgsConstructor
             @AllArgsConstructor
             public static class Packing {
                 private Long sizeDepth;
-
-                // 게터/세터 메서드
             }
         }
     }
