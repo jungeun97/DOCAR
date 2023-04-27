@@ -1,6 +1,7 @@
 package com.pororo.docar.domain.book.service;
 
 import com.pororo.docar.common.exception.ResourceNotFoundException;
+import com.pororo.docar.domain.book.dto.BookApiResponse;
 import com.pororo.docar.domain.book.entity.Book;
 import com.pororo.docar.domain.book.repository.BookRepository;
 import com.pororo.docar.domain.bookshelf.repository.BookshelfRepository;
