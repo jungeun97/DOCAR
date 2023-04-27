@@ -2,22 +2,21 @@ import React, { useEffect } from 'react';
 import * as ListStyle from './ReturnList_Style';
 import Btn from '../../Common/Btn';
 import BookTable from '../BookTable';
-import API from '../../../store/api';
+import { getReturnList } from '../../../store/api';
 
 interface ReturnList {
   ReturnComplete: () => void;
 }
 
 function ReturnList(props: ReturnList) {
-  // useEffect(() => {
-  //   API.get('returnlist')
-  //   .then((response) => {
-  //     console.log(response.data);
-  //   })
-  //   .catch((error) => {
-  //     console.error(error);
-  //   });
-  // }, [])
+  useEffect(() => {
+    const getUserPageInfo = async () => {
+      const request = await getReturnList();
+      console.log('request', request);
+      // setUserPageInfo(request);
+    };
+    getUserPageInfo();
+  }, []);
 
   return (
     <ListStyle.WrapList>
