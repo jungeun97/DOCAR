@@ -23,7 +23,7 @@ public class CartBook {
     private Long site;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "book_id")
+    @JoinColumn(name = "book_id", nullable = false)
     private Book book;
 
     public void setBook(Book book) {
