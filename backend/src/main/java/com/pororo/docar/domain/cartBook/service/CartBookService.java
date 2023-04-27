@@ -45,6 +45,9 @@ public class CartBookService {
         List<TmpBook> list = new ArrayList<>();
         orderList.add(1L);
         orderList.add(2L);
+        orderList.add(3L);
+        orderList.add(4L);
+        orderList.add(5L);
         Long idx = orderList.remove(0);
 
         List<CartBook> bookList = cartBookRepository.findAll();
