@@ -57,7 +57,7 @@ public class CartBookService {
                             .site(cartBook.getSite())
                             .book(cartBook.getBook())
                             .build();
-                    if (!tmpBookRepository.existsById(tmpBook.getBook().getId())) {
+                    if (!tmpBookRepository.existsByBook(tmpBook.getBook())) {
                         list.add(tmpBook);
                     }
                 }

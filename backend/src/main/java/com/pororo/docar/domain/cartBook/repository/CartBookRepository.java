@@ -18,6 +18,4 @@ public interface CartBookRepository extends JpaRepository<CartBook, Long> {
 
     @Query("SELECT MAX(cb.site) FROM CartBook cb WHERE cb.floor = :floor")
     Optional<Long> findMaxSiteByFloor(@Param("floor") Long floor);
-
-    boolean existsById(Long id);
 }
