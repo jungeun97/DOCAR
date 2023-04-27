@@ -25,7 +25,7 @@ export const WrapBooks = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   `;
 
