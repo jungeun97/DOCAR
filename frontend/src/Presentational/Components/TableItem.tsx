@@ -39,9 +39,9 @@ function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
       <TableStyle.ThTitle2>
         <TableStyle.BookName>{book.title}</TableStyle.BookName>
       </TableStyle.ThTitle2>
-      <TableStyle.ThWriter>
-        <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
-      </TableStyle.ThWriter>
+      <TableStyle.ThBookFloor>
+        <TableStyle.BookFloor>{book.writer}</TableStyle.BookFloor>
+      </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );
 }

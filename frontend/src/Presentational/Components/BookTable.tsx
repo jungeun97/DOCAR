@@ -2,6 +2,7 @@ import React from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 import axios from 'axios';
+import * as API from '../../store/api';
 
 interface Props {
   id: number;
@@ -11,31 +12,32 @@ interface Props {
 }
 
 interface BookTableProps {
-  books: Props[];
+  books: API.CartBookType[];
 }
 
 function BookTable({ books }: BookTableProps) {
+  console.log(books);
   return (
     <TableStyle.Table>
       <TableStyle.Thead>
         <TableStyle.TableTr2>
-          <TableStyle.ThImg>표지</TableStyle.ThImg>
           <TableStyle.ThTitle>제목</TableStyle.ThTitle>
-          <TableStyle.ThWriter>저자</TableStyle.ThWriter>
+          <TableStyle.ThBookFloor>서랍 번호</TableStyle.ThBookFloor>
+          {/* <TableStyle.ThImg>서랍 번호</TableStyle.ThImg> */}
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
         {books.map((book, idx) => (
           <TableStyle.TableTr key={idx}>
-            <TableStyle.ThImg>
-              <TableStyle.BookImg src={book.imgurl} />
-            </TableStyle.ThImg>
             <TableStyle.ThTitle>
-              <TableStyle.BookName>{book.title}</TableStyle.BookName>
+              <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>
-            <TableStyle.ThWriter>
-              <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
-            </TableStyle.ThWriter>
+            <TableStyle.ThBookFloor>
+              <TableStyle.BookFloor>{book.cartBookFloor}</TableStyle.BookFloor>
+            </TableStyle.ThBookFloor>
+            {/* <TableStyle.ThImg>
+              <TableStyle.BookName>{book.cartBookSite}</TableStyle.BookName>
+            </TableStyle.ThImg> */}
           </TableStyle.TableTr>
         ))}
       </TableStyle.Tbody>

@@ -7,6 +7,17 @@ export interface ReturnList {
   bookName: string;
 }
 
+export interface CartBookType {
+  bookName: string;
+  cartBookFloor: number;
+  cartBookSite: number;
+  bookshelfId: number;
+}
+
+export interface CartBooksType extends Array<CartBookType> {
+  content: [];
+}
+
 const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
 
 function printError(error: AxiosError) {
@@ -36,3 +47,50 @@ export async function getReturnList(): Promise<ReturnList | null> {
 
   return data;
 }
+
+// cartbooks GET
+// cartbooks 카트 도서 목록 전체 조회
+export async function getCartBookList(): Promise<CartBooksType | null> {
+  let data: CartBooksType | null = null;
+
+  try {
+    const res = await axios.get(`${API_URL}/cartbooks`, {
+      withCredentials: true,
+    });
+
+    data = res.data.data as CartBooksType;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+  }
+
+  return data;
+}
+// cartbooks POST
+// cartbooks 책장 정리
+export async function PostCartBookList(): Promise<CartBooksType | null> {
+  let data: CartBooksType | null = null;
+
+  try {
+    const res = await axios.post(`${API_URL}/cartbooks`, {
+      withCredentials: true,
+    });
+
+    data = res.data.data as CartBooksType;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+  }
+
+  return data;
+}
+
+export function CleanBookShelf() {
+  return axios
+    .delete(`${API_URL}/cartbooks`, {
+      withCredentials: true,
+    })
+    .then((res) => res.data)
+    .catch((res) => res);
+}
+
+// cartbooks 청소완료 후 원위치로
+// export async function ReturnCart(): Promise

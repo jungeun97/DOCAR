@@ -12,6 +12,7 @@ import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
 import BookData from '../BookData.json';
 import Pagenation from './../Pagenation';
+import * as API from '../../../store/api';
 
 interface Props {
   id: number;
@@ -20,41 +21,41 @@ interface Props {
   writer: string;
 }
 
+const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
+
 function Bookshelf() {
-  const [books, setBooks] = useState<Props[]>([]);
-  const { id } = useParams() as { id: string };
+  const [books, setBooks] = useState<null | API.CartBooksType>(null);
+  const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
+  // const { id } = useParams() as { id: string };
+
+  // 카트 도서 목록 전체 조회
+  useEffect(() => {
+    const PostCartBooks = async () => {
+      const request = await API.PostCartBookList();
+      console.log("데이터 읽기")
+      setBooks(request);
+      booksData(request);
+    };
+    PostCartBooks();
+  }, []);
 
   // 페이지 네이션
   const [page, setPage] = useState(1); // 페이지
   const limit = 3; // 몇개 볼거?
   const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
 
-  const booksData = (books: Props[]) => {
+  const booksData = (books: null | API.CartBooksType) => {
     if (books) {
       let result = books.slice(offset, offset + limit);
-      console.log(123);
-      console.log(result);
-      setBooks(result);
-      // return result;
+      setCurbooks(result);
     }
   };
 
   useEffect(() => {
-    booksData(BookData);
-  }, []);
-
-  useEffect(() => {
-    booksData(BookData);
+    booksData(books);
   }, [page]);
 
   const navigate = useNavigate();
-
-  // const GetBooks = () => {
-  //   axios.get('https://jsonplaceholder.typicode.com/todos').then((res) => {
-  //     setBooks(res.data);
-  //     console.log(res.data);
-  //   });
-  // };
 
   const MySwal = withReactContent(Swal);
 
@@ -62,9 +63,7 @@ function Bookshelf() {
   const setModal = () => {
     MySwal.fire({
       title: '모든 책을 정리하셨습니까?',
-      // timer: 1500,
       timerProgressBar: true,
-      // showConfirmButton: false,
       showCancelButton: true,
       showConfirmButton: true,
       cancelButtonText: '아니오',
@@ -74,34 +73,43 @@ function Bookshelf() {
     }).then((result) => {
       if (result.isConfirmed) {
         // 확인 버튼을 눌렀을 때,
-        MySwal.fire({
-          icon: 'success',
-          title: '책장 정리 완료!',
-          // timer: 1500,
-          timerProgressBar: true,
-          // showConfirmButton: false,
-          showCancelButton: true,
-          showConfirmButton: true,
-          cancelButtonText: '정리 종료',
-          confirmButtonText: '다음 책장으로 이동',
-          allowOutsideClick: false,
-          html: <div></div>,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // 확인 버튼을 눌렀을 때,
-            // 확인 버튼을 누르면 axios로 다음 책장을 받는다.
-            console.log(result); // 다음 책장이 있으면 다음 페이지로 넘어가고, 없으면 마무리 페이지로 간다.
-            axios
-              .get('https://jsonplaceholder.typicode.com/todos')
-              .then((res) => {
-                // setBooks(res.data);
-                console.log('도서 정리 완료 요청 성공');
-                navigate(`/cleanup/2`);
-              });
-          } else {
-            navigate(`/cleanup/end`);
-          }
-        });
+        axios
+          .delete(`${API_URL}/cartbooks`, {
+            withCredentials: true,
+          })
+          // 책장 정리 완료했으니깐 삭제
+          .then((res) => {
+            console.log('삭제')
+            MySwal.fire({
+              icon: 'success',
+              title: '책장 정리 완료!',
+              // timer: 1500,
+              timerProgressBar: true,
+              // showConfirmButton: false,
+              showCancelButton: true,
+              showConfirmButton: true,
+              cancelButtonText: '정리 종료',
+              confirmButtonText: '다음 책장으로 이동',
+              allowOutsideClick: false,
+              html: <div></div>,
+            }).then((result) => {
+              if (result.isConfirmed) {
+                axios
+                  .post(`${API_URL}/cartbooks`, {
+                    withCredentials: true,
+                  })
+                  // 책장 정리 완료했으니깐 삭제
+                  .then((res) => {
+                    console.log('다시데이터 읽기')
+                    setBooks(res.data.data);
+                    booksData(res.data.data);
+                  })
+                  .catch((res) => console.log(res));
+              } else {
+              }
+            });
+          })
+          .catch((res) => res);
       } else {
       }
     });
@@ -173,21 +181,16 @@ function Bookshelf() {
         top="-20px"
         right="18px"
       />
-      <BookStyle.Title>{id}번 책장 반납도서</BookStyle.Title>
-      {/* {books && (
-        <BookStyle.WrapBooks>
-          {books.map((book) => (
-            <BookItem book={book} />
-          ))}
-        </BookStyle.WrapBooks>
-      )} */}
-      <BookTable books={books} />
-      <Pagenation
-        limit={limit}
-        page={page}
-        totalPosts={BookData.length}
-        setPage={setPage}
-      />
+      <BookStyle.Title>현재 책장 반납도서</BookStyle.Title>
+      <BookTable books={curbooks} />
+      {books ? (
+        <Pagenation
+          limit={limit}
+          page={page}
+          totalPosts={books.length}
+          setPage={setPage}
+        />
+      ) : null}
       {/* 여기서 이동할 때 이동해야할 책장 경로 */}
       <Btn
         message={`정리완료`}
