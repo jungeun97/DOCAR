@@ -52,7 +52,7 @@ public class BookApiResponse {
             @NoArgsConstructor
             @AllArgsConstructor
             public static class Packing {
-                private double sizeDepth;
+                private Long sizeDepth;
 
                 // 게터/세터 메서드
             }

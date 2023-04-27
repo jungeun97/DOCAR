@@ -35,8 +35,7 @@ public class BookService {
                     .author(item.getAuthor())
                     .isbn(item.getIsbn13())
                     .depth(item.getSubInfo().getPacking().getSizeDepth())
-                    .title_url(item.getCover())
-                    .qr_url("바보")
+                    .cover(item.getCover())
                     .bookshelf(bookshelfRepository.findById(1L).orElseThrow(
                             () -> new ResourceNotFoundException("안됨")
                     ))
