@@ -2,6 +2,7 @@ package com.pororo.docar.domain.tmpBook.controller;
 
 import com.pororo.docar.common.dto.ApiResponse;
 import com.pororo.docar.domain.tmpBook.dto.TmpBookInfo;
+import com.pororo.docar.domain.tmpBook.entity.TmpBook;
 import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -21,6 +22,15 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TmpBookController {
     private final TmpBookService tmpBookService;
+
+    @Operation(summary = "한권씩 바코드 인식 반납")
+    @PostMapping("/isbn/{isbn}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<TmpBookInfo> handleQrReturns(@PathVariable("isbn") String isbn) {
+        TmpBookInfo tmpBook = tmpBookService.moveCheckedOutBookToTmpBook(isbn);
+        ApiResponse<TmpBookInfo> response = new ApiResponse<>(true, "Success", tmpBook);
+        return new ResponseEntity(response, HttpStatus.OK);
+    }
 
     @Operation(summary = "책 최종 반납 전 확인")
     @GetMapping("/returns")
