@@ -24,6 +24,7 @@ public class CartBookController {
 
     @Operation(summary = "카트에 있는 전체 책 정보 출력")
     @GetMapping("/cartbooks")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ApiResponse<List<BookSetList>>> getBooks() {
         List<BookSetList> bookSetList = cartBookService.getBooks();
         ApiResponse<List<BookSetList>> result = new ApiResponse<>(true, "책 정리 리스트", bookSetList);
@@ -32,6 +33,7 @@ public class CartBookController {
 
     @Operation(summary = "정리가 완료된 책 목록 카트에서 삭제")
     @DeleteMapping("/cartbooks")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ApiResponse> deleteCartBooks() {
         cartBookService.deleteSetBooks();
         ApiResponse result = new ApiResponse(true, "다음 책장으로 이동하세요");
@@ -40,6 +42,7 @@ public class CartBookController {
 
     @Operation(summary = "해당 책장에서 정리해야하는 책 목록 출력")
     @PostMapping("/cartbooks")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ApiResponse<List<BookSetList>>> setBooks() {
         List<BookSetList> bookSetLists = cartBookService.getBooksByBookshelf();
         ApiResponse<List<BookSetList>> result = new ApiResponse<>(true, "정리를 시작하세요", bookSetLists);
@@ -48,7 +51,8 @@ public class CartBookController {
 
     @Operation(summary = "원위치 버튼 클릭시 행동")
     @GetMapping("/turtlebot")
-    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false) List<Long> bookIds) {
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false, defaultValue = "") List<Long> bookIds) {
         cartBookService.goHome(bookIds);
         ApiResponse result = new ApiResponse(true, "원 위치로 이동합니다");
         return new ResponseEntity<>(result, HttpStatus.OK);
