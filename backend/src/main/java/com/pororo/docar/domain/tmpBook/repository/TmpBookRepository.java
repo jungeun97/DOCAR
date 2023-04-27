@@ -17,4 +17,5 @@ public interface TmpBookRepository extends JpaRepository<TmpBook, Long> {
     @Query("SELECT MAX(t.site) FROM TmpBook t WHERE t.floor = :floor")
     Optional<Long> findMaxSiteByFloor(@Param("floor") Long floor);
 
+    boolean existsByBook(Book book);
 }

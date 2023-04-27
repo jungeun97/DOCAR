@@ -48,7 +48,7 @@ public class CartBookController {
 
     @Operation(summary = "원위치 버튼 클릭시 행동")
     @GetMapping("/turtlebot")
-    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false) List<Long> bookIds) {
+    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false, defaultValue = "") List<Long> bookIds) {
         cartBookService.goHome(bookIds);
         ApiResponse result = new ApiResponse(true, "원 위치로 이동합니다");
         return new ResponseEntity<>(result, HttpStatus.OK);
