@@ -10,12 +10,12 @@ interface ReturnList {
 
 function ReturnList(props: ReturnList) {
   useEffect(() => {
-    const getUserPageInfo = async () => {
+    const getReturnListAPI = async () => {
       const request = await getReturnList();
       console.log('request', request);
       // setUserPageInfo(request);
     };
-    getUserPageInfo();
+    getReturnListAPI();
   }, []);
 
   return (

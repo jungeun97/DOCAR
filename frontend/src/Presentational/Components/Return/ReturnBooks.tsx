@@ -8,6 +8,8 @@ import withReactContent from 'sweetalert2-react-content';
 import { useNavigate } from 'react-router-dom';
 import { isReturnState } from '../../../store/atoms';
 import { useRecoilState } from 'recoil';
+import { AddReturnBook } from '../../../store/api';
+import { AxiosError } from 'axios';
 
 function ReturnBooks() {
   const [isComplete, setIsComplete] = useState(false);
@@ -20,23 +22,27 @@ function ReturnBooks() {
     setIsComplete(true);
   };
 
-  const ReturnComplete = () => {
-    setIsReturn(false);
-    setModal();
-    // API.post('returnsuccess')
-    //   .then((response) => {
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
+  const AddReturnBookAPI = async () => {
+    const request = await AddReturnBook();
+    if (request === false) {
+      setModal(new Error('반납 처리에 실패했습니다.'));
+    } else {
+      setModal();
+    }
   };
 
-  const setModal = () => {
+  const ReturnComplete = () => {
+    setIsReturn(false);
+    AddReturnBookAPI();
+    setModal();
+  };
+
+  const setModal = (error?: Error) => {
+    const text = error ? error.message : '감사합니다.';
     MySwal.fire({
-      title: '반납이 완료되었습니다.',
-      text: '감사합니다.',
-      icon: 'success',
+      title: error ? '오류 발생!' : '반납이 완료되었습니다.',
+      text,
+      icon: error ? 'error' : 'success',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: '확인',

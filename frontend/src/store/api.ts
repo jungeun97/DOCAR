@@ -11,11 +11,11 @@ const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
 
 function printError(error: AxiosError) {
   if (error.response) {
-    // console.log(error.response.data);
+    console.log(error.response.data);
   } else if (error.message) {
-    // console.log('오류 메시지:', error.message);
+    console.log('오류 메시지:', error.message);
   } else {
-    // console.log('알 수 없는 오류가 발생했습니다.');
+    console.log('알 수 없는 오류가 발생했습니다.');
   }
 }
 
@@ -31,8 +31,24 @@ export async function getReturnList(): Promise<ReturnList | null> {
     data = res.data.data as ReturnList;
   } catch (error) {
     const axiosError = error as AxiosError;
-    // printError(axiosError);
+    printError(axiosError);
   }
 
   return data;
+}
+
+// 책 최종 반납
+export async function AddReturnBook(): Promise<Boolean | null> {
+  let success: Boolean | null = null;
+  try {
+    const res = await axios.post(`${API_URL}/returns`, {
+      withCredentials: true,
+    });
+    success = res.data.success as Boolean;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    printError(axiosError);
+  }
+
+  return success;
 }
