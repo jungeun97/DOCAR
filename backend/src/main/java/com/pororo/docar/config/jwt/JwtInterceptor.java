@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-@Slf4j
 @RequiredArgsConstructor
 public class JwtInterceptor implements HandlerInterceptor {
 
@@ -51,9 +50,8 @@ public class JwtInterceptor implements HandlerInterceptor {
             throw new UnAuthorizedException("권한이 없습니다.");
         }
 
-        log.info("token={" + token + "}");
         if (!jwtService.validateToken(token)) {
-            log.error("권한이 만료되거나 없습니다.");
+//            log.error("권한이 만료되거나 없습니다.");
             throw new UnAuthorizedException("권한이 만료되었습니다.");
         } else {
             return true;
