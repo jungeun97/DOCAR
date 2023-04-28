@@ -4,13 +4,15 @@ import BookImage from '../../../Resources/Images/BookImage.jpg';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
-// import API from '../../../store/api';
+import socket from '../../../socket';
 
 interface ReturnDetail {
   ClickedReturnBtn: () => void;
 }
 
 function ReturnDetail(props: ReturnDetail) {
+  const [barcodeNum, setBarcodeNum] = useState(null);
+  const [prevBarcodeNum, setPrevBarcodeNum] = useState(null);
   const [distance, setDistance] = useState(0);
   const [seosorData, setSensorData] = useState(0);
   const [qrUrl, setQrUrl] = useState('');
@@ -20,6 +22,20 @@ function ReturnDetail(props: ReturnDetail) {
   const ChangeDistance = () => {
     setDistance(distance + 1);
   };
+
+  socket.on('barcode', (barcodeData) => {
+    console.log(`현재 책의 바코드: ${barcodeData}`);
+    if (barcodeData !== prevBarcodeNum) {
+      setPrevBarcodeNum(barcodeData);
+      setBarcodeNum(barcodeData);
+    }
+  });
+
+  useEffect(() => {
+    if (barcodeNum) {
+      handleReturn();
+    }
+  }, [barcodeNum]);
 
   const handleReturn = () => {
     if (seosorData !== distance) {
