@@ -20,7 +20,7 @@ public class Admin {
     private String name;
 
     @Column(name = "pin_number")
-    private int pinNumber = 0;
+    private String pinNumber = "0000";
 
 //    public Admin() {}
 //

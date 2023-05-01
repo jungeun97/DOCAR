@@ -6,18 +6,20 @@ import com.pororo.docar.domain.tmpBook.dto.TmpBookInfo;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 @Component
+@Slf4j
 public class JwtProvider {
 
-    @Value("${jwt.secretKey)")
+    @Value("${jwt.secretKey}")
     private String secretKey;
 
-    @Value("${jwt.expirationTime)")
+    @Value("${jwt.expirationTime}")
     private long expiredTime;
 
     public String createToken(AdminDto adminDto) {
@@ -51,6 +53,7 @@ public class JwtProvider {
     }
 
     public boolean checkRole(String jwtToken, String URI){
+        log.info("check role");
         try {
             Claims claims = Jwts.parser()
                     .setSigningKey(secretKey.getBytes())

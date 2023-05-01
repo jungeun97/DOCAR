@@ -26,19 +26,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers(HttpMethod.PUT, "/**").authenticated()
 //                .antMatchers(HttpMethod.DELETE, "/**").authenticated()
 //                .antMatchers(HttpMethod.PATCH, "/**").authenticated()
-//                .antMatchers(HttpMethod.GET, "/my-profile").authenticated()
-                .anyRequest().permitAll();
+//                .antMatchers(HttpMethod.GET, "/**").authenticated();
+                .antMatchers("/**").permitAll()
+                 .antMatchers("/login").permitAll();
 
-        http.cors()                     // CORS on
-                .and()
-                .csrf().disable()           // CSRF off
-                .httpBasic().disable()     // Basic Auth off
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Session off
+
+//        http.cors()                     // CORS on
+//                .and()
+//                .csrf().disable()           // CSRF off
+//                .httpBasic().disable()     // Basic Auth off
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Session off
+        http.cors().disable()
+                .csrf().disable()
+                .formLogin().disable()
+                .headers().frameOptions().disable();
 
 
         http.logout()
                 .disable();
     }
+
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
