@@ -62,8 +62,6 @@ export const ThTitle2 = styled.th`
   border-right: 1px solid black;
 `;
 
-
-
 export const ThCheck = styled.th`
   width: 50px;
 `;
@@ -78,3 +76,9 @@ export const BookName = styled.div`
 `;
 
 export const BookFloor = styled.div``;
+
+export const ThWriter = styled.th`
+  width: 150px;
+`;
+
+export const BookWriter = styled.div``;

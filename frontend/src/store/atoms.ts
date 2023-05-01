@@ -5,3 +5,9 @@ export const isReturnState = atom({
   key: 'isReturnState',
   default: false,
 });
+
+// 책 바코드
+export const barcodeNumState = atom({
+  key: 'barcodeNumState',
+  default: 0,
+});

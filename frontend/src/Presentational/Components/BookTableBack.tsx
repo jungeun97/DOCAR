@@ -24,10 +24,10 @@ function BookTableBack() {
               />
             </TableStyle.ThCheck>
             <TableStyle.ThTitle2>
-              <TableStyle.BookName>{book.title}</TableStyle.BookName>
+              <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle2>
             <TableStyle.ThBookFloor>
-              <TableStyle.BookFloor>{book.writer}</TableStyle.BookFloor>
+              <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
             </TableStyle.ThBookFloor>
           </TableStyle.TableTr3>
         ))}

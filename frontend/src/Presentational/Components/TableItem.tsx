@@ -4,9 +4,9 @@ import BookData from './BookData.json';
 
 interface Type1 {
   id: number;
-  title: string;
-  writer: string;
-  imgurl: string;
+  bookName: string;
+  author: string;
+  cover: string;
 }
 
 interface Type {
@@ -37,10 +37,10 @@ function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
         />
       </TableStyle.ThCheck>
       <TableStyle.ThTitle2>
-        <TableStyle.BookName>{book.title}</TableStyle.BookName>
+        <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
       </TableStyle.ThTitle2>
       <TableStyle.ThBookFloor>
-        <TableStyle.BookFloor>{book.writer}</TableStyle.BookFloor>
+        <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
       </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );

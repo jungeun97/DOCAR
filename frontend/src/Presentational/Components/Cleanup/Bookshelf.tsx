@@ -24,8 +24,8 @@ interface Props {
 const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
 
 function Bookshelf() {
-  const [books, setBooks] = useState<null | API.CartBooksType>(null);
-  const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
+  const [books, setBooks] = useState<null | API.BookDetail>(null);
+  const [curbooks, setCurbooks] = useState<API.BookDetail[]>([]);
   // const { id } = useParams() as { id: string };
 
   // 카트 도서 목록 전체 조회
@@ -44,7 +44,7 @@ function Bookshelf() {
   const limit = 3; // 몇개 볼거?
   const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
 
-  const booksData = (books: null | API.CartBooksType) => {
+  const booksData = (books: null | API.BookDetail) => {
     if (books) {
       let result = books.slice(offset, offset + limit);
       setCurbooks(result);
