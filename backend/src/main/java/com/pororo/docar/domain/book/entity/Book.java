@@ -46,7 +46,7 @@ public class Book {
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
     private CartBook cartBook = null;
 
-    @Builder.Default
+//    @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
     private TmpBook tmpBook = null;
 
