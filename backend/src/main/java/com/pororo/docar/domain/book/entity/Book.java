@@ -40,15 +40,15 @@ public class Book {
 
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private CheckoutBook checkoutBook = new CheckoutBook();
+    private CheckoutBook checkoutBook = null;
 
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private CartBook cartBook = new CartBook();
+    private CartBook cartBook = null;
 
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private TmpBook tmpBook = new TmpBook();
+    private TmpBook tmpBook = null;
 
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {
