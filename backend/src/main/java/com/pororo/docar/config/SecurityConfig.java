@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers(HttpMethod.DELETE, "/**").authenticated()
 //                .antMatchers(HttpMethod.PATCH, "/**").authenticated()
 //                .antMatchers(HttpMethod.GET, "/**").authenticated();
-                .antMatchers("/**").permitAll()
+                 .antMatchers("/**").permitAll()
                  .antMatchers("/login").permitAll();
 
 
