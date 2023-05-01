@@ -2,16 +2,10 @@ import React from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 import axios from 'axios';
-
-interface Props {
-  id: number;
-  title: string;
-  imgurl: string;
-  writer: string;
-}
+import { BookDetail } from '../../store/api';
 
 interface BookTableProps {
-  books: Props[];
+  books: BookDetail[];
 }
 
 function BookTable({ books }: BookTableProps) {
@@ -26,15 +20,15 @@ function BookTable({ books }: BookTableProps) {
       </TableStyle.Thead>
       <TableStyle.Tbody>
         {books.map((book, idx) => (
-          <TableStyle.TableTr key={idx}>
+          <TableStyle.TableTr key={book.id}>
             <TableStyle.ThImg>
-              <TableStyle.BookImg src={book.imgurl} />
+              <TableStyle.BookImg src={book.cover} />
             </TableStyle.ThImg>
             <TableStyle.ThTitle>
-              <TableStyle.BookName>{book.title}</TableStyle.BookName>
+              <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>
             <TableStyle.ThWriter>
-              <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
+              <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
             </TableStyle.ThWriter>
           </TableStyle.TableTr>
         ))}

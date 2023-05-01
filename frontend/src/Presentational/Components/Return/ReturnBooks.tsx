@@ -8,13 +8,14 @@ import withReactContent from 'sweetalert2-react-content';
 import { useNavigate } from 'react-router-dom';
 import { isReturnState } from '../../../store/atoms';
 import { useRecoilState } from 'recoil';
-import { AddReturnBook } from '../../../store/api';
+import { AddReturnBookList } from '../../../store/api';
 import { AxiosError } from 'axios';
+
+
 
 function ReturnBooks() {
   const [isComplete, setIsComplete] = useState(false);
   const [isReturn, setIsReturn] = useRecoilState(isReturnState);
-
   const navigate = useNavigate();
   const MySwal = withReactContent(Swal);
 
@@ -23,7 +24,7 @@ function ReturnBooks() {
   };
 
   const AddReturnBookAPI = async () => {
-    const request = await AddReturnBook();
+    const request = await AddReturnBookList();
     if (request === false) {
       setModal(new Error('반납 처리에 실패했습니다.'));
     } else {
@@ -54,8 +55,20 @@ function ReturnBooks() {
 
   if (isComplete) {
     return <ReturnList ReturnComplete={ReturnComplete} />;
-  }
-  return <ReturnDetail ClickedReturnBtn={ClickedReturnBtn} />;
+  } 
+  // else if (props.barcodeNum !== 0) {
+  //   return (
+  //     <ReturnDetail
+  //       ClickedReturnBtn={ClickedReturnBtn}
+  //       initBarcodeNum={props.barcodeNum}
+  //     />
+  //   );
+  // }
+  return (
+    <ReturnDetail
+      ClickedReturnBtn={ClickedReturnBtn}
+    />
+  );
 }
 
 export default ReturnBooks;

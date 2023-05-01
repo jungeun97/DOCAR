@@ -12,16 +12,10 @@ import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
 import BookData from '../BookData.json';
 import Pagenation from './../Pagenation';
-
-interface Props {
-  id: number;
-  title: string;
-  imgurl: string;
-  writer: string;
-}
+import { BookDetail } from '../../../store/api';
 
 function Bookshelf() {
-  const [books, setBooks] = useState<Props[]>([]);
+  const [books, setBooks] = useState<BookDetail[]>([]);
   const { id } = useParams() as { id: string };
 
   // 페이지 네이션
@@ -29,7 +23,7 @@ function Bookshelf() {
   const limit = 3; // 몇개 볼거?
   const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
 
-  const booksData = (books: Props[]) => {
+  const booksData = (books: BookDetail[]) => {
     if (books) {
       let result = books.slice(offset, offset + limit);
       console.log(123);
