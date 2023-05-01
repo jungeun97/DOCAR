@@ -15,12 +15,11 @@ function BookTableChecked() {
             {/* 책 하나씩 들어가니깐 */}
             {BookData.map((book) => (
               <TableStyle.TableTr3>
- 
                 <TableStyle.ThTitle2>
-                  <TableStyle.BookName>{book.title}</TableStyle.BookName>
+                  <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
                 </TableStyle.ThTitle2>
                 <TableStyle.ThWriter>
-                  <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
+                  <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
                 </TableStyle.ThWriter>
               </TableStyle.TableTr3>
             ))}

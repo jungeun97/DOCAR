@@ -1,230 +1,272 @@
 [
   {
     "id": 0,
-    "title": "24단계 실습으로 정복하는 쿠버네티스",
-    "writer": "이정훈 저",
-    "imgurl": "https://wikibook.co.kr/images/cover/s/9791158393717.jpg"
+    "bookName": "24단계 실습으로 정복하는 쿠버네티스",
+    "author": "이정훈 저",
+    "cover": "https://wikibook.co.kr/images/cover/s/9791158393717.jpg"
   },
   {
     "id": 1,
-    "title": "Java의 정석",
-    "writer": "남궁성 저",
-    "imgurl": "http://image.yes24.com/goods/24259565/XL"
+    "bookName": "Java의 정석",
+    "author": "남궁성 저",
+    "cover": "http://image.yes24.com/goods/24259565/XL"
   },
   {
     "id": 2,
-    "title": "파이썬 라이브러리를 활용한 데이터 분석",
-    "writer": "웨스 맥키니 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
   },
   {
     "id": 3,
-    "title": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
-    "writer": "김영호 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
   },
   {
     "id": 4,
-    "title": "혼자 공부하는 파이썬",
-    "writer": "윤인성 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
   },
   {
     "id": 5,
-    "title": "인문학도, 개발자되다",
-    "writer": "마르코 저",
-    "imgurl": "http://image.yes24.com/goods/67015072/XL"
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
   },
   {
     "id": 6,
-    "title": "객체지향의 사실과 오해",
-    "writer": "조영호 저",
-    "imgurl": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
   },
   {
     "id": 7,
-    "title": "데이터베이스 첫걸음",
-    "writer": "오라클자바커뮤니티 저",
-    "imgurl": "http://image.yes24.com/goods/32613394/XL"
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
   },
   {
     "id": 8,
-    "title": "이것이 C#이다",
-    "writer": "박상현 저",
-    "imgurl": "http://image.yes24.com/goods/96674785/XL"
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
   },
   {
     "id": 9,
-    "title": "Clean Code",
-    "writer": "로버트 C. 마틴 저",
-    "imgurl": "http://image.yes24.com/goods/11681152/XL"
+    "bookName": "Clean Code",
+    "author": "로버트 C. 마틴 저",
+    "cover": "http://image.yes24.com/goods/11681152/XL"
   },
   {
     "id": 2,
-    "title": "파이썬 라이브러리를 활용한 데이터 분석",
-    "writer": "웨스 맥키니 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
   },
   {
     "id": 3,
-    "title": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
-    "writer": "김영호 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
   },
   {
     "id": 4,
-    "title": "혼자 공부하는 파이썬",
-    "writer": "윤인성 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
   },
   {
     "id": 5,
-    "title": "인문학도, 개발자되다",
-    "writer": "마르코 저",
-    "imgurl": "http://image.yes24.com/goods/67015072/XL"
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
   },
   {
     "id": 6,
-    "title": "객체지향의 사실과 오해",
-    "writer": "조영호 저",
-    "imgurl": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
   },
   {
     "id": 7,
-    "title": "데이터베이스 첫걸음",
-    "writer": "오라클자바커뮤니티 저",
-    "imgurl": "http://image.yes24.com/goods/32613394/XL"
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
   },
   {
     "id": 8,
-    "title": "이것이 C#이다",
-    "writer": "박상현 저",
-    "imgurl": "http://image.yes24.com/goods/96674785/XL"
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
   },
   {
     "id": 2,
-    "title": "파이썬 라이브러리를 활용한 데이터 분석",
-    "writer": "웨스 맥키니 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
   },
   {
     "id": 3,
-    "title": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
-    "writer": "김영호 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
   },
   {
     "id": 4,
-    "title": "혼자 공부하는 파이썬",
-    "writer": "윤인성 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
   },
   {
     "id": 5,
-    "title": "인문학도, 개발자되다",
-    "writer": "마르코 저",
-    "imgurl": "http://image.yes24.com/goods/67015072/XL"
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
   },
   {
     "id": 6,
-    "title": "객체지향의 사실과 오해",
-    "writer": "조영호 저",
-    "imgurl": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
   },
   {
     "id": 7,
-    "title": "데이터베이스 첫걸음",
-    "writer": "오라클자바커뮤니티 저",
-    "imgurl": "http://image.yes24.com/goods/32613394/XL"
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
   },
   {
     "id": 8,
-    "title": "이것이 C#이다",
-    "writer": "박상현 저",
-    "imgurl": "http://image.yes24.com/goods/96674785/XL"
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
   },
   {
     "id": 2,
-    "title": "파이썬 라이브러리를 활용한 데이터 분석",
-    "writer": "웨스 맥키니 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
   },
   {
     "id": 3,
-    "title": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
-    "writer": "김영호 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
   },
   {
     "id": 4,
-    "title": "혼자 공부하는 파이썬",
-    "writer": "윤인성 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
   },
   {
     "id": 5,
-    "title": "인문학도, 개발자되다",
-    "writer": "마르코 저",
-    "imgurl": "http://image.yes24.com/goods/67015072/XL"
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
   },
   {
     "id": 6,
-    "title": "객체지향의 사실과 오해",
-    "writer": "조영호 저",
-    "imgurl": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
   },
   {
     "id": 7,
-    "title": "데이터베이스 첫걸음",
-    "writer": "오라클자바커뮤니티 저",
-    "imgurl": "http://image.yes24.com/goods/32613394/XL"
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
   },
   {
     "id": 8,
-    "title": "이것이 C#이다",
-    "writer": "박상현 저",
-    "imgurl": "http://image.yes24.com/goods/96674785/XL"
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
   },
   {
     "id": 2,
-    "title": "파이썬 라이브러리를 활용한 데이터 분석",
-    "writer": "웨스 맥키니 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
   },
   {
     "id": 3,
-    "title": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
-    "writer": "김영호 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
   },
   {
     "id": 4,
-    "title": "혼자 공부하는 파이썬",
-    "writer": "윤인성 저",
-    "imgurl": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
   },
   {
     "id": 5,
-    "title": "인문학도, 개발자되다",
-    "writer": "마르코 저",
-    "imgurl": "http://image.yes24.com/goods/67015072/XL"
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
   },
   {
     "id": 6,
-    "title": "객체지향의 사실과 오해",
-    "writer": "조영호 저",
-    "imgurl": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
   },
   {
     "id": 7,
-    "title": "데이터베이스 첫걸음",
-    "writer": "오라클자바커뮤니티 저",
-    "imgurl": "http://image.yes24.com/goods/32613394/XL"
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
   },
   {
     "id": 8,
-    "title": "이것이 C#이다",
-    "writer": "박상현 저",
-    "imgurl": "http://image.yes24.com/goods/96674785/XL"
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
+  },
+  {
+    "id": 2,
+    "bookName": "파이썬 라이브러리를 활용한 데이터 분석",
+    "author": "웨스 맥키니 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162241905.jpg"
+  },
+  {
+    "id": 3,
+    "bookName": "Do it! 지옥에서 온 문서 관리자 깃&깃허브 입문",
+    "author": "김영호 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791163031222.jpg"
+  },
+  {
+    "id": 4,
+    "bookName": "혼자 공부하는 파이썬",
+    "author": "윤인성 저",
+    "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162245651.jpg"
+  },
+  {
+    "id": 5,
+    "bookName": "인문학도, 개발자되다",
+    "author": "마르코 저",
+    "cover": "http://image.yes24.com/goods/67015072/XL"
+  },
+  {
+    "id": 6,
+    "bookName": "객체지향의 사실과 오해",
+    "author": "조영호 저",
+    "cover": "http://image.yes24.com/momo/TopCate511/MidCate005/51040273.jpg"
+  },
+  {
+    "id": 7,
+    "bookName": "데이터베이스 첫걸음",
+    "author": "오라클자바커뮤니티 저",
+    "cover": "http://image.yes24.com/goods/32613394/XL"
+  },
+  {
+    "id": 8,
+    "bookName": "이것이 C#이다",
+    "author": "박상현 저",
+    "cover": "http://image.yes24.com/goods/96674785/XL"
   }
 ]
