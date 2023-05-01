@@ -79,7 +79,11 @@ public class JwtProvider {
                 return true;
             }else if(URI.equals("returns") && role == 1){
                 return true;
-            }else if(URI.equals("user") && role == 1){
+            }else if(URI.equals("users") && role == 1){
+                return true;
+            }else if(URI.equals("turtlebot") && role == 1) {
+                return true;
+            }else if(URI.equals("isbn") && role == 1) {
                 return true;
             }else{
                 return false;
