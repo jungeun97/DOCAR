@@ -11,6 +11,8 @@ import java.util.Optional;
 
 public interface TmpBookRepository extends JpaRepository<TmpBook, Long> {
 
+    Optional<TmpBook> findByBookId(Long bookId);
+
     @Query("SELECT cb.book.id FROM TmpBook cb WHERE cb.floor = :floor")
     List<Long> findBookIdsByFloor(@Param("floor") Long floor);
 
@@ -18,4 +20,5 @@ public interface TmpBookRepository extends JpaRepository<TmpBook, Long> {
     Optional<Long> findMaxSiteByFloor(@Param("floor") Long floor);
 
     boolean existsByBook(Book book);
+
 }
