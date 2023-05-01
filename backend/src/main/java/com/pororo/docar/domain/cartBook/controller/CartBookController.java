@@ -18,7 +18,6 @@ import java.util.List;
 @Tag(name = "카트 도서 목록 관리")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
 public class CartBookController {
     private final CartBookService cartBookService;
 
