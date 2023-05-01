@@ -39,7 +39,7 @@ public class Book {
     private Bookshelf bookshelf;
 
     @Builder.Default
-    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "book")
     private CheckoutBook checkoutBook = null;
 
     @Builder.Default
