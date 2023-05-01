@@ -38,17 +38,17 @@ public class Book {
     @JoinColumn(name = "bookshelf_id")
     private Bookshelf bookshelf;
 
-//    @Builder.Default
+    @Builder.Default
+    @OneToOne(mappedBy = "book")
+    private CheckoutBook checkoutBook = null;
+
+    @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private CheckoutBook checkoutBook = new CheckoutBook();
+    private CartBook cartBook = null;
 
 //    @Builder.Default
-    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private CartBook cartBook = new CartBook();
-
-//    @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private TmpBook tmpBook = new TmpBook();
+    private TmpBook tmpBook = null;
 
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {

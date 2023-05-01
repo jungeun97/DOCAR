@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface CheckoutBookRepository extends JpaRepository<CheckoutBook, Long> {
 
     Optional<CheckoutBook> findByBookId(Long id);
+    void deleteByBookId(Long bookId);
 }

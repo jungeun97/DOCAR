@@ -47,7 +47,6 @@ public class TmpBookService {
         CheckoutBook checkoutBook = checkoutBookRepository.findByBookId(book.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("대출 중인 책이 아닙니다."));
 
-        Long bookId = book.getId();
         Long bookDepth = book.getDepth();
 
         List<CartBook> cartBooks = cartBookRepository.findAll();
@@ -108,6 +107,12 @@ public class TmpBookService {
                 }
             }
         }
+        if (tmpBookRepository.findByBookId(book.getId()).isPresent()) {
+            throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
+        }
+        // checkout_book에서 해당 Book 삭제
+        checkoutBookRepository.deleteByBookId(book.getId());
+
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
                 .floor(cartFloor)
@@ -116,8 +121,7 @@ public class TmpBookService {
                 .build();
         tmpBookRepository.save(tmpBook);
 
-        // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.delete(checkoutBook);
+
         return new TmpBookInfo(tmpBook);
     }
 
