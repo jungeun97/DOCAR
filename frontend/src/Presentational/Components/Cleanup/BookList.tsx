@@ -6,24 +6,18 @@ import Btn from '../../Common/Btn';
 import BookTable from './../BookTable';
 import BookData from '../BookData.json';
 import Pagenation from './../Pagenation';
-
-interface Props {
-  id: number;
-  title: string;
-  imgurl: string;
-  writer: string;
-}
+import { BookDetail } from '../../../store/api';
 
 function BookList() {
   const navigate = useNavigate();
-  const [books, setBooks] = useState<Props[]>([]);
+  const [books, setBooks] = useState<BookDetail[]>([]);
 
   // 페이지 네이션
   const [page, setPage] = useState(1); // 페이지
   const limit = 3; // 몇개 볼거?
   const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
 
-  const booksData = (books: Props[]) => {
+  const booksData = (books: BookDetail[]) => {
     if (books) {
       let result = books.slice(offset, offset + limit);
       console.log(123);
