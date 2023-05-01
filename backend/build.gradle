@@ -27,8 +27,6 @@ dependencies {
 	implementation 'mysql:mysql-connector-java:8.0.14'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.mariadb.jdbc:mariadb-java-client'
-	//security
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	// jwt
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'

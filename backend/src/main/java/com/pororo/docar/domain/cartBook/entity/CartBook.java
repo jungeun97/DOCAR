@@ -26,8 +26,8 @@ public class CartBook {
     @JoinColumn(name = "book_id", nullable = false)
     private Book book;
 
-    public void setBook(Book book) {
-        this.book = book;
-        this.book.setCartBook(this);
-    }
+//    public void setBook(Book book) {
+//        this.book = book;
+//        this.book.setCartBook(this);
+//    }
 }
