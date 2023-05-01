@@ -35,6 +35,17 @@ public class JwtProvider {
                 .compact();
     }
 
+    public String createExpireToken() {
+        Claims claims = Jwts.claims();
+        Date now = new Date();
+        return Jwts.builder()
+                .setClaims(claims)
+                .setIssuedAt(now)
+                .setExpiration(new Date(now.getTime() + 0))
+                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .compact();
+    }
+
     public String getAdminInfo(String token) {
         return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().get("id").toString();
     }
