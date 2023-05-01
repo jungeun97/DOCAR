@@ -7,6 +7,8 @@ import com.pororo.docar.domain.admin.dto.AdminLoginDto;
 import com.pororo.docar.domain.admin.entity.Admin;
 import com.pororo.docar.domain.admin.repository.AdminRepository;
 import com.pororo.docar.domain.admin.service.AdminService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +23,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+@Tag(name = "관리자 로그인")
 @Controller
 @RequiredArgsConstructor
 public class AdminController {
@@ -44,6 +47,7 @@ public class AdminController {
 //
 //    }
 
+    @Operation(summary = "핀번호로 관리자 로그인")
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<AdminDto>> loginAdmin(@RequestBody AdminLoginDto input, HttpServletResponse response) {
         AdminDto adminDto = adminService.loginAdmin(input);
