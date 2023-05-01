@@ -108,6 +108,10 @@ public class TmpBookService {
                 }
             }
         }
+        if (tmpBookRepository.findByBookId(book.getId()).isPresent()) {
+            throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
+        }
+
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
                 .floor(cartFloor)
@@ -117,7 +121,7 @@ public class TmpBookService {
         tmpBookRepository.save(tmpBook);
 
         // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.delete(checkoutBook);
+        checkoutBookRepository.deleteByBookId(book.getId());
         return new TmpBookInfo(tmpBook);
     }
 
