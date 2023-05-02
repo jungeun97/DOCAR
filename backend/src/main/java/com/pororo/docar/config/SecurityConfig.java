@@ -36,7 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .csrf().disable()           // CSRF off
 //                .httpBasic().disable()     // Basic Auth off
 //                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Session off
-        http.cors().disable()
+        http.cors()
+                .and()
                 .csrf().disable()
                 .formLogin().disable()
                 .headers().frameOptions().disable();
