@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { BookDetail } from '../../store/api';
+import { ReturnBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
-interface Type1 {
-  id: number;
-  bookName: string;
-  author: string;
-  cover: string;
-}
+// interface Type1 {
+//   id: number;
+//   bookName: string;
+//   author: string;
+//   cover: string;
+// }
 
 interface Type {
-  book: BookDetail;
+  book: ReturnBookType;
   checkedItemHandler: (id: number, isChecked: boolean) => void;
   isAllChecked: boolean;
 }

@@ -9,7 +9,6 @@ function ReturnPage() {
   const [isReturn, setIsReturn] = useRecoilState(isReturnState);
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
 
-
   socket.on('barcode', (barcodeData) => {
     if (barcodeData !== barcodeNum) {
       setBarcodeNum(barcodeData);
@@ -21,7 +20,6 @@ function ReturnPage() {
     setIsReturn(true);
   };
 
-
   useEffect(() => {
     console.log(`현재 책의 바코드: ${barcodeNum}`);
   }, [barcodeNum]);
@@ -30,7 +28,7 @@ function ReturnPage() {
     return <ReturnBooks />;
   }
 
-  return <ReturnQrcode ReturnMode={ReturnMode}/>;
+  return <ReturnQrcode ReturnMode={ReturnMode} />;
 }
 
 export default ReturnPage;
