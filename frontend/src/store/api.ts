@@ -39,6 +39,7 @@ export async function AddLoginPin(pinNumber: string): Promise<boolean> {
       pinNumber: pinNumber,
       withCredentials: true,
     });
+    console.log(response);
     return response.data.success as boolean;
   } catch (error) {
     const axiosError = error as AxiosError;
