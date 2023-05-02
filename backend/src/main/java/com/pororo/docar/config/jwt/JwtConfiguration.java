@@ -19,8 +19,8 @@ public class JwtConfiguration implements WebMvcConfigurer {
                         "/cartbooks",
                         "/returns",
                         "/users",
-                        "turtlebot",
-                        "isbn")
+                        "/turtlebot",
+                        "/isbn")
                 .excludePathPatterns("/login", "/swagger-ui");
     }
 }
