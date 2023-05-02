@@ -18,9 +18,9 @@ function BookTableChecked() {
                 <TableStyle.ThTitle2>
                   <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
                 </TableStyle.ThTitle2>
-                <TableStyle.ThWriter>
-                  <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
-                </TableStyle.ThWriter>
+                <TableStyle.ThBookFloor>
+                  <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+                </TableStyle.ThBookFloor>
               </TableStyle.TableTr3>
             ))}
           </TableStyle.Tbody2>

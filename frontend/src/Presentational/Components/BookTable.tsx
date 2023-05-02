@@ -1,35 +1,30 @@
 import React from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
-import BookData from './BookData.json';
-import axios from 'axios';
-import { BookDetail } from '../../store/api';
+import { ReturnBookType, CartBookType } from '../../store/api';
+import Bookshelf from './Cleanup/Bookshelf';
 
-interface BookTableProps {
-  books: BookDetail[];
+export interface BookTableType {
+  books: CartBookType[];
 }
 
-function BookTable({ books }: BookTableProps) {
+function BookTable({ books }: BookTableType) {
   return (
     <TableStyle.Table>
       <TableStyle.Thead>
         <TableStyle.TableTr2>
-          <TableStyle.ThImg>표지</TableStyle.ThImg>
           <TableStyle.ThTitle>제목</TableStyle.ThTitle>
-          <TableStyle.ThWriter>저자</TableStyle.ThWriter>
+          <TableStyle.ThBookFloor>서랍 번호</TableStyle.ThBookFloor>
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
-        {books.map((book, idx) => (
-          <TableStyle.TableTr key={book.id}>
-            <TableStyle.ThImg>
-              <TableStyle.BookImg src={book.cover} />
-            </TableStyle.ThImg>
+        {books.map((book) => (
+          <TableStyle.TableTr key={book.bookshelfId}>
             <TableStyle.ThTitle>
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>
-            <TableStyle.ThWriter>
-              <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
-            </TableStyle.ThWriter>
+            <TableStyle.ThBookFloor>
+              <TableStyle.BookFloor>{book.cartBookFloor}</TableStyle.BookFloor>
+            </TableStyle.ThBookFloor>
           </TableStyle.TableTr>
         ))}
       </TableStyle.Tbody>
