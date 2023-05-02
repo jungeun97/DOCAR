@@ -10,8 +10,8 @@ import * as API from '../../../store/api';
 
 function BookList() {
   const navigate = useNavigate();
-  const [books, setBooks] = useState<null | API.BookDetail>(null);
-  const [curbooks, setCurbooks] = useState<API.BookDetail[]>([]);
+  const [books, setBooks] = useState<null | API.CartBookType>(null);
+  const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
 
   // 페이지 네이션
   const [page, setPage] = useState(1); // 페이지
@@ -19,7 +19,7 @@ function BookList() {
   const offset = (page - 1) * limit; // 시작점과 끝점을 구하는 offset
 
   //// 한 페이지에 보일 책 slice
-  const booksData = (books: null | API.BookDetail) => {
+  const booksData = (books: null | API.CartBookType) => {
     if (books) {
       let result = books.slice(offset, offset + limit);
       console.log(result);

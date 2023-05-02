@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
 import socket from '../../../socket';
-import { AddReturnBook, BookDetail } from '../../../store/api';
+import { AddReturnBook, ReturnBookType } from '../../../store/api';
 import { useRecoilState } from 'recoil';
 import { barcodeNumState } from '../../../store/atoms';
 
@@ -18,7 +18,7 @@ function ReturnDetail(props: ReturnDetail) {
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
   const [distance, setDistance] = useState(0);
   const [seosorData, setSensorData] = useState(0);
-  const [bookInfo, setBookInfo] = useState<BookDetail | null>(null);
+  const [bookInfo, setBookInfo] = useState<ReturnBookType | null>(null);
   const [qrUrl, setQrUrl] = useState('');
 
   const MySwal = withReactContent(Swal);

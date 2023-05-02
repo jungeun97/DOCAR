@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 
-export interface BookDetail {
+export interface ReturnBookType {
   id: number;
   floor?: number;
   site?: number;
@@ -9,7 +9,14 @@ export interface BookDetail {
   cover: string;
 }
 
-export interface BookDetail extends Array<BookDetail> {
+export interface CartBookType {
+  bookshelfId: number;
+  cartBookFloor: number;
+  cartBookSite: number;
+  bookName: string;
+}
+
+export interface CartBookType extends Array<CartBookType> {
   content: [];
 }
 
@@ -28,13 +35,13 @@ function printError(error: AxiosError) {
 // 책 바코드 체크 후 반납
 export async function AddReturnBook(
   barcodeNum: number
-): Promise<BookDetail | null> {
-  let data: BookDetail | null = null;
+): Promise<ReturnBookType | null> {
+  let data: ReturnBookType | null = null;
   try {
     const res = await axios.post(`${API_URL}/isbn/${barcodeNum}`, {
       withCredentials: true,
     });
-    data = res.data.data as BookDetail;
+    data = res.data.data as ReturnBookType;
   } catch (error) {
     const axiosError = error as AxiosError;
     printError(axiosError);
@@ -44,15 +51,15 @@ export async function AddReturnBook(
 }
 
 // 반납 책 리스트 조회
-export async function getReturnList(): Promise<BookDetail[] | null> {
-  let data: BookDetail[] | null = null; // BookDetail[]로 타입 변경
+export async function getReturnList(): Promise<ReturnBookType[] | null> {
+  let data: ReturnBookType[] | null = null; // BookDetail[]로 타입 변경
 
   try {
     const res = await axios.get(`${API_URL}/returns`, {
       withCredentials: true,
     });
 
-    data = res.data.data as BookDetail[]; // 배열로 파싱
+    data = res.data.data as ReturnBookType[]; // 배열로 파싱
   } catch (error) {
     const axiosError = error as AxiosError;
     printError(axiosError);
@@ -79,15 +86,15 @@ export async function AddReturnBookList(): Promise<Boolean | null> {
 
 // cartbooks GET
 // cartbooks 카트 도서 목록 전체 조회
-export async function getCartBookList(): Promise<BookDetail | null> {
-  let data: BookDetail | null = null;
+export async function getCartBookList(): Promise<CartBookType | null> {
+  let data: CartBookType | null = null;
 
   try {
     const res = await axios.get(`${API_URL}/cartbooks`, {
       withCredentials: true,
     });
 
-    data = res.data.data as BookDetail;
+    data = res.data.data as CartBookType;
   } catch (error) {
     const axiosError = error as AxiosError;
   }
@@ -97,15 +104,15 @@ export async function getCartBookList(): Promise<BookDetail | null> {
 
 // cartbooks POST
 // cartbooks 책장 정리
-export async function PostCartBookList(): Promise<BookDetail | null> {
-  let data: BookDetail | null = null;
+export async function PostCartBookList(): Promise<CartBookType | null> {
+  let data: CartBookType | null = null;
 
   try {
     const res = await axios.post(`${API_URL}/cartbooks`, {
       withCredentials: true,
     });
 
-    data = res.data.data as BookDetail;
+    data = res.data.data as CartBookType;
   } catch (error) {
     const axiosError = error as AxiosError;
   }
