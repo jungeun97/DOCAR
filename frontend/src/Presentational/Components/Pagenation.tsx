@@ -20,8 +20,6 @@ const NonSelectedBtn = styled.button`
 function Pagenation({ totalPosts, limit, page, setPage }: Type) {
   // 총 페이지
   const numPages = Math.ceil(totalPosts / limit);
-  console.log('총 페이지');
-  console.log(numPages);
 
   // 페이지 블록 구하기
   const block = Math.ceil(page / 5);

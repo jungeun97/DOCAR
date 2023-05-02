@@ -17,6 +17,11 @@ function ReturnPage() {
     setIsReturn(true);
   });
 
+  const ReturnMode = () => {
+    setIsReturn(true);
+  };
+
+
   useEffect(() => {
     console.log(`현재 책의 바코드: ${barcodeNum}`);
   }, [barcodeNum]);
@@ -25,7 +30,7 @@ function ReturnPage() {
     return <ReturnBooks />;
   }
 
-  return <ReturnQrcode />;
+  return <ReturnQrcode ReturnMode={ReturnMode}/>;
 }
 
 export default ReturnPage;

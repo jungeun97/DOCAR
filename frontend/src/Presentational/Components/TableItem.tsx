@@ -3,6 +3,13 @@ import { BookDetail } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
+interface Type1 {
+  id: number;
+  bookName: string;
+  author: string;
+  cover: string;
+}
+
 interface Type {
   book: BookDetail;
   checkedItemHandler: (id: number, isChecked: boolean) => void;
@@ -33,9 +40,9 @@ function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
       <TableStyle.ThTitle2>
         <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
       </TableStyle.ThTitle2>
-      <TableStyle.ThWriter>
-        <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
-      </TableStyle.ThWriter>
+      <TableStyle.ThBookFloor>
+        <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+      </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );
 }

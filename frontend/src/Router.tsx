@@ -20,7 +20,8 @@ function Router() {
         <Route path="/cleanup" element={<CleanupPage />}>
           <Route path="" element={<BookList /> } />
           <Route path="end" element={<EndCleanup />} />
-          <Route path=":id" element={<Bookshelf />} />
+          {/* <Route path=":id" element={<Bookshelf />} /> */}
+          <Route path="shelf" element={<Bookshelf />} />
         </Route>
         {/* <Route path="/cleanup/end" element={<EndCleanup />} />
         <Route path="/cleanup/:id" element={<Bookshelf />} /> */}
