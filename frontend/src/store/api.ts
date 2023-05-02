@@ -50,6 +50,24 @@ export async function AddReturnBook(
   return data;
 }
 
+// 책 바코드 체크 후 반납
+export async function AddReturnBook(
+  barcodeNum: number
+): Promise<BookDetail | null> {
+  let data: BookDetail | null = null;
+  try {
+    const res = await axios.post(`${API_URL}/isbn/${barcodeNum}`, {
+      withCredentials: true,
+    });
+    data = res.data.data as BookDetail;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    printError(axiosError);
+    return null;
+  }
+  return data;
+}
+
 // 반납 책 리스트 조회
 export async function getReturnList(): Promise<ReturnBookType[] | null> {
   let data: ReturnBookType[] | null = null; // BookDetail[]로 타입 변경

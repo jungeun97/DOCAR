@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BookDetail } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
@@ -10,7 +11,7 @@ interface Type1 {
 }
 
 interface Type {
-  book: Type1;
+  book: BookDetail;
   checkedItemHandler: (id: number, isChecked: boolean) => void;
   isAllChecked: boolean;
 }
