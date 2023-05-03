@@ -19,13 +19,14 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(new MyWebSocketHandler(), "/ws").setAllowedOrigins("*")
-                .addInterceptors(new HttpSessionHandshakeInterceptor());;
+                .addInterceptors(new HttpSessionHandshakeInterceptor());
     }
 
     static class MyWebSocketHandler extends TextWebSocketHandler {
         @Override
         public void afterConnectionEstablished(WebSocketSession session) throws Exception {
             System.out.println("WebSocket 연결됨: " + session.getId());
+            session.sendMessage(new TextMessage("WebSocket 연결 성공!"));
         }
 
         @Override
