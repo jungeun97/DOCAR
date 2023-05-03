@@ -1,5 +1,6 @@
 package com.pororo.docar.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.TextMessage;
@@ -11,6 +12,8 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import org.springframework.web.socket.server.HandshakeHandler;
 import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 import org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor;
+
+import javax.validation.Payload;
 
 @Configuration
 @EnableWebSocket
@@ -31,7 +34,9 @@ public class WebSocketConfig implements WebSocketConfigurer {
         @Override
         protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
             System.out.println("WebSocket 메시지 수신: " + message.getPayload());
-            session.sendMessage(new TextMessage("WebSocket 응답: " + message.getPayload()));
+            ObjectMapper mapper = new ObjectMapper();
+            Payload payload = mapper.readValue(message.getPayload(), Payload.class);
+            session.sendMessage(new TextMessage(mapper.writeValueAsString(payload)));
         }
     }
 
