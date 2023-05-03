@@ -27,11 +27,15 @@ public class CheckoutBookService {
     public void borrowBook(borrowBookDto input) {
 
         if (userRepository.existsById(input.getUserId()) && bookRepository.existsById(input.getBookId())) {
-            CheckoutBook checkoutBook = CheckoutBook.builder()
-                    .book(bookRepository.findById(input.getBookId()).orElseThrow(() -> new ResourceNotFoundException("책을 확인해주세요.")))
-                    .user(userRepository.findById(input.getUserId()).orElseThrow(() -> new ResourceNotFoundException("유저를 확인해주세요.")))
-                    .build();
-            checkoutBookRepository.save(checkoutBook);
+            if (!checkoutBookRepository.existsByBookId(input.getBookId())) {
+                CheckoutBook checkoutBook = CheckoutBook.builder()
+                        .book(bookRepository.findById(input.getBookId()).orElseThrow(() -> new ResourceNotFoundException("책을 확인해주세요.")))
+                        .user(userRepository.findById(input.getUserId()).orElseThrow(() -> new ResourceNotFoundException("유저를 확인해주세요.")))
+                        .build();
+                checkoutBookRepository.save(checkoutBook);
+            } else {
+                throw new BadRequestException("중복된 책 대여입니다!");
+            }
         } else {
             throw new BadRequestException("id를 확인해주세요!");
         }

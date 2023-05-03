@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class borrowBookDto {
-    private Long userId;
     private Long bookId;
+    private Long userId;
 }
