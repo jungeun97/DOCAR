@@ -85,7 +85,9 @@ public class JwtProvider {
                 return true;
             }else if(URI.equals("isbn") && role == 1) {
                 return true;
-            }else{
+            }else if(URI.equals("checkout") && role == 1) {
+                return true;
+            } else{
                 return false;
             }
 

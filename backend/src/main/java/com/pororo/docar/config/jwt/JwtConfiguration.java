@@ -20,6 +20,7 @@ public class JwtConfiguration implements WebMvcConfigurer {
                         "/returns",
                         "/users",
                         "/turtlebot",
+                        "/checkout",
                         "/isbn")
                 .excludePathPatterns("/login", "/swagger-ui");
     }
