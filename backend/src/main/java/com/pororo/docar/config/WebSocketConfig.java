@@ -26,7 +26,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
         @Override
         public void afterConnectionEstablished(WebSocketSession session) throws Exception {
             System.out.println("WebSocket 연결됨: " + session.getId());
-            session.sendMessage(new TextMessage("WebSocket 연결 성공!"));
         }
 
         @Override
