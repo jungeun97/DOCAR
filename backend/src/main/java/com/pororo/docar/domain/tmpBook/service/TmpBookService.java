@@ -35,7 +35,7 @@ public class TmpBookService {
     @Transactional
     public TmpBookInfo moveCheckedOutBookToTmpBook(String isbn) {
 
-        Double cartLength = 300.0;
+        Double cartLength = 200.0;
         Long cartFloor = 2L;
         Long cartSite = 1L;
 
@@ -57,24 +57,28 @@ public class TmpBookService {
             cartFloor = 2L;
             cartSite = 1L;
         } else {
-            // CartBook과 TmpBook에서 floor가 2인 책들의 id값을 찾아옵니다.
+            // 2. cartBook과 tmpBook의 층이 2인 책들 찾음
             List<Long> cartBook2Ids = cartBookRepository.findBookIdsByFloor(2L);
             List<Long> tmpBook2Ids = tmpBookRepository.findBookIdsByFloor(2L);
 
-            // 두 리스트를 합쳐서 중복을 제거합니다.
+            // 2-1. 두 리스트의 중복값 제거
             List<Long> book2Ids = Stream.concat(cartBook2Ids.stream(), tmpBook2Ids.stream())
                     .distinct()
                     .collect(Collectors.toList());
 
-            // Book 테이블에서 해당 id의 책들의 depth 값을 더합니다.
-            Long depthOnFloor2 = bookRepository.findDepthByIds(book2Ids);
+            // 2-2. 카트 2층 책들의 두께값 합
+            Optional<Long> depthOnFloor2 = bookRepository.findDepthByIds(book2Ids);
+            Long depthOnFloor2Value = depthOnFloor2.orElseGet(() -> 0L);
 
-            if (cartLength - (depthOnFloor2+bookDepth) >= 50) {
+            // 2-3. 카트 2층에 자리가 남았으면
+            if (cartLength - (depthOnFloor2Value+bookDepth) >= 50) {
                 List<Long> tmpBookIds2 = tmpBookRepository.findBookIdsByFloor(2L);
 
+                // 2-4. tmpBook 중 2층인 책 중 가장 큰 위치 값 + 1
                 if (!tmpBookIds2.isEmpty()) {
                     Optional<Long> maxSite = tmpBookRepository.findMaxSiteByFloor(2L);
                     cartSite = maxSite.orElse(0L) + 1L;
+                // 2-5. tmpBook에 2층인 값이 없으면 cartBook 중 2층인 책 중 가장 큰 위치 값 + 1
                 } else {
                     List<Long> cartBookIds2 = cartBookRepository.findBookIdsByFloor(2L);
                     if (!cartBookIds2.isEmpty()) {
@@ -85,8 +89,22 @@ public class TmpBookService {
                     }
                 }
             } else {
+                // 3. 2층에 자리 없음
+                // 3-1. cartBook과 tmpBook의 층이 1인 책들 찾음
+                List<Long> cartBook1Ids = cartBookRepository.findBookIdsByFloor(1L);
+                List<Long> tmpBook1Ids = tmpBookRepository.findBookIdsByFloor(1L);
 
-                if (cartLength - (depthOnFloor2+bookDepth) >= 50) {
+                // 3-2. 두 리스트의 중복값 제거
+                List<Long> book1Ids = Stream.concat(cartBook1Ids.stream(), tmpBook1Ids.stream())
+                        .distinct()
+                        .collect(Collectors.toList());
+
+                // 3-3. 카트 1층 책들의 두께값 합
+                Optional<Long> depthOnFloor1 = bookRepository.findDepthByIds(book1Ids);
+                Long depthOnFloor1Value = depthOnFloor1.orElseGet(() -> 0L);
+
+                // 3-4. 카트 1층에 자리가 있으면
+                if (cartLength - (depthOnFloor1Value+bookDepth) >= 50) {
                     cartFloor = 1L;
                     List<Long> tmpBookIds1 = tmpBookRepository.findBookIdsByFloor(1L);
 
