@@ -40,7 +40,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
             System.out.println("WebSocket 메시지 수신: " + message.getPayload());
             ObjectMapper mapper = new ObjectMapper();
             Payload payload = mapper.readValue(message.getPayload(), Payload.class);
-//            session.sendMessage(new TextMessage(mapper.writeValueAsString(payload)));
             String jsonMessage = mapper.writeValueAsString(payload);
             for (WebSocketSession s : sessions) {
                 if (s.isOpen()) {
@@ -57,11 +56,13 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Data
     public static class Payload {
+        private long distance;
         private long barcode;
 
         public Payload() {}
 
-        public Payload(long barcode) {
+        public Payload(long distance, long barcode) {
+            this.distance = distance;
             this.barcode = barcode;
         }
     }
