@@ -8,9 +8,11 @@ import { socket } from '../../socket';
 function ReturnPage() {
   const [isReturn, setIsReturn] = useRecoilState(isReturnState);
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
+  const [distance, serDistance] = useRecoilState(barcodeNumState);
 
   socket.onmessage = (event) => {
     const data = JSON.parse(event.data);
+    console.log('현재 거리는:', data.distance);
     if (event.data.barcode !== barcodeNum) {
       setBarcodeNum(data.barcode);
     }
