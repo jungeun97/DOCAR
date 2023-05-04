@@ -52,10 +52,10 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
         public Payload() {}
 
-        public Payload(String id, String name, String barcode) {
+        public Payload(String id, String name, Long barcode) {
             this.id = id;
             this.name = name;
-            this.barcode = barcode;
+            this.barcode = barcode.toString();
         }
     }
 }
