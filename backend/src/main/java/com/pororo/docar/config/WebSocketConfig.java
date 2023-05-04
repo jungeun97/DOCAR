@@ -46,15 +46,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Data
     public static class Payload {
-        private String id;
-        private String name;
         private String barcode;
 
         public Payload() {}
 
-        public Payload(String id, String name, Long barcode) {
-            this.id = id;
-            this.name = name;
+        public Payload(Long barcode) {
             this.barcode = barcode.toString();
         }
     }
