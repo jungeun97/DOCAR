@@ -12,9 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 @Service
@@ -27,6 +25,66 @@ public class CartBookService {
 
 //    public List<Long> orderList = tmpBookService.orderList;
     public static List<Long> orderList = new LinkedList<>();
+
+    static int N = 3, M = 5;
+    static int[][] arr = {{-1, 1, -1, 1, -1}, {1, 1, 1, 1, 1}, {-1, 1, -1, 1, -1}};
+    static Map<Integer, int[]> position = Map.of(1, new int[]{0, 0}, 2, new int[]{0, 2}, 3, new int[]{0, 4}, 4, new int[]{2, 0}, 5, new int[]{2, 2}, 6, new int[]{2, 4});
+    static int[][] visited = new int[N][M];
+    static List<Long> bookshelves = new ArrayList<>();
+    static int[] di = {1, 1, 0, -1, -1, -1, 0, 1};
+    static int[] dj = {0, -1, -1, -1, 0, 1, 1, 1};
+    static int[] dx = {1, -1};
+    static int[] dy = {0, 0};
+    static boolean arrange = false;
+
+    public static void bfs(int i, int j) {
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(new int[]{i, j});
+        visited[i][j] = 1;
+
+        while (!q.isEmpty()) {
+            int[] curr = q.poll();
+            i = curr[0];
+            j = curr[1];
+
+            for (int k = 0; k < 2; k++) {
+                int nx = i + dx[k];
+                int ny = j + dy[k];
+                if (0 <= nx && nx < N && 0 <= ny && ny < M) {
+                    if (arr[nx][ny] == 2) {
+                        for (Map.Entry<Integer, int[]> entry : position.entrySet()) {
+                            if (Arrays.equals(entry.getValue(), new int[]{nx, ny})) {
+                                if (!orderList.contains(Long.parseLong(Integer.toString(entry.getKey())))) {
+                                    orderList.add(Long.parseLong(Integer.toString(entry.getKey())));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            for (int k = 0; k < 8; k++) {
+                int ni = i + di[k];
+                int nj = j + dj[k];
+                if (0 <= ni && ni < N && 0 <= nj && nj < M) {
+                    if (visited[ni][nj] == 0 && arr[ni][nj] == 1) {
+                        q.offer(new int[]{ni, nj});
+                        visited[ni][nj] = 1;
+                    }
+                }
+            }
+        }
+    }
+
+    public static void getOrderList() {
+        for (Long bookshelf : bookshelves) {
+            int[] pos = position.get(Integer.parseInt(String.valueOf(bookshelf)));
+            arr[pos[0]][pos[1]] = 2;
+        }
+
+        bfs(1, 0);
+    }
+
 
     public List<BookSetList> getBooks() {
         List<BookSetList> list = new ArrayList<>();
@@ -42,11 +100,16 @@ public class CartBookService {
     public List<BookSetList> getBooksByBookshelf() {
         List<CartBook> bookList = cartBookRepository.findAll();
         List<TmpBook> list = new ArrayList<>();
-        orderList.add(1L);
-        orderList.add(2L);
-        orderList.add(3L);
-        orderList.add(4L);
-        orderList.add(5L);
+        if (!arrange) {
+            for (CartBook cartBook : bookList) {
+                if (!bookshelves.contains(cartBook.getBook().getBookshelf().getId())) {
+                    bookshelves.add(cartBook.getBook().getBookshelf().getId());
+                }
+            }
+            getOrderList();
+            System.out.println(orderList);
+            arrange = true;
+        }
         Long idx = orderList.get(0);
 
         if (!orderList.isEmpty()) {
@@ -105,6 +168,7 @@ public class CartBookService {
     @Transactional
     public void goHome(List<Long> bookIds) {
         List<CartBook> doneBookList = cartBookRepository.findAll();
+        arrange = false;
         if (!bookIds.isEmpty()) {
            for (Long idx : bookIds) {
                for (CartBook cartBook : doneBookList) {
