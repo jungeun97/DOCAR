@@ -110,9 +110,10 @@ public class CartBookService {
             System.out.println(orderList);
             arrange = true;
         }
-        Long idx = orderList.get(0);
+
 
         if (!orderList.isEmpty()) {
+            Long idx = orderList.get(0);
             for (CartBook cartBook : bookList) {
                 if (cartBook.getBook().getBookshelf().getId() == idx) {
                     TmpBook tmpBook = TmpBook.builder()
