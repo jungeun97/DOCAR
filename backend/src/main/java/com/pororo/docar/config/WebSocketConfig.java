@@ -14,6 +14,9 @@ import org.springframework.web.socket.server.HandshakeHandler;
 import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 import org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor;
 
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 @Configuration
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
@@ -25,9 +28,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
     }
 
     static class MyWebSocketHandler extends TextWebSocketHandler {
+        private static final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
         @Override
         public void afterConnectionEstablished(WebSocketSession session) throws Exception {
             System.out.println("WebSocket 연결됨: " + session.getId());
+            sessions.add(session);
         }
 
         @Override
@@ -35,7 +40,13 @@ public class WebSocketConfig implements WebSocketConfigurer {
             System.out.println("WebSocket 메시지 수신: " + message.getPayload());
             ObjectMapper mapper = new ObjectMapper();
             Payload payload = mapper.readValue(message.getPayload(), Payload.class);
-            session.sendMessage(new TextMessage(mapper.writeValueAsString(payload)));
+//            session.sendMessage(new TextMessage(mapper.writeValueAsString(payload)));
+            String jsonMessage = mapper.writeValueAsString(payload);
+            for (WebSocketSession s : sessions) {
+                if (s.isOpen()) {
+                    s.sendMessage(new TextMessage(jsonMessage));
+                }
+            }
         }
     }
 
