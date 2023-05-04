@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import * as ReturnQrStyle from './ReturnQrcode_Style';
 import scanner from '../../../Resources/Images/scanner.png';
 import barcode from '../../../Resources/Images/barcode.png';
-import socket from '../../../socket';
 import { AddReturnBook } from '../../../store/api';
 
 interface ReturnQrcode {

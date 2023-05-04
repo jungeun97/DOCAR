@@ -1,13 +1,9 @@
-import io from 'socket.io-client';
+export const socket = new WebSocket('ws://k8d101.p.ssafy.io:8080/api/ws');
 
-const socket = io('https://172.20.10.2');
+socket.onopen = () => {
+  console.log('WebSocket 연결됨.');
+};
 
-socket.on('connect', () => {
-  console.log('connected to server');
-});
-
-socket.on('disconnect', () => {
-  console.log('disconnected from server');
-});
-
-export default socket;
+socket.onclose = () => {
+  console.log('WebSocket 연결 종료됨.');
+};

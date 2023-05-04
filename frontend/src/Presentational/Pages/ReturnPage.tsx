@@ -3,18 +3,19 @@ import ReturnBooks from '../Components/Return/ReturnBooks';
 import ReturnQrcode from '../Components/Return/ReturnQrcode';
 import { useRecoilState } from 'recoil';
 import { barcodeNumState, isReturnState } from '../../store/atoms';
-import socket from '../../socket';
+import { socket } from '../../socket';
 
 function ReturnPage() {
   const [isReturn, setIsReturn] = useRecoilState(isReturnState);
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
 
-  socket.on('barcode', (barcodeData) => {
-    if (barcodeData !== barcodeNum) {
-      setBarcodeNum(barcodeData);
+  socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    if (event.data.barcode !== barcodeNum) {
+      setBarcodeNum(data.barcode);
     }
     setIsReturn(true);
-  });
+  };
 
   const ReturnMode = () => {
     setIsReturn(true);
