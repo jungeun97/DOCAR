@@ -16,6 +16,8 @@ public class BookSetList {
     private Long cartBookFloor;
     private Long cartBookSite;
     private Long bookshelfId;
+    private String coverImg;
+    private Long bookId;
 
     public BookSetList entityToDto(CartBook cartBook){
         return BookSetList.builder()
@@ -23,6 +25,8 @@ public class BookSetList {
                 .cartBookFloor(cartBook.getFloor())
                 .cartBookSite(cartBook.getSite())
                 .bookshelfId(cartBook.getBook().getBookshelf().getId())
+                .coverImg(cartBook.getBook().getCover())
+                .bookId(cartBook.getBook().getId())
                 .build();
     }
 }
