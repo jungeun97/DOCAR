@@ -1,4 +1,4 @@
-export const socket = new WebSocket('ws://k8d101.p.ssafy.io:8080/api/ws');
+export const socket = new WebSocket('wss://k8d101.p.ssafy.io/api/ws');
 
 socket.onopen = () => {
   console.log('WebSocket 연결됨.');
