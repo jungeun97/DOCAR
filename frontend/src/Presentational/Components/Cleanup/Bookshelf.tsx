@@ -120,8 +120,9 @@ function Bookshelf() {
       allowOutsideClick: false,
       html: (
         <>
-          {/* <BookTableCheck books={books}/> */}
-          <BookTableCheck />
+          {books ? <BookTableCheck books={books}/> : <></>}
+          
+          {/* <BookTableCheck /> */}
         </>
       ),
     }).then((result) => {

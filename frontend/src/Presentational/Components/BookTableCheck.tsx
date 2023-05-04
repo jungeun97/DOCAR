@@ -8,8 +8,8 @@ export interface BookTableType {
   books: CartBookType[];
 }
 
-// function BookTableCheck({ books }: BookTableType) {
-function BookTableCheck() {
+function BookTableCheck({ books }: BookTableType) {
+// function BookTableCheck() {
   const [checkedItems, setCheckedItems] = useState(new Set());
 
   const checkedItemHandler = (id: number, isChecked: boolean) => {
@@ -53,7 +53,7 @@ function BookTableCheck() {
       </TableStyle.Thead>
       <TableStyle.Tbody2>
         {/* 책 하나씩 들어가니깐 */}
-        {BookData.map((book,idx) => (
+        {books.map((book,idx) => (
           <TableItem
             key={idx}
             book={book}
