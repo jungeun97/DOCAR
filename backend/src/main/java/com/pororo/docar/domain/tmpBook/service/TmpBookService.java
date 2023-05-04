@@ -67,11 +67,11 @@ public class TmpBookService {
                     .collect(Collectors.toList());
 
             // 2-2. 카트 2층 책들의 두께값 합
-            Optional<Long> depthOnFloor2 = bookRepository.findDepthByIds(book2Ids);
-            Long depthOnFloor2Value = depthOnFloor2.orElseGet(() -> 0L);
+            Long depthOnFloor2 = bookRepository.findDepthByIds(book2Ids).orElse(0L);
+//            Long depthOnFloor2Value = depthOnFloor2.orElseGet(() -> 0L);
 
             // 2-3. 카트 2층에 자리가 남았으면
-            if (cartLength - (depthOnFloor2Value+bookDepth) >= 50) {
+            if (cartLength - (depthOnFloor2+bookDepth) >= 50) {
                 List<Long> tmpBookIds2 = tmpBookRepository.findBookIdsByFloor(2L);
 
                 // 2-4. tmpBook 중 2층인 책 중 가장 큰 위치 값 + 1
@@ -100,11 +100,11 @@ public class TmpBookService {
                         .collect(Collectors.toList());
 
                 // 3-3. 카트 1층 책들의 두께값 합
-                Optional<Long> depthOnFloor1 = bookRepository.findDepthByIds(book1Ids);
-                Long depthOnFloor1Value = depthOnFloor1.orElseGet(() -> 0L);
+                Long depthOnFloor1 = bookRepository.findDepthByIds(book1Ids).orElse(0L);
+//                Long depthOnFloor1Value = depthOnFloor1.orElseGet(() -> 0L);
 
                 // 3-4. 카트 1층에 자리가 있으면
-                if (cartLength - (depthOnFloor1Value+bookDepth) >= 50) {
+                if (cartLength - (depthOnFloor1+bookDepth) >= 50) {
                     cartFloor = 1L;
                     List<Long> tmpBookIds1 = tmpBookRepository.findBookIdsByFloor(1L);
 
