@@ -24,7 +24,8 @@ function Bookshelf() {
   useEffect(() => {
     const PostCartBooks = async () => {
       const request = await API.PostCartBookList();
-      console.log("데이터 읽기")
+      console.log("해당 책장 데이터 읽기")
+      console.log(request);
       setBooks(request);
       booksData(request);
     };
@@ -119,6 +120,7 @@ function Bookshelf() {
       allowOutsideClick: false,
       html: (
         <>
+          {/* <BookTableCheck books={books}/> */}
           <BookTableCheck />
         </>
       ),

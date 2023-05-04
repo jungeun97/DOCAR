@@ -34,7 +34,7 @@ function Pagenation({ totalPosts, limit, page, setPage }: Type) {
       {Array(end - start + 1)
         .fill(0)
         .map((_, i) => (
-          <>
+          <React.Fragment key={i}>
             {start + i === page ? (
               <PageStyle.SelectedBtn key={start + i} onClick={() => setPage(start + i)}>
                 {start + i}
@@ -47,7 +47,7 @@ function Pagenation({ totalPosts, limit, page, setPage }: Type) {
                 {start + i}
               </PageStyle.NonSelectedBtn>
             )}
-          </>
+          </React.Fragment>
         ))}
       <PageStyle.NextPreBtn onClick={() => setPage(page + 1)} disabled={page === numPages}>
         &gt;

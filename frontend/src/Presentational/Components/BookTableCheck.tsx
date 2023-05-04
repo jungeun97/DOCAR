@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 import TableItem from './TableItem';
+import { CartBookType } from '../../store/api';
 
+export interface BookTableType {
+  books: CartBookType[];
+}
+
+// function BookTableCheck({ books }: BookTableType) {
 function BookTableCheck() {
   const [checkedItems, setCheckedItems] = useState(new Set());
 
@@ -47,8 +53,9 @@ function BookTableCheck() {
       </TableStyle.Thead>
       <TableStyle.Tbody2>
         {/* 책 하나씩 들어가니깐 */}
-        {BookData.map((book) => (
+        {BookData.map((book,idx) => (
           <TableItem
+            key={idx}
             book={book}
             checkedItemHandler={checkedItemHandler}
             isAllChecked={isAllChecked}

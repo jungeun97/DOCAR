@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReturnBookType } from '../../store/api';
+import { ReturnBookType, CartBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 

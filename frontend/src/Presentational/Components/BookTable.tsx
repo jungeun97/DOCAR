@@ -17,8 +17,8 @@ function BookTable({ books }: BookTableType) {
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
-        {books.map((book) => (
-          <TableStyle.TableTr key={book.bookshelfId}>
+        {books.map((book, idx) => (
+          <TableStyle.TableTr key={idx}>
             <TableStyle.ThTitle>
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>
