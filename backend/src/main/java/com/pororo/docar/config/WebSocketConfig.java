@@ -57,11 +57,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Data
     public static class Payload {
         private long distance;
-        private long barcode;
+        private String barcode;
 
         public Payload() {}
 
-        public Payload(long distance, long barcode) {
+        public Payload(long distance, String barcode) {
             this.distance = distance;
             this.barcode = barcode;
         }
