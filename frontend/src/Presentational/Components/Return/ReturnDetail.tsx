@@ -7,7 +7,7 @@ import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
 import { AddReturnBook, ReturnBookType } from '../../../store/api';
 import { useRecoilState } from 'recoil';
-import { barcodeNumState } from '../../../store/atoms';
+import { barcodeNumState, distanceState } from '../../../store/atoms';
 
 interface ReturnDetail {
   ClickedReturnBtn: () => void;
@@ -15,10 +15,10 @@ interface ReturnDetail {
 
 function ReturnDetail(props: ReturnDetail) {
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
-  const [distance, setDistance] = useState(0);
+  const [distance, setDistance] = useRecoilState(distanceState);
   const [seosorData, setSensorData] = useState(0);
   const [bookInfo, setBookInfo] = useState<ReturnBookType | null>(null);
-  const [qrUrl, setQrUrl] = useState('');
+  const [tmpDistance, setTmpDistance] = useState(0);
 
   const MySwal = withReactContent(Swal);
 
@@ -28,15 +28,12 @@ function ReturnDetail(props: ReturnDetail) {
 
   useEffect(() => {
     if (barcodeNum !== 0) {
+      setTmpDistance(distance);
       AddReturnBookAPI();
     } else {
       console.log('디테일페이지', barcodeNum);
     }
   }, []);
-
-  // useEffect(() => {
-  //   AddReturnBookAPI();
-  // }, [barcodeNum]);
 
   const AddReturnBookAPI = async () => {
     const result = await AddReturnBook(barcodeNum);
@@ -49,10 +46,6 @@ function ReturnDetail(props: ReturnDetail) {
   };
 
   useEffect(() => {
-    //     if (barcodeNum !== 0) {
-    //   AddReturnBookAPI();
-    // } else {
-    //   console.log('디테일페이지', barcodeNum);
     if (barcodeNum !== 0) {
       console.log('handleReturn 함수 실행');
       handleReturn();
@@ -60,8 +53,8 @@ function ReturnDetail(props: ReturnDetail) {
   }, [barcodeNum]);
 
   const handleReturn = async () => {
-    if (seosorData !== distance) {
-      setDistance(seosorData);
+    if (tmpDistance !== distance) {
+      setTmpDistance(distance);
       console.log('책 반납 처리');
       AddReturnBookAPI();
     } else {

@@ -11,3 +11,9 @@ export const barcodeNumState = atom({
   key: 'barcodeNumState',
   default: 0,
 });
+
+// 거리값
+export const distanceState = atom({
+  key: 'distanceState',
+  default: 0,
+});
