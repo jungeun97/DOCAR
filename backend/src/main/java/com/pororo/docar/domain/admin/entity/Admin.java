@@ -20,7 +20,10 @@ public class Admin {
     private String name;
 
     @Column(name = "pin_number")
-    private String pinNumber = "1234";
+    private String pinNumber;
+
+    @Column(name = "qr_url")
+    private String qrCode;
 
 //    public Admin() {}
 //
