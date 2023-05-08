@@ -149,9 +149,9 @@ public class CartBookService {
     public void deleteSetBooks() {
         List<TmpBook> setBookList = tmpBookRepository.findAll();
         List<CartBook> doneBookList = cartBookRepository.findAll();
-        Long idx = orderList.remove(0);
 
         if (!setBookList.isEmpty()) {
+            orderList.remove(0);
             for (TmpBook tmpBook : setBookList) {
                 for (CartBook cartBook : doneBookList) {
                     Long id = tmpBook.getBook().getId();
