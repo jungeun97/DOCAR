@@ -48,6 +48,22 @@ export async function AddLoginPin(pinNumber: string): Promise<boolean> {
   }
 }
 
+// Qrcode 로그인 API
+export async function AddLoginQr(QrNumber: string): Promise<boolean> {
+  try {
+    const response = await axios.post(`${API_URL}/qrlogin`, {
+      QrNumber: QrNumber,
+      withCredentials: true,
+    });
+    console.log(response);
+    return response.data.success as boolean;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    console.error(axiosError);
+    return false;
+  }
+}
+
 // 책 바코드 체크 후 반납
 export async function AddReturnBook(
   barcodeNum: number
