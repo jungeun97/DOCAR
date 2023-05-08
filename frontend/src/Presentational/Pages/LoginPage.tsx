@@ -1,15 +1,25 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import * as LoginStyle from './LoginPage_Style';
 import qrcode from '../../Resources/Images/qrcode.png';
-import { AiOutlineUser } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import Btn from '../Common/Btn';
 import { AddLoginPin } from '../../store/api';
+import { socket } from '../../socket';
+import PinLogin from '../Components/Login/PinLogin';
 
 function LoginPage() {
   const navigate = useNavigate();
   const [option, setOption] = useState<boolean>(false);
   const [pinNumber, setPinNumber] = useState<string>('');
+
+  socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log('현재 바코드는', data.barcode);
+    if (data.barcode !== pinNumber) {
+      setPinNumber(data.barcode);
+      handleLogin();
+    }
+  };
 
   const ChangeLogin = () => {
     setOption(!option);
@@ -35,7 +45,6 @@ function LoginPage() {
 
   return (
     <LoginStyle.WrapLogin>
-      {/* 안녕 난 로그인이야~ */}
       {!option ? (
         <>
           <LoginStyle.PinTitle>사원증의 QR을 찍어주세요</LoginStyle.PinTitle>
@@ -49,26 +58,7 @@ function LoginPage() {
         </>
       ) : (
         <>
-          <LoginStyle.WrapPin>
-            <LoginStyle.PinTitle>LOGIN</LoginStyle.PinTitle>
-            <LoginStyle.WrapIdpw>
-              <LoginStyle.IdIcon />
-              <LoginStyle.LoginInput placeholder="admin" disabled />
-            </LoginStyle.WrapIdpw>
-            <LoginStyle.WrapIdpw>
-              <LoginStyle.PwIcon />
-              <LoginStyle.LoginInput
-                type="password"
-                placeholder="password"
-                name="pinNumber"
-                value={pinNumber}
-                onChange={onChage}
-              />
-            </LoginStyle.WrapIdpw>
-            <LoginStyle.WrapBtn onClick={handleLogin}>
-              Sign In
-            </LoginStyle.WrapBtn>
-          </LoginStyle.WrapPin>
+          <PinLogin />
           <Btn
             message="QR로 로그인"
             go={ChangeLogin}
