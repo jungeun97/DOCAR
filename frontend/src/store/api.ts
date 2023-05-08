@@ -52,7 +52,7 @@ export async function AddLoginPin(pinNumber: string): Promise<boolean> {
 export async function AddLoginQr(QrNumber: string): Promise<boolean> {
   try {
     const response = await axios.post(`${API_URL}/qrlogin`, {
-      QrNumber: QrNumber,
+      qrCode: QrNumber,
       withCredentials: true,
     });
     console.log(response);
