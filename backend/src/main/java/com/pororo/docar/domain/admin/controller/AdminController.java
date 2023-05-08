@@ -2,8 +2,7 @@ package com.pororo.docar.domain.admin.controller;
 
 import com.pororo.docar.common.dto.ApiResponse;
 import com.pororo.docar.config.jwt.JwtProvider;
-import com.pororo.docar.domain.admin.dto.AdminDto;
-import com.pororo.docar.domain.admin.dto.AdminLoginDto;
+import com.pororo.docar.domain.admin.dto.*;
 import com.pororo.docar.domain.admin.entity.Admin;
 import com.pororo.docar.domain.admin.repository.AdminRepository;
 import com.pororo.docar.domain.admin.service.AdminService;
@@ -32,21 +31,6 @@ public class AdminController {
     private final JwtProvider jwtProvider;
 
 
-//    @Autowired
-//    public AdminController(AdminRepository adminRepository) {
-//        this.adminRepository = adminRepository;
-//    }
-
-    @GetMapping("/login")
-    public String loginForm() {
-        return "loginForm";
-    }
-
-//    @PostMapping("/login")
-//    public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
-//
-//    }
-
     @Operation(summary = "핀번호로 관리자 로그인")
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<AdminDto>> loginAdmin(@RequestBody AdminLoginDto input, HttpServletResponse response) {
@@ -61,21 +45,34 @@ public class AdminController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @Operation(summary = "admin 등록")
+    @PostMapping("/register")
+    public ResponseEntity<ApiResponse<AdminDto>> resisterAdmin(@RequestBody AdminResisterDto input) {
+        AdminDto adminDto = adminService.registerAdmin(input);
+        ApiResponse<AdminDto> result = new ApiResponse<>(true, "관리자 생성되었습니다", adminDto);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
-//    @GetMapping("/register")
-//    public String registerForm() {
-//        return "registerForm";
-//    }
-//
-//    @PostMapping("/register")
-//    public String registerAdmin(@RequestParam String name, Model model) {
-//        Admin admin = new Admin(name);
-//        adminRepository.save(admin);
-//
-//        String formattedPinNumber = String.format("%04d", admin.getPinNumber());
-//        model.addAttribute("pinNumber", formattedPinNumber);
-//
-//        return "registered";
-//    }
+    @Operation(summary = "admin 수정")
+    @PutMapping("/change")
+    public ResponseEntity<ApiResponse<AdminDto>> changeAdmin(@RequestBody AdminChangePwDto input) {
+        AdminDto adminDto = adminService.changeAdmin(input);
+        ApiResponse<AdminDto> result = new ApiResponse<>(true, "관리자 비밀번호 수정되었습니다", adminDto);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @Operation(summary = "QR코드로 관리자 로그인")
+    @PostMapping("/qrlogin")
+    public ResponseEntity<ApiResponse<AdminDto>> loginQRAdmin(@RequestBody AdminQrLoginDto input, HttpServletResponse response) {
+        AdminDto adminDto = adminService.qrLoginAdmin(input);
+        ApiResponse<AdminDto> result = new ApiResponse<>(true, "관리자 로그인 되었습니다", adminDto);
+
+        String Key = jwtProvider.createToken(adminDto);
+        Cookie cookie = new Cookie("Authorization", Key);
+        cookie.setMaxAge(60*60*24);
+        cookie.setPath("/");
+        response.addCookie(cookie);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 }
 
