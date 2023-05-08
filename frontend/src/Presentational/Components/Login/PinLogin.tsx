@@ -8,15 +8,6 @@ function PinLogin() {
   const navigate = useNavigate();
   const [pinNumber, setPinNumber] = useState<string>('');
 
-  socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    console.log('현재 바코드는', data.barcode);
-    if (data.barcode !== pinNumber) {
-      setPinNumber(data.barcode);
-      handleLogin();
-    }
-  };
-
   const onChage = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPinNumber(e.target.value);
   };
