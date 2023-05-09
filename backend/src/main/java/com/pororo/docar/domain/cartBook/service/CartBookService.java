@@ -80,7 +80,6 @@ public class CartBookService {
             int[] pos = position.get(Integer.parseInt(String.valueOf(bookshelf)));
             arr[pos[0]][pos[1]] = 2;
         }
-
         bfs(1, 0);
     }
 
@@ -107,6 +106,7 @@ public class CartBookService {
             }
             getOrderList();
             arrange = true;
+            bookshelves.clear();
         }
 
 
@@ -126,7 +126,6 @@ public class CartBookService {
                     }
                 }
             }
-            System.out.println(list);
             tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
