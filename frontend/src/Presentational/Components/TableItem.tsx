@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ReturnBookType } from '../../store/api';
+import { CartBookType, ReturnBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
-// interface Type1 {
-//   id: number;
-//   bookName: string;
-//   author: string;
-//   cover: string;
-// }
-
 interface Type {
-  book: ReturnBookType;
+  book: CartBookType;
   checkedItemHandler: (id: number, isChecked: boolean) => void;
   isAllChecked: boolean;
 }
@@ -21,7 +14,7 @@ function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
 
   const checkHandler = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(!bChecked);
-    checkedItemHandler(book.id, target.checked);
+    checkedItemHandler(book.bookId, target.checked);
   };
 
   const allCheckHandler = () => setChecked(isAllChecked);

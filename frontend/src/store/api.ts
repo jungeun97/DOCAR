@@ -14,6 +14,10 @@ export interface CartBookType {
   cartBookFloor: number;
   cartBookSite: number;
   bookName: string;
+  coverImg: string;
+  depth: number;
+  bookId: number;
+  author: string;
 }
 
 export interface CartBookType extends Array<CartBookType> {
@@ -162,4 +166,11 @@ export function CleanBookShelf() {
 }
 
 // cartbooks 청소완료 후 원위치로
-// export async function ReturnCart(): Promise
+export async function getTurtlebot() {
+  return axios
+    .get(`${API_URL}/turtlebot`, {
+      withCredentials: true,
+    })
+    .then((res) => res.data)
+    .catch((res) => res);
+}
