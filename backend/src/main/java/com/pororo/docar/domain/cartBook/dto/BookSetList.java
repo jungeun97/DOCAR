@@ -18,6 +18,7 @@ public class BookSetList {
     private Long bookshelfId;
     private String coverImg;
     private Long depth;
+    private String author;
     private Long bookId;
 
     public BookSetList entityToDto(CartBook cartBook){
@@ -28,6 +29,7 @@ public class BookSetList {
                 .bookshelfId(cartBook.getBook().getBookshelf().getId())
                 .coverImg(cartBook.getBook().getCover())
                 .depth(cartBook.getBook().getDepth())
+                .author(cartBook.getBook().getAuthor())
                 .bookId(cartBook.getBook().getId())
                 .build();
     }
