@@ -97,6 +97,7 @@ public class CartBookService {
 
     @Transactional
     public List<BookSetList> getBooksByBookshelf() {
+        log.info("=====================post 메소드 시작");
         List<CartBook> bookList = cartBookRepository.findAll();
         List<TmpBook> list = new ArrayList<>();
         if (!arrange) {
@@ -109,13 +110,15 @@ public class CartBookService {
             arrange = true;
             bookshelves.clear();
         }
+        log.info("=======================bfs 로직 돌아감");
+        log.info("=====================orderlist: " + orderList);
 
 
         if (!orderList.isEmpty()) {
-//            System.out.println(orderList);
+            System.out.println(orderList);
             log.info("=====================orderlist: " + orderList);
             Long idx = orderList.get(0);
-//            System.out.println(idx);
+            System.out.println(idx);
             log.info("=====================정리할 책장번호: " + idx);
             for (CartBook cartBook : bookList) {
                 if (cartBook.getBook().getBookshelf().getId() == idx) {
@@ -124,12 +127,12 @@ public class CartBookService {
                             .site(cartBook.getSite())
                             .book(cartBook.getBook())
                             .build();
+                    System.out.println(tmpBook.getBook().getName());
                     if (!tmpBookRepository.existsByBook(tmpBook.getBook())) {
                         list.add(tmpBook);
                     }
                 }
             }
-            tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
             List<TmpBook> setBookList = tmpBookRepository.findAll();
@@ -189,7 +192,7 @@ public class CartBookService {
         }
         tmpBookRepository.deleteAll();
 //        System.out.println("===============================gohome후 arrange:" + arrange);
-        log.info("=====================gohome 후 arrange" + arrange);
+        log.info("=====================gohome 후 arrange: " + arrange);
 
     }
 
