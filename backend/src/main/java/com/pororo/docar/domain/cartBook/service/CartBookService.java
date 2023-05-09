@@ -9,12 +9,13 @@ import com.pororo.docar.domain.tmpBook.entity.TmpBook;
 import com.pororo.docar.domain.tmpBook.repository.TmpBookRepository;
 import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-
+@Slf4j
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
@@ -111,9 +112,11 @@ public class CartBookService {
 
 
         if (!orderList.isEmpty()) {
-            System.out.println(orderList);
+//            System.out.println(orderList);
+            log.info("=====================orderlist: " + orderList);
             Long idx = orderList.get(0);
-            System.out.println(idx);
+//            System.out.println(idx);
+            log.info("=====================정리할 책장번호: " + idx);
             for (CartBook cartBook : bookList) {
                 if (cartBook.getBook().getBookshelf().getId() == idx) {
                     TmpBook tmpBook = TmpBook.builder()
@@ -185,6 +188,9 @@ public class CartBookService {
            }
         }
         tmpBookRepository.deleteAll();
+//        System.out.println("===============================gohome후 arrange:" + arrange);
+        log.info("=====================gohome 후 arrange" + arrange);
+
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
