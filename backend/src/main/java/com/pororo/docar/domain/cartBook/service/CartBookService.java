@@ -81,6 +81,7 @@ public class CartBookService {
             int[] pos = position.get(Integer.parseInt(String.valueOf(bookshelf)));
             arr[pos[0]][pos[1]] = 2;
         }
+        log.info("====================정리할 책장 목록: " + arr);
         bfs(1, 0);
     }
 
@@ -112,6 +113,7 @@ public class CartBookService {
         }
         log.info("=======================bfs 로직 돌아감");
         log.info("=====================orderlist: " + orderList);
+        log.info("==============================arrange: " + arrange);
 
 
         if (!orderList.isEmpty()) {
