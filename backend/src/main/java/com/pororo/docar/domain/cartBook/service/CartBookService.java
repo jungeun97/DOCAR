@@ -29,7 +29,7 @@ public class CartBookService {
     static int N = 3, M = 5;
     static int[][] arr = {{-1, 1, -1, 1, -1}, {1, 1, 1, 1, 1}, {-1, 1, -1, 1, -1}};
     static Map<Integer, int[]> position = Map.of(1, new int[]{0, 0}, 2, new int[]{0, 2}, 3, new int[]{0, 4}, 4, new int[]{2, 0}, 5, new int[]{2, 2}, 6, new int[]{2, 4});
-    static int[][] visited = new int[N][M];
+//    static int[][] visited = new int[N][M];
     static List<Long> bookshelves = new ArrayList<>();
     static int[] di = {1, 1, 0, -1, -1, -1, 0, 1};
     static int[] dj = {0, -1, -1, -1, 0, 1, 1, 1};
@@ -38,6 +38,7 @@ public class CartBookService {
     static boolean arrange = false;
 
     public static void bfs(int i, int j) {
+        int[][] visited = new int[N][M];
         Queue<int[]> q = new LinkedList<>();
         q.offer(new int[]{i, j});
         visited[i][j] = 1;
@@ -81,7 +82,7 @@ public class CartBookService {
             int[] pos = position.get(Integer.parseInt(String.valueOf(bookshelf)));
             arr[pos[0]][pos[1]] = 2;
         }
-        log.info("====================정리할 책장 목록: " + arr);
+        System.out.println("====================정리할 책장 목록: " + arr);
         bfs(1, 0);
     }
 
@@ -93,6 +94,8 @@ public class CartBookService {
         for (CartBook cartBook : bookList) {
             list.add(new BookSetList().entityToDto(cartBook));
         }
+        System.out.println(list);
+        System.out.println(arrange);
         return list;
     }
 
@@ -158,8 +161,8 @@ public class CartBookService {
                 }
             }
 
-            System.out.println(indexList);
-            System.out.println(depthList);
+            System.out.println("===================" + idx + "번 책장의 indexList: " + indexList);
+            System.out.println("===================" + idx + "번 책장의 depthList: " + depthList);
 
             return setList;
         } else {
