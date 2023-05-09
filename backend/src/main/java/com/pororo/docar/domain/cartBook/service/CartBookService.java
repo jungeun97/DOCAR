@@ -137,7 +137,10 @@ public class CartBookService {
             tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
+            List<Long> depthList = new ArrayList<>();
+            List<Long> indexList = new ArrayList<>();
             List<TmpBook> setBookList = tmpBookRepository.findAll();
+            List<CartBook> cartBookList = cartBookRepository.findAll();
 
             for (TmpBook tmpBook : setBookList) {
                 CartBook cartBook = CartBook.builder()
@@ -146,7 +149,18 @@ public class CartBookService {
                         .book(tmpBook.getBook())
                         .build();
                 setList.add(new BookSetList().entityToDto(cartBook));
+                depthList.add(cartBook.getBook().getDepth());
             }
+
+            for (int i = 0; i < cartBookList.size(); i++) {
+                if (cartBookList.get(i).getBook().getBookshelf().getId() == idx) {
+                    indexList.add((long)i);
+                }
+            }
+
+            System.out.println(indexList);
+            System.out.println(depthList);
+
             return setList;
         } else {
             throw new BadRequestException("정리할 책장이 없습니다.");
