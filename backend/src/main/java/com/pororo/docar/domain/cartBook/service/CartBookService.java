@@ -129,12 +129,12 @@ public class CartBookService {
                             .site(cartBook.getSite())
                             .book(cartBook.getBook())
                             .build();
-                    System.out.println(tmpBook.getBook().getName());
                     if (!tmpBookRepository.existsByBook(tmpBook.getBook())) {
                         list.add(tmpBook);
                     }
                 }
             }
+            tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
             List<TmpBook> setBookList = tmpBookRepository.findAll();
@@ -161,7 +161,7 @@ public class CartBookService {
         if (!orderList.isEmpty()) {
             orderList.remove(0);
         } else {
-            throw new BadRequestException("정리할 책장이 업습니다.");
+            throw new BadRequestException("정리할 책장이 없습니다.");
         }
 
         if (!setBookList.isEmpty()) {
