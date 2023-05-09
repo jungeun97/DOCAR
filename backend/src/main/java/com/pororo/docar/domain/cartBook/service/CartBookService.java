@@ -23,7 +23,6 @@ public class CartBookService {
     private final TmpBookRepository tmpBookRepository;
     private final TmpBookService tmpBookService;
 
-//    public List<Long> orderList = tmpBookService.orderList;
     public static List<Long> orderList = new LinkedList<>();
 
     static int N = 3, M = 5;
@@ -107,13 +106,14 @@ public class CartBookService {
                 }
             }
             getOrderList();
-            System.out.println(orderList);
             arrange = true;
         }
 
 
         if (!orderList.isEmpty()) {
+            System.out.println(orderList);
             Long idx = orderList.get(0);
+            System.out.println(idx);
             for (CartBook cartBook : bookList) {
                 if (cartBook.getBook().getBookshelf().getId() == idx) {
                     TmpBook tmpBook = TmpBook.builder()
@@ -126,6 +126,7 @@ public class CartBookService {
                     }
                 }
             }
+            System.out.println(list);
             tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
@@ -141,7 +142,7 @@ public class CartBookService {
             }
             return setList;
         } else {
-            throw new BadRequestException("모든 책장 정리가 완료되었습니다.");
+            throw new BadRequestException("정리할 책장이 없습니다.");
         }
     }
 
@@ -150,8 +151,13 @@ public class CartBookService {
         List<TmpBook> setBookList = tmpBookRepository.findAll();
         List<CartBook> doneBookList = cartBookRepository.findAll();
 
-        if (!setBookList.isEmpty()) {
+        if (!orderList.isEmpty()) {
             orderList.remove(0);
+        } else {
+            throw new BadRequestException("정리할 책장이 업습니다.");
+        }
+
+        if (!setBookList.isEmpty()) {
             for (TmpBook tmpBook : setBookList) {
                 for (CartBook cartBook : doneBookList) {
                     Long id = tmpBook.getBook().getId();
