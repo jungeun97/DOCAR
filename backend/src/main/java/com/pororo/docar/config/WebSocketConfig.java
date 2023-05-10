@@ -73,6 +73,25 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 }
             }
         }
+        public void sendNextBookShelfList(Long idx) {
+            ObjectMapper mapper = new ObjectMapper();
+            String jsonMessage;
+            try {
+                jsonMessage = mapper.writeValueAsString(idx);
+            } catch (JsonProcessingException e) {
+                return;
+            }
+
+            for (WebSocketSession s : sessions) {
+                if (s.isOpen()) {
+                    try {
+                        s.sendMessage(new TextMessage(jsonMessage));
+                    } catch(IOException e) {
+                        return;
+                    }
+                }
+            }
+        }
     }
 
     @Bean
