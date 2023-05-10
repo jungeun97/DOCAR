@@ -1,6 +1,7 @@
 package com.pororo.docar.domain.cartBook.controller;
 
 import com.pororo.docar.common.dto.ApiResponse;
+import com.pororo.docar.domain.cartBook.dto.BookIds;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
 import com.pororo.docar.domain.cartBook.service.CartBookService;
 import com.pororo.docar.domain.tmpBook.dto.TmpBookInfo;
@@ -47,9 +48,9 @@ public class CartBookController {
     }
 
     @Operation(summary = "원위치 버튼 클릭시 행동")
-    @GetMapping("/turtlebot")
-    public ResponseEntity<ApiResponse> goHome(@RequestParam(value = "bookIds", required = false, defaultValue = "") List<Long> bookIds) {
-        cartBookService.goHome(bookIds);
+    @PostMapping("/turtlebot")
+    public ResponseEntity<ApiResponse> goHome(@RequestBody BookIds input) {
+        cartBookService.goHome(input);
         ApiResponse result = new ApiResponse(true, "원 위치로 이동합니다");
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

@@ -3,6 +3,7 @@ package com.pororo.docar.domain.cartBook.service;
 import com.pororo.docar.common.exception.BadRequestException;
 import com.pororo.docar.common.exception.ResourceNotFoundException;
 import com.pororo.docar.config.WebSocketConfig;
+import com.pororo.docar.domain.cartBook.dto.BookIds;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
@@ -200,19 +201,24 @@ public class CartBookService {
     }
 
     @Transactional
-    public void goHome(List<Long> bookIds) {
+    public void goHome(BookIds input) {
         List<CartBook> doneBookList = cartBookRepository.findAll();
         arrange = false;
-        if (!bookIds.isEmpty()) {
-           for (Long idx : bookIds) {
+        if (!input.getBookIds().isEmpty()) {
+           for (Long id : input.getBookIds()) {
                for (CartBook cartBook : doneBookList) {
-                   if (idx == cartBook.getBook().getId()) {
+                   if (id == cartBook.getBook().getId()) {
                        cartBookRepository.delete(cartBook);
                    }
                }
            }
         }
         tmpBookRepository.deleteAll();
+        if (!orderList.isEmpty()) {
+            myWebSocketHandler.sendNextBookShelfList(orderList.get(0));
+        } else {
+            myWebSocketHandler.sendNextBookShelfList(0L);
+        }
 //        System.out.println("===============================gohome후 arrange:" + arrange);
 
     }
