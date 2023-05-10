@@ -1,5 +1,6 @@
 package com.pororo.docar.config;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
@@ -52,15 +53,23 @@ public class WebSocketConfig implements WebSocketConfigurer {
         }
 
         public void sendIndexAndDepthListsToAllSessions(List<Long> indexList, List<Long> depthList) {
-            String indexListMessage = convertListToString(indexList);
-            String depthListMessage = convertListToString(depthList);
+            ObjectMapper objectMapper = new ObjectMapper();
+            String indexListMessage;
+            String depthListMessage;
+            try {
+                indexListMessage = objectMapper.writeValueAsString(indexList);
+                depthListMessage = objectMapper.writeValueAsString(depthList);
+            } catch (JsonProcessingException e) {
+                // 예외 처리
+                return;
+            }
 
             for (WebSocketSession s : sessions) {
                 if (s.isOpen()) {
                     try {
                         // indexList와 depthList를 텍스트 메시지로 변환하여 세션에 전송합니다.
-                        s.sendMessage(new TextMessage("{indexList: " + indexListMessage + "}"));
-                        s.sendMessage(new TextMessage("{depthList: " + depthListMessage + "}"));
+                        s.sendMessage(new TextMessage(indexListMessage));
+                        s.sendMessage(new TextMessage(depthListMessage));
                     } catch (IOException e) {
                         // 에러 캐치
                     }
@@ -68,16 +77,16 @@ public class WebSocketConfig implements WebSocketConfigurer {
             }
         }
 
-        private String convertListToString(List<Long> list) {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < list.size(); i++) {
-                sb.append(list.get(i));
-                if (i < list.size() - 1) {
-                    sb.append(",");
-                }
-            }
-            return sb.toString();
-        }
+//        private String convertListToString(List<Long> list) {
+//            StringBuilder sb = new StringBuilder();
+//            for (int i = 0; i < list.size(); i++) {
+//                sb.append(list.get(i));
+//                if (i < list.size() - 1) {
+//                    sb.append(",");
+//                }
+//            }
+//            return sb.toString();
+//        }
     }
 
     @Bean
