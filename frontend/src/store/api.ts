@@ -17,7 +17,6 @@ export interface CartBookType {
   bookName: string;
   coverImg: string;
   depth: number;
-  bookId: number;
   author: string;
 }
 
