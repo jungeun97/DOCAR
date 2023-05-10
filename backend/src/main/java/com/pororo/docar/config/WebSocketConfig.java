@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -28,6 +29,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 .addInterceptors(new HttpSessionHandshakeInterceptor());
     }
 
+    @Component
     public static class MyWebSocketHandler extends TextWebSocketHandler {
         private static final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
         @Override
