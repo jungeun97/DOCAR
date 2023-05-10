@@ -14,6 +14,7 @@ import org.springframework.web.socket.server.HandshakeHandler;
 import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 import org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -27,7 +28,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 .addInterceptors(new HttpSessionHandshakeInterceptor());
     }
 
-    static class MyWebSocketHandler extends TextWebSocketHandler {
+    public static class MyWebSocketHandler extends TextWebSocketHandler {
         private static final List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
         @Override
         public void afterConnectionEstablished(WebSocketSession session) throws Exception {
@@ -46,6 +47,34 @@ public class WebSocketConfig implements WebSocketConfigurer {
                     s.sendMessage(new TextMessage(jsonMessage));
                 }
             }
+        }
+
+        public void sendIndexAndDepthListsToAllSessions(List<Long> indexList, List<Long> depthList) {
+            String indexListMessage = convertListToString(indexList);
+            String depthListMessage = convertListToString(depthList);
+
+            for (WebSocketSession s : sessions) {
+                if (s.isOpen()) {
+                    try {
+                        // indexList와 depthList를 텍스트 메시지로 변환하여 세션에 전송합니다.
+                        s.sendMessage(new TextMessage("indexList:" + indexListMessage));
+                        s.sendMessage(new TextMessage("depthList:" + depthListMessage));
+                    } catch (IOException e) {
+                        return;
+                    }
+                }
+            }
+        }
+
+        private String convertListToString(List<Long> list) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < list.size(); i++) {
+                sb.append(list.get(i));
+                if (i < list.size() - 1) {
+                    sb.append(",");
+                }
+            }
+            return sb.toString();
         }
     }
 

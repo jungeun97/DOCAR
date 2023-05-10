@@ -2,6 +2,7 @@ package com.pororo.docar.domain.cartBook.service;
 
 import com.pororo.docar.common.exception.BadRequestException;
 import com.pororo.docar.common.exception.ResourceNotFoundException;
+import com.pororo.docar.config.WebSocketConfig;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
@@ -23,6 +24,7 @@ public class CartBookService {
     private final CartBookRepository cartBookRepository;
     private final TmpBookRepository tmpBookRepository;
     private final TmpBookService tmpBookService;
+    private final WebSocketConfig.MyWebSocketHandler myWebSocketHandler;
 
     public static List<Long> orderList = new LinkedList<>();
 
@@ -156,6 +158,7 @@ public class CartBookService {
 
             System.out.println("===================" + idx + "번 책장의 indexList: " + indexList);
             System.out.println("===================" + idx + "번 책장의 depthList: " + depthList);
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList);
 
             return setList;
         } else {
