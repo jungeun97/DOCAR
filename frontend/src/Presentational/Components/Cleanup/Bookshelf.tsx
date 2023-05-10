@@ -12,7 +12,7 @@ import Pagenation from './../Pagenation';
 import * as API from '../../../store/api';
 import { checkBookType } from '../../../store/types';
 
-const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
+const API_URL = 'https://k8d101.p.ssafy.io/api';
 
 function Bookshelf() {
   const [books, setBooks] = useState<null | API.CartBookType>(null);
@@ -88,13 +88,34 @@ function Bookshelf() {
                   .post(`${API_URL}/cartbooks`, {
                     withCredentials: true,
                   })
-                  // 책장 정리 완료했으니깐 삭제
                   .then((res) => {
+                    console.log(res);
                     console.log('다시데이터 읽기');
                     setBooks(res.data.data);
                     booksData(res.data.data);
                   })
-                  .catch((res) => console.log(res));
+                  .catch((res) => {
+                    console.log(res);
+                    navigate(`/cleanup/end`);
+                    // MySwal.fire({
+                    //   title: '모든 책을 정리하였습니다.',
+                    //   timerProgressBar: true,
+                    //   showCancelButton: false,
+                    //   showConfirmButton: true,
+                    //   confirmButtonText: '홈으로 이동',
+                    //   allowOutsideClick: false,
+                    // }).then(() => {
+                    //   axios
+                    //     .post(`${API_URL}/turtlebot`, {
+                    //       bookIds: [],
+                    //       withCredentials: true,
+                    //     })
+                    //     .then((res) => {
+                    //       console.log(res);
+                    //       navigate(`/`);
+                    //     });
+                    // });
+                  });
               } else {
               }
             });

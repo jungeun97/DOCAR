@@ -37,13 +37,11 @@ function BookList() {
     const getCartBooks = async () => {
       const request = await API.getCartBookList();
       console.log(request);
-      setBooks(request);
-      booksData(request);
       if (request?.length === 0) {
         MySwal.fire({
           title: '정리할 책이 없습니다.',
           timerProgressBar: true,
-          showCancelButton: true,
+          showCancelButton: false,
           showConfirmButton: true,
           confirmButtonText: '홈으로 이동',
           allowOutsideClick: false,
@@ -51,6 +49,8 @@ function BookList() {
           navigate(`/`);
         });
       }
+      setBooks(request);
+      booksData(request);
     };
     getCartBooks();
   }, []);

@@ -2,12 +2,23 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getTurtlebot } from '../../../store/api';
 import Btn from '../../Common/Btn';
+import axios from 'axios';
+
+const API_URL = 'https://k8d101.p.ssafy.io/api';
 
 function EndCleanup() {
   const navigate = useNavigate();
 
   const goTurtlebot = () => {
-    getTurtlebot();
+    axios
+      .post(`${API_URL}/turtlebot`, {
+        bookIds: [],
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res);
+        navigate(`/`);
+      });
     navigate('/');
   };
 
