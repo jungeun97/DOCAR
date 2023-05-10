@@ -1,5 +1,6 @@
 package com.pororo.docar.config;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
@@ -52,31 +53,44 @@ public class WebSocketConfig implements WebSocketConfigurer {
         }
 
         public void sendIndexAndDepthListsToAllSessions(List<Long> indexList, List<Long> depthList) {
-            String indexListMessage = convertListToString(indexList);
-            String depthListMessage = convertListToString(depthList);
+            ObjectMapper mapper = new ObjectMapper();
+            CartBookList cartBookList = new CartBookList(indexList, depthList);
+            String jsonMessage;
+            try {
+                jsonMessage = mapper.writeValueAsString(cartBookList);
+            } catch (JsonProcessingException e) {
+                // 예외 처리
+                return;
+            }
 
             for (WebSocketSession s : sessions) {
                 if (s.isOpen()) {
                     try {
-                        // indexList와 depthList를 텍스트 메시지로 변환하여 세션에 전송합니다.
-                        s.sendMessage(new TextMessage("{indexList: " + indexListMessage + "}"));
-                        s.sendMessage(new TextMessage("{depthList:" + depthListMessage + "}"));
-                    } catch (IOException e) {
-                        // 에러 캐치
+                        s.sendMessage(new TextMessage(jsonMessage));
+                    } catch(IOException e) {
+                        return;
                     }
                 }
             }
         }
+        public void sendNextBookShelfList(Long idx) {
+            ObjectMapper mapper = new ObjectMapper();
+            String jsonMessage;
+            try {
+                jsonMessage = mapper.writeValueAsString(idx);
+            } catch (JsonProcessingException e) {
+                return;
+            }
 
-        private String convertListToString(List<Long> list) {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < list.size(); i++) {
-                sb.append(list.get(i));
-                if (i < list.size() - 1) {
-                    sb.append(",");
+            for (WebSocketSession s : sessions) {
+                if (s.isOpen()) {
+                    try {
+                        s.sendMessage(new TextMessage(jsonMessage));
+                    } catch(IOException e) {
+                        return;
+                    }
                 }
             }
-            return sb.toString();
         }
     }
 
@@ -95,6 +109,17 @@ public class WebSocketConfig implements WebSocketConfigurer {
         public Payload(long distance, String barcode) {
             this.distance = distance;
             this.barcode = barcode;
+        }
+    }
+
+    @Data
+    public static class CartBookList {
+        private List<Long> indexList;
+        private List<Long> depthList;
+
+        public CartBookList(List<Long> indexList, List<Long> depthList) {
+            this.indexList = indexList;
+            this.depthList = depthList;
         }
     }
 }

@@ -113,6 +113,13 @@ public class CartBookService {
             getOrderList();
             arrange = true;
             bookshelves.clear();
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < M; j++) {
+                    if (arr[i][j] == 2) {
+                        arr[i][j] = -1;
+                    }
+                }
+            }
         }
 
 
@@ -159,7 +166,7 @@ public class CartBookService {
             System.out.println("===================" + idx + "번 책장의 indexList: " + indexList);
             System.out.println("===================" + idx + "번 책장의 depthList: " + depthList);
             myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList);
-
+            myWebSocketHandler.sendNextBookShelfList(orderList.get(0));
             return setList;
         } else {
             throw new BadRequestException("정리할 책장이 없습니다.");
