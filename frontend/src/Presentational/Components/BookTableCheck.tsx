@@ -4,12 +4,11 @@ import BookData from './BookData.json';
 import TableItem from './TableItem';
 import { CartBookType } from '../../store/api';
 
-export interface BookTableType {
+interface Props {
   books: CartBookType[];
 }
 
-function BookTableCheck({ books }: BookTableType) {
-// function BookTableCheck() {
+function BookTableCheck({ books }: Props) {
   const [checkedItems, setCheckedItems] = useState(new Set());
 
   const checkedItemHandler = (id: number, isChecked: boolean) => {

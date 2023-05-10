@@ -15,6 +15,10 @@ export interface CartBookType {
   cartBookFloor: number;
   cartBookSite: number;
   bookName: string;
+  coverImg: string;
+  depth: number;
+  bookId: number;
+  author: string;
 }
 
 export interface CartBookType extends Array<CartBookType> {
@@ -38,6 +42,22 @@ export async function AddLoginPin(pinNumber: string): Promise<boolean> {
   try {
     const response = await axios.post(`${API_URL}/login`, {
       pinNumber: pinNumber,
+      withCredentials: true,
+    });
+    console.log(response);
+    return response.data.success as boolean;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    console.error(axiosError);
+    return false;
+  }
+}
+
+// Qrcode 로그인 API
+export async function AddLoginQr(QrNumber: string): Promise<boolean> {
+  try {
+    const response = await axios.post(`${API_URL}/qrlogin`, {
+      qrCode: QrNumber,
       withCredentials: true,
     });
     console.log(response);
@@ -147,4 +167,11 @@ export function CleanBookShelf() {
 }
 
 // cartbooks 청소완료 후 원위치로
-// export async function ReturnCart(): Promise
+export async function getTurtlebot() {
+  return axios
+    .get(`${API_URL}/turtlebot`, {
+      withCredentials: true,
+    })
+    .then((res) => res.data)
+    .catch((res) => res);
+}

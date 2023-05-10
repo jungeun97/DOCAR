@@ -28,15 +28,21 @@ function Pagenation({ totalPosts, limit, page, setPage }: Type) {
 
   return (
     <PageStyle.WrapPagenation>
-      <PageStyle.NextPreBtn onClick={() => setPage(page - 1)} disabled={page === 1}>
+      <PageStyle.NextPreBtn
+        onClick={() => setPage(page - 1)}
+        disabled={page === 1}
+      >
         &lt;
       </PageStyle.NextPreBtn>
       {Array(end - start + 1)
         .fill(0)
         .map((_, i) => (
-          <React.Fragment key={i}>
+          <React.Fragment key={start + i}>
             {start + i === page ? (
-              <PageStyle.SelectedBtn key={start + i} onClick={() => setPage(start + i)}>
+              <PageStyle.SelectedBtn
+                key={start + i}
+                onClick={() => setPage(start + i)}
+              >
                 {start + i}
               </PageStyle.SelectedBtn>
             ) : (
@@ -49,7 +55,10 @@ function Pagenation({ totalPosts, limit, page, setPage }: Type) {
             )}
           </React.Fragment>
         ))}
-      <PageStyle.NextPreBtn onClick={() => setPage(page + 1)} disabled={page === numPages}>
+      <PageStyle.NextPreBtn
+        onClick={() => setPage(page + 1)}
+        disabled={page === numPages}
+      >
         &gt;
       </PageStyle.NextPreBtn>
     </PageStyle.WrapPagenation>

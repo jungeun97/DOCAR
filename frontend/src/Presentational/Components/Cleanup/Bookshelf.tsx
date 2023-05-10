@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import BookItem from './BookItem';
 import * as BookStyle from './BookList_Style';
 import Btn from './../../Common/Btn';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import BookTable from './../BookTable';
 import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
-import BookData from '../BookData.json';
 import Pagenation from './../Pagenation';
 import * as API from '../../../store/api';
 
@@ -24,8 +22,12 @@ function Bookshelf() {
   useEffect(() => {
     const PostCartBooks = async () => {
       const request = await API.PostCartBookList();
+<<<<<<< HEAD
       console.log("해당 책장 데이터 읽기")
       console.log(request);
+=======
+      console.log('데이터 읽기');
+>>>>>>> 01200929377f49a6d39c3487e6016a2cf283ae1a
       setBooks(request);
       booksData(request);
     };
@@ -72,7 +74,7 @@ function Bookshelf() {
           })
           // 책장 정리 완료했으니깐 삭제
           .then((res) => {
-            console.log('삭제')
+            console.log('삭제');
             MySwal.fire({
               icon: 'success',
               title: '책장 정리 완료!',
@@ -93,7 +95,7 @@ function Bookshelf() {
                   })
                   // 책장 정리 완료했으니깐 삭제
                   .then((res) => {
-                    console.log('다시데이터 읽기')
+                    console.log('다시데이터 읽기');
                     setBooks(res.data.data);
                     booksData(res.data.data);
                   })
@@ -120,9 +122,9 @@ function Bookshelf() {
       allowOutsideClick: false,
       html: (
         <>
-          {books ? <BookTableCheck books={books}/> : <></>}
+          {/* {books ? <BookTableCheck books={books}/> : <></>} */}
           
-          {/* <BookTableCheck /> */}
+          <BookTableCheck books={curbooks} />
         </>
       ),
     }).then((result) => {
