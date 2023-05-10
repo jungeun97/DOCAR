@@ -20,41 +20,39 @@ const NonSelectedBtn = styled.button`
 function Pagenation({ totalPosts, limit, page, setPage }: Type) {
   // 총 페이지
   const numPages = Math.ceil(totalPosts / limit);
-  console.log('총 페이지');
-  console.log(numPages);
-  
+
   // 페이지 블록 구하기
   const block = Math.ceil(page / 5);
   const start = (block - 1) * 5 + 1;
   const end = Math.min(start + 4, numPages);
 
   return (
-    <div>
-      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+    <PageStyle.WrapPagenation>
+      <PageStyle.NextPreBtn onClick={() => setPage(page - 1)} disabled={page === 1}>
         &lt;
-      </button>
+      </PageStyle.NextPreBtn>
       {Array(end - start + 1)
         .fill(0)
         .map((_, i) => (
           <>
-          {start + i === page ? <SelectedBtn  key={start + i}
-          onClick={() => setPage(start + i)}>{start + i}</SelectedBtn>:<NonSelectedBtn  key={start + i}
-          onClick={() => setPage(start + i)}>{start + i}</NonSelectedBtn>}
+            {start + i === page ? (
+              <PageStyle.SelectedBtn key={start + i} onClick={() => setPage(start + i)}>
+                {start + i}
+              </PageStyle.SelectedBtn>
+            ) : (
+              <PageStyle.NonSelectedBtn
+                key={start + i}
+                onClick={() => setPage(start + i)}
+              >
+                {start + i}
+              </PageStyle.NonSelectedBtn>
+            )}
           </>
-          // <button
-          //   key={start + i}
-          //   onClick={() => setPage(start + i)}
-          //   style={{
-          //     backgroundColor: start + i === page ? 'red' : 'blue'
-          //   }}
-          // >
-          //   {start + i}
-          // </button>
         ))}
-      <button onClick={() => setPage(page + 1)} disabled={page === numPages}>
+      <PageStyle.NextPreBtn onClick={() => setPage(page + 1)} disabled={page === numPages}>
         &gt;
-      </button>
-    </div>
+      </PageStyle.NextPreBtn>
+    </PageStyle.WrapPagenation>
   );
 }
 

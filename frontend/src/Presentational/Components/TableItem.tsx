@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { ReturnBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 
-interface Type1 {
-  id: number;
-  title: string;
-  writer: string;
-  imgurl: string;
-}
+// interface Type1 {
+//   id: number;
+//   bookName: string;
+//   author: string;
+//   cover: string;
+// }
 
 interface Type {
-  book: Type1;
+  book: ReturnBookType;
   checkedItemHandler: (id: number, isChecked: boolean) => void;
   isAllChecked: boolean;
 }
@@ -37,11 +38,11 @@ function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
         />
       </TableStyle.ThCheck>
       <TableStyle.ThTitle2>
-        <TableStyle.BookName>{book.title}</TableStyle.BookName>
+        <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
       </TableStyle.ThTitle2>
-      <TableStyle.ThWriter>
-        <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
-      </TableStyle.ThWriter>
+      <TableStyle.ThBookFloor>
+        <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+      </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );
 }

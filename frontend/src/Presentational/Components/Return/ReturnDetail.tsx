@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import * as DetailStyle from './ReturnDetail_Style';
 import BookImage from '../../../Resources/Images/BookImage.jpg';
+import defaultImage from '../../../Resources/Images/defaultImage.png';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
-import API from '../../../store/api';
+import { AddReturnBook, ReturnBookType } from '../../../store/api';
+import { useRecoilState } from 'recoil';
+import { barcodeNumState } from '../../../store/atoms';
 
 interface ReturnDetail {
   ClickedReturnBtn: () => void;
 }
 
 function ReturnDetail(props: ReturnDetail) {
+  const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
   const [distance, setDistance] = useState(0);
   const [seosorData, setSensorData] = useState(0);
+  const [bookInfo, setBookInfo] = useState<ReturnBookType | null>(null);
   const [qrUrl, setQrUrl] = useState('');
 
   const MySwal = withReactContent(Swal);
@@ -21,18 +26,44 @@ function ReturnDetail(props: ReturnDetail) {
     setDistance(distance + 1);
   };
 
-  const handleReturn = () => {
+  useEffect(() => {
+    if (barcodeNum !== 0) {
+      AddReturnBookAPI();
+    } else {
+      console.log('디테일페이지', barcodeNum);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   AddReturnBookAPI();
+  // }, [barcodeNum]);
+
+  const AddReturnBookAPI = async () => {
+    const result = await AddReturnBook(barcodeNum);
+    if (result) {
+      setBookInfo(result);
+    } else {
+      setModal();
+    }
+    console.log('반납바코드', barcodeNum);
+  };
+
+  useEffect(() => {
+    //     if (barcodeNum !== 0) {
+    //   AddReturnBookAPI();
+    // } else {
+    //   console.log('디테일페이지', barcodeNum);
+    if (barcodeNum !== 0) {
+      console.log('handleReturn 함수 실행');
+      handleReturn();
+    }
+  }, [barcodeNum]);
+
+  const handleReturn = async () => {
     if (seosorData !== distance) {
       setDistance(seosorData);
-      // 반납 처리 API 호출
-      // API.post('return', { qr_url: qrUrl })
-      //   .then((response) => {
-      //     console.log(response.data);
-      //   })
-      //   .catch((error) => {
-      //     console.error(error);
-      //   });
       console.log('책 반납 처리');
+      AddReturnBookAPI();
     } else {
       setModal();
     }
@@ -54,16 +85,16 @@ function ReturnDetail(props: ReturnDetail) {
     <DetailStyle.WrapDetail>
       <DetailStyle.BookDetailDiv>
         <DetailStyle.BookDiv>
-          <DetailStyle.BookImg src={BookImage} />
+          <DetailStyle.BookImg src={bookInfo?.cover} />
           <DetailStyle.BookTextDiv>
-            <DetailStyle.BookName>
-              24단계 실습으로 정복하는 쿠버네티스
-            </DetailStyle.BookName>
-            <DetailStyle.BookWriter>이정훈 저</DetailStyle.BookWriter>
+            <DetailStyle.BookName>{bookInfo?.bookName}</DetailStyle.BookName>
+            <DetailStyle.BookWriter>
+              {bookInfo?.author} 저
+            </DetailStyle.BookWriter>
           </DetailStyle.BookTextDiv>
         </DetailStyle.BookDiv>
         <DetailStyle.PositionText>
-          2번째 선반에 책을 넣으세요.
+          {bookInfo?.floor}번째 선반에 책을 넣으세요.
           <button onClick={ChangeDistance}>책장에 책 넣기</button>
           <button onClick={handleReturn}>바코드 인식</button>
         </DetailStyle.PositionText>

@@ -9,7 +9,7 @@ function BookTableBack() {
         <TableStyle.TableTr2>
           <TableStyle.ThCheck><input type="checkbox" /></TableStyle.ThCheck>
           <TableStyle.ThTitle2>제목</TableStyle.ThTitle2>
-          <TableStyle.ThWriter>저자</TableStyle.ThWriter>
+          <TableStyle.ThBookFloor>저자</TableStyle.ThBookFloor>
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody2>
@@ -24,11 +24,11 @@ function BookTableBack() {
               />
             </TableStyle.ThCheck>
             <TableStyle.ThTitle2>
-              <TableStyle.BookName>{book.title}</TableStyle.BookName>
+              <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle2>
-            <TableStyle.ThWriter>
-              <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
-            </TableStyle.ThWriter>
+            <TableStyle.ThBookFloor>
+              <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+            </TableStyle.ThBookFloor>
           </TableStyle.TableTr3>
         ))}
       </TableStyle.Tbody2>

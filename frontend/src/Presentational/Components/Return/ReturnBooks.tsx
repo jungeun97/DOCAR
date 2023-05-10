@@ -4,36 +4,44 @@ import ReturnList from './ReturnList';
 import * as BooksStyle from './ReturnBooks_Style';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import API from '../../../store/api';
+// import API from '../../../store/api';
 import { useNavigate } from 'react-router-dom';
+import { isReturnState } from '../../../store/atoms';
+import { useRecoilState } from 'recoil';
+import { AddReturnBookList } from '../../../store/api';
+import { AxiosError } from 'axios';
 
 function ReturnBooks() {
-  // const [isComplete, setIsComplete] = useState(false);
-  const [clickedBtn, setClickedBtn] = useState(false);
-
+  const [isComplete, setIsComplete] = useState(false);
+  const [isReturn, setIsReturn] = useRecoilState(isReturnState);
   const navigate = useNavigate();
   const MySwal = withReactContent(Swal);
 
   const ClickedReturnBtn = () => {
-    setClickedBtn(true);
+    setIsComplete(true);
+  };
+
+  const AddReturnBookAPI = async () => {
+    const request = await AddReturnBookList();
+    if (request === false) {
+      setModal(new Error('반납 처리에 실패했습니다.'));
+    } else {
+      setModal();
+    }
   };
 
   const ReturnComplete = () => {
+    setIsReturn(false);
+    AddReturnBookAPI();
     setModal();
-    // API.post('returnsuccess')
-    //   .then((response) => {
-    //     console.log(response.data);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
   };
 
-  const setModal = () => {
+  const setModal = (error?: Error) => {
+    const text = error ? error.message : '감사합니다.';
     MySwal.fire({
-      title: '반납이 완료되었습니다.',
-      text: '감사합니다.',
-      icon: 'success',
+      title: error ? '오류 발생!' : '반납이 완료되었습니다.',
+      text,
+      icon: error ? 'error' : 'success',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: '확인',
@@ -43,10 +51,22 @@ function ReturnBooks() {
     });
   };
 
-  if (clickedBtn) {
+  if (isComplete) {
     return <ReturnList ReturnComplete={ReturnComplete} />;
-  }
-  return <ReturnDetail ClickedReturnBtn={ClickedReturnBtn} />;
+  } 
+  // else if (props.barcodeNum !== 0) {
+  //   return (
+  //     <ReturnDetail
+  //       ClickedReturnBtn={ClickedReturnBtn}
+  //       initBarcodeNum={props.barcodeNum}
+  //     />
+  //   );
+  // }
+  return (
+    <ReturnDetail
+      ClickedReturnBtn={ClickedReturnBtn}
+    />
+  );
 }
 
 export default ReturnBooks;

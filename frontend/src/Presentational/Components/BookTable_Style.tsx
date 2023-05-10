@@ -45,21 +45,21 @@ export const TableTr3 = styled.tr`
 // Tbody에 들어가는 셀, th는 가운데 정렬, td는 왼쪽 정렬
 export const ThImg = styled.th`
   width: 150px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 export const ThTitle = styled.th`
-  width: 250px;
+  width: 325px;
+`;
+
+export const ThBookFloor = styled.th`
+  width: 225px;
 `;
 
 export const ThTitle2 = styled.th`
   width: 250px;
   border-left: 1px solid black;
   border-right: 1px solid black;
-`;
-
-export const ThWriter = styled.th`
-  width: 150px;
 `;
 
 export const ThCheck = styled.th`
@@ -73,6 +73,12 @@ export const BookImg = styled.img`
 
 export const BookName = styled.div`
   font-size: 1rem;
+`;
+
+export const BookFloor = styled.div``;
+
+export const ThWriter = styled.th`
+  width: 150px;
 `;
 
 export const BookWriter = styled.div``;

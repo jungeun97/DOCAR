@@ -42,7 +42,7 @@ function BookTableCheck() {
             />
           </TableStyle.ThCheck>
           <TableStyle.ThTitle2>제목</TableStyle.ThTitle2>
-          <TableStyle.ThWriter>저자</TableStyle.ThWriter>
+          <TableStyle.ThBookFloor>저자</TableStyle.ThBookFloor>
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody2>
