@@ -113,6 +113,13 @@ public class CartBookService {
             getOrderList();
             arrange = true;
             bookshelves.clear();
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < M; j++) {
+                    if (arr[i][j] == 2) {
+                        arr[i][j] = -1;
+                    }
+                }
+            }
         }
 
 
