@@ -27,7 +27,7 @@ function TableItem({ book, checked, onCheckboxChange }: Type) {
         <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
       </TableStyle.ThTitle2>
       <TableStyle.ThBookFloor>
-        <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+        <TableStyle.BookFloor>{book.bookName}</TableStyle.BookFloor>
       </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );

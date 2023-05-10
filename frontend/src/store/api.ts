@@ -10,6 +10,7 @@ export interface ReturnBookType {
 }
 
 export interface CartBookType {
+  bookId: number;
   bookshelfId: number;
   cartBookFloor: number;
   cartBookSite: number;
