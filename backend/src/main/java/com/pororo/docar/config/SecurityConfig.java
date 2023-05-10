@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -24,19 +26,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers(HttpMethod.PUT, "/**").authenticated()
 //                .antMatchers(HttpMethod.DELETE, "/**").authenticated()
 //                .antMatchers(HttpMethod.PATCH, "/**").authenticated()
-//                .antMatchers(HttpMethod.GET, "/my-profile").authenticated()
-                .anyRequest().permitAll();
+//                .antMatchers(HttpMethod.GET, "/**").authenticated();
+                 .antMatchers("/**").permitAll()
+                 .antMatchers("/login").permitAll();
 
-        http.cors()                     // CORS on
+
+//        http.cors()                     // CORS on
+//                .and()
+//                .csrf().disable()           // CSRF off
+//                .httpBasic().disable()     // Basic Auth off
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Session off
+        http.cors()
                 .and()
-                .csrf().disable()           // CSRF off
-                .httpBasic().disable()     // Basic Auth off
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);    // Session off
+                .csrf().disable()
+                .formLogin().disable()
+                .headers().frameOptions().disable();
 
 
         http.logout()
                 .disable();
     }
+
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
@@ -50,5 +60,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
+    }
+
+    @Bean
+    public PasswordEncoder getPasswordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }

@@ -25,33 +25,30 @@ public class Book {
     @Column(length = 50)
     private String author;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String isbn;
 
-    @Column(columnDefinition = "DECIMAL(9,6)", nullable = false)
-    private double depth;
+    @Column(nullable = false)
+    private Long depth;
 
     @Column(length = 100)
-    private String title_url;
-
-    @Column(length = 100, nullable = false)
-    private String qr_url;
+    private String cover;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bookshelf_id")
     private Bookshelf bookshelf;
 
     @Builder.Default
-    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private CheckoutBook checkoutBook = new CheckoutBook();
+    @OneToOne(mappedBy = "book")
+    private CheckoutBook checkoutBook = null;
 
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private CartBook cartBook = new CartBook();
+    private CartBook cartBook = null;
 
     @Builder.Default
     @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
-    private TmpBook tmpBook = new TmpBook();
+    private TmpBook tmpBook = null;
 
     public void setBookshelf(Bookshelf bookshelf) {
         if (this.bookshelf != null) {
@@ -62,3 +59,4 @@ public class Book {
         this.bookshelf.getBooks().add(this);
     }
 }
+
