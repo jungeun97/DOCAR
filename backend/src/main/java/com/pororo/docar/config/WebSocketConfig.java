@@ -53,12 +53,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
         }
 
         public void sendIndexAndDepthListsToAllSessions(List<Long> indexList, List<Long> depthList) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            String indexListMessage;
-            String depthListMessage;
+            ObjectMapper mapper = new ObjectMapper();
+            CartBookList cartBookList = new CartBookList(indexList, depthList);
+            String jsonMessage;
             try {
-                indexListMessage = objectMapper.writeValueAsString(indexList);
-                depthListMessage = objectMapper.writeValueAsString(depthList);
+                jsonMessage = mapper.writeValueAsString(cartBookList);
             } catch (JsonProcessingException e) {
                 // 예외 처리
                 return;
@@ -67,26 +66,13 @@ public class WebSocketConfig implements WebSocketConfigurer {
             for (WebSocketSession s : sessions) {
                 if (s.isOpen()) {
                     try {
-                        // indexList와 depthList를 텍스트 메시지로 변환하여 세션에 전송합니다.
-                        s.sendMessage(new TextMessage(indexListMessage));
-                        s.sendMessage(new TextMessage(depthListMessage));
-                    } catch (IOException e) {
-                        // 에러 캐치
+                        s.sendMessage(new TextMessage(jsonMessage));
+                    } catch(IOException e) {
+                        return;
                     }
                 }
             }
         }
-
-//        private String convertListToString(List<Long> list) {
-//            StringBuilder sb = new StringBuilder();
-//            for (int i = 0; i < list.size(); i++) {
-//                sb.append(list.get(i));
-//                if (i < list.size() - 1) {
-//                    sb.append(",");
-//                }
-//            }
-//            return sb.toString();
-//        }
     }
 
     @Bean
@@ -104,6 +90,17 @@ public class WebSocketConfig implements WebSocketConfigurer {
         public Payload(long distance, String barcode) {
             this.distance = distance;
             this.barcode = barcode;
+        }
+    }
+
+    @Data
+    public static class CartBookList {
+        private List<Long> indexList;
+        private List<Long> depthList;
+
+        public CartBookList(List<Long> indexList, List<Long> depthList) {
+            this.indexList = indexList;
+            this.depthList = depthList;
         }
     }
 }
