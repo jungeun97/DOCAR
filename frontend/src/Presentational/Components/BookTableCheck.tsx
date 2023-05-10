@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-import { CartBookType, ReturnBookType } from '../../store/api';
-=======
-import React, { useState } from 'react';
->>>>>>> a0e670e0ddf59b534c1ff0b0b43a6c0a1984fafe
+import { CartBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 import TableItem from './TableItem';
-import { CartBookType } from '../../store/api';
 
 interface Props {
   books: CartBookType[];
@@ -49,13 +44,9 @@ function BookTableCheck({ books, onCheckedItemsChange }: Props) {
       </TableStyle.Thead>
       <TableStyle.Tbody2>
         {/* 책 하나씩 들어가니깐 */}
-        {books.map((book,idx) => (
+        {books.map((book) => (
           <TableItem
-<<<<<<< HEAD
             key={book.bookId}
-=======
-            key={idx}
->>>>>>> a0e670e0ddf59b534c1ff0b0b43a6c0a1984fafe
             book={book}
             checked={checkedItems.includes(book.bookId)}
             onCheckboxChange={handleCheckboxChange}
