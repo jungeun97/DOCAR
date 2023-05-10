@@ -154,13 +154,13 @@ public class CartBookService {
                         .book(tmpBook.getBook())
                         .build();
                 setList.add(new BookSetList().entityToDto(cartBook));
-                depthList.add(cartBook.getBook().getDepth());
             }
 
             for (int i = 0; i < cartBookList.size(); i++) {
                 if (cartBookList.get(i).getBook().getBookshelf().getId() == idx) {
                     indexList.add((long)i);
                 }
+                depthList.add(cartBookList.get(i).getBook().getDepth());
             }
 
             System.out.println("===================" + idx + "번 책장의 indexList: " + indexList);
