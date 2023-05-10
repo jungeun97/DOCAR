@@ -12,13 +12,17 @@ function BookTable({ books }: BookTableType) {
     <TableStyle.Table>
       <TableStyle.Thead>
         <TableStyle.TableTr2>
+          <TableStyle.ThImg>표지</TableStyle.ThImg>
           <TableStyle.ThTitle>제목</TableStyle.ThTitle>
           <TableStyle.ThBookFloor>서랍 번호</TableStyle.ThBookFloor>
         </TableStyle.TableTr2>
       </TableStyle.Thead>
       <TableStyle.Tbody>
         {books.map((book) => (
-          <TableStyle.TableTr key={book.bookshelfId}>
+          <TableStyle.TableTr key={book.bookId}>
+            <TableStyle.ThImg>
+              <TableStyle.BookImg src={book.coverImg} />
+            </TableStyle.ThImg>
             <TableStyle.ThTitle>
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>

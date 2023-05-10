@@ -1,45 +1,47 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { CartBookType, ReturnBookType } from '../../store/api';
+=======
 import React, { useState } from 'react';
+>>>>>>> a0e670e0ddf59b534c1ff0b0b43a6c0a1984fafe
 import * as TableStyle from '../Components/BookTable_Style';
 import BookData from './BookData.json';
 import TableItem from './TableItem';
+import { CartBookType } from '../../store/api';
 
-function BookTableCheck() {
-  const [checkedItems, setCheckedItems] = useState(new Set());
+interface Props {
+  books: CartBookType[];
+  onCheckedItemsChange: (checkedItems: number[]) => void;
+}
 
-  const checkedItemHandler = (id: number, isChecked: boolean) => {
-    if (isChecked) {
-      checkedItems.add(id);
-      setCheckedItems(checkedItems);
-    } else if (!isChecked && checkedItems.has(id)) {
-      checkedItems.delete(id);
-      setCheckedItems(checkedItems);
-    }
-  };
+function BookTableCheck({ books, onCheckedItemsChange }: Props) {
+  const [checkedItems, setCheckedItems] = useState<number[]>([]);
 
-  const [isAllChecked, setIsAllChecked] = useState(false);
-
-  const allCheckedHandler = (isChecked: boolean) => {
-    if (isChecked) {
-      setCheckedItems(new Set(BookData.map(({ id }) => id)));
-      setIsAllChecked(true);
+  const handleCheckboxChange = (id: number, checked: boolean) => {
+    if (checked) {
+      setCheckedItems((prev) => [...prev, id]);
     } else {
-      checkedItems.clear();
-      setCheckedItems(checkedItems);
-      setIsAllChecked(false);
+      setCheckedItems((prev) => prev.filter((itemId) => itemId !== id));
     }
   };
+
+  const handleAllCheckboxChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const isChecked = event.target.checked;
+    setCheckedItems(isChecked ? books.map(({ bookId }) => bookId) : []);
+  };
+
+  useEffect(() => {
+    onCheckedItemsChange(checkedItems);
+  }, [checkedItems, onCheckedItemsChange]);
 
   return (
     <TableStyle.Table>
       <TableStyle.Thead>
         <TableStyle.TableTr2>
           <TableStyle.ThCheck>
-            <input
-              type="checkbox"
-              onClick={() => {
-                setIsAllChecked(!isAllChecked);
-              }}
-            />
+            <input type="checkbox" onChange={handleAllCheckboxChange} />
           </TableStyle.ThCheck>
           <TableStyle.ThTitle2>제목</TableStyle.ThTitle2>
           <TableStyle.ThBookFloor>저자</TableStyle.ThBookFloor>
@@ -47,28 +49,17 @@ function BookTableCheck() {
       </TableStyle.Thead>
       <TableStyle.Tbody2>
         {/* 책 하나씩 들어가니깐 */}
-        {BookData.map((book) => (
+        {books.map((book,idx) => (
           <TableItem
+<<<<<<< HEAD
+            key={book.bookId}
+=======
+            key={idx}
+>>>>>>> a0e670e0ddf59b534c1ff0b0b43a6c0a1984fafe
             book={book}
-            checkedItemHandler={checkedItemHandler}
-            isAllChecked={isAllChecked}
+            checked={checkedItems.includes(book.bookId)}
+            onCheckboxChange={handleCheckboxChange}
           />
-
-          //   <TableStyle.TableTr3>
-          //     <TableStyle.ThCheck>
-          //       <input type="checkbox"
-          //       onChange={(e)=>{console.log(e.target.checked)}}
-          //       // 도서의 반납 체크
-          //       // onClick={() => {setReturn(true)}}
-          //       />
-          //     </TableStyle.ThCheck>
-          //     <TableStyle.ThTitle2>
-          //       <TableStyle.BookName>{book.title}</TableStyle.BookName>
-          //     </TableStyle.ThTitle2>
-          //     <TableStyle.ThWriter>
-          //       <TableStyle.BookWriter>{book.writer}</TableStyle.BookWriter>
-          //     </TableStyle.ThWriter>
-          //   </TableStyle.TableTr3>
         ))}
       </TableStyle.Tbody2>
     </TableStyle.Table>

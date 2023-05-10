@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import * as BookStyle from './BookList_Style';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import Btn from '../../Common/Btn';
 import BookTable from './../BookTable';
-import BookData from '../BookData.json';
 import Pagenation from './../Pagenation';
 import * as API from '../../../store/api';
 
@@ -12,6 +13,7 @@ function BookList() {
   const navigate = useNavigate();
   const [books, setBooks] = useState<null | API.CartBookType>(null);
   const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
+  const MySwal = withReactContent(Swal);
 
   // 페이지 네이션
   const [page, setPage] = useState(1); // 페이지
@@ -37,6 +39,18 @@ function BookList() {
       console.log(request);
       setBooks(request);
       booksData(request);
+      if (request?.length === 0) {
+        MySwal.fire({
+          title: '정리할 책이 없습니다.',
+          timerProgressBar: true,
+          showCancelButton: true,
+          showConfirmButton: true,
+          confirmButtonText: '홈으로 이동',
+          allowOutsideClick: false,
+        }).then(() => {
+          navigate(`/`);
+        });
+      }
     };
     getCartBooks();
   }, []);
