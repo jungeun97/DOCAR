@@ -62,7 +62,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
                         s.sendMessage(new TextMessage("indexList:" + indexListMessage));
                         s.sendMessage(new TextMessage("depthList:" + depthListMessage));
                     } catch (IOException e) {
-                        return;
+                        // 에러 캐치
                     }
                 }
             }
