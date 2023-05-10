@@ -22,12 +22,7 @@ function Bookshelf() {
   useEffect(() => {
     const PostCartBooks = async () => {
       const request = await API.PostCartBookList();
-<<<<<<< HEAD
-      console.log("해당 책장 데이터 읽기")
-      console.log(request);
-=======
       console.log('데이터 읽기');
->>>>>>> 01200929377f49a6d39c3487e6016a2cf283ae1a
       setBooks(request);
       booksData(request);
     };
