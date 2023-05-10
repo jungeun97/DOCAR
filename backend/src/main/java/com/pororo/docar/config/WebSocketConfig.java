@@ -59,8 +59,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
                 if (s.isOpen()) {
                     try {
                         // indexList와 depthList를 텍스트 메시지로 변환하여 세션에 전송합니다.
-                        s.sendMessage(new TextMessage("indexList:" + indexListMessage));
-                        s.sendMessage(new TextMessage("depthList:" + depthListMessage));
+                        s.sendMessage(new TextMessage("{indexList: " + indexListMessage + "}"));
+                        s.sendMessage(new TextMessage("{depthList: " + depthListMessage + "}"));
                     } catch (IOException e) {
                         return;
                     }
