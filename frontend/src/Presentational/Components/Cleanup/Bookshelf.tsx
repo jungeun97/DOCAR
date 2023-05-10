@@ -10,13 +10,21 @@ import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
 import Pagenation from './../Pagenation';
 import * as API from '../../../store/api';
+import { useRecoilState } from 'recoil';
+import { checkedBookState } from '../../../store/atoms';
+import { checkBookType } from '../../../store/types';
 
 const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
 
 function Bookshelf() {
   const [books, setBooks] = useState<null | API.CartBookType>(null);
   const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
-  // const { id } = useParams() as { id: string };
+  const [checkedBooks, setCheckedBooks] = useRecoilState(checkedBookState);
+
+  const handleCheckedItemsChange = (items: number[]) => {
+    const checkedBooks = curbooks.filter((book) => items.includes(book.bookId));
+    setCheckedBooks(checkedBooks);
+  };
 
   // 카트 도서 목록 전체 조회
   useEffect(() => {
@@ -44,6 +52,10 @@ function Bookshelf() {
   useEffect(() => {
     booksData(books);
   }, [page]);
+
+  const updateCheckedBook = () => {
+    console.log(checkedBooks);
+  };
 
   const navigate = useNavigate();
 
@@ -107,6 +119,8 @@ function Bookshelf() {
 
   // 중간에 원위치로 돌아가는 모달
   const setCheckModal = () => {
+    let modalCheckedBooks: checkBookType[] = [];
+
     MySwal.fire({
       title: '현재 정리된 책을 체크해주세요',
       timerProgressBar: true,
@@ -117,12 +131,25 @@ function Bookshelf() {
       allowOutsideClick: false,
       html: (
         <>
-          <BookTableCheck books={curbooks} />
+          <BookTableCheck
+            books={curbooks}
+            onCheckedItemsChange={(checkedItems) => {
+              modalCheckedBooks = checkedItems.map((bookId) => {
+                const book = curbooks.find((book) => book.bookId === bookId);
+                const checkBook: checkBookType = {
+                  bookId: book?.bookId || 0,
+                  bookName: book?.bookName || '',
+                  author: book?.author || '',
+                };
+                return checkBook;
+              });
+            }}
+          />
         </>
       ),
     }).then((result) => {
-      // 확인 버튼을 누르면 반납된 책들만 보여준다.
       if (result.isConfirmed) {
+        updateCheckedBook();
         MySwal.fire({
           title: '반납된 책이 맞습니까?',
           timerProgressBar: true,
@@ -133,18 +160,14 @@ function Bookshelf() {
           allowOutsideClick: false,
           html: (
             <>
-              <BookTableChecked />
+              <BookTableChecked books={modalCheckedBooks} />
             </>
           ),
         }).then((result) => {
           if (result.isConfirmed) {
-            // 확인 버튼을 눌렀을 때,
-            // 확인 버튼을 누르면 axios로 다음 책장을 받는다.
-            console.log(result); // 다음 책장이 있으면 다음 페이지로 넘어가고, 없으면 마무리 페이지로 간다.
             axios
               .get('https://jsonplaceholder.typicode.com/todos')
               .then((res) => {
-                // setBooks(res.data);
                 console.log('도서 정리 완료 요청 성공');
                 navigate(`/cleanup/end`);
               });
@@ -154,7 +177,7 @@ function Bookshelf() {
         });
       } else {
         MySwal.fire({
-          title: '실팽',
+          title: '실패',
         });
       }
     });

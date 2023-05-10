@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
-import BookData from './BookData.json';
-import axios from 'axios';
 import { ReturnBookType } from '../../store/api';
 
 interface BookTableProps {

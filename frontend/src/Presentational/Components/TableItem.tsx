@@ -5,28 +5,21 @@ import BookData from './BookData.json';
 
 interface Type {
   book: CartBookType;
-  checkedItemHandler: (id: number, isChecked: boolean) => void;
-  isAllChecked: boolean;
+  checked: boolean;
+  onCheckboxChange: (id: number, checked: boolean) => void;
 }
 
-function TableItem({ book, checkedItemHandler, isAllChecked }: Type) {
-  const [bChecked, setChecked] = useState(false);
-
+function TableItem({ book, checked, onCheckboxChange }: Type) {
   const checkHandler = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(!bChecked);
-    checkedItemHandler(book.bookId, target.checked);
+    onCheckboxChange(book.bookId, target.checked);
   };
-
-  const allCheckHandler = () => setChecked(isAllChecked);
-
-  useEffect(() => allCheckHandler(), [isAllChecked]);
 
   return (
     <TableStyle.TableTr3>
       <TableStyle.ThCheck>
         <input
           type="checkbox"
-          checked={bChecked}
+          checked={checked}
           onChange={(e) => checkHandler(e)}
         />
       </TableStyle.ThCheck>
