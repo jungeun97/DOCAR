@@ -10,8 +10,6 @@ import BookTableCheck from './../BookTableCheck';
 import BookTableChecked from './../BookTableChecked';
 import Pagenation from './../Pagenation';
 import * as API from '../../../store/api';
-import { useRecoilState } from 'recoil';
-import { checkedBookState } from '../../../store/atoms';
 import { checkBookType } from '../../../store/types';
 
 const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
@@ -19,12 +17,6 @@ const API_URL = 'http://k8d101.p.ssafy.io:8080/api';
 function Bookshelf() {
   const [books, setBooks] = useState<null | API.CartBookType>(null);
   const [curbooks, setCurbooks] = useState<API.CartBookType[]>([]);
-  const [checkedBooks, setCheckedBooks] = useRecoilState(checkedBookState);
-
-  const handleCheckedItemsChange = (items: number[]) => {
-    const checkedBooks = curbooks.filter((book) => items.includes(book.bookId));
-    setCheckedBooks(checkedBooks);
-  };
 
   // 카트 도서 목록 전체 조회
   useEffect(() => {
@@ -52,10 +44,6 @@ function Bookshelf() {
   useEffect(() => {
     booksData(books);
   }, [page]);
-
-  const updateCheckedBook = () => {
-    console.log(checkedBooks);
-  };
 
   const navigate = useNavigate();
 
@@ -149,7 +137,6 @@ function Bookshelf() {
       ),
     }).then((result) => {
       if (result.isConfirmed) {
-        updateCheckedBook();
         MySwal.fire({
           title: '반납된 책이 맞습니까?',
           timerProgressBar: true,
@@ -165,9 +152,15 @@ function Bookshelf() {
           ),
         }).then((result) => {
           if (result.isConfirmed) {
+            const bookIds = modalCheckedBooks.map((book) => book.bookId);
+            console.log(bookIds);
             axios
-              .get('https://jsonplaceholder.typicode.com/todos')
+              .post(`${API_URL}/turtlebot`, {
+                bookIds: bookIds,
+                withCredentials: true,
+              })
               .then((res) => {
+                console.log(res);
                 console.log('도서 정리 완료 요청 성공');
                 navigate(`/cleanup/end`);
               });
