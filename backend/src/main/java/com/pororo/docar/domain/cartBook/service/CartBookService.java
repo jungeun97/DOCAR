@@ -1,7 +1,6 @@
 package com.pororo.docar.domain.cartBook.service;
 
 import com.pororo.docar.common.exception.BadRequestException;
-import com.pororo.docar.common.exception.ResourceNotFoundException;
 import com.pororo.docar.config.WebSocketConfig;
 import com.pororo.docar.domain.cartBook.dto.BookIds;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
@@ -9,7 +8,6 @@ import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
 import com.pororo.docar.domain.tmpBook.entity.TmpBook;
 import com.pororo.docar.domain.tmpBook.repository.TmpBookRepository;
-import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -27,6 +25,8 @@ public class CartBookService {
     private final WebSocketConfig.MyWebSocketHandler myWebSocketHandler;
 
     public static List<Long> orderList = new LinkedList<>();
+    public static List<Long> depthList = new ArrayList<>();
+    public static List<Long> indexList = new ArrayList<>();
 
     static int N = 3, M = 5;
     static int[][] arr = {{-1, 1, -1, 1, -1}, {1, 1, 1, 1, 1}, {-1, 1, -1, 1, -1}};
@@ -140,8 +140,8 @@ public class CartBookService {
             tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
-            List<Long> depthList = new ArrayList<>();
-            List<Long> indexList = new ArrayList<>();
+            depthList = new ArrayList<>();
+            indexList = new ArrayList<>();
             List<TmpBook> setBookList = tmpBookRepository.findAll();
             List<CartBook> cartBookList = cartBookRepository.findAll();
             // tmpbook에 있는 책들을 dto로 변환하여 목록을 출력
@@ -160,8 +160,7 @@ public class CartBookService {
                 }
                 depthList.add(cartBookList.get(i).getBook().getDepth());
             }
-            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList);
-            myWebSocketHandler.sendNextBookShelfList(orderList.get(0));
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
             return setList;
         } else {
             throw new BadRequestException("정리할 책장이 없습니다.");
@@ -211,9 +210,9 @@ public class CartBookService {
         }
         tmpBookRepository.deleteAll();
         if (!orderList.isEmpty()) {
-            myWebSocketHandler.sendNextBookShelfList(orderList.get(0));
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
         } else {
-            myWebSocketHandler.sendNextBookShelfList(0L);
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
         }
     }
 }
