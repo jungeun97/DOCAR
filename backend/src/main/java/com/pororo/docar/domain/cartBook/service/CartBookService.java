@@ -163,6 +163,7 @@ public class CartBookService {
             myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
             return setList;
         } else {
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
             throw new BadRequestException("정리할 책장이 없습니다.");
         }
     }
