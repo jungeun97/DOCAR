@@ -1,10 +1,12 @@
 package com.pororo.docar.config.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 public class CartBookList {
     private List<Long> indexList;
     private List<Long> depthList;
