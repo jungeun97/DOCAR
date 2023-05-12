@@ -7,6 +7,8 @@ public class SensorInfo {
     private long distance;
     private String barcode;
 
+    public SensorInfo(){}
+
     public SensorInfo(long distance, String barcode) {
         this.distance = distance;
         this.barcode = barcode;
