@@ -16,9 +16,10 @@ interface ReturnDetail {
 function ReturnDetail(props: ReturnDetail) {
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
   const [distance, setDistance] = useRecoilState(distanceState);
-  const [seosorData, setSensorData] = useState(0);
   const [bookInfo, setBookInfo] = useState<ReturnBookType | null>(null);
   const [tmpDistance, setTmpDistance] = useState(0);
+  const [tmpBarcode, setTmpBarcode] = useState(0);
+  const [isApiCalled, setIsApiCalled] = useState(false);
 
   const MySwal = withReactContent(Swal);
 
@@ -28,16 +29,20 @@ function ReturnDetail(props: ReturnDetail) {
 
   useEffect(() => {
     if (barcodeNum !== 0) {
-      setTmpDistance(distance);
-      AddReturnBookAPI();
-    } else {
-      console.log('디테일페이지', barcodeNum);
+      if (!isApiCalled) {
+        setTmpDistance(distance);
+        AddReturnBookAPI();
+        setIsApiCalled(true);
+      } else {
+        handleReturn();
+      }
     }
-  }, []);
+  }, [barcodeNum, distance]);
 
   const AddReturnBookAPI = async () => {
     const result = await AddReturnBook(barcodeNum);
     if (result) {
+      setTmpBarcode(barcodeNum);
       setBookInfo(result);
     } else {
       setModal();
@@ -45,15 +50,8 @@ function ReturnDetail(props: ReturnDetail) {
     console.log('반납바코드', barcodeNum);
   };
 
-  useEffect(() => {
-    if (barcodeNum !== 0) {
-      console.log('handleReturn 함수 실행');
-      handleReturn();
-    }
-  }, [barcodeNum]);
-
   const handleReturn = async () => {
-    if (tmpDistance !== distance) {
+    if (tmpBarcode !== barcodeNum && tmpDistance !== distance) {
       setTmpDistance(distance);
       console.log('책 반납 처리');
       AddReturnBookAPI();

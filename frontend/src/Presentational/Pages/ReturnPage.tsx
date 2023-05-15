@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import ReturnBooks from '../Components/Return/ReturnBooks';
 import ReturnQrcode from '../Components/Return/ReturnQrcode';
 import { useRecoilState } from 'recoil';
-import { barcodeNumState, distanceState, isReturnState } from '../../store/atoms';
+import {
+  barcodeNumState,
+  distanceState,
+  isReturnState,
+} from '../../store/atoms';
 import { socket } from '../../socket';
 
 function ReturnPage() {
