@@ -45,6 +45,7 @@ function ReturnDetail(props: ReturnDetail) {
       setTmpBarcode(barcodeNum);
       setBookInfo(result);
     } else {
+      console.log(result);
       setReturnError(result);
       setModal(result);
     }

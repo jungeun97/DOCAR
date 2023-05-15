@@ -3,16 +3,12 @@ import * as ReturnQrStyle from './ReturnQrcode_Style';
 import scanner from '../../../Resources/Images/scanner.png';
 import barcode from '../../../Resources/Images/barcode.png';
 
-interface ReturnQrcode {
-  ReturnMode: () => void;
-}
-
-function ReturnQrcode(props: ReturnQrcode) {
+function ReturnQrcode() {
   return (
     <ReturnQrStyle.WrapReturn>
       <ReturnQrStyle.ImgDiv>
-        <ReturnQrStyle.barcodeImg src={barcode} onClick={props.ReturnMode} />
-        <ReturnQrStyle.Img src={scanner} onClick={props.ReturnMode} />
+        <ReturnQrStyle.barcodeImg src={barcode} />
+        <ReturnQrStyle.Img src={scanner} />
       </ReturnQrStyle.ImgDiv>
       <ReturnQrStyle.ReturnText>
         반납할 책의 바코드를 찍어 주세요.
