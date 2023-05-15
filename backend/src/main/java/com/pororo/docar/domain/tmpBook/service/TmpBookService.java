@@ -129,7 +129,8 @@ public class TmpBookService {
             throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
         }
         // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.deleteByBookId(book.getId());
+//        checkoutBookRepository.deleteByBookId(book.getId());
+        checkoutBookRepository.delete(checkoutBook);
 
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
