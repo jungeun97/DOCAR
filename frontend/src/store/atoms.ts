@@ -13,6 +13,12 @@ export const barcodeNumState = atom({
   default: 0,
 });
 
+// 거리값
+export const distanceState = atom({
+  key: 'distanceState',
+  default: 0,
+});
+
 // 체크표시 된 책
 export const checkedBookState = atom<CartBookType[]>({
   key: 'checkedBookState',

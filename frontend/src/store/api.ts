@@ -77,6 +77,7 @@ export async function AddReturnBook(
     const res = await axios.post(`${API_URL}/isbn/${barcodeNum}`, {
       withCredentials: true,
     });
+    console.log(res);
     data = res.data.data as ReturnBookType;
   } catch (error) {
     const axiosError = error as AxiosError;
