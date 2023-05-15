@@ -51,12 +51,14 @@ function ReturnDetail(props: ReturnDetail) {
   };
 
   const handleReturn = async () => {
-    if (tmpBarcode !== barcodeNum && tmpDistance !== distance) {
-      setTmpDistance(distance);
-      console.log('책 반납 처리');
-      AddReturnBookAPI();
-    } else {
-      setModal();
+    if (tmpBarcode !== barcodeNum) {
+      if (tmpDistance !== distance) {
+        setTmpDistance(distance);
+        console.log('책 반납 처리');
+        AddReturnBookAPI();
+      } else {
+        setModal();
+      }
     }
   };
 
