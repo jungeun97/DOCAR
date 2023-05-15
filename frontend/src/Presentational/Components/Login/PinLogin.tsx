@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, useRef } from 'react';
+import React, { useState, ChangeEvent, useRef, useMemo, useEffect } from 'react';
 import * as LoginStyle from '../../Pages/LoginPage_Style';
 import { useNavigate } from 'react-router-dom';
 import { socket } from '../../../socket';
@@ -10,8 +10,12 @@ function PinLogin() {
   const navigate = useNavigate();
   const [pinNumber, setPinNumber] = useState<string>('');
   const [layout, setLayout] = useState('default');
-  // const keyboard2 = useRef(null);
-  const [usekeyboard, setUsekeyboard] = useState(false);  // 키보드 on/off  (useRef, focus 사용 실패함)
+  const keyboard2 = useRef<any>();
+  const [usekeyboard, setUsekeyboard] = useState(false); // 키보드 on/off  (useRef, focus 사용 실패함)
+
+  useEffect(() => {
+    keyboard2.current?.setInput(pinNumber);
+  }, [usekeyboard])
 
   const handleLogin = async () => {
     console.log(pinNumber);
@@ -21,36 +25,30 @@ function PinLogin() {
         navigate('/cleanup');
       } else {
         alert('로그인 실패');
-        // setPinNumber('');
+        setPinNumber('');
+        keyboard2.current.clearInput();
       }
     } catch (error) {
       alert('로그인 실패');
-      // setPinNumber('');
+      setPinNumber('');
+      keyboard2.current.clearInput();
     }
   };
 
   const onChange1 = (input: any) => {
     console.log('Input changed =>', input);
     setPinNumber(input);
-    
   };
 
-  const onChangeInput = (event: { target: { value: any } }) => {
+  const onChangeInput = (event: ChangeEvent<HTMLInputElement>): void => {
     const input = event.target.value;
     setPinNumber(input);
-    
-  };
-
-  const handleShift = () => {
-    const newLayoutName = layout === 'default' ? 'shift' : 'default';
-    console.log('newLayoutName =>', newLayoutName);
-    setLayout(newLayoutName);
+    keyboard2.current.setInput(input);
   };
 
   const onKeyPress = (button: any) => {
     console.log('Button pressed =>', button);
     if (button === '{enter}') handleLogin();
-    if (button === '{shift}' || button === '{lock}') handleShift();
   };
 
   return (
@@ -70,28 +68,20 @@ function PinLogin() {
           placeholder="password"
           name="pinNumber"
           value={pinNumber}
-          onChange={onChangeInput}
+          onChange={(e) => onChangeInput(e)}
         />
       </LoginStyle.WrapIdpw>
       <LoginStyle.WrapBtn onClick={handleLogin}>Sign In</LoginStyle.WrapBtn>
-      {usekeyboard ? (
+      {usekeyboard && (
         <Keyboard
-          // keyboardRef={keyboard2}
+          keyboardRef={(r) => (keyboard2.current = r)}
           layoutName={layout} // 이거 안하면 shift 처리 안된다.
           onChange={onChange1}
           onKeyPress={onKeyPress}
           layout={{
-            default: [
-              "1 2 3",
-              "4 5 6",
-              "7 8 9",
-              "{bksp} 0 {enter}"
-            ],
-
+            default: ['1 2 3', '4 5 6', '7 8 9', '{bksp} 0 {enter}'],
           }}
         />
-      ) : (
-        <></>
       )}
     </LoginStyle.WrapLogin>
   );
