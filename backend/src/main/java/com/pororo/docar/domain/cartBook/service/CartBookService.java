@@ -1,14 +1,13 @@
 package com.pororo.docar.domain.cartBook.service;
 
 import com.pororo.docar.common.exception.BadRequestException;
-import com.pororo.docar.common.exception.ResourceNotFoundException;
 import com.pororo.docar.config.WebSocketConfig;
+import com.pororo.docar.domain.cartBook.dto.BookIds;
 import com.pororo.docar.domain.cartBook.dto.BookSetList;
 import com.pororo.docar.domain.cartBook.entity.CartBook;
 import com.pororo.docar.domain.cartBook.repository.CartBookRepository;
 import com.pororo.docar.domain.tmpBook.entity.TmpBook;
 import com.pororo.docar.domain.tmpBook.repository.TmpBookRepository;
-import com.pororo.docar.domain.tmpBook.service.TmpBookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,15 +22,15 @@ import java.util.*;
 public class CartBookService {
     private final CartBookRepository cartBookRepository;
     private final TmpBookRepository tmpBookRepository;
-    private final TmpBookService tmpBookService;
     private final WebSocketConfig.MyWebSocketHandler myWebSocketHandler;
 
     public static List<Long> orderList = new LinkedList<>();
+    public static List<Long> depthList = new ArrayList<>();
+    public static List<Long> indexList = new ArrayList<>();
 
     static int N = 3, M = 5;
     static int[][] arr = {{-1, 1, -1, 1, -1}, {1, 1, 1, 1, 1}, {-1, 1, -1, 1, -1}};
     static Map<Integer, int[]> position = Map.of(1, new int[]{0, 0}, 2, new int[]{0, 2}, 3, new int[]{0, 4}, 4, new int[]{2, 0}, 5, new int[]{2, 2}, 6, new int[]{2, 4});
-//    static int[][] visited = new int[N][M];
     static List<Long> bookshelves = new ArrayList<>();
     static int[] di = {1, 1, 0, -1, -1, -1, 0, 1};
     static int[] dj = {0, -1, -1, -1, 0, 1, 1, 1};
@@ -80,13 +79,13 @@ public class CartBookService {
     }
 
     public static void getOrderList() {
+        // 정리할 책이 있는 책장을 체크하기 위해서 해당 위치를 2로 체크
         for (Long bookshelf : bookshelves) {
             int[] pos = position.get(Integer.parseInt(String.valueOf(bookshelf)));
             arr[pos[0]][pos[1]] = 2;
         }
         bfs(1, 0);
     }
-
 
     public List<BookSetList> getBooks() {
         List<BookSetList> list = new ArrayList<>();
@@ -95,8 +94,6 @@ public class CartBookService {
         for (CartBook cartBook : bookList) {
             list.add(new BookSetList().entityToDto(cartBook));
         }
-        System.out.println(list);
-        System.out.println(arrange);
         return list;
     }
 
@@ -104,6 +101,7 @@ public class CartBookService {
     public List<BookSetList> getBooksByBookshelf() {
         List<CartBook> bookList = cartBookRepository.findAll();
         List<TmpBook> list = new ArrayList<>();
+        // 정리를 한 적이 없다면 최단경로를 구하는 로직이 실행됨
         if (!arrange) {
             for (CartBook cartBook : bookList) {
                 if (!bookshelves.contains(cartBook.getBook().getBookshelf().getId())) {
@@ -112,6 +110,7 @@ public class CartBookService {
             }
             getOrderList();
             arrange = true;
+            // 최단경로를 구하고 난 뒤에는 로직을 초기화시키기 위해서 책장순서 및 arr배열을 초기화시킴
             bookshelves.clear();
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < M; j++) {
@@ -122,11 +121,10 @@ public class CartBookService {
             }
         }
 
-
+        // 정리해야하는 순서가 존재한다면, 해당 책장의 책들을 정리하는 로직
         if (!orderList.isEmpty()) {
-            System.out.println(orderList);
             Long idx = orderList.get(0);
-            System.out.println(idx);
+            // 먼저 정리해야하는 책을 tmpbook에 저장 (tmpbook를 해당 책장에서 정리해야하는 책을 저장하는 용도로 사용)
             for (CartBook cartBook : bookList) {
                 if (cartBook.getBook().getBookshelf().getId() == idx) {
                     TmpBook tmpBook = TmpBook.builder()
@@ -142,11 +140,11 @@ public class CartBookService {
             tmpBookRepository.saveAll(list);
 
             List<BookSetList> setList = new ArrayList<>();
-            List<Long> depthList = new ArrayList<>();
-            List<Long> indexList = new ArrayList<>();
+            depthList = new ArrayList<>();
+            indexList = new ArrayList<>();
             List<TmpBook> setBookList = tmpBookRepository.findAll();
             List<CartBook> cartBookList = cartBookRepository.findAll();
-
+            // tmpbook에 있는 책들을 dto로 변환하여 목록을 출력
             for (TmpBook tmpBook : setBookList) {
                 CartBook cartBook = CartBook.builder()
                         .floor(tmpBook.getFloor())
@@ -154,21 +152,18 @@ public class CartBookService {
                         .book(tmpBook.getBook())
                         .build();
                 setList.add(new BookSetList().entityToDto(cartBook));
-                depthList.add(cartBook.getBook().getDepth());
             }
 
             for (int i = 0; i < cartBookList.size(); i++) {
                 if (cartBookList.get(i).getBook().getBookshelf().getId() == idx) {
                     indexList.add((long)i);
                 }
+                depthList.add(cartBookList.get(i).getBook().getDepth());
             }
-
-            System.out.println("===================" + idx + "번 책장의 indexList: " + indexList);
-            System.out.println("===================" + idx + "번 책장의 depthList: " + depthList);
-            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList);
-            myWebSocketHandler.sendNextBookShelfList(orderList.get(0));
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
             return setList;
         } else {
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
             throw new BadRequestException("정리할 책장이 없습니다.");
         }
     }
@@ -183,7 +178,7 @@ public class CartBookService {
         } else {
             throw new BadRequestException("정리할 책장이 없습니다.");
         }
-
+        // 정리해야하는 책이 있다면, 해당 책을 cartbook에서 삭제시킴 + tmpbook 내역도 초기화
         if (!setBookList.isEmpty()) {
             for (TmpBook tmpBook : setBookList) {
                 for (CartBook cartBook : doneBookList) {
@@ -200,34 +195,25 @@ public class CartBookService {
     }
 
     @Transactional
-    public void goHome(List<Long> bookIds) {
+    public void goHome(BookIds input) {
         List<CartBook> doneBookList = cartBookRepository.findAll();
+        // 원위치로 이동시키므로, 최단 경로 구하는 flag를 초기화시킴.
         arrange = false;
-        if (!bookIds.isEmpty()) {
-           for (Long idx : bookIds) {
+        // 정리 중에 원위치로 이동시킨다면, 지금까지 정리한 책은 cart에서 삭제시키고 tmpbook내역은 그냥 초기화
+        if (!input.getBookIds().isEmpty()) {
+           for (Long id : input.getBookIds()) {
                for (CartBook cartBook : doneBookList) {
-                   if (idx == cartBook.getBook().getId()) {
+                   if (id == cartBook.getBook().getId()) {
                        cartBookRepository.delete(cartBook);
                    }
                }
            }
         }
         tmpBookRepository.deleteAll();
-//        System.out.println("===============================gohome후 arrange:" + arrange);
-
+        if (!orderList.isEmpty()) {
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
+        } else {
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
+        }
     }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    public CartBook findById(Long id) {
-        return cartBookRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Id를 확인해주세요."));
-    }
-
-    public TmpBook getBookById(Long id) {
-        return tmpBookRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Id를 확인해주세요."));
-    }
-
-
 }
