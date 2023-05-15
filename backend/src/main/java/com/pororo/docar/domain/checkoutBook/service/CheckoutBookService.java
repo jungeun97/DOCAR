@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,6 +23,16 @@ public class CheckoutBookService {
     private final CheckoutBookRepository checkoutBookRepository;
     private final UserRepository userRepository;
     private final BookRepository bookRepository;
+
+    public List<borrowBookDto> getBorrowedBooks() {
+        List<borrowBookDto> list = new ArrayList<>();
+        List<CheckoutBook> checkoutBooks = checkoutBookRepository.findAll();
+
+        for (CheckoutBook book : checkoutBooks) {
+            list.add(new borrowBookDto().entityToDto(book));
+        }
+        return list;
+    }
 
     @Transactional
     public void borrowBook(borrowBookDto input) {
