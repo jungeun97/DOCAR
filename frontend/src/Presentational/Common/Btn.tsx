@@ -14,7 +14,7 @@ const baseColor = '#8088A2';
 const transition = 'all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5)';
 
 const ButtonStyle = styled.button<BtnProps>`
-  margin-top: 35px;
+  /* margin-top: 35px; */
   background-color: white;
   border: 1px solid ${baseColor};
   line-height: 0;

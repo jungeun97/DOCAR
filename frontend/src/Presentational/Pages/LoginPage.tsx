@@ -8,10 +8,15 @@ import { socket } from '../../socket';
 import PinLogin from '../Components/Login/PinLogin';
 import QrLogin from '../Components/Login/QrLogin';
 
+
+
+
 function LoginPage() {
   const navigate = useNavigate();
   const [option, setOption] = useState<boolean>(false);
   const [pinNumber, setPinNumber] = useState<string>('');
+
+  
 
   const ChangeLogin = () => {
     setOption(!option);
@@ -26,17 +31,21 @@ function LoginPage() {
             message="PIN 번호로 로그인"
             go={ChangeLogin}
             position="absolute"
-            bottom="10px"
+            top="15px"
+            right="15px"
           />
+          
         </>
       ) : (
         <>
           <PinLogin />
+          
           <Btn
             message="QR로 로그인"
             go={ChangeLogin}
             position="absolute"
-            bottom="10px"
+            top="15px"
+            right="15px"
           />
         </>
       )}
