@@ -172,6 +172,10 @@ export async function getTurtlebot() {
     .get(`${API_URL}/turtlebot`, {
       withCredentials: true,
     })
-    .then((res) => res.data)
+    .then((res) => {
+      // API 요청이 성공한 후에 쿠키에서 Authorization 토큰 삭제
+      delete axios.defaults.headers.common['Authorization'];
+      return res.data;
+    })
     .catch((res) => res);
 }
