@@ -101,7 +101,6 @@ public class TmpBookService {
 
                 // 3-3. 카트 1층 책들의 두께값 합
                 Long depthOnFloor1 = bookRepository.findDepthByIds(book1Ids).orElse(0L);
-//                Long depthOnFloor1Value = depthOnFloor1.orElseGet(() -> 0L);
 
                 // 3-4. 카트 1층에 자리가 있으면
                 if (cartLength - (depthOnFloor1+bookDepth) >= 50) {
@@ -129,7 +128,6 @@ public class TmpBookService {
             throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
         }
         // checkout_book에서 해당 Book 삭제
-//        checkoutBookRepository.deleteByBookId(book.getId());
         checkoutBookRepository.delete(checkoutBook);
 
         // TmpBook으로 이동
@@ -139,7 +137,6 @@ public class TmpBookService {
                 .book(book)
                 .build();
         tmpBookRepository.save(tmpBook);
-
 
         return new TmpBookInfo(tmpBook);
     }
