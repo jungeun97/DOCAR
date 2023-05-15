@@ -1,10 +1,21 @@
 import { atom } from 'recoil';
-import { CartBookType } from './api';
+import { CartBookType, ReturnBookType } from './api';
 
 // 책 반납
 export const isReturnState = atom({
   key: 'isReturnState',
   default: false,
+});
+
+export const isReturnError = atom<string | null>({
+  key: 'isReturnError',
+  default: null,
+});
+
+// 책 정보
+export const isBookInfoState = atom<ReturnBookType | null>({
+  key: 'isBookInfoState',
+  default: null,
 });
 
 // 책 바코드

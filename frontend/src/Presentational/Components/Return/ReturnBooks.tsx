@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   barcodeNumState,
   distanceState,
+  isBookInfoState,
   isReturnState,
 } from '../../../store/atoms';
 import { useRecoilState } from 'recoil';

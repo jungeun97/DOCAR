@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReturnBooks from '../Components/Return/ReturnBooks';
 import ReturnQrcode from '../Components/Return/ReturnQrcode';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import {
   barcodeNumState,
   distanceState,
@@ -14,22 +14,25 @@ function ReturnPage() {
   const [barcodeNum, setBarcodeNum] = useRecoilState(barcodeNumState);
   const [distance, setDistance] = useRecoilState(distanceState);
 
-  socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    console.log('현재 거리는:', data.distance);
-    if (data.barcode !== barcodeNum) {
-      setBarcodeNum(data.barcode);
-    }
+  useEffect(() => {
+    const handleMessage = (event: any) => {
+      const data = JSON.parse(event.data);
+      console.log('현재 거리는:', data.distance);
+      if (data.barcode !== barcodeNum) {
+        setBarcodeNum(data.barcode);
+      }
+      if (data.distance !== distance) {
+        setDistance(data.distance);
+      }
+      setIsReturn(true);
+    };
 
-    if (data.distance !== distance) {
-      setDistance(data.distance);
-    }
-    setIsReturn(true);
-  };
+    socket.onmessage = handleMessage;
 
-  const ReturnMode = () => {
-    setIsReturn(true);
-  };
+    return () => {
+      socket.removeEventListener('message', handleMessage);
+    };
+  }, [barcodeNum, distance]);
 
   useEffect(() => {
     console.log(`현재 책의 바코드: ${barcodeNum}`);
@@ -39,7 +42,7 @@ function ReturnPage() {
     return <ReturnBooks />;
   }
 
-  return <ReturnQrcode ReturnMode={ReturnMode} />;
+  return <ReturnQrcode />;
 }
 
 export default ReturnPage;

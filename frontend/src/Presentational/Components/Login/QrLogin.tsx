@@ -7,7 +7,6 @@ import { AddLoginPin, AddLoginQr } from '../../../store/api';
 
 function QrLogin() {
   const navigate = useNavigate();
-  const [option, setOption] = useState<boolean>(false);
   const [qrNumber, setQrNumber] = useState<string>('');
 
   socket.onmessage = (event) => {

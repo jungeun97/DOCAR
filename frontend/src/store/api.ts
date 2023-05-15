@@ -24,6 +24,10 @@ export interface CartBookType extends Array<CartBookType> {
   content: [];
 }
 
+interface ErrorResponse {
+  message: string;
+}
+
 const API_URL = 'https://k8d101.p.ssafy.io/api';
 
 function printError(error: AxiosError) {
@@ -71,20 +75,24 @@ export async function AddLoginQr(QrNumber: string): Promise<boolean> {
 // 책 바코드 체크 후 반납
 export async function AddReturnBook(
   barcodeNum: number
-): Promise<ReturnBookType | null> {
-  let data: ReturnBookType | null = null;
+): Promise<ReturnBookType | null | string> {
+  // Promise에 반환 타입 |string 추가
   try {
     const res = await axios.post(`${API_URL}/isbn/${barcodeNum}`, {
       withCredentials: true,
     });
     console.log(res);
-    data = res.data.data as ReturnBookType;
+    const data: ReturnBookType = res.data.data;
+    return data;
   } catch (error) {
-    const axiosError = error as AxiosError;
+    const axiosError = error as AxiosError<ErrorResponse>;
     printError(axiosError);
-    return null;
+    if (axiosError.response?.data?.message) {
+      return axiosError.response.data.message; // API로부터 받은 에러 메시지를 반환합니다.
+    } else {
+      return '오류가 발생했습니다. 다시 시도해주세요.';
+    }
   }
-  return data;
 }
 
 // 반납 책 리스트 조회
