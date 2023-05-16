@@ -56,9 +56,20 @@ export const ThBookFloor = styled.th`
   width: 225px;
 `;
 
+export const ThBookFloorCheck = styled.th`
+  width: 225px;
+  font-size: 1rem;
+`;
+
+export const BookFloor = styled.div``;
+
 export const ThTitle2 = styled.th`
   width: 250px;
   border-left: 1px solid black;
+  border-right: 1px solid black;
+`;
+export const checkedTitle = styled.th`
+  width: 250px;
   border-right: 1px solid black;
 `;
 
@@ -74,8 +85,6 @@ export const BookImg = styled.img`
 export const BookName = styled.div`
   font-size: 1rem;
 `;
-
-export const BookFloor = styled.div``;
 
 export const ThWriter = styled.th`
   width: 150px;
