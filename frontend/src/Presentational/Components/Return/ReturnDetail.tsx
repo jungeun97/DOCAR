@@ -86,7 +86,7 @@ function ReturnDetail(props: ReturnDetail) {
           <DetailStyle.BookTextDiv>
             <DetailStyle.BookName>{bookInfo?.bookName}</DetailStyle.BookName>
             <DetailStyle.BookWriter>
-              {bookInfo?.author} 저
+              {bookInfo?.author.split('(')[0].trim()} 저
             </DetailStyle.BookWriter>
           </DetailStyle.BookTextDiv>
         </DetailStyle.BookDiv>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as ListStyle from './ReturnList_Style';
 import Btn from '../../Common/Btn';
-import BookTable from '../BookTable';
 import { ReturnBookType, getReturnList } from '../../../store/api';
 import ReturnBookTable from '../ReturnBookTable';
 
