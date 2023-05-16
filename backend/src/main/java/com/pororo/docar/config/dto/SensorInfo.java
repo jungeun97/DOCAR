@@ -1,8 +1,10 @@
 package com.pororo.docar.config.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class SensorInfo {
     private long distance;
     private String barcode;
