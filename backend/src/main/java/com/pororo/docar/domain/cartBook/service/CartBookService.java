@@ -163,7 +163,7 @@ public class CartBookService {
             myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
             return setList;
         } else {
-            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
+            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 99L);
             throw new BadRequestException("정리할 책장이 없습니다.");
         }
     }
@@ -210,10 +210,6 @@ public class CartBookService {
            }
         }
         tmpBookRepository.deleteAll();
-        if (!orderList.isEmpty()) {
-            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, orderList.get(0));
-        } else {
-            myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
-        }
+        myWebSocketHandler.sendIndexAndDepthListsToAllSessions(indexList, depthList, 0L);
     }
 }
