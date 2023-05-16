@@ -22,7 +22,9 @@ function BookTableChecked({ books }: Props) {
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.checkedTitle>
             <TableStyle.ThBookFloor>
-              <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+              <TableStyle.ThBookAuthor>
+                {book?.author.split('(')[0].trim()} 저
+              </TableStyle.ThBookAuthor>
             </TableStyle.ThBookFloor>
           </TableStyle.TableTr3>
         ))}

@@ -56,7 +56,7 @@ export const ThBookFloor = styled.th`
   width: 225px;
 `;
 
-export const ThBookFloorCheck = styled.th`
+export const ThBookAuthor = styled.th`
   width: 225px;
   font-size: 1rem;
 `;

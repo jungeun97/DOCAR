@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CartBookType, ReturnBookType } from '../../store/api';
 import * as TableStyle from '../Components/BookTable_Style';
-import BookData from './BookData.json';
 
 interface Type {
   book: CartBookType;
@@ -27,7 +26,9 @@ function TableItem({ book, checked, onCheckboxChange }: Type) {
         <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
       </TableStyle.ThTitle2>
       <TableStyle.ThBookFloor>
-        <TableStyle.ThBookFloorCheck>{book.author}</TableStyle.ThBookFloorCheck>
+        <TableStyle.ThBookAuthor>
+          {book?.author.split('(')[0].trim()} 저
+        </TableStyle.ThBookAuthor>
       </TableStyle.ThBookFloor>
     </TableStyle.TableTr3>
   );
