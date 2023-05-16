@@ -3,7 +3,8 @@ import * as LoginStyle from '../../Pages/LoginPage_Style';
 import qrcode from '../../../Resources/Images/qrcode.png';
 import { useNavigate } from 'react-router-dom';
 import { socket } from '../../../socket';
-import { AddLoginPin, AddLoginQr } from '../../../store/api';
+import { AddLoginQr } from '../../../store/api';
+import { LoginError } from './LoginError';
 
 function QrLogin() {
   const navigate = useNavigate();
@@ -30,11 +31,11 @@ function QrLogin() {
       if (result) {
         navigate('/cleanup');
       } else {
-        alert('로그인 실패');
+        LoginError();
         setQrNumber('');
       }
     } catch (error) {
-      alert('로그인 실패');
+      LoginError();
       setQrNumber('');
     }
   };

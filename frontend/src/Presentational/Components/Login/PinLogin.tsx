@@ -1,10 +1,10 @@
-import React, { useState, ChangeEvent, useRef, useMemo, useEffect } from 'react';
+import React, { useState, ChangeEvent, useRef, useEffect } from 'react';
 import * as LoginStyle from '../../Pages/LoginPage_Style';
 import { useNavigate } from 'react-router-dom';
-import { socket } from '../../../socket';
 import { AddLoginPin } from '../../../store/api';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
+import { LoginError } from './LoginError';
 
 function PinLogin() {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ function PinLogin() {
 
   useEffect(() => {
     keyboard2.current?.setInput(pinNumber);
-  }, [usekeyboard])
+  }, [usekeyboard]);
 
   const handleLogin = async () => {
     console.log(pinNumber);
@@ -24,19 +24,18 @@ function PinLogin() {
       if (result) {
         navigate('/cleanup');
       } else {
-        alert('로그인 실패');
+        LoginError();
         setPinNumber('');
         keyboard2.current.clearInput();
       }
     } catch (error) {
-      alert('로그인 실패');
+      LoginError();
       setPinNumber('');
       keyboard2.current.clearInput();
     }
   };
 
   const onChange1 = (input: any) => {
-    console.log('Input changed =>', input);
     setPinNumber(input);
   };
 
@@ -47,7 +46,6 @@ function PinLogin() {
   };
 
   const onKeyPress = (button: any) => {
-    console.log('Button pressed =>', button);
     if (button === '{enter}') handleLogin();
   };
 
