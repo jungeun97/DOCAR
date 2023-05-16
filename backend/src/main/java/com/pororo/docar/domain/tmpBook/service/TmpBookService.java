@@ -45,7 +45,7 @@ public class TmpBookService {
 
         // 찾은 책의 id로 checkout_book 테이블에서 조회
         CheckoutBook checkoutBook = checkoutBookRepository.findByBookId(book.getId())
-                .orElseThrow(() -> new ResourceNotFoundException("대출 중인 책이 아닙니다."));
+                .orElse(null);
 
         Long bookDepth = book.getDepth();
 
@@ -128,7 +128,10 @@ public class TmpBookService {
             throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
         }
         // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.delete(checkoutBook);
+        if (checkoutBook != null) {
+            checkoutBookRepository.delete(checkoutBook);
+        }
+
 
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
