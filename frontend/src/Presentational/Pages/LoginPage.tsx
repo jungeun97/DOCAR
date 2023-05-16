@@ -21,18 +21,18 @@ function LoginPage() {
             message="PIN 번호로 로그인"
             go={ChangeLogin}
             position="absolute"
-            top="15px"
+            top="-20px"
             right="15px"
           />
         </>
       ) : (
         <>
-          <PinLogin />  
+          <PinLogin />
           <Btn
             message="QR로 로그인"
             go={ChangeLogin}
             position="absolute"
-            top="15px"
+            top="-20px"
             right="15px"
           />
         </>
