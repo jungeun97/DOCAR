@@ -15,6 +15,12 @@ const StyledButton = styled.button`
   width: 20%;
 `;
 
+const KeyboardWrapper = styled.div`
+  .hg-button {
+    width: 2%;
+  }
+`;
+
 function PinLogin() {
   const navigate = useNavigate();
   const [pinNumber, setPinNumber] = useState<string>('');
@@ -81,25 +87,27 @@ function PinLogin() {
       <LoginStyle.WrapBtn onClick={handleLogin}>Sign In</LoginStyle.WrapBtn>
       {usekeyboard && (
         <StyledKeyboardWrapper>
-          <Keyboard
-            keyboardRef={(r) => (keyboard2.current = r)}
-            layoutName={layout}
-            onChange={onChange1}
-            onKeyPress={onKeyPress}
-            mergeDisplay={true}
-            layout={{
-              default: ['1 2 3', '4 5 6', '7 8 9', '{bksp} 0 {enter}'],
-            }}
-            buttonTheme={[
-              {
-                class: 'hg-button',
-                buttons: '{enter} {bksp}',
-              },
-            ]}
-            renderButton={(button: string) => (
-              <StyledButton>{button}</StyledButton>
-            )}
-          />
+          <KeyboardWrapper>
+            <Keyboard
+              keyboardRef={(r) => (keyboard2.current = r)}
+              layoutName={layout}
+              onChange={onChange1}
+              onKeyPress={onKeyPress}
+              mergeDisplay={true}
+              layout={{
+                default: ['1 2 3', '4 5 6', '7 8 9', '{bksp} 0 {enter}'],
+              }}
+              buttonTheme={[
+                {
+                  class: 'hg-button',
+                  buttons: '{enter} {bksp}',
+                },
+              ]}
+              renderButton={(button: string) => (
+                <StyledButton>{button}</StyledButton>
+              )}
+            />
+          </KeyboardWrapper>
         </StyledKeyboardWrapper>
       )}
     </LoginStyle.WrapLogin>
