@@ -44,8 +44,8 @@ public class TmpBookService {
                 .orElseThrow(() -> new ResourceNotFoundException("해당 바코드에 해당하는 책이 없습니다."));
 
         // 찾은 책의 id로 checkout_book 테이블에서 조회
-//        CheckoutBook checkoutBook = checkoutBookRepository.findByBookId(book.getId())
-//                .orElseThrow(() -> new ResourceNotFoundException("대출 중인 책이 아닙니다."));
+        CheckoutBook checkoutBook = checkoutBookRepository.findByBookId(book.getId())
+                .orElse(null);
 
         Long bookDepth = book.getDepth();
 
@@ -129,10 +129,10 @@ public class TmpBookService {
         }
 
         // checkout_book에서 해당 Book 삭제
-        Optional<CheckoutBook> checkoutBookOptional = checkoutBookRepository.findByBookId(book.getId());
-        if (checkoutBookOptional.isPresent()) {
-            checkoutBookRepository.deleteByBookId(book.getId());
+        if (checkoutBook != null) {
+            checkoutBookRepository.delete(checkoutBook);
         }
+
 
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
