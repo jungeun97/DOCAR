@@ -5,13 +5,22 @@ import { AddLoginPin } from '../../../store/api';
 import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
 import { LoginError } from './LoginError';
+import styled from 'styled-components';
+
+const StyledKeyboardWrapper = styled.div`
+  width: 100%;
+`;
+
+const StyledButton = styled.button`
+  width: 20%;
+`;
 
 function PinLogin() {
   const navigate = useNavigate();
   const [pinNumber, setPinNumber] = useState<string>('');
   const [layout, setLayout] = useState('default');
   const keyboard2 = useRef<any>();
-  const [usekeyboard, setUsekeyboard] = useState(false); // 키보드 on/off  (useRef, focus 사용 실패함)
+  const [usekeyboard, setUsekeyboard] = useState(false);
 
   useEffect(() => {
     keyboard2.current?.setInput(pinNumber);
@@ -39,13 +48,13 @@ function PinLogin() {
     setPinNumber(input);
   };
 
-  const onChangeInput = (event: ChangeEvent<HTMLInputElement>): void => {
+  const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const input = event.target.value;
     setPinNumber(input);
     keyboard2.current.setInput(input);
   };
 
-  const onKeyPress = (button: any) => {
+  const onKeyPress = (button: string) => {
     if (button === '{enter}') handleLogin();
   };
 
@@ -71,15 +80,27 @@ function PinLogin() {
       </LoginStyle.WrapIdpw>
       <LoginStyle.WrapBtn onClick={handleLogin}>Sign In</LoginStyle.WrapBtn>
       {usekeyboard && (
-        <Keyboard
-          keyboardRef={(r) => (keyboard2.current = r)}
-          layoutName={layout} // 이거 안하면 shift 처리 안된다.
-          onChange={onChange1}
-          onKeyPress={onKeyPress}
-          layout={{
-            default: ['1 2 3', '4 5 6', '7 8 9', '{bksp} 0 {enter}'],
-          }}
-        />
+        <StyledKeyboardWrapper>
+          <Keyboard
+            keyboardRef={(r) => (keyboard2.current = r)}
+            layoutName={layout}
+            onChange={onChange1}
+            onKeyPress={onKeyPress}
+            mergeDisplay={true}
+            layout={{
+              default: ['1 2 3', '4 5 6', '7 8 9', '{bksp} 0 {enter}'],
+            }}
+            buttonTheme={[
+              {
+                class: 'hg-button',
+                buttons: '{enter} {bksp}',
+              },
+            ]}
+            renderButton={(button: string) => (
+              <StyledButton>{button}</StyledButton>
+            )}
+          />
+        </StyledKeyboardWrapper>
       )}
     </LoginStyle.WrapLogin>
   );
