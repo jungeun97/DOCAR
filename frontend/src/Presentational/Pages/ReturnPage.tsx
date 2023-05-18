@@ -38,11 +38,22 @@ function ReturnPage() {
     console.log(`현재 책의 바코드: ${barcodeNum}`);
   }, [barcodeNum]);
 
+  const testBarcode = () => {
+    setBarcodeNum(9788994796871);
+    setDistance(10);
+    setIsReturn(true);
+  };
+
   if (isReturn && barcodeNum !== 0) {
     return <ReturnBooks />;
   }
 
-  return <ReturnQrcode />;
+  return (
+    <>
+      <ReturnQrcode />
+      <button onClick={testBarcode}>바코드 번호 입력</button>
+    </>
+  );
 }
 
 export default ReturnPage;

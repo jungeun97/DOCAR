@@ -25,31 +25,31 @@ function ReturnBooks() {
   const ClickedReturnBtn = () => {
     setIsComplete(true);
   };
-
+  
   const AddReturnBookAPI = async () => {
-    const request = await AddReturnBookList();
-    if (request === false) {
-      setModal('반납 처리에 실패했습니다.');
+    const result = await AddReturnBookList();
+    if (typeof result === 'string') {
+      setModal(false, result);
     } else {
-      setModal();
+      setModal(result.success, result.message);
     }
   };
 
   const ReturnComplete = () => {
     setIsReturn(false);
     AddReturnBookAPI();
-    setModal();
-
     setBarcodeNum(0);
     setDistance(0);
   };
 
-  const setModal = (errorMessage?: string) => {
-    const text = errorMessage || '감사합니다.';
+  const setModal = (success: boolean, message: string) => {
+    const title = success ? '반납이 완료되었습니다.' : '반납에 실패했습니다.';
+    const icon = success ? 'success' : 'error';
+  
     MySwal.fire({
-      title: errorMessage ? '오류 발생!' : '반납이 완료되었습니다.',
-      text,
-      icon: errorMessage ? 'error' : 'success',
+      title,
+      text: message || '감사합니다.',
+      icon,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: '확인',
