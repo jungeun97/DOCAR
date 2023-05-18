@@ -96,25 +96,25 @@ function Bookshelf() {
                   })
                   .catch((res) => {
                     console.log(res);
-                    navigate(`/cleanup/end`);
-                    // MySwal.fire({
-                    //   title: '모든 책을 정리하였습니다.',
-                    //   timerProgressBar: true,
-                    //   showCancelButton: false,
-                    //   showConfirmButton: true,
-                    //   confirmButtonText: '홈으로 이동',
-                    //   allowOutsideClick: false,
-                    // }).then(() => {
-                    //   axios
-                    //     .post(`${API_URL}/turtlebot`, {
-                    //       bookIds: [],
-                    //       withCredentials: true,
-                    //     })
-                    //     .then((res) => {
-                    //       console.log(res);
-                    //       navigate(`/`);
-                    //     });
-                    // });
+                    // navigate(`/cleanup/end`);
+                    MySwal.fire({
+                      title: '모든 책을 정리하였습니다.',
+                      timerProgressBar: true,
+                      showCancelButton: false,
+                      showConfirmButton: true,
+                      confirmButtonText: '원위치로',
+                      allowOutsideClick: false,
+                    }).then(() => {
+                      axios
+                        .post(`${API_URL}/turtlebot`, {
+                          bookIds: [],
+                          withCredentials: true,
+                        })
+                        .then((res) => {
+                          console.log(res);
+                          navigate(`/`);
+                        });
+                    });
                   });
               } else {
               }
@@ -183,7 +183,25 @@ function Bookshelf() {
               .then((res) => {
                 console.log(res);
                 console.log('도서 정리 완료 요청 성공');
-                navigate(`/cleanup/end`);
+                // navigate(`/cleanup/end`);
+                MySwal.fire({
+                  title: '모든 책을 정리하였습니다.',
+                  timerProgressBar: true,
+                  showCancelButton: false,
+                  showConfirmButton: true,
+                  confirmButtonText: '원위치로',
+                  allowOutsideClick: false,
+                }).then(() => {
+                  axios
+                    .post(`${API_URL}/turtlebot`, {
+                      bookIds: [],
+                      withCredentials: true,
+                    })
+                    .then((res) => {
+                      console.log(res);
+                      navigate(`/`);
+                    });
+                });
               });
           } else {
             setCheckModal();
