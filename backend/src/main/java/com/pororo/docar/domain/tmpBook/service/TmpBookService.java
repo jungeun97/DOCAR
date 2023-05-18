@@ -35,7 +35,7 @@ public class TmpBookService {
     @Transactional
     public TmpBookInfo moveCheckedOutBookToTmpBook(String isbn) {
 
-        Double cartLength = 200.0;
+        Double cartLength = 290.0;
         Long cartFloor = 2L;
         Long cartSite = 1L;
 

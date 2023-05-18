@@ -7,6 +7,7 @@ import com.pororo.docar.domain.book.repository.BookRepository;
 import com.pororo.docar.domain.bookshelf.repository.BookshelfRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +22,8 @@ public class BookService {
     @Autowired
     private final BookRepository bookRepository;
     private final BookshelfRepository bookshelfRepository;
+    @Value("${aladin.ttbKey}")
+    private String ttbKey;
 
     RestTemplate restTemplate = new RestTemplate();
     @Transactional
@@ -28,7 +31,7 @@ public class BookService {
         List<String> isbnCodeList = List.of("9791133487516", "9791133487523", "9791133487530", "9791133487547", "9791133487554", "9791133487561", "9791133487578", "9791133487585", "9791133487592", "9791133487608");
         List<Book> bookList = new ArrayList<>();
         for (String isbnCode : isbnCodeList) {
-            String apiUrl = "https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=ttbchn98011431002&itemIdType=ISBN&ItemId=" + isbnCode + "&output=js&Version=20131101&OptResult=packing";
+            String apiUrl = String.format("https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=%s&itemIdType=ISBN&ItemId=", ttbKey) + isbnCode + "&output=js&Version=20131101&OptResult=packing";
             BookApiResponse response = restTemplate.getForObject(apiUrl, BookApiResponse.class);
             BookApiResponse.Item item = response.getItem().get(0);
             Book book = Book.builder()
