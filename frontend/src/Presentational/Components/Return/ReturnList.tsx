@@ -26,11 +26,7 @@ function ReturnList(props: ReturnList) {
     <ListStyle.WrapList>
       <ListStyle.ListTitle>반납 책 목록</ListStyle.ListTitle>
       <ReturnBookTable books={bookList} />
-      <Btn
-        message="위 사항이 맞다면 버튼을 눌러주세요."
-        go={props.ReturnComplete}
-        position="relative"
-      />
+      <Btn message="반납하기" go={props.ReturnComplete} position="relative" />
     </ListStyle.WrapList>
   );
 }

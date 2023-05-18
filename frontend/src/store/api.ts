@@ -20,6 +20,12 @@ export interface CartBookType {
   author: string;
 }
 
+export interface ReturnBookResponse {
+  success: boolean;
+  message: string;
+  data: null;
+}
+
 export interface CartBookType extends Array<CartBookType> {
   content: [];
 }
@@ -113,19 +119,21 @@ export async function getReturnList(): Promise<ReturnBookType[] | null> {
 }
 
 // 책 최종 반납
-export async function AddReturnBookList(): Promise<Boolean | null> {
-  let success: Boolean | null = null;
+export async function AddReturnBookList(): Promise<ReturnBookResponse | string> {
   try {
-    const res = await axios.post(`${API_URL}/returns`, {
+    const res = await axios.post<ReturnBookResponse>(`${API_URL}/returns`, {
       withCredentials: true,
     });
-    success = res.data.success as Boolean;
+    return res.data;
   } catch (error) {
-    const axiosError = error as AxiosError;
+    const axiosError = error as AxiosError<ErrorResponse>;
     printError(axiosError);
+    if (axiosError.response?.data?.message) {
+      return axiosError.response.data.message; // API로부터 받은 에러 메시지를 반환합니다.
+    } else {
+      return '오류가 발생했습니다. 다시 시도해주세요.';
+    }
   }
-
-  return success;
 }
 
 // cartbooks GET
