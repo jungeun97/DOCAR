@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as TableStyle from '../Components/BookTable_Style';
-import BookData from './BookData.json';
-import axios from 'axios';
 import { ReturnBookType } from '../../store/api';
 
 interface BookTableProps {
@@ -28,7 +26,7 @@ function ReturnBookTable({ books }: BookTableProps) {
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle>
             <TableStyle.ThWriter>
-              <TableStyle.BookWriter>{book.author}</TableStyle.BookWriter>
+              <TableStyle.BookWriter>{book?.author.split('(')[0].trim()} 저</TableStyle.BookWriter>
             </TableStyle.ThWriter>
           </TableStyle.TableTr>
         ))}

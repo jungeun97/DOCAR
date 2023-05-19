@@ -10,14 +10,28 @@ export interface ReturnBookType {
 }
 
 export interface CartBookType {
+  bookId: number;
   bookshelfId: number;
   cartBookFloor: number;
   cartBookSite: number;
   bookName: string;
+  coverImg: string;
+  depth: number;
+  author: string;
+}
+
+export interface ReturnBookResponse {
+  success: boolean;
+  message: string;
+  data: null;
 }
 
 export interface CartBookType extends Array<CartBookType> {
   content: [];
+}
+
+interface ErrorResponse {
+  message: string;
 }
 
 const API_URL = 'https://k8d101.p.ssafy.io/api';
@@ -67,19 +81,23 @@ export async function AddLoginQr(QrNumber: string): Promise<boolean> {
 // 책 바코드 체크 후 반납
 export async function AddReturnBook(
   barcodeNum: number
-): Promise<ReturnBookType | null> {
-  let data: ReturnBookType | null = null;
+): Promise<ReturnBookType | null | string> {
+  // Promise에 반환 타입 |string 추가
   try {
     const res = await axios.post(`${API_URL}/isbn/${barcodeNum}`, {
       withCredentials: true,
     });
-    data = res.data.data as ReturnBookType;
+    const data: ReturnBookType = res.data.data;
+    return data;
   } catch (error) {
-    const axiosError = error as AxiosError;
+    const axiosError = error as AxiosError<ErrorResponse>;
     printError(axiosError);
-    return null;
+    if (axiosError.response?.data?.message) {
+      return axiosError.response.data.message; // API로부터 받은 에러 메시지를 반환합니다.
+    } else {
+      return '오류가 발생했습니다. 다시 시도해주세요.';
+    }
   }
-  return data;
 }
 
 // 반납 책 리스트 조회
@@ -101,19 +119,21 @@ export async function getReturnList(): Promise<ReturnBookType[] | null> {
 }
 
 // 책 최종 반납
-export async function AddReturnBookList(): Promise<Boolean | null> {
-  let success: Boolean | null = null;
+export async function AddReturnBookList(): Promise<ReturnBookResponse | string> {
   try {
-    const res = await axios.post(`${API_URL}/returns`, {
+    const res = await axios.post<ReturnBookResponse>(`${API_URL}/returns`, {
       withCredentials: true,
     });
-    success = res.data.success as Boolean;
+    return res.data;
   } catch (error) {
-    const axiosError = error as AxiosError;
+    const axiosError = error as AxiosError<ErrorResponse>;
     printError(axiosError);
+    if (axiosError.response?.data?.message) {
+      return axiosError.response.data.message; // API로부터 받은 에러 메시지를 반환합니다.
+    } else {
+      return '오류가 발생했습니다. 다시 시도해주세요.';
+    }
   }
-
-  return success;
 }
 
 // cartbooks GET
@@ -162,4 +182,15 @@ export function CleanBookShelf() {
 }
 
 // cartbooks 청소완료 후 원위치로
-// export async function ReturnCart(): Promise
+export async function getTurtlebot() {
+  return axios
+    .get(`${API_URL}/turtlebot`, {
+      withCredentials: true,
+    })
+    .then((res) => {
+      // API 요청이 성공한 후에 쿠키에서 Authorization 토큰 삭제
+      delete axios.defaults.headers.common['Authorization'];
+      return res.data;
+    })
+    .catch((res) => res);
+}

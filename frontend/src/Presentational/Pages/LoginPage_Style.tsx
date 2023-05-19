@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { FiUser, FiLock } from 'react-icons/fi';
+// import Keyboard from 'react-simple-keyboard';
 
 export const WrapLogin = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ export const Img = styled.img`
       transform: translatey(-20px);
     }
   }
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   /* animation: up-down 1.4s infinite ease-in-out alternate; */
 `;
 
@@ -56,6 +57,7 @@ export const PinTitle = styled.div`
   font-size: 36px;
   font-weight: Bold;
   margin-bottom: 20px;
+  color: #9baacf;
 `;
 
 export const WrapIdpw = styled.div`
@@ -138,7 +140,8 @@ export const WrapBtn = styled.div`
   align-items: center;
   box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #ffffff;
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   /* color: #7f7f7f; */
   color: #9baacf;
   /* box-shadow: ; */
@@ -151,3 +154,8 @@ export const WrapBtn = styled.div`
       inset -0.2rem -0.2rem 0.5rem #ffffff;
   }
 `;
+
+
+// export const WrapKeyboard = styled(Keyboard)`
+
+// `
