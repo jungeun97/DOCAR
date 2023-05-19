@@ -28,7 +28,7 @@ public class BookService {
     RestTemplate restTemplate = new RestTemplate();
     @Transactional
     public void fetchDataFromApi() {
-        List<String> isbnCodeList = List.of("9791133487516", "9791133487523", "9791133487530", "9791133487547", "9791133487554", "9791133487561", "9791133487578", "9791133487585", "9791133487592", "9791133487608");
+        List<String> isbnCodeList = List.of("9791162244760", "9791162241912", "9788997383474", "9788966263134", "9791160508567");
         List<Book> bookList = new ArrayList<>();
         for (String isbnCode : isbnCodeList) {
             String apiUrl = String.format("https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=%s&itemIdType=ISBN&ItemId=", ttbKey) + isbnCode + "&output=js&Version=20131101&OptResult=packing";
