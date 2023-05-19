@@ -1,0 +1,3 @@
+[console_scripts]
+my_navigation_node = my_navigation_pkg.move_to_goal:main
+

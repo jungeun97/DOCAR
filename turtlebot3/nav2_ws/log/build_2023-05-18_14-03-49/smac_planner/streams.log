@@ -1,0 +1,179 @@
+[0.120s] Invoking command in '/home/turtlebot/nav2_ws/build/smac_planner': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/smac_planner
+[0.266s] -- The C compiler identification is GNU 9.4.0
+[0.353s] -- The CXX compiler identification is GNU 9.4.0
+[0.362s] -- Check for working C compiler: /usr/bin/cc
+[0.626s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.626s] -- Detecting C compiler ABI info
+[0.926s] -- Detecting C compiler ABI info - done
+[0.962s] -- Detecting C compile features
+[0.963s] -- Detecting C compile features - done
+[0.977s] -- Check for working CXX compiler: /usr/bin/c++
+[1.289s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.291s] -- Detecting CXX compiler ABI info
+[1.597s] -- Detecting CXX compiler ABI info - done
+[1.632s] -- Detecting CXX compile features
+[1.633s] -- Detecting CXX compile features - done
+[1.645s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.734s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.734s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.250s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.333s] -- Found nav2_common: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake)
+[2.341s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.491s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.526s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.836s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.959s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.298s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.532s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.532s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.540s] -- Looking for pthread.h
+[3.714s] -- Looking for pthread.h - found
+[3.715s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.006s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[4.006s] -- Looking for pthread_create in pthreads
+[4.188s] -- Looking for pthread_create in pthreads - not found
+[4.188s] -- Looking for pthread_create in pthread
+[4.436s] -- Looking for pthread_create in pthread - found
+[4.438s] -- Found Threads: TRUE  
+[4.866s] -- Found rclcpp_action: 2.4.2 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[5.104s] -- Found rclcpp_lifecycle: 2.4.2 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[5.174s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[5.481s] -- Found nav2_util: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake)
+[8.248s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[8.263s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[8.696s] -- Found nav2_core: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_core/share/nav2_core/cmake)
+[12.503s] -- Found installed version of Eigen: /usr/lib/cmake/eigen3
+[12.504s] -- Found required Ceres dependency: Eigen version 3.3.7 in /usr/include/eigen3
+[12.521s] -- Found required Ceres dependency: glog
+[12.533s] -- Found installed version of gflags: /usr/lib/x86_64-linux-gnu/cmake/gflags
+[12.534s] -- Detected gflags version: 2.2.2
+[12.540s] -- Found required Ceres dependency: gflags
+[12.550s] -- Found Ceres version: 1.14.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, OpenMP, Multithreading]
+[12.565s] -- Found ompl: /opt/ros/foxy/include/ompl-1.5;/usr/include/eigen3  
+[13.466s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[13.847s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[13.850s] -- Found OpenMP: TRUE (found version "4.5")  
+[26.447s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[26.757s] -- Found ament_cmake_gtest: 0.9.11 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[26.774s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[26.779s] -- Check if compiler accepts -pthread
+[27.086s] -- Check if compiler accepts -pthread - yes
+[120.578s] -- Added test 'copyright' to check source files copyright and LICENSE
+[120.586s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[120.587s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/smac_planner/include
+[120.587s] -- Configured cppcheck exclude dirs and/or files: 
+[120.594s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[120.595s] -- Configured cpplint exclude dirs and/or files: 
+[120.597s] -- Added test 'lint_cmake' to check CMake code style
+[120.600s] -- Added test 'uncrustify' to check C / C++ code style
+[120.602s] -- Configured uncrustify additional arguments: 
+[120.604s] -- Added test 'xmllint' to check XML markup files
+[120.629s] -- Configuring done
+[122.341s] -- Generating done
+[122.357s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/smac_planner
+[122.414s] Invoked command in '/home/turtlebot/nav2_ws/build/smac_planner' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/smac_planner
+[122.416s] Invoking command in '/home/turtlebot/nav2_ws/build/smac_planner': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/smac_planner -- -j2 -l2
+[122.607s] [35m[1mScanning dependencies of target smac_planner_2d[0m
+[122.942s] [  2%] [32mBuilding CXX object CMakeFiles/smac_planner_2d.dir/src/smac_planner_2d.cpp.o[0m
+[149.417s] [  5%] [32mBuilding CXX object CMakeFiles/smac_planner_2d.dir/src/a_star.cpp.o[0m
+[158.201s] [  8%] [32mBuilding CXX object CMakeFiles/smac_planner_2d.dir/src/node_se2.cpp.o[0m
+[166.655s] [ 11%] [32mBuilding CXX object CMakeFiles/smac_planner_2d.dir/src/costmap_downsampler.cpp.o[0m
+[171.859s] [ 14%] [32mBuilding CXX object CMakeFiles/smac_planner_2d.dir/src/node_2d.cpp.o[0m
+[175.388s] [ 17%] [32m[1mLinking CXX shared library libsmac_planner_2d.so[0m
+[176.186s] [ 17%] Built target smac_planner_2d
+[176.204s] [35m[1mScanning dependencies of target smac_planner[0m
+[176.342s] [ 20%] [32mBuilding CXX object CMakeFiles/smac_planner.dir/src/smac_planner.cpp.o[0m
+[189.494s] [ 23%] [32mBuilding CXX object CMakeFiles/smac_planner.dir/src/a_star.cpp.o[0m
+[197.274s] [ 26%] [32mBuilding CXX object CMakeFiles/smac_planner.dir/src/node_se2.cpp.o[0m
+[204.347s] [ 29%] [32mBuilding CXX object CMakeFiles/smac_planner.dir/src/costmap_downsampler.cpp.o[0m
+[213.306s] [ 32%] [32mBuilding CXX object CMakeFiles/smac_planner.dir/src/node_2d.cpp.o[0m
+[219.495s] [ 35%] [32m[1mLinking CXX shared library libsmac_planner.so[0m
+[221.044s] [ 35%] Built target smac_planner
+[221.066s] [35m[1mScanning dependencies of target gtest[0m
+[221.109s] [ 38%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[244.642s] [ 41%] [32m[1mLinking CXX static library libgtest.a[0m
+[244.801s] [ 41%] Built target gtest
+[244.843s] [35m[1mScanning dependencies of target gtest_main[0m
+[244.886s] [ 44%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[247.117s] [ 47%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[247.234s] [ 47%] Built target gtest_main
+[247.300s] [35m[1mScanning dependencies of target test_costmap_downsampler[0m
+[247.589s] [ 50%] [32mBuilding CXX object test/CMakeFiles/test_costmap_downsampler.dir/test_costmap_downsampler.cpp.o[0m
+[254.464s] [ 52%] [32m[1mLinking CXX executable test_costmap_downsampler[0m
+[255.091s] [ 52%] Built target test_costmap_downsampler
+[255.114s] [35m[1mScanning dependencies of target test_a_star[0m
+[255.251s] [ 55%] [32mBuilding CXX object test/CMakeFiles/test_a_star.dir/test_a_star.cpp.o[0m
+[261.881s] [ 58%] [32m[1mLinking CXX executable test_a_star[0m
+[262.490s] [ 58%] Built target test_a_star
+[262.507s] [35m[1mScanning dependencies of target test_node2d[0m
+[262.604s] [ 61%] [32mBuilding CXX object test/CMakeFiles/test_node2d.dir/test_node2d.cpp.o[0m
+[267.550s] [ 64%] [32m[1mLinking CXX executable test_node2d[0m
+[268.092s] [ 64%] Built target test_node2d
+[268.110s] [35m[1mScanning dependencies of target test_nodese2[0m
+[268.216s] [ 67%] [32mBuilding CXX object test/CMakeFiles/test_nodese2.dir/test_nodese2.cpp.o[0m
+[274.436s] [ 70%] [32m[1mLinking CXX executable test_nodese2[0m
+[275.014s] [ 70%] Built target test_nodese2
+[275.030s] [35m[1mScanning dependencies of target test_smac_se2[0m
+[275.148s] [ 73%] [32mBuilding CXX object test/CMakeFiles/test_smac_se2.dir/test_smac_se2.cpp.o[0m
+[284.112s] [ 76%] [32m[1mLinking CXX executable test_smac_se2[0m
+[284.665s] [ 76%] Built target test_smac_se2
+[284.681s] [35m[1mScanning dependencies of target test_nodebasic[0m
+[284.791s] [ 79%] [32mBuilding CXX object test/CMakeFiles/test_nodebasic.dir/test_nodebasic.cpp.o[0m
+[290.289s] [ 82%] [32m[1mLinking CXX executable test_nodebasic[0m
+[290.687s] [ 82%] Built target test_nodebasic
+[290.704s] [35m[1mScanning dependencies of target test_smac_2d[0m
+[290.844s] [ 85%] [32mBuilding CXX object test/CMakeFiles/test_smac_2d.dir/test_smac_2d.cpp.o[0m
+[299.766s] [ 88%] [32m[1mLinking CXX executable test_smac_2d[0m
+[300.345s] [ 88%] Built target test_smac_2d
+[300.365s] [35m[1mScanning dependencies of target test_collision_checker[0m
+[300.449s] [ 91%] [32mBuilding CXX object test/CMakeFiles/test_collision_checker.dir/test_collision_checker.cpp.o[0m
+[304.556s] [ 94%] [32m[1mLinking CXX executable test_collision_checker[0m
+[304.952s] [ 94%] Built target test_collision_checker
+[304.969s] [35m[1mScanning dependencies of target test_smoother[0m
+[305.088s] [ 97%] [32mBuilding CXX object test/CMakeFiles/test_smoother.dir/test_smoother.cpp.o[0m
+[313.750s] [100%] [32m[1mLinking CXX executable test_smoother[0m
+[314.393s] [100%] Built target test_smoother
+[314.425s] Invoked command in '/home/turtlebot/nav2_ws/build/smac_planner' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/smac_planner -- -j2 -l2
+[314.509s] Invoking command in '/home/turtlebot/nav2_ws/build/smac_planner': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/smac_planner
+[314.533s] -- Install configuration: "Release"
+[314.534s] -- Execute custom install script
+[314.534s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner//smac_plugin.xml
+[314.559s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner//smac_plugin_2d.xml
+[314.583s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/lib/libsmac_planner.so
+[314.602s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/lib/libsmac_planner_2d.so
+[314.622s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/a_star.hpp
+[314.644s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/collision_checker.hpp
+[314.655s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/constants.hpp
+[314.671s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/costmap_downsampler.hpp
+[314.687s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/node_2d.hpp
+[314.705s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/node_basic.hpp
+[314.723s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/node_se2.hpp
+[314.736s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/options.hpp
+[314.756s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/smac_planner.hpp
+[314.773s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/smac_planner_2d.hpp
+[314.787s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/smoother.hpp
+[314.803s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/smoother_cost_function.hpp
+[314.818s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/include//smac_planner/types.hpp
+[314.832s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/library_path.sh
+[314.847s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/library_path.dsv
+[314.864s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/ament_index/resource_index/package_run_dependencies/smac_planner
+[314.878s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/ament_index/resource_index/parent_prefix_path/smac_planner
+[314.892s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/ament_prefix_path.sh
+[314.912s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/ament_prefix_path.dsv
+[314.930s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/path.sh
+[314.950s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/environment/path.dsv
+[314.972s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/local_setup.bash
+[314.991s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/local_setup.sh
+[315.010s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/local_setup.zsh
+[315.030s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/local_setup.dsv
+[315.044s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/package.dsv
+[315.059s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/ament_index/resource_index/packages/smac_planner
+[315.075s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/smac_planner
+[315.089s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[315.104s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/ament_cmake_export_libraries-extras.cmake
+[315.118s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[315.131s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/ament_cmake_export_definitions-extras.cmake
+[315.146s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/smac_plannerConfig.cmake
+[315.164s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/cmake/smac_plannerConfig-version.cmake
+[315.190s] -- Symlinking: /home/turtlebot/nav2_ws/install/smac_planner/share/smac_planner/package.xml
+[315.214s] Invoked command in '/home/turtlebot/nav2_ws/build/smac_planner' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_core:/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/smac_planner

@@ -1,0 +1,1 @@
+/home/turtlebot/nav2_ws/build/nav2_msgs/rosidl_cmake/srv/ManageLifecycleNodes_Request.msg

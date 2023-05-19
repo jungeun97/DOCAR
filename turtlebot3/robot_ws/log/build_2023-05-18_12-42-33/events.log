@@ -1,0 +1,41 @@
+[0.000000] (-) TimerEvent: {}
+[0.000312] (-) JobUnselected: {'identifier': 'forward1'}
+[0.000355] (-) JobUnselected: {'identifier': 'my_navigation_pkg'}
+[0.000372] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000722] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000766] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.000783] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000797] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000829] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.000870] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000891] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.000924] (nav2_example) JobQueued: {'identifier': 'nav2_example', 'dependencies': OrderedDict()}
+[0.000958] (nav2_example) JobStarted: {'identifier': 'nav2_example'}
+[0.097740] (-) TimerEvent: {}
+[0.198606] (-) TimerEvent: {}
+[0.299292] (-) TimerEvent: {}
+[0.399980] (-) TimerEvent: {}
+[0.500723] (-) TimerEvent: {}
+[0.517461] (nav2_example) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/turtlebot/robot_ws/build/nav2_example/build', '--no-deps', 'install_data'], 'cwd': '/home/turtlebot/robot_ws/build/nav2_example', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'turtlebot', 'SSH_AGENT_PID': '1238', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/turtlebot', 'OLDPWD': '/home/turtlebot/robot_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '948', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/home/turtlebot/dev_ws', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/turtlebot/robot_ws/install:/home/turtlebot/colcon_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'turtlebot', 'JOURNAL_STREAM': '8:46835', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'turtlebot', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/turtlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/1281,unix/ubuntu:/tmp/.ICE-unix/1281', 'INVOCATION_ID': '2d501e946ecf4530b8f39391b0a26048', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/19aa1d91_662c_4326_9826_f73d7303a126', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.108', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/turtlebot/robot_ws/build/nav2_example', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:/home/turtlebot/robot_ws/build/nav2_example:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:/home/turtlebot/robot_ws/install/my_package/lib/python3.8/site-packages:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:/home/turtlebot/robot_ws/build/forward1:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/turtlebot/robot_ws/install/turtlebot3'}, 'shell': False}
+[0.601549] (-) TimerEvent: {}
+[0.702171] (-) TimerEvent: {}
+[0.704718] (nav2_example) StdoutLine: {'line': b'running develop\n'}
+[0.803131] (-) TimerEvent: {}
+[0.817594] (nav2_example) StdoutLine: {'line': b'running egg_info\n'}
+[0.817894] (nav2_example) StdoutLine: {'line': b'writing nav2_example.egg-info/PKG-INFO\n'}
+[0.818303] (nav2_example) StdoutLine: {'line': b'writing dependency_links to nav2_example.egg-info/dependency_links.txt\n'}
+[0.818659] (nav2_example) StdoutLine: {'line': b'writing entry points to nav2_example.egg-info/entry_points.txt\n'}
+[0.819061] (nav2_example) StdoutLine: {'line': b'writing requirements to nav2_example.egg-info/requires.txt\n'}
+[0.819504] (nav2_example) StdoutLine: {'line': b'writing top-level names to nav2_example.egg-info/top_level.txt\n'}
+[0.847471] (nav2_example) StdoutLine: {'line': b"reading manifest file 'nav2_example.egg-info/SOURCES.txt'\n"}
+[0.848191] (nav2_example) StdoutLine: {'line': b"writing manifest file 'nav2_example.egg-info/SOURCES.txt'\n"}
+[0.875971] (nav2_example) StdoutLine: {'line': b'running build_ext\n'}
+[0.876167] (nav2_example) StdoutLine: {'line': b'Creating /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2-example.egg-link (link to .)\n'}
+[0.877083] (nav2_example) StdoutLine: {'line': b'Installing navigation_example script to /home/turtlebot/robot_ws/install/nav2_example/lib/nav2_example\n'}
+[0.877320] (nav2_example) StdoutLine: {'line': b'\n'}
+[0.877430] (nav2_example) StdoutLine: {'line': b'Installed /home/turtlebot/robot_ws/build/nav2_example\n'}
+[0.877508] (nav2_example) StdoutLine: {'line': b'running install_data\n'}
+[0.897686] (nav2_example) CommandEnded: {'returncode': 0}
+[0.904341] (-) TimerEvent: {}
+[0.915573] (nav2_example) JobEnded: {'identifier': 'nav2_example', 'rc': 0}
+[0.916378] (-) EventReactorShutdown: {}

@@ -1,0 +1,24 @@
+[0.515s] Invoking command in '/home/turtlebot/robot_ws/build/nav2_example': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/nav2_example/build --no-deps install_data
+[0.703s] running develop
+[0.810s] running egg_info
+[0.811s] creating nav2_example.egg-info
+[0.811s] writing nav2_example.egg-info/PKG-INFO
+[0.811s] writing dependency_links to nav2_example.egg-info/dependency_links.txt
+[0.811s] writing entry points to nav2_example.egg-info/entry_points.txt
+[0.811s] writing requirements to nav2_example.egg-info/requires.txt
+[0.811s] writing top-level names to nav2_example.egg-info/top_level.txt
+[0.812s] writing manifest file 'nav2_example.egg-info/SOURCES.txt'
+[0.844s] reading manifest file 'nav2_example.egg-info/SOURCES.txt'
+[0.844s] writing manifest file 'nav2_example.egg-info/SOURCES.txt'
+[0.871s] running build_ext
+[0.871s] Creating /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/site.py
+[0.872s] Creating /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2-example.egg-link (link to .)
+[0.873s] 
+[0.873s] Installed /home/turtlebot/robot_ws/build/nav2_example
+[0.873s] running install_data
+[0.873s] creating /home/turtlebot/robot_ws/install/nav2_example/share/ament_index
+[0.873s] creating /home/turtlebot/robot_ws/install/nav2_example/share/ament_index/resource_index
+[0.873s] creating /home/turtlebot/robot_ws/install/nav2_example/share/ament_index/resource_index/packages
+[0.873s] copying resource/nav2_example -> /home/turtlebot/robot_ws/install/nav2_example/share/ament_index/resource_index/packages
+[0.873s] copying package.xml -> /home/turtlebot/robot_ws/install/nav2_example/share/nav2_example
+[0.895s] Invoked command in '/home/turtlebot/robot_ws/build/nav2_example' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/nav2_example/build --no-deps install_data

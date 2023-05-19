@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: my-navigation-pkg
+Version: 0.0.1
+Summary: Simple navigation example in ROS2 foxy
+Home-page: UNKNOWN
+Maintainer: <your_name>
+Maintainer-email: <your_email>
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN

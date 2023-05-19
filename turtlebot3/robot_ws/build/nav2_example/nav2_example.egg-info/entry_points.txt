@@ -1,0 +1,3 @@
+[console_scripts]
+navigation_example = nav2_example.navigation_example:main
+

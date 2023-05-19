@@ -1,0 +1,10 @@
+{
+  "package_name": "waypoint_navigation_interfaces",
+  "non_idl_tuples": [
+    "/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces:action/NavigateToWp.action",
+    "/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces:srv/AddWp.srv",
+    "/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces:srv/GetWp.srv",
+    "/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces:srv/GetWps.srv",
+    "/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces:msg/Wp.msg"
+  ]
+}

@@ -1,0 +1,8 @@
+[console_scripts]
+amcl1 = forward1.amcl1:main
+amcl2 = forward1.amcl2:main
+forward1_1 = forward1.forward1_1:main
+forward1_2 = forward1.forward1_2:main
+tb3_navigation = forward1.tb3_navigation:main
+test1 = forward1.test1:main
+

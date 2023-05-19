@@ -1,0 +1,30 @@
+running develop
+Removing /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my-navigation-pkg.egg-link (link to .)
+running egg_info
+writing ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/requires.txt
+writing top-level names to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/top_level.txt
+reading manifest file '../../build/my_navigation_pkg/my_navigation_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_navigation_pkg/my_navigation_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/turtlebot/robot_ws/build/my_navigation_pkg/build
+creating /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib
+creating /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib/my_navigation_pkg
+copying my_navigation_pkg/__init__.py -> /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib/my_navigation_pkg
+copying my_navigation_pkg/move_to_goal.py -> /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib/my_navigation_pkg
+running install
+running install_lib
+creating /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg
+copying /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib/my_navigation_pkg/__init__.py -> /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg
+copying /home/turtlebot/robot_ws/build/my_navigation_pkg/build/lib/my_navigation_pkg/move_to_goal.py -> /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg
+byte-compiling /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg/move_to_goal.py to move_to_goal.cpython-38.pyc
+running install_data
+running install_egg_info
+Copying ../../build/my_navigation_pkg/my_navigation_pkg.egg-info to /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg-0.0.1-py3.8.egg-info
+running install_scripts
+Installing my_navigation_node script to /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/my_navigation_pkg
+writing list of installed files to '/home/turtlebot/robot_ws/build/my_navigation_pkg/install.log'

@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing forward1.egg-info/PKG-INFO
+writing dependency_links to forward1.egg-info/dependency_links.txt
+writing entry points to forward1.egg-info/entry_points.txt
+writing requirements to forward1.egg-info/requires.txt
+writing top-level names to forward1.egg-info/top_level.txt
+reading manifest file 'forward1.egg-info/SOURCES.txt'
+writing manifest file 'forward1.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1.egg-link (link to .)
+Installing amcl1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+Installing amcl2 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+Installing forward1_1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+
+Installed /home/turtlebot/robot_ws/build/forward1
+running install_data
+copying package.xml -> /home/turtlebot/robot_ws/install/forward1/share/forward1

@@ -1,0 +1,25 @@
+[0.990s] Invoking command in '/home/turtlebot/robot_ws/build/forward1': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build --no-deps install_data
+[1.306s] running develop
+[1.568s] running egg_info
+[1.568s] creating forward1.egg-info
+[1.569s] writing forward1.egg-info/PKG-INFO
+[1.569s] writing dependency_links to forward1.egg-info/dependency_links.txt
+[1.570s] writing entry points to forward1.egg-info/entry_points.txt
+[1.570s] writing requirements to forward1.egg-info/requires.txt
+[1.571s] writing top-level names to forward1.egg-info/top_level.txt
+[1.572s] writing manifest file 'forward1.egg-info/SOURCES.txt'
+[1.614s] reading manifest file 'forward1.egg-info/SOURCES.txt'
+[1.615s] writing manifest file 'forward1.egg-info/SOURCES.txt'
+[1.662s] running build_ext
+[1.663s] Creating /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/site.py
+[1.666s] Creating /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1.egg-link (link to .)
+[1.667s] Installing forward1_1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.668s] 
+[1.668s] Installed /home/turtlebot/robot_ws/build/forward1
+[1.668s] running install_data
+[1.668s] creating /home/turtlebot/robot_ws/install/forward1/share/ament_index
+[1.669s] creating /home/turtlebot/robot_ws/install/forward1/share/ament_index/resource_index
+[1.669s] creating /home/turtlebot/robot_ws/install/forward1/share/ament_index/resource_index/packages
+[1.669s] copying resource/forward1 -> /home/turtlebot/robot_ws/install/forward1/share/ament_index/resource_index/packages
+[1.670s] copying package.xml -> /home/turtlebot/robot_ws/install/forward1/share/forward1
+[1.703s] Invoked command in '/home/turtlebot/robot_ws/build/forward1' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build --no-deps install_data

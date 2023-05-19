@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_generator_py/waypoint_navigation_interfaces/libwaypoint_navigation_interfaces__python.so" "TARGETS" "waypoint_navigation_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

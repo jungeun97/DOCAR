@@ -1,0 +1,51 @@
+[0.918s] Invoking command in '/home/turtlebot/robot_ws/build/forward1': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build
+[1.175s] running develop
+[1.333s] Removing /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1.egg-link (link to .)
+[1.355s] Invoked command in '/home/turtlebot/robot_ws/build/forward1' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build
+[1.359s] Invoking command in '/home/turtlebot/robot_ws/src/forward1': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/forward1 build --build-base /home/turtlebot/robot_ws/build/forward1/build install --record /home/turtlebot/robot_ws/build/forward1/install.log --install-scripts $base/lib/forward1 --single-version-externally-managed
+[1.618s] running egg_info
+[1.619s] writing ../../build/forward1/forward1.egg-info/PKG-INFO
+[1.619s] writing dependency_links to ../../build/forward1/forward1.egg-info/dependency_links.txt
+[1.620s] writing entry points to ../../build/forward1/forward1.egg-info/entry_points.txt
+[1.620s] writing requirements to ../../build/forward1/forward1.egg-info/requires.txt
+[1.621s] writing top-level names to ../../build/forward1/forward1.egg-info/top_level.txt
+[1.655s] reading manifest file '../../build/forward1/forward1.egg-info/SOURCES.txt'
+[1.657s] writing manifest file '../../build/forward1/forward1.egg-info/SOURCES.txt'
+[1.657s] running build
+[1.657s] running build_py
+[1.657s] creating /home/turtlebot/robot_ws/build/forward1/build
+[1.658s] creating /home/turtlebot/robot_ws/build/forward1/build/lib
+[1.658s] creating /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.658s] copying forward1/forward1_2.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.659s] copying forward1/forward1_1.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.659s] copying forward1/__init__.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.659s] copying forward1/amcl2.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.660s] copying forward1/amcl1.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.660s] copying forward1/test1.py -> /home/turtlebot/robot_ws/build/forward1/build/lib/forward1
+[1.661s] running install
+[1.662s] running install_lib
+[1.663s] creating /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.663s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/forward1_2.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.664s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/forward1_1.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.664s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/__init__.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.664s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/amcl2.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.665s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/amcl1.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.665s] copying /home/turtlebot/robot_ws/build/forward1/build/lib/forward1/test1.py -> /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1
+[1.666s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/forward1_2.py to forward1_2.cpython-38.pyc
+[1.667s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/forward1_1.py to forward1_1.cpython-38.pyc
+[1.668s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/__init__.py to __init__.cpython-38.pyc
+[1.669s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/amcl2.py to amcl2.cpython-38.pyc
+[1.670s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/amcl1.py to amcl1.cpython-38.pyc
+[1.671s] byte-compiling /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1/test1.py to test1.cpython-38.pyc
+[1.672s] running install_data
+[1.673s] copying package.xml -> /home/turtlebot/robot_ws/install/forward1/share/forward1
+[1.674s] running install_egg_info
+[1.675s] Copying ../../build/forward1/forward1.egg-info to /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1-0.0.0-py3.8.egg-info
+[1.676s] running install_scripts
+[1.692s] Installing amcl1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.692s] Installing amcl2 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.693s] Installing forward1_1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.693s] Installing forward1_2 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.694s] Installing test1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[1.694s] writing list of installed files to '/home/turtlebot/robot_ws/build/forward1/install.log'
+[1.847s] Invoked command in '/home/turtlebot/robot_ws/src/forward1' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/forward1 build --build-base /home/turtlebot/robot_ws/build/forward1/build install --record /home/turtlebot/robot_ws/build/forward1/install.log --install-scripts $base/lib/forward1 --single-version-externally-managed

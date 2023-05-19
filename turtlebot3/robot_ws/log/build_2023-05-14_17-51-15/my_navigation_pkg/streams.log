@@ -1,0 +1,18 @@
+[0.552s] Invoking command in '/home/turtlebot/robot_ws/build/my_navigation_pkg': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/my_navigation_pkg/build --no-deps install_data
+[0.728s] running develop
+[0.834s] running egg_info
+[0.835s] writing my_navigation_pkg.egg-info/PKG-INFO
+[0.835s] writing dependency_links to my_navigation_pkg.egg-info/dependency_links.txt
+[0.835s] writing entry points to my_navigation_pkg.egg-info/entry_points.txt
+[0.836s] writing requirements to my_navigation_pkg.egg-info/requires.txt
+[0.836s] writing top-level names to my_navigation_pkg.egg-info/top_level.txt
+[0.871s] reading manifest file 'my_navigation_pkg.egg-info/SOURCES.txt'
+[0.872s] writing manifest file 'my_navigation_pkg.egg-info/SOURCES.txt'
+[0.898s] running build_ext
+[0.899s] Creating /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my-navigation-pkg.egg-link (link to .)
+[0.900s] Installing my_navigation_node script to /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/my_navigation_pkg
+[0.900s] 
+[0.900s] Installed /home/turtlebot/robot_ws/build/my_navigation_pkg
+[0.900s] running install_data
+[0.901s] copying launch/robot_navigation.launch.py -> /home/turtlebot/robot_ws/install/my_navigation_pkg/share/my_navigation_pkg/launch
+[0.923s] Invoked command in '/home/turtlebot/robot_ws/build/my_navigation_pkg' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/my_navigation_pkg/build --no-deps install_data

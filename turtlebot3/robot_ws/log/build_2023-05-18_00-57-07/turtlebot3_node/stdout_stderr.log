@@ -1,0 +1,25 @@
+[ 85%] Built target turtlebot3_node_lib
+[100%] Built target turtlebot3_ros
+-- Install configuration: ""
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+-- Set runtime path of "/home/turtlebot/robot_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros" to ""
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+-- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml

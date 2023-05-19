@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from waypoint_navigation_interfaces/srv/AddWp.srv
+// generated code does not contain a copyright notice
+
+#include "waypoint_navigation_interfaces/msg/Wp.idl"
+
+module waypoint_navigation_interfaces {
+  module srv {
+    struct AddWp_Request {
+      waypoint_navigation_interfaces::msg::Wp wp;
+    };
+    struct AddWp_Response {
+      boolean overwrite;
+    };
+  };
+};

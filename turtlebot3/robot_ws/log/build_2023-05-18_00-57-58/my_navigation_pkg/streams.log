@@ -1,0 +1,24 @@
+[0.951s] Invoking command in '/home/turtlebot/robot_ws/build/my_navigation_pkg': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/my_navigation_pkg/build
+[1.284s] running develop
+[1.503s] Invoked command in '/home/turtlebot/robot_ws/build/my_navigation_pkg' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/my_navigation_pkg/build
+[1.508s] Invoking command in '/home/turtlebot/robot_ws/src/my_navigation_pkg': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_navigation_pkg build --build-base /home/turtlebot/robot_ws/build/my_navigation_pkg/build install --record /home/turtlebot/robot_ws/build/my_navigation_pkg/install.log --install-scripts $base/lib/my_navigation_pkg --single-version-externally-managed
+[1.836s] running egg_info
+[1.837s] writing ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/PKG-INFO
+[1.846s] writing dependency_links to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/dependency_links.txt
+[1.847s] writing entry points to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/entry_points.txt
+[1.847s] writing requirements to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/requires.txt
+[1.848s] writing top-level names to ../../build/my_navigation_pkg/my_navigation_pkg.egg-info/top_level.txt
+[1.896s] reading manifest file '../../build/my_navigation_pkg/my_navigation_pkg.egg-info/SOURCES.txt'
+[1.898s] writing manifest file '../../build/my_navigation_pkg/my_navigation_pkg.egg-info/SOURCES.txt'
+[1.898s] running build
+[1.899s] running build_py
+[1.900s] running install
+[1.902s] running install_lib
+[1.905s] running install_data
+[1.906s] running install_egg_info
+[1.909s] removing '/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg-0.0.1-py3.8.egg-info' (and everything under it)
+[1.909s] Copying ../../build/my_navigation_pkg/my_navigation_pkg.egg-info to /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages/my_navigation_pkg-0.0.1-py3.8.egg-info
+[1.911s] running install_scripts
+[1.934s] Installing my_navigation_node script to /home/turtlebot/robot_ws/install/my_navigation_pkg/lib/my_navigation_pkg
+[1.935s] writing list of installed files to '/home/turtlebot/robot_ws/build/my_navigation_pkg/install.log'
+[1.966s] Invoked command in '/home/turtlebot/robot_ws/src/my_navigation_pkg' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/my_navigation_pkg/prefix_override:/home/turtlebot/robot_ws/install/my_navigation_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_navigation_pkg build --build-base /home/turtlebot/robot_ws/build/my_navigation_pkg/build install --record /home/turtlebot/robot_ws/build/my_navigation_pkg/install.log --install-scripts $base/lib/my_navigation_pkg --single-version-externally-managed

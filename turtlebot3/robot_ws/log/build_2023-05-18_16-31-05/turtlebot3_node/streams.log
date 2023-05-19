@@ -1,0 +1,65 @@
+[0.032s] Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_node -- -j2 -l2
+[0.074s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.102s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.307s] -- Found dynamixel_sdk: 3.7.40 (/opt/ros/foxy/share/dynamixel_sdk/cmake)
+[0.309s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.329s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.333s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.450s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.526s] -- Found message_filters: 3.2.5 (/opt/ros/foxy/share/message_filters/cmake)
+[0.528s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.589s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.622s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.624s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.741s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.814s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[0.826s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[0.841s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.154s] -- Found turtlebot3_msgs: 2.2.1 (/opt/ros/foxy/share/turtlebot3_msgs/cmake)
+[1.321s] -- Configuring done
+[1.349s] -- Generating done
+[1.352s] -- Build files have been written to: /home/turtlebot/robot_ws/build/turtlebot3_node
+[1.395s] [35m[1mScanning dependencies of target turtlebot3_node_lib[0m
+[1.456s] [  7%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/sound.cpp.o[0m
+[1.460s] [ 14%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/motor_power.cpp.o[0m
+[4.986s] [ 21%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/reset.cpp.o[0m
+[5.105s] [ 28%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/diff_drive_controller.cpp.o[0m
+[7.883s] [ 35%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/dynamixel_sdk_wrapper.cpp.o[0m
+[8.528s] [ 42%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/odometry.cpp.o[0m
+[8.670s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/turtlebot3.cpp.o[0m
+[16.468s] [ 57%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/battery_state.cpp.o[0m
+[19.141s] [ 64%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/imu.cpp.o[0m
+[19.192s] [ 71%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/joint_state.cpp.o[0m
+[21.838s] [ 78%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/sensor_state.cpp.o[0m
+[24.262s] [ 85%] [32m[1mLinking CXX static library libturtlebot3_node_lib.a[0m
+[24.511s] [ 85%] Built target turtlebot3_node_lib
+[24.524s] [35m[1mScanning dependencies of target turtlebot3_ros[0m
+[24.550s] [ 92%] [32mBuilding CXX object CMakeFiles/turtlebot3_ros.dir/src/node_main.cpp.o[0m
+[26.483s] [100%] [32m[1mLinking CXX executable turtlebot3_ros[0m
+[27.316s] [100%] Built target turtlebot3_ros
+[27.329s] Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_node -- -j2 -l2
+[27.374s] Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_node
+[27.383s] -- Install configuration: ""
+[27.383s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param
+[27.384s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+[27.384s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+[27.385s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+[27.385s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+[27.390s] -- Set runtime path of "/home/turtlebot/robot_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros" to ""
+[27.390s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+[27.391s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+[27.392s] -- Installing: /home/turtlebot/robot_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml
+[27.398s] Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_node

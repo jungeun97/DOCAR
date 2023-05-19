@@ -1,0 +1,186 @@
+-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/turtlebot/robot_ws/build/waypoint_navigation_interfaces
+[  1%] Built target waypoint_navigation_interfaces__cpp
+[ 12%] Built target waypoint_navigation_interfaces__rosidl_generator_c
+[ 23%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp
+[ 25%] [32m[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 36%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c
+[ 47%] Built target waypoint_navigation_interfaces__rosidl_typesupport_c
+[ 58%] Built target waypoint_navigation_interfaces__rosidl_typesupport_cpp
+[ 68%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 69%] [32m[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[ 79%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c
+[ 79%] Built target waypoint_navigation_interfaces
+[ 80%] Built target waypoint_navigation_interfaces__py
+[ 82%] [32m[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/libwaypoint_navigation_interfaces__python.so[0m
+[ 90%] Built target waypoint_navigation_interfaces__python
+[ 93%] [32m[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 93%] [32m[1mLinking CXX shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 95%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c__pyext
+[ 96%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] Built target waypoint_navigation_interfaces__rosidl_typesupport_c__pyext
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/rosidl_interfaces/waypoint_navigation_interfaces
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__functions.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__struct.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/navigate_to_wp.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__functions.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__struct.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__type_support.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/wp.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/add_wp.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__functions.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__struct.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__functions.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__struct.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__functions.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__struct.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wp.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wps.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/library_path.sh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/library_path.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__builder.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__struct.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__traits.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/navigate_to_wp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__builder.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__struct.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__traits.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/wp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/add_wp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__builder.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__struct.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__traits.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__builder.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__struct.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__traits.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__builder.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__struct.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__traits.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wps.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/pythonpath.sh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/pythonpath.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/__init__.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action/__init__.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action/_navigate_to_wp.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/__init__.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_add_wp.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wp.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wps.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg/__init__.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg/_wp.py
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__python.so
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/action/NavigateToWp.idl
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp.idl
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp.idl
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps.idl
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/msg/Wp.idl
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/action/NavigateToWp.action
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp.srv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp_Request.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp_Response.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp.srv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp_Request.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp_Response.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps.srv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps_Request.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps_Response.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/msg/Wp.msg
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/package_run_dependencies/waypoint_navigation_interfaces
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/parent_prefix_path/waypoint_navigation_interfaces
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/ament_prefix_path.sh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/ament_prefix_path.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/path.sh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/path.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.bash
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.sh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.zsh
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/package.dsv
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/packages/waypoint_navigation_interfaces
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfacesConfig.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfacesConfig-version.cmake
+-- Symlinking: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/package.xml
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_generator_c.so
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_c.so
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_cpp.so
+Compiling '/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/__init__.py'...
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cppExport.cmake
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cppExport-noconfig.cmake

@@ -1,0 +1,138 @@
+[0.083s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_rviz_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_rviz_plugins
+[0.378s] -- The C compiler identification is GNU 9.4.0
+[0.671s] -- The CXX compiler identification is GNU 9.4.0
+[0.697s] -- Check for working C compiler: /usr/bin/cc
+[1.091s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.092s] -- Detecting C compiler ABI info
+[1.248s] -- Detecting C compiler ABI info - done
+[1.266s] -- Detecting C compile features
+[1.267s] -- Detecting C compile features - done
+[1.271s] -- Check for working CXX compiler: /usr/bin/c++
+[1.466s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.468s] -- Detecting CXX compiler ABI info
+[1.639s] -- Detecting CXX compiler ABI info - done
+[1.659s] -- Detecting CXX compile features
+[1.660s] -- Detecting CXX compile features - done
+[1.663s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.748s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.749s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.222s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.289s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.395s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.423s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.619s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.709s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.934s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.152s] -- Found nav2_util: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake)
+[4.232s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[4.234s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.235s] -- Looking for pthread.h
+[4.471s] -- Looking for pthread.h - found
+[4.471s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.640s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[4.640s] -- Looking for pthread_create in pthreads
+[4.877s] -- Looking for pthread_create in pthreads - not found
+[4.877s] -- Looking for pthread_create in pthread
+[5.173s] -- Looking for pthread_create in pthread - found
+[5.175s] -- Found Threads: TRUE  
+[6.262s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[6.279s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[6.647s] -- Found nav2_lifecycle_manager: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/share/nav2_lifecycle_manager/cmake)
+[7.228s] -- Found pluginlib: 2.5.4 (/opt/ros/foxy/share/pluginlib/cmake)
+[7.342s] -- Found rviz_common: 8.2.8 (/opt/ros/foxy/share/rviz_common/cmake)
+[7.381s] -- Setting OGRE_DIR to: '/opt/ros/foxy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[7.389s] -- Found OGRE
+[7.389s] --   static     : OFF
+[7.389s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[7.389s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[7.390s] --   media      : /opt/ros/foxy/opt/rviz_ogre_vendor/share/OGRE/Media
+[7.390s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[7.390s] -- OGRE_LIBRARY_DIRS: /opt/ros/foxy/opt/rviz_ogre_vendor/lib
+[7.390s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[7.390s] -- OGRE_PLUGIN_DIR: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/OGRE
+[7.390s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[7.390s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[7.390s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[7.390s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/foxy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[7.441s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[7.450s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[7.667s] -- Found X11: /usr/include   
+[7.678s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[7.886s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[7.887s] -- Looking for gethostbyname
+[8.080s] -- Looking for gethostbyname - found
+[8.080s] -- Looking for connect
+[8.235s] -- Looking for connect - found
+[8.235s] -- Looking for remove
+[8.391s] -- Looking for remove - found
+[8.392s] -- Looking for shmat
+[8.535s] -- Looking for shmat - found
+[8.537s] -- Looking for IceConnectionNumber in ICE
+[8.705s] -- Looking for IceConnectionNumber in ICE - found
+[8.709s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_RELEASE: _render_system_gl_static_library_abs-NOTFOUND
+[8.709s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_DEBUG: _render_system_gl_static_library_abs-NOTFOUND
+[8.739s] -- library: libassimp.so.5
+[8.949s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[9.414s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[9.418s] -- Found rviz_default_plugins: 8.2.8 (/opt/ros/foxy/share/rviz_default_plugins/cmake)
+[11.994s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[12.258s] -- Added test 'copyright' to check source files copyright and LICENSE
+[12.260s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[12.260s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/nav2_rviz_plugins/include
+[12.260s] -- Configured cppcheck exclude dirs and/or files: 
+[12.268s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[12.268s] -- Configured cpplint exclude dirs and/or files: 
+[12.268s] -- Added test 'lint_cmake' to check CMake code style
+[12.273s] -- Added test 'uncrustify' to check C / C++ code style
+[12.273s] -- Configured uncrustify additional arguments: 
+[12.274s] -- Added test 'xmllint' to check XML markup files
+[12.295s] -- Configuring done
+[12.446s] -- Generating done
+[12.449s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/nav2_rviz_plugins
+[12.492s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_rviz_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_rviz_plugins
+[12.494s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_rviz_plugins -- -j2 -l2
+[12.629s] [35m[1mScanning dependencies of target nav2_rviz_plugins_autogen[0m
+[12.651s] [ 20%] [34m[1mAutomatic MOC for target nav2_rviz_plugins[0m
+[15.909s] [ 20%] Built target nav2_rviz_plugins_autogen
+[15.940s] [35m[1mScanning dependencies of target nav2_rviz_plugins[0m
+[16.273s] [ 40%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/nav2_rviz_plugins_autogen/mocs_compilation.cpp.o[0m
+[38.465s] [ 60%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/goal_tool.cpp.o[0m
+[59.673s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_rviz_plugins.dir/src/nav2_panel.cpp.o[0m
+[116.088s] [100%] [32m[1mLinking CXX shared library libnav2_rviz_plugins.so[0m
+[127.693s] [100%] Built target nav2_rviz_plugins
+[127.734s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_rviz_plugins -- -j2 -l2
+[127.919s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_rviz_plugins
+[127.976s] -- Install configuration: ""
+[127.981s] -- Execute custom install script
+[127.982s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins//plugins_description.xml
+[128.022s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_common.hpp
+[128.065s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_pose_updater.hpp
+[128.105s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/include//nav2_rviz_plugins/goal_tool.hpp
+[128.144s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/include//nav2_rviz_plugins/nav2_panel.hpp
+[128.195s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/include//nav2_rviz_plugins/ros_action_qevent.hpp
+[128.246s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.sh
+[128.292s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/library_path.dsv
+[128.328s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/ament_index/resource_index/package_run_dependencies/nav2_rviz_plugins
+[128.387s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/ament_index/resource_index/parent_prefix_path/nav2_rviz_plugins
+[128.420s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.sh
+[128.447s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/ament_prefix_path.dsv
+[128.488s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.sh
+[128.530s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/environment/path.dsv
+[128.568s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.bash
+[128.633s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.sh
+[128.677s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.zsh
+[128.709s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/local_setup.dsv
+[128.745s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.dsv
+[128.778s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/ament_index/resource_index/packages/nav2_rviz_plugins
+[128.810s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/ament_index/resource_index/rviz_common__pluginlib__plugin/nav2_rviz_plugins
+[128.869s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_include_directories-extras.cmake
+[128.922s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_targets-extras.cmake
+[128.975s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/ament_cmake_export_dependencies-extras.cmake
+[129.029s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig.cmake
+[129.103s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsConfig-version.cmake
+[129.162s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/package.xml
+[129.229s] -- Installing: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so
+[129.245s] -- Set runtime path of "/home/turtlebot/nav2_ws/install/nav2_rviz_plugins/lib/libnav2_rviz_plugins.so" to ""
+[129.246s] -- Installing: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport.cmake
+[129.246s] -- Installing: /home/turtlebot/nav2_ws/install/nav2_rviz_plugins/share/nav2_rviz_plugins/cmake/nav2_rviz_pluginsExport-noconfig.cmake
+[129.272s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_rviz_plugins' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_lifecycle_manager/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_rviz_plugins

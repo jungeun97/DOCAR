@@ -1,0 +1,636 @@
+[0.000000] (-) TimerEvent: {}
+[0.000663] (my_package) JobQueued: {'identifier': 'my_package', 'dependencies': OrderedDict()}
+[0.000742] (waypoint_navigation) JobQueued: {'identifier': 'waypoint_navigation', 'dependencies': OrderedDict()}
+[0.000812] (waypoint_navigation_interfaces) JobQueued: {'identifier': 'waypoint_navigation_interfaces', 'dependencies': OrderedDict()}
+[0.000874] (my_package) JobStarted: {'identifier': 'my_package'}
+[0.034321] (waypoint_navigation) JobStarted: {'identifier': 'waypoint_navigation'}
+[0.096928] (-) TimerEvent: {}
+[0.197586] (-) TimerEvent: {}
+[0.298327] (-) TimerEvent: {}
+[0.399133] (-) TimerEvent: {}
+[0.499739] (-) TimerEvent: {}
+[0.600481] (-) TimerEvent: {}
+[0.702219] (-) TimerEvent: {}
+[0.803505] (-) TimerEvent: {}
+[0.904949] (-) TimerEvent: {}
+[1.005689] (-) TimerEvent: {}
+[1.106416] (-) TimerEvent: {}
+[1.207197] (-) TimerEvent: {}
+[1.243086] (my_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/my_package', 'build', '--build-base', '/home/turtlebot/robot_ws/build/my_package/build', 'install', '--record', '/home/turtlebot/robot_ws/build/my_package/install.log', '--install-scripts', '$base/lib/my_package', '--single-version-externally-managed'], 'cwd': '/home/turtlebot/robot_ws/my_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'turtlebot', 'SSH_AGENT_PID': '1211', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/turtlebot', 'OLDPWD': '/home/turtlebot/robot_ws/src/waypoint_navigation', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '970', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/turtlebot/colcon_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'turtlebot', 'JOURNAL_STREAM': '8:44488', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'turtlebot', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/1264,unix/ubuntu:/tmp/.ICE-unix/1264', 'INVOCATION_ID': '17029e8d8b5a48a097923969efb44eaa', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/1fcf51dc_ab9c_4ec1_a244_2a436296e613', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.345', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/turtlebot/robot_ws/build/my_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/turtlebot/robot_ws/build/my_package/prefix_override:/home/turtlebot/robot_ws/install/my_package/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[1.253303] (waypoint_navigation) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../build/waypoint_navigation', 'build', '--build-base', '/home/turtlebot/robot_ws/build/waypoint_navigation/build', 'install', '--record', '/home/turtlebot/robot_ws/build/waypoint_navigation/install.log', '--install-scripts', '$base/lib/waypoint_navigation', '--single-version-externally-managed'], 'cwd': '/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'turtlebot', 'SSH_AGENT_PID': '1211', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/turtlebot', 'OLDPWD': '/home/turtlebot/robot_ws/src/waypoint_navigation', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '970', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/turtlebot/colcon_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'turtlebot', 'JOURNAL_STREAM': '8:44488', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'turtlebot', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/1264,unix/ubuntu:/tmp/.ICE-unix/1264', 'INVOCATION_ID': '17029e8d8b5a48a097923969efb44eaa', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/1fcf51dc_ab9c_4ec1_a244_2a436296e613', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.345', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/turtlebot/robot_ws/build/waypoint_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/turtlebot/robot_ws/build/waypoint_navigation/prefix_override:/home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[1.307904] (-) TimerEvent: {}
+[1.408609] (-) TimerEvent: {}
+[1.509348] (-) TimerEvent: {}
+[1.534228] (my_package) StdoutLine: {'line': b'running egg_info\n'}
+[1.535386] (my_package) StdoutLine: {'line': b'writing ../build/my_package/my_package.egg-info/PKG-INFO\n'}
+[1.537016] (my_package) StdoutLine: {'line': b'writing dependency_links to ../build/my_package/my_package.egg-info/dependency_links.txt\n'}
+[1.537744] (my_package) StdoutLine: {'line': b'writing entry points to ../build/my_package/my_package.egg-info/entry_points.txt\n'}
+[1.538445] (my_package) StdoutLine: {'line': b'writing requirements to ../build/my_package/my_package.egg-info/requires.txt\n'}
+[1.538842] (my_package) StdoutLine: {'line': b'writing top-level names to ../build/my_package/my_package.egg-info/top_level.txt\n'}
+[1.543105] (waypoint_navigation) StdoutLine: {'line': b'running egg_info\n'}
+[1.544328] (waypoint_navigation) StdoutLine: {'line': b'creating ../../../build/waypoint_navigation/waypoint_navigation.egg-info\n'}
+[1.544565] (waypoint_navigation) StdoutLine: {'line': b'writing ../../../build/waypoint_navigation/waypoint_navigation.egg-info/PKG-INFO\n'}
+[1.544960] (waypoint_navigation) StdoutLine: {'line': b'writing dependency_links to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/dependency_links.txt\n'}
+[1.545199] (waypoint_navigation) StdoutLine: {'line': b'writing entry points to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/entry_points.txt\n'}
+[1.545439] (waypoint_navigation) StdoutLine: {'line': b'writing requirements to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/requires.txt\n'}
+[1.545637] (waypoint_navigation) StdoutLine: {'line': b'writing top-level names to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/top_level.txt\n'}
+[1.547398] (waypoint_navigation) StdoutLine: {'line': b"writing manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'\n"}
+[1.587918] (my_package) StdoutLine: {'line': b"reading manifest file '../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[1.589314] (my_package) StdoutLine: {'line': b"writing manifest file '../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[1.589841] (my_package) StdoutLine: {'line': b'running build\n'}
+[1.590097] (my_package) StdoutLine: {'line': b'running build_py\n'}
+[1.590701] (my_package) StdoutLine: {'line': b'running install\n'}
+[1.591927] (my_package) StdoutLine: {'line': b'running install_lib\n'}
+[1.592866] (waypoint_navigation) StdoutLine: {'line': b"reading manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'\n"}
+[1.593888] (waypoint_navigation) StdoutLine: {'line': b"writing manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'\n"}
+[1.594231] (waypoint_navigation) StdoutLine: {'line': b'running build\n'}
+[1.594352] (waypoint_navigation) StdoutLine: {'line': b'running build_py\n'}
+[1.594631] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/build/waypoint_navigation/build\n'}
+[1.594817] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib\n'}
+[1.594950] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation\n'}
+[1.595145] (waypoint_navigation) StdoutLine: {'line': b'copying waypoint_navigation/waypoint_navigation_node.py -> /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation\n'}
+[1.595302] (waypoint_navigation) StdoutLine: {'line': b'copying waypoint_navigation/__init__.py -> /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation\n'}
+[1.595432] (waypoint_navigation) StdoutLine: {'line': b'running install\n'}
+[1.596059] (my_package) StdoutLine: {'line': b'running install_data\n'}
+[1.596373] (waypoint_navigation) StdoutLine: {'line': b'running install_lib\n'}
+[1.597138] (my_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.597629] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation\n'}
+[1.597968] (waypoint_navigation) StdoutLine: {'line': b'copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/waypoint_navigation_node.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation\n'}
+[1.598133] (waypoint_navigation) StdoutLine: {'line': b'copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/__init__.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation\n'}
+[1.598593] (waypoint_navigation) StdoutLine: {'line': b'byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/waypoint_navigation_node.py to waypoint_navigation_node.cpython-38.pyc\n'}
+[1.600449] (my_package) StdoutLine: {'line': b"removing '/home/turtlebot/robot_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.601110] (my_package) StdoutLine: {'line': b'Copying ../build/my_package/my_package.egg-info to /home/turtlebot/robot_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info\n'}
+[1.601376] (waypoint_navigation) StdoutLine: {'line': b'byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/__init__.py to __init__.cpython-38.pyc\n'}
+[1.601602] (waypoint_navigation) StdoutLine: {'line': b'running install_data\n'}
+[1.602280] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index\n'}
+[1.602561] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index\n'}
+[1.602764] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index/packages\n'}
+[1.602951] (waypoint_navigation) StdoutLine: {'line': b'copying resource/waypoint_navigation -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index/packages\n'}
+[1.603229] (waypoint_navigation) StdoutLine: {'line': b'copying package.xml -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation\n'}
+[1.603399] (waypoint_navigation) StdoutLine: {'line': b'creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation/params\n'}
+[1.603509] (waypoint_navigation) StdoutLine: {'line': b'copying params/apartamento_leon.yaml -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation/params\n'}
+[1.603594] (waypoint_navigation) StdoutLine: {'line': b'copying launch/waypoint_navigation.launch.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation\n'}
+[1.603723] (waypoint_navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.604797] (my_package) StdoutLine: {'line': b'running install_scripts\n'}
+[1.605443] (waypoint_navigation) StdoutLine: {'line': b'Copying ../../../build/waypoint_navigation/waypoint_navigation.egg-info to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation-0.0.0-py3.8.egg-info\n'}
+[1.606522] (waypoint_navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[1.610054] (-) TimerEvent: {}
+[1.627920] (my_package) StdoutLine: {'line': b'Installing my_node script to /home/turtlebot/robot_ws/install/my_package/lib/my_package\n'}
+[1.628584] (waypoint_navigation) StdoutLine: {'line': b'Installing waypoint_navigation_node script to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/waypoint_navigation\n'}
+[1.629024] (waypoint_navigation) StdoutLine: {'line': b"writing list of installed files to '/home/turtlebot/robot_ws/build/waypoint_navigation/install.log'\n"}
+[1.629377] (my_package) StdoutLine: {'line': b"writing list of installed files to '/home/turtlebot/robot_ws/build/my_package/install.log'\n"}
+[1.657914] (my_package) CommandEnded: {'returncode': 0}
+[1.686858] (my_package) JobEnded: {'identifier': 'my_package', 'rc': 0}
+[1.694360] (waypoint_navigation_interfaces) JobStarted: {'identifier': 'waypoint_navigation_interfaces'}
+[1.711654] (waypoint_navigation) CommandEnded: {'returncode': 0}
+[1.712449] (-) TimerEvent: {}
+[1.731306] (waypoint_navigation) JobEnded: {'identifier': 'waypoint_navigation', 'rc': 0}
+[1.735152] (waypoint_navigation_interfaces) JobProgress: {'identifier': 'waypoint_navigation_interfaces', 'progress': 'cmake'}
+[1.735386] (waypoint_navigation_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces'], 'cwd': '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'turtlebot'), ('SSH_AGENT_PID', '1211'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/turtlebot'), ('OLDPWD', '/home/turtlebot/robot_ws/src/waypoint_navigation'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '970'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/turtlebot/colcon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'turtlebot'), ('JOURNAL_STREAM', '8:44488'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'turtlebot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1264,unix/ubuntu:/tmp/.ICE-unix/1264'), ('INVOCATION_ID', '17029e8d8b5a48a097923969efb44eaa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1fcf51dc_ab9c_4ec1_a244_2a436296e613'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.345'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.812825] (-) TimerEvent: {}
+[1.913478] (-) TimerEvent: {}
+[2.014124] (-) TimerEvent: {}
+[2.024446] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[2.114415] (-) TimerEvent: {}
+[2.215066] (-) TimerEvent: {}
+[2.280816] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.303647] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.316420] (-) TimerEvent: {}
+[2.417056] (-) TimerEvent: {}
+[2.450272] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.454765] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.517699] (-) TimerEvent: {}
+[2.577647] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.598527] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.599824] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.607240] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.617826] (-) TimerEvent: {}
+[2.719334] (-) TimerEvent: {}
+[2.734156] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.735945] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.820307] (-) TimerEvent: {}
+[2.909152] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.921050] (-) TimerEvent: {}
+[2.938578] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.940005] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.956619] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.021632] (-) TimerEvent: {}
+[3.033385] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.034131] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.122159] (-) TimerEvent: {}
+[3.223033] (-) TimerEvent: {}
+[3.324202] (-) TimerEvent: {}
+[3.423112] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[3.424395] (-) TimerEvent: {}
+[3.517299] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.524607] (-) TimerEvent: {}
+[3.540757] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[3.625517] (-) TimerEvent: {}
+[3.727219] (-) TimerEvent: {}
+[3.772077] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[3.827698] (-) TimerEvent: {}
+[3.847242] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[3.928429] (-) TimerEvent: {}
+[4.029103] (-) TimerEvent: {}
+[4.040120] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.129883] (-) TimerEvent: {}
+[4.230660] (-) TimerEvent: {}
+[4.273904] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[4.330991] (-) TimerEvent: {}
+[4.432395] (-) TimerEvent: {}
+[4.480907] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[4.532899] (-) TimerEvent: {}
+[4.570851] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[4.633291] (-) TimerEvent: {}
+[4.734037] (-) TimerEvent: {}
+[4.834798] (-) TimerEvent: {}
+[4.935331] (-) TimerEvent: {}
+[5.036180] (-) TimerEvent: {}
+[5.096680] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[5.136931] (-) TimerEvent: {}
+[5.237604] (-) TimerEvent: {}
+[5.338485] (-) TimerEvent: {}
+[5.439069] (-) TimerEvent: {}
+[5.539862] (-) TimerEvent: {}
+[5.564465] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.640650] (-) TimerEvent: {}
+[5.741372] (-) TimerEvent: {}
+[5.781178] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.822999] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.826960] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[5.842144] (-) TimerEvent: {}
+[5.872992] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.873945] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.874494] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[5.875003] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[5.908346] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.942828] (-) TimerEvent: {}
+[6.043701] (-) TimerEvent: {}
+[6.137662] (waypoint_navigation_interfaces) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[6.142883] (waypoint_navigation_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.144070] (-) TimerEvent: {}
+[6.146202] (waypoint_navigation_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.164146] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.244457] (-) TimerEvent: {}
+[6.314518] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.321172] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/turtlebot/robot_ws/build/waypoint_navigation_interfaces\n'}
+[6.341957] (waypoint_navigation_interfaces) CommandEnded: {'returncode': 0}
+[6.344594] (-) TimerEvent: {}
+[6.344918] (waypoint_navigation_interfaces) JobProgress: {'identifier': 'waypoint_navigation_interfaces', 'progress': 'build'}
+[6.345001] (waypoint_navigation_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces', '--', '-j2', '-l2'], 'cwd': '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'turtlebot'), ('SSH_AGENT_PID', '1211'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/turtlebot'), ('OLDPWD', '/home/turtlebot/robot_ws/src/waypoint_navigation'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '970'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/turtlebot/colcon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'turtlebot'), ('JOURNAL_STREAM', '8:44488'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'turtlebot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1264,unix/ubuntu:/tmp/.ICE-unix/1264'), ('INVOCATION_ID', '17029e8d8b5a48a097923969efb44eaa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1fcf51dc_ab9c_4ec1_a244_2a436296e613'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.345'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[6.435363] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__cpp\x1b[0m\n'}
+[6.436142] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.444849] (-) TimerEvent: {}
+[6.451895] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.545755] (-) TimerEvent: {}
+[6.646461] (-) TimerEvent: {}
+[6.747231] (-) TimerEvent: {}
+[6.850663] (-) TimerEvent: {}
+[6.951667] (-) TimerEvent: {}
+[7.052396] (-) TimerEvent: {}
+[7.153130] (-) TimerEvent: {}
+[7.253867] (-) TimerEvent: {}
+[7.354670] (-) TimerEvent: {}
+[7.434627] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  3%] Built target waypoint_navigation_interfaces__cpp\n'}
+[7.455446] (-) TimerEvent: {}
+[7.464668] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[7.556228] (-) TimerEvent: {}
+[7.605595] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_generator_c\x1b[0m\n'}
+[7.639560] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_generator_c.dir/rosidl_generator_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__functions.c.o\x1b[0m\n'}
+[7.656594] (-) TimerEvent: {}
+[7.757686] (-) TimerEvent: {}
+[7.852282] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_generator_c.dir/rosidl_generator_c/waypoint_navigation_interfaces/srv/detail/add_wp__functions.c.o\x1b[0m\n'}
+[7.858409] (-) TimerEvent: {}
+[7.931408] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_generator_c.dir/rosidl_generator_c/waypoint_navigation_interfaces/srv/detail/get_wp__functions.c.o\x1b[0m\n'}
+[7.959183] (-) TimerEvent: {}
+[8.010703] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_generator_c.dir/rosidl_generator_c/waypoint_navigation_interfaces/srv/detail/get_wps__functions.c.o\x1b[0m\n'}
+[8.059897] (-) TimerEvent: {}
+[8.089546] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_generator_c.dir/rosidl_generator_c/waypoint_navigation_interfaces/msg/detail/wp__functions.c.o\x1b[0m\n'}
+[8.152671] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libwaypoint_navigation_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[8.160612] (-) TimerEvent: {}
+[8.163722] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[8.213309] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.cpp.o\x1b[0m\n'}
+[8.251921] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 15%] Built target waypoint_navigation_interfaces__rosidl_generator_c\n'}
+[8.260880] (-) TimerEvent: {}
+[8.270718] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.361354] (-) TimerEvent: {}
+[8.462085] (-) TimerEvent: {}
+[8.562932] (-) TimerEvent: {}
+[8.663656] (-) TimerEvent: {}
+[8.748160] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.cpp.o\x1b[0m\n'}
+[8.764368] (-) TimerEvent: {}
+[8.865133] (-) TimerEvent: {}
+[8.965822] (-) TimerEvent: {}
+[9.066597] (-) TimerEvent: {}
+[9.101407] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[9.152956] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.cpp.o\x1b[0m\n'}
+[9.155001] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/waypoint_navigation_interfaces/action/detail/dds_fastrtps/navigate_to_wp__type_support.cpp.o\x1b[0m\n'}
+[9.167407] (-) TimerEvent: {}
+[9.268102] (-) TimerEvent: {}
+[9.368818] (-) TimerEvent: {}
+[9.469564] (-) TimerEvent: {}
+[9.556665] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.cpp.o\x1b[0m\n'}
+[9.570268] (-) TimerEvent: {}
+[9.671015] (-) TimerEvent: {}
+[9.771860] (-) TimerEvent: {}
+[9.859915] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/waypoint_navigation_interfaces/srv/detail/dds_fastrtps/add_wp__type_support.cpp.o\x1b[0m\n'}
+[9.872592] (-) TimerEvent: {}
+[9.973604] (-) TimerEvent: {}
+[10.021748] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/waypoint_navigation_interfaces/msg/detail/wp__type_support.cpp.o\x1b[0m\n'}
+[10.074333] (-) TimerEvent: {}
+[10.175082] (-) TimerEvent: {}
+[10.276034] (-) TimerEvent: {}
+[10.376775] (-) TimerEvent: {}
+[10.411446] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32m\x1b[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[10.443658] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/waypoint_navigation_interfaces/srv/detail/dds_fastrtps/get_wp__type_support.cpp.o\x1b[0m\n'}
+[10.477512] (-) TimerEvent: {}
+[10.511182] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 30%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[10.526530] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[10.578408] (-) TimerEvent: {}
+[10.679146] (-) TimerEvent: {}
+[10.780371] (-) TimerEvent: {}
+[10.881098] (-) TimerEvent: {}
+[10.981832] (-) TimerEvent: {}
+[11.029058] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/waypoint_navigation_interfaces/srv/detail/dds_fastrtps/get_wps__type_support.cpp.o\x1b[0m\n'}
+[11.082240] (-) TimerEvent: {}
+[11.183312] (-) TimerEvent: {}
+[11.277778] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[11.284058] (-) TimerEvent: {}
+[11.317334] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.c.o\x1b[0m\n'}
+[11.380021] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.c.o\x1b[0m\n'}
+[11.385038] (-) TimerEvent: {}
+[11.429906] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.c.o\x1b[0m\n'}
+[11.478359] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.c.o\x1b[0m\n'}
+[11.485780] (-) TimerEvent: {}
+[11.531614] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/waypoint_navigation_interfaces/msg/detail/wp__type_support.c.o\x1b[0m\n'}
+[11.576382] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking C shared library libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.586551] (-) TimerEvent: {}
+[11.626111] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 42%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c\n'}
+[11.642258] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.687349] (-) TimerEvent: {}
+[11.694672] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/waypoint_navigation_interfaces/msg/detail/dds_fastrtps/wp__type_support.cpp.o\x1b[0m\n'}
+[11.788014] (-) TimerEvent: {}
+[11.888509] (-) TimerEvent: {}
+[11.989223] (-) TimerEvent: {}
+[12.089959] (-) TimerEvent: {}
+[12.164197] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[12.190921] (-) TimerEvent: {}
+[12.198915] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/waypoint_navigation_interfaces/action/navigate_to_wp__type_support.cpp.o\x1b[0m\n'}
+[12.264499] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[12.264964] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/waypoint_navigation_interfaces/srv/add_wp__type_support.cpp.o\x1b[0m\n'}
+[12.291574] (-) TimerEvent: {}
+[12.310372] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/waypoint_navigation_interfaces/srv/get_wp__type_support.cpp.o\x1b[0m\n'}
+[12.357000] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/waypoint_navigation_interfaces/srv/get_wps__type_support.cpp.o\x1b[0m\n'}
+[12.392720] (-) TimerEvent: {}
+[12.403024] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/waypoint_navigation_interfaces/msg/wp__type_support.cpp.o\x1b[0m\n'}
+[12.405816] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 55%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[12.421330] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[12.446823] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[12.493064] (-) TimerEvent: {}
+[12.513536] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 58%] Built target waypoint_navigation_interfaces__rosidl_typesupport_c\n'}
+[12.531325] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[12.593790] (-) TimerEvent: {}
+[12.694610] (-) TimerEvent: {}
+[12.795373] (-) TimerEvent: {}
+[12.896068] (-) TimerEvent: {}
+[12.952364] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[12.977031] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/waypoint_navigation_interfaces/action/navigate_to_wp__type_support.cpp.o\x1b[0m\n'}
+[12.996796] (-) TimerEvent: {}
+[13.097530] (-) TimerEvent: {}
+[13.198296] (-) TimerEvent: {}
+[13.299139] (-) TimerEvent: {}
+[13.341069] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[13.387639] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support_c.cpp.o\x1b[0m\n'}
+[13.399780] (-) TimerEvent: {}
+[13.414571] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/waypoint_navigation_interfaces/srv/add_wp__type_support.cpp.o\x1b[0m\n'}
+[13.500518] (-) TimerEvent: {}
+[13.601245] (-) TimerEvent: {}
+[13.701974] (-) TimerEvent: {}
+[13.797125] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/waypoint_navigation_interfaces/srv/get_wp__type_support.cpp.o\x1b[0m\n'}
+[13.802889] (-) TimerEvent: {}
+[13.903445] (-) TimerEvent: {}
+[13.933678] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/add_wp__type_support_c.cpp.o\x1b[0m\n'}
+[14.004172] (-) TimerEvent: {}
+[14.104906] (-) TimerEvent: {}
+[14.186229] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/waypoint_navigation_interfaces/srv/get_wps__type_support.cpp.o\x1b[0m\n'}
+[14.205632] (-) TimerEvent: {}
+[14.306373] (-) TimerEvent: {}
+[14.407252] (-) TimerEvent: {}
+[14.432663] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wp__type_support_c.cpp.o\x1b[0m\n'}
+[14.507977] (-) TimerEvent: {}
+[14.587131] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/waypoint_navigation_interfaces/msg/wp__type_support.cpp.o\x1b[0m\n'}
+[14.608710] (-) TimerEvent: {}
+[14.709453] (-) TimerEvent: {}
+[14.810175] (-) TimerEvent: {}
+[14.910926] (-) TimerEvent: {}
+[14.938630] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wps__type_support_c.cpp.o\x1b[0m\n'}
+[14.983877] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[15.011646] (-) TimerEvent: {}
+[15.044739] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 76%] Built target waypoint_navigation_interfaces__rosidl_typesupport_cpp\n'}
+[15.057569] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/msg/detail/wp__type_support_c.cpp.o\x1b[0m\n'}
+[15.112395] (-) TimerEvent: {}
+[15.213113] (-) TimerEvent: {}
+[15.313842] (-) TimerEvent: {}
+[15.414588] (-) TimerEvent: {}
+[15.515352] (-) TimerEvent: {}
+[15.537888] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[15.616280] (-) TimerEvent: {}
+[15.665986] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 79%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[15.681588] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces\x1b[0m\n'}
+[15.696513] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 79%] Built target waypoint_navigation_interfaces\n'}
+[15.712353] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__py\x1b[0m\n'}
+[15.716437] (-) TimerEvent: {}
+[15.730091] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[15.817202] (-) TimerEvent: {}
+[15.917924] (-) TimerEvent: {}
+[16.019010] (-) TimerEvent: {}
+[16.119553] (-) TimerEvent: {}
+[16.220557] (-) TimerEvent: {}
+[16.322166] (-) TimerEvent: {}
+[16.422972] (-) TimerEvent: {}
+[16.523655] (-) TimerEvent: {}
+[16.624918] (-) TimerEvent: {}
+[16.725561] (-) TimerEvent: {}
+[16.826292] (-) TimerEvent: {}
+[16.927062] (-) TimerEvent: {}
+[17.027775] (-) TimerEvent: {}
+[17.128547] (-) TimerEvent: {}
+[17.229278] (-) TimerEvent: {}
+[17.330363] (-) TimerEvent: {}
+[17.431101] (-) TimerEvent: {}
+[17.531845] (-) TimerEvent: {}
+[17.632551] (-) TimerEvent: {}
+[17.733347] (-) TimerEvent: {}
+[17.768904] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 80%] Built target waypoint_navigation_interfaces__py\n'}
+[17.785943] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__python\x1b[0m\n'}
+[17.834441] (-) TimerEvent: {}
+[17.918470] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__python.dir/rosidl_generator_py/waypoint_navigation_interfaces/action/_navigate_to_wp_s.c.o\x1b[0m\n'}
+[17.919018] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__python.dir/rosidl_generator_py/waypoint_navigation_interfaces/srv/_add_wp_s.c.o\x1b[0m\n'}
+[17.934612] (-) TimerEvent: {}
+[18.035626] (-) TimerEvent: {}
+[18.137345] (-) TimerEvent: {}
+[18.228985] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__python.dir/rosidl_generator_py/waypoint_navigation_interfaces/srv/_get_wp_s.c.o\x1b[0m\n'}
+[18.237953] (-) TimerEvent: {}
+[18.278929] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__python.dir/rosidl_generator_py/waypoint_navigation_interfaces/srv/_get_wps_s.c.o\x1b[0m\n'}
+[18.338742] (-) TimerEvent: {}
+[18.358036] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__python.dir/rosidl_generator_py/waypoint_navigation_interfaces/msg/_wp_s.c.o\x1b[0m\n'}
+[18.439629] (-) TimerEvent: {}
+[18.478826] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/libwaypoint_navigation_interfaces__python.so\x1b[0m\n'}
+[18.540398] (-) TimerEvent: {}
+[18.612208] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 90%] Built target waypoint_navigation_interfaces__python\n'}
+[18.641080] (-) TimerEvent: {}
+[18.643599] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[18.644412] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[18.679855] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/waypoint_navigation_interfaces/_waypoint_navigation_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[18.684365] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/waypoint_navigation_interfaces/_waypoint_navigation_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[18.741765] (-) TimerEvent: {}
+[18.842498] (-) TimerEvent: {}
+[18.847873] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[18.857520] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[18.910280] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 96%] Built target waypoint_navigation_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[18.924862] (waypoint_navigation_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target waypoint_navigation_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[18.943247] (-) TimerEvent: {}
+[18.954658] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/waypoint_navigation_interfaces/_waypoint_navigation_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[18.962531] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[ 98%] Built target waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.043975] (-) TimerEvent: {}
+[19.125449] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[19.144522] (-) TimerEvent: {}
+[19.245596] (-) TimerEvent: {}
+[19.253965] (waypoint_navigation_interfaces) StdoutLine: {'line': b'[100%] Built target waypoint_navigation_interfaces__rosidl_typesupport_c__pyext\n'}
+[19.301979] (waypoint_navigation_interfaces) CommandEnded: {'returncode': 0}
+[19.346295] (-) TimerEvent: {}
+[19.448036] (-) TimerEvent: {}
+[19.549704] (-) TimerEvent: {}
+[19.651283] (-) TimerEvent: {}
+[19.704365] (waypoint_navigation_interfaces) JobProgress: {'identifier': 'waypoint_navigation_interfaces', 'progress': 'install'}
+[19.742006] (waypoint_navigation_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces'], 'cwd': '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'turtlebot'), ('SSH_AGENT_PID', '1211'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/turtlebot'), ('OLDPWD', '/home/turtlebot/robot_ws/src/waypoint_navigation'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '970'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/turtlebot/colcon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'turtlebot'), ('JOURNAL_STREAM', '8:44488'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'turtlebot'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1264,unix/ubuntu:/tmp/.ICE-unix/1264'), ('INVOCATION_ID', '17029e8d8b5a48a097923969efb44eaa'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1fcf51dc_ab9c_4ec1_a244_2a436296e613'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.345'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[19.752251] (-) TimerEvent: {}
+[19.783764] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.785275] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/rosidl_interfaces/waypoint_navigation_interfaces\n'}
+[19.786507] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.787598] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.788427] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[19.789361] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/wp.h\n'}
+[19.790266] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.791037] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__functions.c\n'}
+[19.792376] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__type_support.h\n'}
+[19.794132] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__struct.h\n'}
+[19.795151] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__functions.h\n'}
+[19.795704] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.797627] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.798260] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__functions.c\n'}
+[19.798655] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.h\n'}
+[19.799653] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__struct.h\n'}
+[19.800734] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__functions.h\n'}
+[19.801435] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/navigate_to_wp.h\n'}
+[19.802001] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.802515] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wp.h\n'}
+[19.803398] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wps.h\n'}
+[19.804105] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.804656] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__functions.h\n'}
+[19.805139] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__struct.h\n'}
+[19.805352] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.h\n'}
+[19.805860] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__functions.c\n'}
+[19.806292] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__functions.h\n'}
+[19.806521] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__functions.c\n'}
+[19.806817] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.h\n'}
+[19.807233] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__struct.h\n'}
+[19.807436] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__functions.c\n'}
+[19.807661] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__struct.h\n'}
+[19.807969] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.h\n'}
+[19.808315] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__functions.h\n'}
+[19.809231] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/add_wp.h\n'}
+[19.809717] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/library_path.sh\n'}
+[19.810741] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/library_path.dsv\n'}
+[19.811517] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_generator_c.so\n'}
+[19.812042] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_generator_c.so" to ""\n'}
+[19.812262] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.812764] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.813059] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.813261] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_fastrtps_c.h\n'}
+[19.813460] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[19.814070] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.815112] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.815989] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_fastrtps_c.h\n'}
+[19.816700] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.817369] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.817929] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_fastrtps_c.h\n'}
+[19.818587] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_fastrtps_c.h\n'}
+[19.819014] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_fastrtps_c.h\n'}
+[19.819229] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[19.819722] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[19.819977] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.820173] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.820367] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[19.820559] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.820988] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/dds_fastrtps\n'}
+[19.821961] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.822972] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.823534] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.824152] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/dds_fastrtps\n'}
+[19.824919] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.825509] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.826129] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.826598] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.827085] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.827520] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/dds_fastrtps\n'}
+[19.827828] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.828039] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[19.828235] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[19.828567] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.829189] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.829436] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.829696] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__type_support.c\n'}
+[19.829944] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_introspection_c.h\n'}
+[19.830483] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.831461] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.832175] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.832972] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.c\n'}
+[19.833424] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_introspection_c.h\n'}
+[19.834136] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.834823] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.835681] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_introspection_c.h\n'}
+[19.836183] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.c\n'}
+[19.836534] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.c\n'}
+[19.837048] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.c\n'}
+[19.837442] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_introspection_c.h\n'}
+[19.837803] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_introspection_c.h\n'}
+[19.838037] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[19.838411] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[19.838732] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_c.so\n'}
+[19.839363] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[19.840006] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.840328] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.841079] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.841405] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__builder.hpp\n'}
+[19.841837] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__struct.hpp\n'}
+[19.842207] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__traits.hpp\n'}
+[19.842379] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/wp.hpp\n'}
+[19.842526] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.842906] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/navigate_to_wp.hpp\n'}
+[19.843057] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.843200] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__struct.hpp\n'}
+[19.843360] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__traits.hpp\n'}
+[19.843502] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__builder.hpp\n'}
+[19.843797] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.844121] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/add_wp.hpp\n'}
+[19.844370] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wp.hpp\n'}
+[19.844518] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.844731] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__traits.hpp\n'}
+[19.844845] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__builder.hpp\n'}
+[19.845195] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__struct.hpp\n'}
+[19.845386] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__struct.hpp\n'}
+[19.845623] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__struct.hpp\n'}
+[19.845864] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__traits.hpp\n'}
+[19.846053] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__traits.hpp\n'}
+[19.846167] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__builder.hpp\n'}
+[19.846291] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__builder.hpp\n'}
+[19.846403] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/get_wps.hpp\n'}
+[19.846514] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces\n'}
+[19.846736] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg\n'}
+[19.846856] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail\n'}
+[19.847013] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.847172] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/msg/detail/wp__type_support.cpp\n'}
+[19.847313] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action\n'}
+[19.847452] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail\n'}
+[19.847645] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support.cpp\n'}
+[19.847813] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.847956] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv\n'}
+[19.848098] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail\n'}
+[19.848236] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.848374] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wps__type_support.cpp\n'}
+[19.848511] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.848721] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/get_wp__type_support.cpp\n'}
+[19.848867] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__type_support.cpp\n'}
+[19.849004] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/include/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.849142] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[19.849278] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[19.849415] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_cpp.so\n'}
+[19.849580] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[19.849782] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/pythonpath.sh\n'}
+[19.849920] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/pythonpath.dsv\n'}
+[19.850085] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/__init__.py\n'}
+[19.852647] (-) TimerEvent: {}
+[19.924424] (waypoint_navigation_interfaces) StdoutLine: {'line': b"Compiling '/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/__init__.py'...\n"}
+[19.934088] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action\n'}
+[19.934572] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action/__init__.py\n'}
+[19.934955] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action/_navigate_to_wp_s.c\n'}
+[19.935196] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/action/_navigate_to_wp.py\n'}
+[19.935673] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv\n'}
+[19.935974] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_add_wp.py\n'}
+[19.936438] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/__init__.py\n'}
+[19.936742] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wp.py\n'}
+[19.937020] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_add_wp_s.c\n'}
+[19.937391] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wps.py\n'}
+[19.937635] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wp_s.c\n'}
+[19.938084] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/srv/_get_wps_s.c\n'}
+[19.938455] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg\n'}
+[19.938778] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg/_wp.py\n'}
+[19.938926] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg/_wp_s.c\n'}
+[19.939088] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/msg/__init__.py\n'}
+[19.939441] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[19.941023] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[19.941901] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[19.943431] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[19.944075] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[19.945477] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/python3.8/site-packages/waypoint_navigation_interfaces/waypoint_navigation_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[19.945947] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__python.so\n'}
+[19.946704] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/lib/libwaypoint_navigation_interfaces__python.so" to ""\n'}
+[19.947237] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/action/NavigateToWp.idl\n'}
+[19.947667] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp.idl\n'}
+[19.948015] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp.idl\n'}
+[19.948398] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps.idl\n'}
+[19.948751] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/msg/Wp.idl\n'}
+[19.949092] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/action/NavigateToWp.action\n'}
+[19.949481] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp.srv\n'}
+[19.949864] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp_Request.msg\n'}
+[19.950230] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/AddWp_Response.msg\n'}
+[19.950658] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp.srv\n'}
+[19.951100] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp_Request.msg\n'}
+[19.951555] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWp_Response.msg\n'}
+[19.951905] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps.srv\n'}
+[19.952216] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps_Request.msg\n'}
+[19.952685] (-) TimerEvent: {}
+[19.953172] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/srv/GetWps_Response.msg\n'}
+[19.953574] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/msg/Wp.msg\n'}
+[19.953743] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/package_run_dependencies/waypoint_navigation_interfaces\n'}
+[19.954065] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/parent_prefix_path/waypoint_navigation_interfaces\n'}
+[19.954409] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/ament_prefix_path.sh\n'}
+[19.956208] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/ament_prefix_path.dsv\n'}
+[19.956638] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/path.sh\n'}
+[19.956958] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/environment/path.dsv\n'}
+[19.957211] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.bash\n'}
+[19.957497] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.sh\n'}
+[19.957820] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.zsh\n'}
+[19.957979] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/local_setup.dsv\n'}
+[19.958209] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/package.dsv\n'}
+[19.958525] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/ament_index/resource_index/packages/waypoint_navigation_interfaces\n'}
+[19.958880] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cExport.cmake\n'}
+[19.959035] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[19.959369] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[19.959724] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[19.960441] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[19.960827] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[19.961421] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_generator_cppExport.cmake\n'}
+[19.961987] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[19.962469] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[19.962869] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[19.964053] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[19.964418] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[19.964759] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.965007] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[19.965439] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.965626] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.965951] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[19.966336] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[19.966918] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfacesConfig.cmake\n'}
+[19.967330] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/cmake/waypoint_navigation_interfacesConfig-version.cmake\n'}
+[19.967572] (waypoint_navigation_interfaces) StdoutLine: {'line': b'-- Installing: /home/turtlebot/robot_ws/install/waypoint_navigation_interfaces/share/waypoint_navigation_interfaces/package.xml\n'}
+[19.980779] (waypoint_navigation_interfaces) CommandEnded: {'returncode': 0}
+[20.053262] (-) TimerEvent: {}
+[20.154946] (-) TimerEvent: {}
+[20.256357] (-) TimerEvent: {}
+[20.357842] (-) TimerEvent: {}
+[20.464351] (-) TimerEvent: {}
+[20.511051] (waypoint_navigation_interfaces) JobEnded: {'identifier': 'waypoint_navigation_interfaces', 'rc': 0}
+[20.514954] (-) EventReactorShutdown: {}

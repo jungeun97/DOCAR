@@ -1,0 +1,29 @@
+[0.699s] Invoking command in '/home/turtlebot/robot_ws/build/waypoint_navigation': PYTHONPATH=/home/turtlebot/robot_ws/build/waypoint_navigation/prefix_override:/home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/waypoint_navigation/build
+[0.910s] running develop
+[1.063s] Removing /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint-navigation.egg-link (link to .)
+[1.087s] Invoked command in '/home/turtlebot/robot_ws/build/waypoint_navigation' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/waypoint_navigation/prefix_override:/home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/waypoint_navigation/build
+[1.091s] Invoking command in '/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation': PYTHONPATH=/home/turtlebot/robot_ws/build/waypoint_navigation/prefix_override:/home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/waypoint_navigation build --build-base /home/turtlebot/robot_ws/build/waypoint_navigation/build install --record /home/turtlebot/robot_ws/build/waypoint_navigation/install.log --install-scripts $base/lib/waypoint_navigation --single-version-externally-managed
+[1.325s] running egg_info
+[1.326s] writing ../../../build/waypoint_navigation/waypoint_navigation.egg-info/PKG-INFO
+[1.326s] writing dependency_links to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/dependency_links.txt
+[1.327s] writing entry points to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/entry_points.txt
+[1.327s] writing requirements to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/requires.txt
+[1.327s] writing top-level names to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/top_level.txt
+[1.363s] reading manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'
+[1.364s] writing manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'
+[1.364s] running build
+[1.364s] running build_py
+[1.365s] running install
+[1.366s] running install_lib
+[1.368s] creating /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+[1.368s] copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/waypoint_navigation_node.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+[1.368s] copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/__init__.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+[1.369s] byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/waypoint_navigation_node.py to waypoint_navigation_node.cpython-38.pyc
+[1.371s] byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/__init__.py to __init__.cpython-38.pyc
+[1.371s] running install_data
+[1.372s] running install_egg_info
+[1.375s] Copying ../../../build/waypoint_navigation/waypoint_navigation.egg-info to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation-0.0.0-py3.8.egg-info
+[1.376s] running install_scripts
+[1.391s] Installing waypoint_navigation_node script to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/waypoint_navigation
+[1.391s] writing list of installed files to '/home/turtlebot/robot_ws/build/waypoint_navigation/install.log'
+[1.411s] Invoked command in '/home/turtlebot/robot_ws/src/waypoint_navigation/waypoint_navigation' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/waypoint_navigation/prefix_override:/home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/waypoint_navigation build --build-base /home/turtlebot/robot_ws/build/waypoint_navigation/build install --record /home/turtlebot/robot_ws/build/waypoint_navigation/install.log --install-scripts $base/lib/waypoint_navigation --single-version-externally-managed

@@ -1,0 +1,25 @@
+[2.551s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_gazebo_spawner': PYTHONPATH=/home/turtlebot/nav2_ws/build/nav2_gazebo_spawner/prefix_override:/home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/nav2_ws/build/nav2_gazebo_spawner/build --no-deps install_data
+[3.515s] running develop
+[4.029s] running egg_info
+[4.030s] creating nav2_gazebo_spawner.egg-info
+[4.031s] writing nav2_gazebo_spawner.egg-info/PKG-INFO
+[4.032s] writing dependency_links to nav2_gazebo_spawner.egg-info/dependency_links.txt
+[4.033s] writing entry points to nav2_gazebo_spawner.egg-info/entry_points.txt
+[4.034s] writing requirements to nav2_gazebo_spawner.egg-info/requires.txt
+[4.035s] writing top-level names to nav2_gazebo_spawner.egg-info/top_level.txt
+[4.042s] writing manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[4.174s] reading manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[4.176s] writing manifest file 'nav2_gazebo_spawner.egg-info/SOURCES.txt'
+[4.310s] running build_ext
+[4.311s] Creating /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages/site.py
+[4.321s] Creating /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages/nav2-gazebo-spawner.egg-link (link to .)
+[4.325s] Installing nav2_gazebo_spawner script to /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/lib/nav2_gazebo_spawner
+[4.327s] 
+[4.327s] Installed /home/turtlebot/nav2_ws/build/nav2_gazebo_spawner
+[4.328s] running install_data
+[4.329s] creating /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/share/ament_index
+[4.330s] creating /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/share/ament_index/resource_index
+[4.331s] creating /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/share/ament_index/resource_index/packages
+[4.331s] copying resource/nav2_gazebo_spawner -> /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/share/ament_index/resource_index/packages
+[4.333s] copying package.xml -> /home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/share/nav2_gazebo_spawner
+[4.420s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_gazebo_spawner' returned '0': PYTHONPATH=/home/turtlebot/nav2_ws/build/nav2_gazebo_spawner/prefix_override:/home/turtlebot/nav2_ws/install/nav2_gazebo_spawner/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/nav2_ws/build/nav2_gazebo_spawner/build --no-deps install_data

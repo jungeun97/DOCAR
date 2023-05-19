@@ -1,0 +1,93 @@
+[0.040s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_waypoint_follower -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_waypoint_follower
+[0.122s] -- The C compiler identification is GNU 9.4.0
+[0.194s] -- The CXX compiler identification is GNU 9.4.0
+[0.201s] -- Check for working C compiler: /usr/bin/cc
+[0.296s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.298s] -- Detecting C compiler ABI info
+[0.400s] -- Detecting C compiler ABI info - done
+[0.408s] -- Detecting C compile features
+[0.409s] -- Detecting C compile features - done
+[0.412s] -- Check for working CXX compiler: /usr/bin/c++
+[0.527s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.528s] -- Detecting CXX compiler ABI info
+[0.633s] -- Detecting CXX compiler ABI info - done
+[0.647s] -- Detecting CXX compile features
+[0.648s] -- Detecting CXX compile features - done
+[0.651s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.700s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.700s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.964s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.000s] -- Found nav2_common: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake)
+[1.003s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.074s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.086s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.328s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.432s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.664s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.817s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.820s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.822s] -- Looking for pthread.h
+[1.940s] -- Looking for pthread.h - found
+[1.940s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.051s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.051s] -- Looking for pthread_create in pthreads
+[2.132s] -- Looking for pthread_create in pthreads - not found
+[2.133s] -- Looking for pthread_create in pthread
+[2.228s] -- Looking for pthread_create in pthread - found
+[2.228s] -- Found Threads: TRUE  
+[2.495s] -- Found rclcpp_action: 2.4.2 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[2.605s] -- Found rclcpp_lifecycle: 2.4.2 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[2.650s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.812s] -- Found nav2_msgs: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_msgs/share/nav2_msgs/cmake)
+[3.107s] -- Found nav2_util: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake)
+[3.538s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[3.542s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[3.736s] -- Setting build type to Release as none was specified.
+[4.131s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.248s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.250s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.250s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/nav2_waypoint_follower/include
+[4.250s] -- Configured cppcheck exclude dirs and/or files: 
+[4.252s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.252s] -- Configured cpplint exclude dirs and/or files: 
+[4.253s] -- Added test 'lint_cmake' to check CMake code style
+[4.254s] -- Added test 'uncrustify' to check C / C++ code style
+[4.254s] -- Configured uncrustify additional arguments: 
+[4.255s] -- Added test 'xmllint' to check XML markup files
+[4.261s] -- Configuring done
+[4.344s] -- Generating done
+[4.346s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/nav2_waypoint_follower
+[4.358s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_waypoint_follower -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_waypoint_follower
+[4.362s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_waypoint_follower -- -j2 -l2
+[4.429s] [35m[1mScanning dependencies of target waypoint_follower_core[0m
+[4.495s] [ 25%] [32mBuilding CXX object CMakeFiles/waypoint_follower_core.dir/src/waypoint_follower.cpp.o[0m
+[19.081s] [ 50%] [32m[1mLinking CXX shared library libwaypoint_follower_core.so[0m
+[19.467s] [ 50%] Built target waypoint_follower_core
+[19.528s] [35m[1mScanning dependencies of target waypoint_follower[0m
+[19.674s] [ 75%] [32mBuilding CXX object CMakeFiles/waypoint_follower.dir/src/main.cpp.o[0m
+[25.876s] [100%] [32m[1mLinking CXX executable waypoint_follower[0m
+[26.377s] [100%] Built target waypoint_follower
+[26.410s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_waypoint_follower -- -j2 -l2
+[26.563s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_waypoint_follower
+[26.606s] -- Install configuration: "Release"
+[26.607s] -- Execute custom install script
+[26.608s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/lib/libwaypoint_follower_core.so
+[26.653s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/lib/nav2_waypoint_follower/waypoint_follower
+[26.709s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/include//nav2_waypoint_follower/waypoint_follower.hpp
+[26.751s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/ament_index/resource_index/package_run_dependencies/nav2_waypoint_follower
+[26.771s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/ament_index/resource_index/parent_prefix_path/nav2_waypoint_follower
+[26.782s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/ament_prefix_path.sh
+[26.810s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/ament_prefix_path.dsv
+[26.828s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/path.sh
+[26.862s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/environment/path.dsv
+[26.896s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.bash
+[26.932s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.sh
+[26.967s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.zsh
+[26.978s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/local_setup.dsv
+[27.002s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/package.dsv
+[27.013s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/ament_index/resource_index/packages/nav2_waypoint_follower
+[27.028s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.046s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/nav2_waypoint_followerConfig.cmake
+[27.064s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/cmake/nav2_waypoint_followerConfig-version.cmake
+[27.083s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_waypoint_follower/share/nav2_waypoint_follower/package.xml
+[27.105s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_waypoint_follower' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_waypoint_follower

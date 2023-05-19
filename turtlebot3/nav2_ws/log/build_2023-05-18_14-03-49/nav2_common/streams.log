@@ -1,0 +1,47 @@
+[0.048s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_common
+[0.097s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.142s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.142s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.403s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.418s] -- Found ament_cmake_python: 0.9.11 (/opt/ros/foxy/share/ament_cmake_python/cmake)
+[0.554s] -- Configuring done
+[0.557s] -- Generating done
+[0.558s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/nav2_common
+[0.561s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_common -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_common
+[0.566s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_common -- -j2 -l2
+[0.619s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_common -- -j2 -l2
+[0.671s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_common
+[0.685s] -- Install configuration: ""
+[0.686s] -- Execute custom install script
+[0.687s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/pythonpath.sh
+[0.700s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/pythonpath.dsv
+[0.713s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/__init__.py
+[0.727s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/__init__.py
+[0.740s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/has_node_params.py
+[0.752s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/replace_string.py
+[0.766s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/rewritten_yaml.py
+[0.778s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/ament_index/resource_index/package_run_dependencies/nav2_common
+[0.792s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/ament_index/resource_index/parent_prefix_path/nav2_common
+[0.805s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.sh
+[0.818s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/ament_prefix_path.dsv
+[0.833s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/path.sh
+[0.846s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/environment/path.dsv
+[0.859s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/local_setup.bash
+[0.873s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/local_setup.sh
+[0.887s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/local_setup.zsh
+[0.899s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/local_setup.dsv
+[0.913s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/package.dsv
+[0.925s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/ament_index/resource_index/packages/nav2_common
+[0.940s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake/nav2_common-extras.cmake
+[0.953s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig.cmake
+[0.966s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake/nav2_commonConfig-version.cmake
+[0.978s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/package.xml
+[0.991s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake/nav2_package.cmake
+[1.055s] Listing '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common'...
+[1.055s] Compiling '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/__init__.py'...
+[1.055s] Listing '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch'...
+[1.055s] Compiling '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/__init__.py'...
+[1.055s] Compiling '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/has_node_params.py'...
+[1.055s] Compiling '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/replace_string.py'...
+[1.055s] Compiling '/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages/nav2_common/launch/rewritten_yaml.py'...
+[1.063s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_common

@@ -1,0 +1,38 @@
+running egg_info
+creating ../../../build/waypoint_navigation/waypoint_navigation.egg-info
+writing ../../../build/waypoint_navigation/waypoint_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/dependency_links.txt
+writing entry points to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/entry_points.txt
+writing requirements to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/requires.txt
+writing top-level names to ../../../build/waypoint_navigation/waypoint_navigation.egg-info/top_level.txt
+writing manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'
+reading manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'
+writing manifest file '../../../build/waypoint_navigation/waypoint_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/turtlebot/robot_ws/build/waypoint_navigation/build
+creating /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib
+creating /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation
+copying waypoint_navigation/waypoint_navigation_node.py -> /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation
+copying waypoint_navigation/__init__.py -> /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation
+running install
+running install_lib
+creating /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/waypoint_navigation_node.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+copying /home/turtlebot/robot_ws/build/waypoint_navigation/build/lib/waypoint_navigation/__init__.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation
+byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/waypoint_navigation_node.py to waypoint_navigation_node.cpython-38.pyc
+byte-compiling /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index
+creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index
+creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index/packages
+copying resource/waypoint_navigation -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation
+creating /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation/params
+copying params/apartamento_leon.yaml -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation/params
+copying launch/waypoint_navigation.launch.py -> /home/turtlebot/robot_ws/install/waypoint_navigation/share/waypoint_navigation
+running install_egg_info
+Copying ../../../build/waypoint_navigation/waypoint_navigation.egg-info to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/python3.8/site-packages/waypoint_navigation-0.0.0-py3.8.egg-info
+running install_scripts
+Installing waypoint_navigation_node script to /home/turtlebot/robot_ws/install/waypoint_navigation/lib/waypoint_navigation
+writing list of installed files to '/home/turtlebot/robot_ws/build/waypoint_navigation/install.log'

@@ -1,0 +1,191 @@
+[0.032s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_util': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_util -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_util
+[0.133s] -- The C compiler identification is GNU 9.4.0
+[0.217s] -- The CXX compiler identification is GNU 9.4.0
+[0.225s] -- Check for working C compiler: /usr/bin/cc
+[0.335s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.337s] -- Detecting C compiler ABI info
+[0.450s] -- Detecting C compiler ABI info - done
+[0.476s] -- Detecting C compile features
+[0.476s] -- Detecting C compile features - done
+[0.482s] -- Check for working CXX compiler: /usr/bin/c++
+[0.623s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.625s] -- Detecting CXX compiler ABI info
+[0.776s] -- Detecting CXX compiler ABI info - done
+[0.799s] -- Detecting CXX compile features
+[0.800s] -- Detecting CXX compile features - done
+[0.805s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.857s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.857s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.403s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.463s] -- Found nav2_common: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake)
+[1.464s] -- Found nav2_msgs: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_msgs/share/nav2_msgs/cmake)
+[1.527s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.540s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.714s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.780s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.957s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.221s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[3.475s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.482s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.485s] -- Looking for pthread.h
+[3.725s] -- Looking for pthread.h - found
+[3.726s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.910s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[3.912s] -- Looking for pthread_create in pthreads
+[4.058s] -- Looking for pthread_create in pthreads - not found
+[4.059s] -- Looking for pthread_create in pthread
+[4.248s] -- Looking for pthread_create in pthread - found
+[4.252s] -- Found Threads: TRUE  
+[5.596s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[5.625s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[5.636s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[5.731s] -- Found lifecycle_msgs: 1.0.0 (/opt/ros/foxy/share/lifecycle_msgs/cmake)
+[5.790s] -- Found test_msgs: 1.0.0 (/opt/ros/foxy/share/test_msgs/cmake)
+[5.989s] -- Found rclcpp_lifecycle: 2.4.2 (/opt/ros/foxy/share/rclcpp_lifecycle/cmake)
+[6.038s] -- Setting build type to Release as none was specified.
+[6.067s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: program_options 
+[6.076s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[6.081s] -- Found ament_cmake_pytest: 0.9.11 (/opt/ros/foxy/share/ament_cmake_pytest/cmake)
+[6.089s] -- Found launch_testing_ament_cmake: 0.10.10 (/opt/ros/foxy/share/launch_testing_ament_cmake/cmake)
+[6.095s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[6.167s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[6.181s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[6.182s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.182s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[6.182s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[6.282s] -- Found PythonExtra: .so  
+[6.677s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[6.685s] -- Check if compiler accepts -pthread
+[6.822s] -- Check if compiler accepts -pthread - yes
+[6.878s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.881s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.882s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/nav2_util/include
+[6.882s] -- Configured cppcheck exclude dirs and/or files: 
+[6.886s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[6.886s] -- Configured cpplint exclude dirs and/or files: 
+[6.888s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.889s] -- Added test 'lint_cmake' to check CMake code style
+[6.890s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[6.894s] -- Added test 'uncrustify' to check C / C++ code style
+[6.894s] -- Configured uncrustify additional arguments: 
+[6.895s] -- Added test 'xmllint' to check XML markup files
+[6.906s] -- Configuring done
+[7.066s] -- Generating done
+[7.071s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/nav2_util
+[7.093s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_util' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_util -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_util
+[7.100s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_util': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_util -- -j2 -l2
+[7.215s] [35m[1mScanning dependencies of target nav2_util_core[0m
+[7.217s] [35m[1mScanning dependencies of target dump_params[0m
+[7.358s] [  2%] [32mBuilding CXX object src/CMakeFiles/dump_params.dir/dump_params.cpp.o[0m
+[7.516s] [  5%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/costmap.cpp.o[0m
+[15.263s] [  7%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/node_utils.cpp.o[0m
+[18.632s] [ 10%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/lifecycle_service_client.cpp.o[0m
+[23.125s] [ 12%] [32m[1mLinking CXX executable dump_params[0m
+[23.295s] [ 12%] Built target dump_params
+[23.311s] [35m[1mScanning dependencies of target gtest[0m
+[23.334s] [ 15%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[24.496s] [ 17%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/string_utils.cpp.o[0m
+[24.908s] [ 20%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/lifecycle_utils.cpp.o[0m
+[27.636s] [ 22%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/lifecycle_node.cpp.o[0m
+[30.516s] [ 25%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/robot_utils.cpp.o[0m
+[33.409s] [ 27%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/node_thread.cpp.o[0m
+[33.890s] [ 30%] [32m[1mLinking CXX static library libgtest.a[0m
+[33.948s] [ 30%] Built target gtest
+[33.963s] [35m[1mScanning dependencies of target gtest_main[0m
+[33.983s] [ 32%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[35.055s] [ 35%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[35.113s] [ 35%] Built target gtest_main
+[35.129s] [ 37%] [32mBuilding CXX object src/CMakeFiles/nav2_util_core.dir/odometry_utils.cpp.o[0m
+[36.190s] [35m[1mScanning dependencies of target test_execution_timer[0m
+[36.210s] [ 40%] [32mBuilding CXX object test/CMakeFiles/test_execution_timer.dir/test_execution_timer.cpp.o[0m
+[37.902s] [ 42%] [32m[1mLinking CXX executable test_execution_timer[0m
+[38.026s] [ 42%] Built target test_execution_timer
+[43.896s] [ 45%] [32m[1mLinking CXX shared library libnav2_util_core.so[0m
+[44.329s] [ 45%] Built target nav2_util_core
+[44.350s] [35m[1mScanning dependencies of target lifecycle_bringup[0m
+[44.352s] [35m[1mScanning dependencies of target test_service_client[0m
+[44.413s] [ 47%] [32mBuilding CXX object src/CMakeFiles/lifecycle_bringup.dir/lifecycle_bringup_commandline.cpp.o[0m
+[44.429s] [ 50%] [32mBuilding CXX object test/CMakeFiles/test_service_client.dir/test_service_client.cpp.o[0m
+[46.953s] [ 52%] [32m[1mLinking CXX executable lifecycle_bringup[0m
+[47.121s] [ 52%] Built target lifecycle_bringup
+[47.137s] [35m[1mScanning dependencies of target test_string_utils[0m
+[47.164s] [ 55%] [32mBuilding CXX object test/CMakeFiles/test_string_utils.dir/test_string_utils.cpp.o[0m
+[48.675s] [ 57%] [32m[1mLinking CXX executable test_string_utils[0m
+[48.861s] [ 57%] Built target test_string_utils
+[48.876s] [35m[1mScanning dependencies of target test_lifecycle_node[0m
+[48.934s] [ 60%] [32mBuilding CXX object test/CMakeFiles/test_lifecycle_node.dir/test_lifecycle_node.cpp.o[0m
+[48.993s] [ 62%] [32m[1mLinking CXX executable test_service_client[0m
+[49.188s] [ 62%] Built target test_service_client
+[49.202s] [35m[1mScanning dependencies of target test_lifecycle_utils[0m
+[49.258s] [ 65%] [32mBuilding CXX object test/CMakeFiles/test_lifecycle_utils.dir/test_lifecycle_utils.cpp.o[0m
+[52.523s] [ 67%] [32m[1mLinking CXX executable test_lifecycle_node[0m
+[52.722s] [ 67%] Built target test_lifecycle_node
+[52.740s] [35m[1mScanning dependencies of target test_actions[0m
+[52.831s] [ 70%] [32mBuilding CXX object test/CMakeFiles/test_actions.dir/test_actions.cpp.o[0m
+[52.849s] [ 72%] [32m[1mLinking CXX executable test_lifecycle_utils[0m
+[53.062s] [ 72%] Built target test_lifecycle_utils
+[53.078s] [35m[1mScanning dependencies of target test_node_utils[0m
+[53.135s] [ 75%] [32mBuilding CXX object test/CMakeFiles/test_node_utils.dir/test_node_utils.cpp.o[0m
+[57.831s] [ 77%] [32m[1mLinking CXX executable test_node_utils[0m
+[58.043s] [ 77%] Built target test_node_utils
+[58.058s] [35m[1mScanning dependencies of target test_lifecycle_cli_node[0m
+[58.118s] [ 80%] [32mBuilding CXX object test/CMakeFiles/test_lifecycle_cli_node.dir/test_lifecycle_cli_node.cpp.o[0m
+[62.023s] [ 82%] [32m[1mLinking CXX executable test_lifecycle_cli_node[0m
+[62.240s] [ 82%] Built target test_lifecycle_cli_node
+[62.255s] [35m[1mScanning dependencies of target test_geometry_utils[0m
+[62.318s] [ 85%] [32mBuilding CXX object test/CMakeFiles/test_geometry_utils.dir/test_geometry_utils.cpp.o[0m
+[65.804s] [ 87%] [32m[1mLinking CXX executable test_geometry_utils[0m
+[65.957s] [ 87%] Built target test_geometry_utils
+[65.971s] [35m[1mScanning dependencies of target test_odometry_utils[0m
+[66.034s] [ 90%] [32mBuilding CXX object test/CMakeFiles/test_odometry_utils.dir/test_odometry_utils.cpp.o[0m
+[77.851s] [ 92%] [32m[1mLinking CXX executable test_actions[0m
+[78.507s] [ 92%] Built target test_actions
+[78.547s] [35m[1mScanning dependencies of target test_robot_utils[0m
+[78.749s] [ 95%] [32mBuilding CXX object test/CMakeFiles/test_robot_utils.dir/test_robot_utils.cpp.o[0m
+[83.653s] [ 97%] [32m[1mLinking CXX executable test_odometry_utils[0m
+[84.211s] [ 97%] Built target test_odometry_utils
+[86.747s] [100%] [32m[1mLinking CXX executable test_robot_utils[0m
+[87.060s] [100%] Built target test_robot_utils
+[87.100s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_util' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_util -- -j2 -l2
+[87.226s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_util': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_util
+[87.278s] -- Install configuration: "Release"
+[87.281s] -- Execute custom install script
+[87.281s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/lib/libnav2_util_core.so
+[87.308s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/lib/nav2_util/lifecycle_bringup
+[87.323s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/lib/nav2_util/dump_params
+[87.338s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/clear_entirely_costmap_service_client.hpp
+[87.352s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/costmap.hpp
+[87.374s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/execution_timer.hpp
+[87.388s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/geometry_utils.hpp
+[87.408s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/lifecycle_node.hpp
+[87.435s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/lifecycle_service_client.hpp
+[87.461s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/lifecycle_utils.hpp
+[87.485s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/line_iterator.hpp
+[87.508s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/node_thread.hpp
+[87.524s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/node_utils.hpp
+[87.537s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/odometry_utils.hpp
+[87.549s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/robot_utils.hpp
+[87.561s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/service_client.hpp
+[87.573s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/simple_action_server.hpp
+[87.586s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/include//nav2_util/string_utils.hpp
+[87.599s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/library_path.sh
+[87.611s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/library_path.dsv
+[87.630s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/ament_index/resource_index/package_run_dependencies/nav2_util
+[87.646s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/ament_index/resource_index/parent_prefix_path/nav2_util
+[87.663s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/ament_prefix_path.sh
+[87.681s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/ament_prefix_path.dsv
+[87.694s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/path.sh
+[87.707s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/environment/path.dsv
+[87.720s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/local_setup.bash
+[87.733s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/local_setup.sh
+[87.746s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/local_setup.zsh
+[87.759s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/local_setup.dsv
+[87.773s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/package.dsv
+[87.790s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/ament_index/resource_index/packages/nav2_util
+[87.800s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_include_directories-extras.cmake
+[87.813s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_libraries-extras.cmake
+[87.827s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake/ament_cmake_export_dependencies-extras.cmake
+[87.840s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake/nav2_utilConfig.cmake
+[87.852s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/cmake/nav2_utilConfig-version.cmake
+[87.871s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_util/share/nav2_util/package.xml
+[87.907s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_util' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_util

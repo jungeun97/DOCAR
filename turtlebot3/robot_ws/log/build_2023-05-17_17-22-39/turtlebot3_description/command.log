@@ -1,0 +1,6 @@
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3/turtlebot3_description -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_description
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3/turtlebot3_description -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_description
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_description -- -j2 -l2
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_description -- -j2 -l2
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_description': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_description
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_description

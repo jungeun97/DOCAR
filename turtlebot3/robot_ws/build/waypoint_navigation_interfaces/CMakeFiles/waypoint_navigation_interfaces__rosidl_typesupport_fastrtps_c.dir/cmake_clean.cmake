@@ -1,0 +1,24 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support_c.cpp.o"
+  "CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/msg/detail/wp__type_support_c.cpp.o"
+  "CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/add_wp__type_support_c.cpp.o"
+  "CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wp__type_support_c.cpp.o"
+  "CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wps__type_support_c.cpp.o"
+  "libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libwaypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/action/detail/navigate_to_wp__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/msg/detail/wp__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/msg/detail/wp__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/add_wp__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/add_wp__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wp__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wp__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wps__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/waypoint_navigation_interfaces/srv/detail/get_wps__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/waypoint_navigation_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

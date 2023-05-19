@@ -1,0 +1,99 @@
+[0.067s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_voxel_grid -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_voxel_grid
+[0.141s] -- The C compiler identification is GNU 9.4.0
+[0.212s] -- The CXX compiler identification is GNU 9.4.0
+[0.218s] -- Check for working C compiler: /usr/bin/cc
+[0.383s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.388s] -- Detecting C compiler ABI info
+[0.643s] -- Detecting C compiler ABI info - done
+[0.669s] -- Detecting C compile features
+[0.670s] -- Detecting C compile features - done
+[0.675s] -- Check for working CXX compiler: /usr/bin/c++
+[0.927s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.928s] -- Detecting CXX compiler ABI info
+[1.196s] -- Detecting CXX compiler ABI info - done
+[1.213s] -- Detecting CXX compile features
+[1.221s] -- Detecting CXX compile features - done
+[1.225s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.319s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.319s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.771s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.798s] -- Found nav2_common: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake)
+[1.801s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.889s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.899s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.005s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.043s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.150s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.261s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.266s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.269s] -- Looking for pthread.h
+[2.376s] -- Looking for pthread.h - found
+[2.376s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.467s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.467s] -- Looking for pthread_create in pthreads
+[2.555s] -- Looking for pthread_create in pthreads - not found
+[2.555s] -- Looking for pthread_create in pthread
+[2.644s] -- Looking for pthread_create in pthread - found
+[2.644s] -- Found Threads: TRUE  
+[2.896s] -- Setting build type to Release as none was specified.
+[2.903s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[3.038s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.041s] -- Check if compiler accepts -pthread
+[3.148s] -- Check if compiler accepts -pthread - yes
+[3.155s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.156s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/nav2_voxel_grid/include
+[3.156s] -- Configured cppcheck exclude dirs and/or files: 
+[3.158s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.158s] -- Configured cpplint exclude dirs and/or files: 
+[3.161s] -- Added test 'lint_cmake' to check CMake code style
+[3.163s] -- Added test 'uncrustify' to check C / C++ code style
+[3.163s] -- Configured uncrustify additional arguments: 
+[3.165s] -- Added test 'xmllint' to check XML markup files
+[3.176s] -- Configuring done
+[3.193s] -- Generating done
+[3.196s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/nav2_voxel_grid
+[3.210s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_voxel_grid -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/nav2_voxel_grid
+[3.212s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_voxel_grid -- -j2 -l2
+[3.272s] [35m[1mScanning dependencies of target voxel_grid[0m
+[3.387s] [ 12%] [32mBuilding CXX object CMakeFiles/voxel_grid.dir/src/voxel_grid.cpp.o[0m
+[6.306s] [ 25%] [32m[1mLinking CXX shared library libvoxel_grid.so[0m
+[6.458s] [ 25%] Built target voxel_grid
+[6.472s] [35m[1mScanning dependencies of target gtest[0m
+[6.522s] [ 37%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[16.342s] [ 50%] [32m[1mLinking CXX static library libgtest.a[0m
+[16.401s] [ 50%] Built target gtest
+[16.415s] [35m[1mScanning dependencies of target gtest_main[0m
+[16.434s] [ 62%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[17.391s] [ 75%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[17.433s] [ 75%] Built target gtest_main
+[17.447s] [35m[1mScanning dependencies of target voxel_grid_tests[0m
+[17.500s] [ 87%] [32mBuilding CXX object test/CMakeFiles/voxel_grid_tests.dir/voxel_grid_tests.cpp.o[0m
+[23.636s] [100%] [32m[1mLinking CXX executable voxel_grid_tests[0m
+[24.054s] [100%] Built target voxel_grid_tests
+[24.094s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/nav2_voxel_grid -- -j2 -l2
+[24.197s] Invoking command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_voxel_grid
+[24.235s] -- Install configuration: "Release"
+[24.238s] -- Execute custom install script
+[24.240s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib/libvoxel_grid.so
+[24.285s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/include/nav2_voxel_grid/voxel_grid.hpp
+[24.323s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/library_path.sh
+[24.361s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/library_path.dsv
+[24.399s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/ament_index/resource_index/package_run_dependencies/nav2_voxel_grid
+[24.435s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/ament_index/resource_index/parent_prefix_path/nav2_voxel_grid
+[24.475s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/ament_prefix_path.sh
+[24.509s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/ament_prefix_path.dsv
+[24.544s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/path.sh
+[24.579s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/environment/path.dsv
+[24.602s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.bash
+[24.624s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.sh
+[24.656s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.zsh
+[24.695s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/local_setup.dsv
+[24.728s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/package.dsv
+[24.760s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/ament_index/resource_index/packages/nav2_voxel_grid
+[24.798s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.829s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.863s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/ament_cmake_export_libraries-extras.cmake
+[24.898s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/nav2_voxel_gridConfig.cmake
+[24.929s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/cmake/nav2_voxel_gridConfig-version.cmake
+[24.961s] -- Symlinking: /home/turtlebot/nav2_ws/install/nav2_voxel_grid/share/nav2_voxel_grid/package.xml
+[25.010s] Invoked command in '/home/turtlebot/nav2_ws/build/nav2_voxel_grid' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/nav2_voxel_grid

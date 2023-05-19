@@ -1,0 +1,6 @@
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3/turtlebot3_navigation2 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_navigation2
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3/turtlebot3_navigation2 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_navigation2
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_navigation2 -- -j2 -l2
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_navigation2 -- -j2 -l2
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_navigation2
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_navigation2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_navigation2

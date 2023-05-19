@@ -1,0 +1,106 @@
+[0.122s] Invoking command in '/home/turtlebot/nav2_ws/build/costmap_queue': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/costmap_queue -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/costmap_queue
+[0.335s] -- The C compiler identification is GNU 9.4.0
+[0.546s] -- The CXX compiler identification is GNU 9.4.0
+[0.571s] -- Check for working C compiler: /usr/bin/cc
+[0.792s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.796s] -- Detecting C compiler ABI info
+[1.039s] -- Detecting C compiler ABI info - done
+[1.084s] -- Detecting C compile features
+[1.086s] -- Detecting C compile features - done
+[1.096s] -- Check for working CXX compiler: /usr/bin/c++
+[1.342s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.346s] -- Detecting CXX compiler ABI info
+[1.622s] -- Detecting CXX compiler ABI info - done
+[1.651s] -- Detecting CXX compile features
+[1.654s] -- Detecting CXX compile features - done
+[1.660s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.751s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.751s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.425s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.540s] -- Found nav2_common: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_common/share/nav2_common/cmake)
+[2.542s] -- Found nav2_costmap_2d: 0.4.7 (/home/turtlebot/nav2_ws/install/nav2_costmap_2d/share/nav2_costmap_2d/cmake)
+[2.672s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.694s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.915s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[3.015s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.261s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.878s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[6.884s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.886s] -- Looking for pthread.h
+[7.083s] -- Looking for pthread.h - found
+[7.085s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.336s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[7.337s] -- Looking for pthread_create in pthreads
+[7.520s] -- Looking for pthread_create in pthreads - not found
+[7.521s] -- Looking for pthread_create in pthread
+[7.765s] -- Looking for pthread_create in pthread - found
+[7.787s] -- Found Threads: TRUE  
+[9.545s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[11.610s] -- Setting build type to Release as none was specified.
+[12.926s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[13.211s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[13.224s] -- Check if compiler accepts -pthread
+[13.477s] -- Check if compiler accepts -pthread - yes
+[16.182s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[16.185s] -- Configured cppcheck include dirs: /home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/costmap_queue/include
+[16.185s] -- Configured cppcheck exclude dirs and/or files: 
+[16.190s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[16.190s] -- Configured cpplint exclude dirs and/or files: 
+[16.195s] -- Added test 'lint_cmake' to check CMake code style
+[16.199s] -- Added test 'uncrustify' to check C / C++ code style
+[16.200s] -- Configured uncrustify additional arguments: 
+[16.203s] -- Added test 'xmllint' to check XML markup files
+[16.224s] -- Configuring done
+[16.618s] -- Generating done
+[16.625s] -- Build files have been written to: /home/turtlebot/nav2_ws/build/costmap_queue
+[16.669s] Invoked command in '/home/turtlebot/nav2_ws/build/costmap_queue' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/costmap_queue -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/turtlebot/nav2_ws/install/costmap_queue
+[16.673s] Invoking command in '/home/turtlebot/nav2_ws/build/costmap_queue': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/costmap_queue -- -j2 -l2
+[16.816s] [35m[1mScanning dependencies of target gtest[0m
+[16.883s] [  9%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[42.485s] [ 18%] [32m[1mLinking CXX static library libgtest.a[0m
+[42.617s] [ 18%] Built target gtest
+[42.656s] [35m[1mScanning dependencies of target costmap_queue[0m
+[42.701s] [ 27%] [32mBuilding CXX object CMakeFiles/costmap_queue.dir/src/costmap_queue.cpp.o[0m
+[45.474s] [ 36%] [32mBuilding CXX object CMakeFiles/costmap_queue.dir/src/limited_costmap_queue.cpp.o[0m
+[47.217s] [ 45%] [32m[1mLinking CXX static library libcostmap_queue.a[0m
+[47.334s] [ 45%] Built target costmap_queue
+[47.376s] [35m[1mScanning dependencies of target gtest_main[0m
+[47.431s] [ 54%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[50.344s] [ 63%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[50.470s] [ 63%] Built target gtest_main
+[50.515s] [35m[1mScanning dependencies of target utest[0m
+[50.702s] [ 72%] [32mBuilding CXX object CMakeFiles/utest.dir/test/utest.cpp.o[0m
+[60.473s] [ 81%] [32m[1mLinking CXX executable utest[0m
+[61.373s] [ 81%] Built target utest
+[61.413s] [35m[1mScanning dependencies of target mbq_test[0m
+[61.489s] [ 90%] [32mBuilding CXX object CMakeFiles/mbq_test.dir/test/mbq_test.cpp.o[0m
+[65.901s] [100%] [32m[1mLinking CXX executable mbq_test[0m
+[66.423s] [100%] Built target mbq_test
+[66.473s] Invoked command in '/home/turtlebot/nav2_ws/build/costmap_queue' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/turtlebot/nav2_ws/build/costmap_queue -- -j2 -l2
+[66.588s] Invoking command in '/home/turtlebot/nav2_ws/build/costmap_queue': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/costmap_queue
+[66.615s] -- Install configuration: "Release"
+[66.617s] -- Execute custom install script
+[66.619s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/lib/libcostmap_queue.a
+[66.649s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/include//costmap_queue/costmap_queue.hpp
+[66.675s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/include//costmap_queue/limited_costmap_queue.hpp
+[66.712s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/include//costmap_queue/map_based_queue.hpp
+[66.755s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/library_path.sh
+[66.791s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/library_path.dsv
+[66.832s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/ament_index/resource_index/package_run_dependencies/costmap_queue
+[66.872s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/ament_index/resource_index/parent_prefix_path/costmap_queue
+[66.910s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/ament_prefix_path.sh
+[66.953s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/ament_prefix_path.dsv
+[66.990s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/path.sh
+[67.028s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/environment/path.dsv
+[67.070s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/local_setup.bash
+[67.108s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/local_setup.sh
+[67.150s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/local_setup.zsh
+[67.188s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/local_setup.dsv
+[67.226s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/package.dsv
+[67.269s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/ament_index/resource_index/packages/costmap_queue
+[67.308s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/cmake/ament_cmake_export_include_directories-extras.cmake
+[67.350s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/cmake/ament_cmake_export_libraries-extras.cmake
+[67.387s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/cmake/costmap_queueConfig.cmake
+[67.426s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/cmake/costmap_queueConfig-version.cmake
+[67.468s] -- Symlinking: /home/turtlebot/nav2_ws/install/costmap_queue/share/costmap_queue/package.xml
+[67.517s] Invoked command in '/home/turtlebot/nav2_ws/build/costmap_queue' returned '0': AMENT_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d:/home/turtlebot/nav2_ws/install/nav2_util:/home/turtlebot/nav2_ws/install/nav2_voxel_grid:/home/turtlebot/nav2_ws/install/nav2_msgs:/home/turtlebot/nav2_ws/install/nav2_common:/home/turtlebot/robot_ws/install/turtlebot3:/home/turtlebot/robot_ws/install/nav2_example:/home/turtlebot/robot_ws/install/my_package:/home/turtlebot/robot_ws/install/my_navigation_pkg:/home/turtlebot/robot_ws/install/forward1:/opt/ros/foxy LD_LIBRARY_PATH=/home/turtlebot/nav2_ws/install/nav2_costmap_2d/lib:/home/turtlebot/nav2_ws/install/nav2_util/lib:/home/turtlebot/nav2_ws/install/nav2_voxel_grid/lib:/home/turtlebot/nav2_ws/install/nav2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/turtlebot/nav2_ws/install/nav2_msgs/lib/python3.8/site-packages:/home/turtlebot/nav2_ws/install/nav2_common/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/turtlebot/nav2_ws/build/costmap_queue

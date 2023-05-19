@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from waypoint_navigation_interfaces/action/NavigateToWp.action
+// generated code does not contain a copyright notice
+
+
+module waypoint_navigation_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      " Define the goal")
+    struct NavigateToWp_Goal {
+      string wp_id;
+    };
+    struct NavigateToWp_Result {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct NavigateToWp_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

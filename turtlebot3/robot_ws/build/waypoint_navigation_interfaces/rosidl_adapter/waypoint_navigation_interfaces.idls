@@ -1,0 +1,5 @@
+/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_adapter/waypoint_navigation_interfaces:action/NavigateToWp.idl
+/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_adapter/waypoint_navigation_interfaces:srv/AddWp.idl
+/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_adapter/waypoint_navigation_interfaces:srv/GetWp.idl
+/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_adapter/waypoint_navigation_interfaces:srv/GetWps.idl
+/home/turtlebot/robot_ws/build/waypoint_navigation_interfaces/rosidl_adapter/waypoint_navigation_interfaces:msg/Wp.idl

@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from waypoint_navigation_interfaces/srv/GetWps.srv
+// generated code does not contain a copyright notice
+
+#include "waypoint_navigation_interfaces/msg/Wp.idl"
+
+module waypoint_navigation_interfaces {
+  module srv {
+    struct GetWps_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetWps_Response {
+      sequence<waypoint_navigation_interfaces::msg::Wp> wps;
+    };
+  };
+};

@@ -1,0 +1,27 @@
+{
+  "package_name": "nav2_msgs",
+  "non_idl_tuples": [
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/Costmap.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/CostmapMetaData.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/VoxelGrid.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/BehaviorTreeStatusChange.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/BehaviorTreeLog.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/Particle.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:msg/ParticleCloud.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/GetCostmap.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/ClearCostmapExceptRegion.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/ClearCostmapAroundRobot.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/ClearEntireCostmap.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/ManageLifecycleNodes.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/LoadMap.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:srv/SaveMap.srv",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/BackUp.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/ComputePathToPose.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/FollowPath.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/NavigateToPose.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/Wait.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/Spin.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/DummyRecovery.action",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_msgs:action/FollowWaypoints.action"
+  ]
+}

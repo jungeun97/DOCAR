@@ -1,0 +1,22 @@
+[0.488s] Invoking command in '/home/turtlebot/robot_ws/build/forward1': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build --no-deps install_data
+[0.662s] running develop
+[0.769s] running egg_info
+[0.770s] writing forward1.egg-info/PKG-INFO
+[0.770s] writing dependency_links to forward1.egg-info/dependency_links.txt
+[0.771s] writing entry points to forward1.egg-info/entry_points.txt
+[0.771s] writing requirements to forward1.egg-info/requires.txt
+[0.772s] writing top-level names to forward1.egg-info/top_level.txt
+[0.798s] reading manifest file 'forward1.egg-info/SOURCES.txt'
+[0.799s] writing manifest file 'forward1.egg-info/SOURCES.txt'
+[0.827s] running build_ext
+[0.828s] Creating /home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages/forward1.egg-link (link to .)
+[0.829s] Installing amcl1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] Installing amcl2 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] Installing forward1_1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] Installing forward1_2 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] Installing tb3_navigation script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] Installing test1 script to /home/turtlebot/robot_ws/install/forward1/lib/forward1
+[0.830s] 
+[0.830s] Installed /home/turtlebot/robot_ws/build/forward1
+[0.830s] running install_data
+[0.849s] Invoked command in '/home/turtlebot/robot_ws/build/forward1' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/forward1/prefix_override:/home/turtlebot/robot_ws/install/forward1/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/turtlebot/robot_ws/build/forward1/build --no-deps install_data

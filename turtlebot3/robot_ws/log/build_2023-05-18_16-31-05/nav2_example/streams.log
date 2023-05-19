@@ -1,0 +1,34 @@
+[0.898s] Invoking command in '/home/turtlebot/robot_ws/build/nav2_example': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/nav2_example/build
+[1.283s] running develop
+[1.433s] Removing /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2-example.egg-link (link to .)
+[1.473s] Invoked command in '/home/turtlebot/robot_ws/build/nav2_example' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/turtlebot/robot_ws/build/nav2_example/build
+[1.474s] Invoking command in '/home/turtlebot/robot_ws/src/nav2_example': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav2_example build --build-base /home/turtlebot/robot_ws/build/nav2_example/build install --record /home/turtlebot/robot_ws/build/nav2_example/install.log --install-scripts $base/lib/nav2_example --single-version-externally-managed
+[1.821s] running egg_info
+[1.821s] writing ../../build/nav2_example/nav2_example.egg-info/PKG-INFO
+[1.822s] writing dependency_links to ../../build/nav2_example/nav2_example.egg-info/dependency_links.txt
+[1.822s] writing entry points to ../../build/nav2_example/nav2_example.egg-info/entry_points.txt
+[1.823s] writing requirements to ../../build/nav2_example/nav2_example.egg-info/requires.txt
+[1.823s] writing top-level names to ../../build/nav2_example/nav2_example.egg-info/top_level.txt
+[1.891s] reading manifest file '../../build/nav2_example/nav2_example.egg-info/SOURCES.txt'
+[1.898s] writing manifest file '../../build/nav2_example/nav2_example.egg-info/SOURCES.txt'
+[1.898s] running build
+[1.899s] running build_py
+[1.899s] creating /home/turtlebot/robot_ws/build/nav2_example/build
+[1.899s] creating /home/turtlebot/robot_ws/build/nav2_example/build/lib
+[1.899s] creating /home/turtlebot/robot_ws/build/nav2_example/build/lib/nav2_example
+[1.899s] copying nav2_example/__init__.py -> /home/turtlebot/robot_ws/build/nav2_example/build/lib/nav2_example
+[1.899s] copying nav2_example/navigation_example.py -> /home/turtlebot/robot_ws/build/nav2_example/build/lib/nav2_example
+[1.899s] running install
+[1.900s] running install_lib
+[1.901s] creating /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example
+[1.901s] copying /home/turtlebot/robot_ws/build/nav2_example/build/lib/nav2_example/__init__.py -> /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example
+[1.901s] copying /home/turtlebot/robot_ws/build/nav2_example/build/lib/nav2_example/navigation_example.py -> /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example
+[1.902s] byte-compiling /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example/__init__.py to __init__.cpython-38.pyc
+[1.903s] byte-compiling /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example/navigation_example.py to navigation_example.cpython-38.pyc
+[1.903s] running install_data
+[1.913s] running install_egg_info
+[1.915s] Copying ../../build/nav2_example/nav2_example.egg-info to /home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages/nav2_example-0.0.0-py3.8.egg-info
+[1.916s] running install_scripts
+[1.948s] Installing navigation_example script to /home/turtlebot/robot_ws/install/nav2_example/lib/nav2_example
+[1.956s] writing list of installed files to '/home/turtlebot/robot_ws/build/nav2_example/install.log'
+[2.001s] Invoked command in '/home/turtlebot/robot_ws/src/nav2_example' returned '0': PYTHONPATH=/home/turtlebot/robot_ws/build/nav2_example/prefix_override:/home/turtlebot/robot_ws/install/nav2_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav2_example build --build-base /home/turtlebot/robot_ws/build/nav2_example/build install --record /home/turtlebot/robot_ws/build/nav2_example/install.log --install-scripts $base/lib/nav2_example --single-version-externally-managed

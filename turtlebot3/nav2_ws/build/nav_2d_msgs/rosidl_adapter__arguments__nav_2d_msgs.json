@@ -1,0 +1,11 @@
+{
+  "package_name": "nav_2d_msgs",
+  "non_idl_tuples": [
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Path2D.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Pose2D32.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Pose2DStamped.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2D.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2D32.msg",
+    "/home/turtlebot/nav2_ws/src/navigation2/nav2_dwb_controller/nav_2d_msgs:msg/Twist2DStamped.msg"
+  ]
+}

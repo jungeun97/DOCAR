@@ -1,0 +1,6 @@
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_gazebo
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/turtlebot/robot_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DCMAKE_INSTALL_PREFIX=/home/turtlebot/robot_ws/install/turtlebot3_gazebo
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_gazebo -- -j2 -l2
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/turtlebot/robot_ws/build/turtlebot3_gazebo -- -j2 -l2
+Invoking command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_gazebo
+Invoked command in '/home/turtlebot/robot_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/turtlebot/robot_ws/build/turtlebot3_gazebo
