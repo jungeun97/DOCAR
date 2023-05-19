@@ -27,7 +27,7 @@ function BookTableBack() {
               <TableStyle.BookName>{book.bookName}</TableStyle.BookName>
             </TableStyle.ThTitle2>
             <TableStyle.ThBookFloor>
-              <TableStyle.BookFloor>{book.author}</TableStyle.BookFloor>
+              <TableStyle.BookFloor>{book?.author.split('(')[0].trim()} 저</TableStyle.BookFloor>
             </TableStyle.ThBookFloor>
           </TableStyle.TableTr3>
         ))}

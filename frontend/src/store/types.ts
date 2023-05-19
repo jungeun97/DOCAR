@@ -4,3 +4,9 @@ export interface Book {
   bookImg: string;
   bookWriter: string;
 }
+
+export interface checkBookType {
+  bookId: number;
+  bookName: string;
+  author: string;
+}
