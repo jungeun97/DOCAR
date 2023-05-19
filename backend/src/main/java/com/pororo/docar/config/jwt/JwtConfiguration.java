@@ -16,13 +16,12 @@ public class JwtConfiguration implements WebMvcConfigurer {
         registry.addInterceptor(jwtInterceptor)
                 .order(1)
                 .addPathPatterns(
-                        "/testest"
-//                        "/cartbooks",
-//                        "/returns",
-//                        "/users",
-//                        "/turtlebot",
-//                        "/checkout",
-//                        "/isbn/**"
+                        "/cartbooks",
+                        "/returns",
+                        "/users",
+                        "/turtlebot",
+                        "/checkout",
+                        "/isbn/**"
                         )
                 .excludePathPatterns("/login", "/swagger-ui");
     }
