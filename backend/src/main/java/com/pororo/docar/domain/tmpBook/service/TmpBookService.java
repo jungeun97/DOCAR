@@ -35,7 +35,7 @@ public class TmpBookService {
     @Transactional
     public TmpBookInfo moveCheckedOutBookToTmpBook(String isbn) {
 
-        Double cartLength = 200.0;
+        Double cartLength = 290.0;
         Long cartFloor = 2L;
         Long cartSite = 1L;
 
@@ -45,7 +45,7 @@ public class TmpBookService {
 
         // 찾은 책의 id로 checkout_book 테이블에서 조회
         CheckoutBook checkoutBook = checkoutBookRepository.findByBookId(book.getId())
-                .orElseThrow(() -> new ResourceNotFoundException("대출 중인 책이 아닙니다."));
+                .orElse(null);
 
         Long bookDepth = book.getDepth();
 
@@ -101,7 +101,6 @@ public class TmpBookService {
 
                 // 3-3. 카트 1층 책들의 두께값 합
                 Long depthOnFloor1 = bookRepository.findDepthByIds(book1Ids).orElse(0L);
-//                Long depthOnFloor1Value = depthOnFloor1.orElseGet(() -> 0L);
 
                 // 3-4. 카트 1층에 자리가 있으면
                 if (cartLength - (depthOnFloor1+bookDepth) >= 50) {
@@ -129,7 +128,10 @@ public class TmpBookService {
             throw new BadRequestException("이미 임시 책으로 등록된 책입니다.");
         }
         // checkout_book에서 해당 Book 삭제
-        checkoutBookRepository.deleteByBookId(book.getId());
+        if (checkoutBook != null) {
+            checkoutBookRepository.delete(checkoutBook);
+        }
+
 
         // TmpBook으로 이동
         TmpBook tmpBook = TmpBook.builder()
@@ -138,7 +140,6 @@ public class TmpBookService {
                 .book(book)
                 .build();
         tmpBookRepository.save(tmpBook);
-
 
         return new TmpBookInfo(tmpBook);
     }
