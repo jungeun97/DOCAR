@@ -38,7 +38,6 @@ public class TmpBookService {
         Double cartLength = 290.0;
         Long cartFloor = 2L;
         Long cartSite = 1L;
-
         // 바코드로 Book 조회
         Book book = bookRepository.findByIsbn(isbn)
                 .orElseThrow(() -> new ResourceNotFoundException("해당 바코드에 해당하는 책이 없습니다."));
