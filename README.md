@@ -151,5 +151,5 @@ IDE
 
 ## 화면 구성
 ### 메인페이지
-<img src = "./docs/imgs/main.png">
+<img src = "./docs/imgs/main.png" width="300px">
 
