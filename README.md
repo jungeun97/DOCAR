@@ -170,10 +170,10 @@ IDE
 
 <img src = "./docs/imgs/login_pin.png" width="700px"><br>
 - 메인에서 정리를 선택시에 관리자 로그인이 필요
-- 출입증의 핀넘버로 로그인
+- 핀넘버로 로그인
 
 <img src = "./docs/imgs/cart_list.png" width="700px"><br>
-- 반납 카트에 있는 전체 도서 목록 출력
+- 관리자 로그인 후에 반납 카트에 있는 전체 도서 목록 출력
 - 이동하기 버튼으로 책 정리 시작
 
 <img src = "./docs/imgs/present_return.png" width="700px"><br>
@@ -185,8 +185,6 @@ IDE
 <img src = "./docs/imgs/all_done.png" width="700px"><br>
 - 책을 모두 정리해 이동할 다음 책장이 없다면 원위치로 이동 가능
 
-<div>
-<img src = "./docs/imgs/go_home.png" width="700px">
+<img src = "./docs/imgs/go_home.png" width="700px"><br>
 - 정리과정 중에 정리를 급종료 및 원위치로 이동해야할 때 사용
 - 현재까지 정리한 책 목록 선택 후 해당 책 카트목록에서 삭제
-<div>
