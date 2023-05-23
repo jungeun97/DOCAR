@@ -163,6 +163,7 @@ IDE
 
 <div>
 <img src = "./docs/imgs/return_book.png" width="700px">
+<br>
 - 책을 인식 후에 각 선반의 용량에 따라 어느 선반에 위치하라는 안내
 - 초음파 센서 상으로 책이 제대로 선반에 놓아지지 않을 시에 에러 출력
 <div>
