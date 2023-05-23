@@ -30,7 +30,7 @@
 <br>
 
 ### UCC ➡ [유튜브](https://www.youtube.com/watch?v=XqWZ3UWdW3c)
-<!-- ### 발표자료 ➡ [중간 발표자료](docs/pdf/중간발표.pdf) / [최종 발표자료](docs/pdf/최종발표.pdf) -->
+### 발표자료 ➡ [최종 발표자료](docs/구미_1반_D101_발표자료.pdf)
 ### Notion ➡ [노션](https://dent-asiago-e07.notion.site/D101-edc6bd849b91436abe5038a4d9b2465e)
 
 <br>
