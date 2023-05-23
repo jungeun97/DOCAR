@@ -96,6 +96,10 @@ IDE
 
 <img src = "./docs/imgs/websocket.png">
 
+<br>
+
+## 기술스택
+
 ### Front-End
 <div>
 	<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
