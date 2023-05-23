@@ -88,7 +88,7 @@ IDE
 
 ## 아키텍쳐
 
-<img src = "./docs/imgs/architenture.png">
+<img src = "./docs/imgs/architecture.png">
 
 <br>
 
