@@ -151,5 +151,62 @@ IDE
 
 ## 화면 구성
 ### 메인페이지
+<div>
 <img src = "./docs/imgs/main.png" width="700px">
+- 반납이나 정리 가능
+<div>
 
+<div>
+<img src = "./docs/imgs/return.png" width="700px">
+- 해당 페이지에서 바코드 리더기에서 책의 바코드를 통해 책을 반납
+<div>
+
+<div>
+<img src = "./docs/imgs/return_book.png" width="700px">
+- 책을 인식 후에 각 선반의 용량에 따라 어느 선반에 위치하라는 안내
+- 초음파 센서 상으로 책이 제대로 선반에 놓아지지 않을 시에 에러 출력
+<div>
+
+<div>
+<img src = "./docs/imgs/return_list.png" width="700px">
+- 반납한 책을 모두 보이고, 정리 목록에 추가
+<div>
+
+<div>
+<img src = "./docs/imgs/login_qr.png" width="700px">
+- 메인에서 정리를 선택시에 관리자 로그인이 필요
+- 출입증의 QR로 로그인
+<div>
+
+<div>
+<img src = "./docs/imgs/login_pin.png" width="700px">
+- 메인에서 정리를 선택시에 관리자 로그인이 필요
+- 출입증의 핀넘버로 로그인
+<div>
+
+<div>
+<img src = "./docs/imgs/cart_list.png" width="700px">
+- 반납 카트에 있는 전체 도서 목록 출력
+- 이동하기 버튼으로 책 정리 시작
+<div>
+
+<div>
+<img src = "./docs/imgs/present_return.png" width="700px">
+- 정리해야하는 책들로 최단거리 구현 후 목적지의 책장의 책 목록 출력 
+<div>
+
+<div>
+<img src = "./docs/imgs/cart_done.png" width="700px">
+- 해당 책장에서 정리를 완료했다면 다음 책장으로 이동 가능
+<div>
+
+<div>
+<img src = "./docs/imgs/all_done.png" width="700px">
+- 책을 모두 정리해 이동할 다음 책장이 없다면 원위치로 이동 가능
+<div>
+
+<div>
+<img src = "./docs/imgs/go_home.png" width="700px">
+- 정리과정 중에 정리를 급종료 및 원위치로 이동해야할 때 사용
+- 현재까지 정리한 책 목록 선택 후 해당 책 카트목록에서 삭제
+<div>
