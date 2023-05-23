@@ -194,3 +194,655 @@ IDE
 <img src = "./docs/imgs/go_home.png" width="700px"><br>
 - 정리과정 중에 정리를 급종료 및 원위치로 이동해야할 때 사용
 - 현재까지 정리한 책 목록 선택 후 해당 책 카트목록에서 삭제
+
+```bash
++---backend
+|   |   .gitignore
+|   |   build.gradle
+|   |   Dockerfile
+|   |   gradlew
+|   |   gradlew.bat
+|   |   settings.gradle
+|   |
+|   +---.gradle
+|   |   |   file-system.probe
+|   |   |
+|   |   +---7.6.1
+|   |   |   |   gc.properties
+|   |   |   |
+|   |   |   +---checksums
+|   |   |   |       checksums.lock
+|   |   |   |       md5-checksums.bin
+|   |   |   |       sha1-checksums.bin
+|   |   |   |
+|   |   |   +---dependencies-accessors
+|   |   |   |       dependencies-accessors.lock
+|   |   |   |       gc.properties
+|   |   |   |
+|   |   |   +---executionHistory
+|   |   |   |       executionHistory.bin
+|   |   |   |       executionHistory.lock
+|   |   |   |
+|   |   |   +---fileChanges
+|   |   |   |       last-build.bin
+|   |   |   |
+|   |   |   +---fileHashes
+|   |   |   |       fileHashes.bin
+|   |   |   |       fileHashes.lock
+|   |   |   |       resourceHashesCache.bin
+|   |   |   |
+|   |   |   \---vcsMetadata
+|   |   +---buildOutputCleanup
+|   |   |       buildOutputCleanup.lock
+|   |   |       cache.properties
+|   |   |       outputFiles.bin
+|   |   |
+|   |   \---vcs-1
+|   |           gc.properties
+|   |
+|   +---.idea
+|   |   |   .gitignore
+|   |   |   .name
+|   |   |   compiler.xml
+|   |   |   gradle.xml
+|   |   |   jarRepositories.xml
+|   |   |   misc.xml
+|   |   |   modules.xml
+|   |   |   vcs.xml
+|   |   |   workspace.xml
+|   |   |
+|   |   \---modules
+|   |           docar.main.iml
+|   |
+|   +---build
+|   |   |   bootJarMainClassName
+|   |   |
+|   |   +---classes
+|   |   |   \---java
+|   |   |       +---main
+|   |   |       |   \---com
+|   |   |       |       \---pororo
+|   |   |       |           \---docar
+|   |   |       |               |   DocarApplication.class
+|   |   |       |               |
+|   |   |       |               +---common
+|   |   |       |               |   +---dto
+|   |   |       |               |   |       ApiResponse.class
+|   |   |       |               |   |
+|   |   |       |               |   \---exception
+|   |   |       |               |           BadRequestException.class
+|   |   |       |               |           ResourceAlreadyExistsException.class
+|   |   |       |               |           ResourceForbiddenException.class
+|   |   |       |               |           ResourceNotFoundException.class
+|   |   |       |               |           UnAuthorizedException.class
+|   |   |       |               |
+|   |   |       |               +---config
+|   |   |       |               |   |   OpenApiConfig.class
+|   |   |       |               |   |   RestControllerExceptionHandler.class
+|   |   |       |               |   |   SecurityConfig.class
+|   |   |       |               |   |   WebSocketConfig$MyWebSocketHandler.class
+|   |   |       |               |   |   WebSocketConfig.class
+|   |   |       |               |   |
+|   |   |       |               |   +---dto
+|   |   |       |               |   |       CartBookList.class
+|   |   |       |               |   |       SensorInfo.class
+|   |   |       |               |   |
+|   |   |       |               |   \---jwt
+|   |   |       |               |           JwtConfiguration.class
+|   |   |       |               |           JwtInterceptor.class
+|   |   |       |               |           JwtProvider.class
+|   |   |       |               |
+|   |   |       |               \---domain
+|   |   |       |                   +---admin
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       AdminController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---dto
+|   |   |       |                   |   |       AdminChangePwDto$AdminChangePwDtoBuilder.class
+|   |   |       |                   |   |       AdminChangePwDto.class
+|   |   |       |                   |   |       AdminDto$AdminDtoBuilder.class
+|   |   |       |                   |   |       AdminDto.class
+|   |   |       |                   |   |       AdminLoginDto$AdminLoginDtoBuilder.class
+|   |   |       |                   |   |       AdminLoginDto.class
+|   |   |       |                   |   |       AdminQrLoginDto$AdminQrLoginDtoBuilder.class
+|   |   |       |                   |   |       AdminQrLoginDto.class
+|   |   |       |                   |   |       AdminResisterDto$AdminResisterDtoBuilder.class
+|   |   |       |                   |   |       AdminResisterDto.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       Admin$AdminBuilder.class
+|   |   |       |                   |   |       Admin.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       AdminRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           AdminService.class
+|   |   |       |                   |
+|   |   |       |                   +---book
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       BookController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---dto
+|   |   |       |                   |   |       BookApiResponse$Item$SubInfo$Packing.class
+|   |   |       |                   |   |       BookApiResponse$Item$SubInfo.class
+|   |   |       |                   |   |       BookApiResponse$Item.class
+|   |   |       |                   |   |       BookApiResponse.class
+|   |   |       |                   |   |       BookDto$BookDtoBuilder.class
+|   |   |       |                   |   |       BookDto$Items.class
+|   |   |       |                   |   |       BookDto.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       Book$BookBuilder.class
+|   |   |       |                   |   |       Book.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       BookRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           BookService.class
+|   |   |       |                   |
+|   |   |       |                   +---bookshelf
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       BookshelfController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       Bookshelf$BookshelfBuilder.class
+|   |   |       |                   |   |       Bookshelf.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       BookshelfRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           BookshelfService.class
+|   |   |       |                   |
+|   |   |       |                   +---cartBook
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       CartBookController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---dto
+|   |   |       |                   |   |       BookIds$BookIdsBuilder.class
+|   |   |       |                   |   |       BookIds.class
+|   |   |       |                   |   |       BookSetList$BookSetListBuilder.class
+|   |   |       |                   |   |       BookSetList.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       CartBook$CartBookBuilder.class
+|   |   |       |                   |   |       CartBook.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       CartBookRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           CartBookService.class
+|   |   |       |                   |
+|   |   |       |                   +---checkoutBook
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       CheckoutBookController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---dto
+|   |   |       |                   |   |       borrowBookDto$borrowBookDtoBuilder.class
+|   |   |       |                   |   |       borrowBookDto.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       CheckoutBook$CheckoutBookBuilder.class
+|   |   |       |                   |   |       CheckoutBook.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       CheckoutBookRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           CheckoutBookService.class
+|   |   |       |                   |
+|   |   |       |                   +---tmpBook
+|   |   |       |                   |   +---controller
+|   |   |       |                   |   |       TmpBookController.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---dto
+|   |   |       |                   |   |       TmpBookInfo.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---entity
+|   |   |       |                   |   |       TmpBook$TmpBookBuilder.class
+|   |   |       |                   |   |       TmpBook.class
+|   |   |       |                   |   |
+|   |   |       |                   |   +---repository
+|   |   |       |                   |   |       TmpBookRepository.class
+|   |   |       |                   |   |
+|   |   |       |                   |   \---service
+|   |   |       |                   |           TmpBookService.class
+|   |   |       |                   |
+|   |   |       |                   \---user
+|   |   |       |                       +---controller
+|   |   |       |                       |       UserController.class
+|   |   |       |                       |
+|   |   |       |                       +---dto
+|   |   |       |                       |       UserCreateRequest.class
+|   |   |       |                       |       UserSimpleInfo.class
+|   |   |       |                       |
+|   |   |       |                       +---entity
+|   |   |       |                       |       User$UserBuilder.class
+|   |   |       |                       |       User.class
+|   |   |       |                       |
+|   |   |       |                       +---repository
+|   |   |       |                       |       UserRepository.class
+|   |   |       |                       |
+|   |   |       |                       \---service
+|   |   |       |                               UserService.class
+|   |   |       |
+|   |   |       \---test
+|   |   |           \---com
+|   |   |               \---pororo
+|   |   |                   \---docar
+|   |   |                           DocarApplicationTests.class
+|   |   |
+|   |   +---generated
+|   |   |   \---sources
+|   |   |       +---annotationProcessor
+|   |   |       |   \---java
+|   |   |       |       +---main
+|   |   |       |       \---test
+|   |   |       \---headers
+|   |   |           \---java
+|   |   |               +---main
+|   |   |               \---test
+|   |   +---libs
+|   |   |       docar-0.0.1-SNAPSHOT-plain.jar
+|   |   |       docar-0.0.1-SNAPSHOT.jar
+|   |   |
+|   |   +---reports
+|   |   |   \---tests
+|   |   |       \---test
+|   |   |           |   index.html
+|   |   |           |
+|   |   |           +---classes
+|   |   |           |       com.pororo.docar.DocarApplicationTests.html
+|   |   |           |
+|   |   |           +---css
+|   |   |           |       base-style.css
+|   |   |           |       style.css
+|   |   |           |
+|   |   |           +---js
+|   |   |           |       report.js
+|   |   |           |
+|   |   |           \---packages
+|   |   |                   com.pororo.docar.html
+|   |   |
+|   |   +---resources
+|   |   |   +---main
+|   |   |   |       application.yml
+|   |   |   |
+|   |   |   \---test
+|   |   |           application.yml
+|   |   |
+|   |   +---test-results
+|   |   |   \---test
+|   |   |       |   TEST-com.pororo.docar.DocarApplicationTests.xml
+|   |   |       |
+|   |   |       \---binary
+|   |   |               output.bin
+|   |   |               output.bin.idx
+|   |   |               results.bin
+|   |   |
+|   |   \---tmp
+|   |       +---bootJar
+|   |       |       MANIFEST.MF
+|   |       |
+|   |       +---compileJava
+|   |       |       previous-compilation-data.bin
+|   |       |
+|   |       +---compileTestJava
+|   |       |       previous-compilation-data.bin
+|   |       |
+|   |       +---jar
+|   |       |       MANIFEST.MF
+|   |       |
+|   |       \---test
+|   +---gradle
+|   |   \---wrapper
+|   |           gradle-wrapper.jar
+|   |           gradle-wrapper.properties
+|   |
+|   \---src
+|       +---main
+|       |   +---java
+|       |   |   \---com
+|       |   |       \---pororo
+|       |   |           \---docar
+|       |   |               |   DocarApplication.java
+|       |   |               |
+|       |   |               +---common
+|       |   |               |   +---dto
+|       |   |               |   |       ApiResponse.java
+|       |   |               |   |
+|       |   |               |   \---exception
+|       |   |               |           BadRequestException.java
+|       |   |               |           ResourceAlreadyExistsException.java
+|       |   |               |           ResourceForbiddenException.java
+|       |   |               |           ResourceNotFoundException.java
+|       |   |               |           UnAuthorizedException.java
+|       |   |               |
+|       |   |               +---config
+|       |   |               |   |   OpenApiConfig.java
+|       |   |               |   |   RestControllerExceptionHandler.java
+|       |   |               |   |   SecurityConfig.java
+|       |   |               |   |   WebSocketConfig.java
+|       |   |               |   |
+|       |   |               |   +---dto
+|       |   |               |   |       CartBookList.java
+|       |   |               |   |       SensorInfo.java
+|       |   |               |   |
+|       |   |               |   \---jwt
+|       |   |               |           JwtConfiguration.java
+|       |   |               |           JwtInterceptor.java
+|       |   |               |           JwtProvider.java
+|       |   |               |
+|       |   |               \---domain
+|       |   |                   +---admin
+|       |   |                   |   +---controller
+|       |   |                   |   |       AdminController.java
+|       |   |                   |   |
+|       |   |                   |   +---dto
+|       |   |                   |   |       AdminChangePwDto.java
+|       |   |                   |   |       AdminDto.java
+|       |   |                   |   |       AdminLoginDto.java
+|       |   |                   |   |       AdminQrLoginDto.java
+|       |   |                   |   |       AdminResisterDto.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       Admin.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       AdminRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           AdminService.java
+|       |   |                   |
+|       |   |                   +---book
+|       |   |                   |   +---controller
+|       |   |                   |   |       BookController.java
+|       |   |                   |   |
+|       |   |                   |   +---dto
+|       |   |                   |   |       BookApiResponse.java
+|       |   |                   |   |       BookDto.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       Book.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       BookRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           BookService.java
+|       |   |                   |
+|       |   |                   +---bookshelf
+|       |   |                   |   +---controller
+|       |   |                   |   |       BookshelfController.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       Bookshelf.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       BookshelfRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           BookshelfService.java
+|       |   |                   |
+|       |   |                   +---cartBook
+|       |   |                   |   +---controller
+|       |   |                   |   |       CartBookController.java
+|       |   |                   |   |
+|       |   |                   |   +---dto
+|       |   |                   |   |       BookIds.java
+|       |   |                   |   |       BookSetList.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       CartBook.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       CartBookRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           CartBookService.java
+|       |   |                   |
+|       |   |                   +---checkoutBook
+|       |   |                   |   +---controller
+|       |   |                   |   |       CheckoutBookController.java
+|       |   |                   |   |
+|       |   |                   |   +---dto
+|       |   |                   |   |       borrowBookDto.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       CheckoutBook.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       CheckoutBookRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           CheckoutBookService.java
+|       |   |                   |
+|       |   |                   +---tmpBook
+|       |   |                   |   +---controller
+|       |   |                   |   |       TmpBookController.java
+|       |   |                   |   |
+|       |   |                   |   +---dto
+|       |   |                   |   |       TmpBookInfo.java
+|       |   |                   |   |
+|       |   |                   |   +---entity
+|       |   |                   |   |       TmpBook.java
+|       |   |                   |   |
+|       |   |                   |   +---repository
+|       |   |                   |   |       TmpBookRepository.java
+|       |   |                   |   |
+|       |   |                   |   \---service
+|       |   |                   |           TmpBookService.java
+|       |   |                   |
+|       |   |                   \---user
+|       |   |                       +---controller
+|       |   |                       |       UserController.java
+|       |   |                       |
+|       |   |                       +---dto
+|       |   |                       |       UserCreateRequest.java
+|       |   |                       |       UserSimpleInfo.java
+|       |   |                       |
+|       |   |                       +---entity
+|       |   |                       |       User.java
+|       |   |                       |
+|       |   |                       +---repository
+|       |   |                       |       UserRepository.java
+|       |   |                       |
+|       |   |                       \---service
+|       |   |                               UserService.java
+|       |   |
+|       |   \---resources
+|       |           application.yml
+|       |
+|       \---test
+|           +---java
+|           |   \---com
+|           |       \---pororo
+|           |           \---docar
+|           |                   DocarApplicationTests.java
+|           |
+|           \---resources
+|                   application.yml
+|
++---config
+|   |   README.md
+|   |
+|   \---backend
+|           application.yml
+|
++---docs
+|   |   .gitkeep
+|   |   구미_1반_D101_발표자료.pdf
+|   |   자율PJT_구미_1반_D101_UCC경진대회.mp4
+|   |
+|   \---imgs
+|           .gitkeep
+|           all_done.png
+|           architecture.png
+|           cart_done.png
+|           cart_list.png
+|           go_home.png
+|           login_pin.png
+|           login_qr.png
+|           main.png
+|           present_return.png
+|           return.png
+|           return_book.png
+|           return_list.png
+|           websocket.png
+|
++---exec
+|   |   .gitkeep
+|   |   01_포팅 매뉴얼.pdf
+|   |   02._프로젝트에서_사용하는_외부_서비스_정보를_정리한_문서.md
+|   |   04_시연_시나리오.pptx
+|   |
+|   \---03_DB 덤프 파일
+|           docar.sql
+|
++---frontend
+|   |   .gitignore
+|   |   .prettierrc.yml
+|   |   Dockerfile
+|   |   nginx.conf
+|   |   package-lock.json
+|   |   package.json
+|   |   README.md
+|   |   tsconfig.json
+|   |
+|   +---public
+|   |       favicon.ico
+|   |       index.html
+|   |       logo192.png
+|   |       logo512.png
+|   |       robots.txt
+|   |
+|   \---src
+|       |   App.css
+|       |   App.tsx
+|       |   index.css
+|       |   index.tsx
+|       |   react-app-env.d.ts
+|       |   Router.tsx
+|       |   socket.js
+|       |
+|       +---Presentational
+|       |   +---Common
+|       |   |   |   Btn.tsx
+|       |   |   |   HomeBtn.tsx
+|       |   |   |   Modal.tsx
+|       |   |   |   MoveShelf.tsx
+|       |   |   |
+|       |   |   \---Cleanup
+|       |   |           MoveShelf.tsx
+|       |   |
+|       |   +---Components
+|       |   |   |   BookData.json
+|       |   |   |   BookTable.tsx
+|       |   |   |   BookTableBack.tsx
+|       |   |   |   BookTableCheck.tsx
+|       |   |   |   BookTableChecked.tsx
+|       |   |   |   BookTable_Style.tsx
+|       |   |   |   Pagenation.tsx
+|       |   |   |   Pagenation_Style.tsx
+|       |   |   |   ReturnBookTable.tsx
+|       |   |   |   TableItem.tsx
+|       |   |   |
+|       |   |   +---Cleanup
+|       |   |   |       BookItem.tsx
+|       |   |   |       BookList.tsx
+|       |   |   |       BookList_Style.tsx
+|       |   |   |       Bookshelf.tsx
+|       |   |   |       EndCleanup.tsx
+|       |   |   |
+|       |   |   +---Login
+|       |   |   |       LoginError.tsx
+|       |   |   |       PinLogin.tsx
+|       |   |   |       QrLogin.tsx
+|       |   |   |
+|       |   |   \---Return
+|       |   |           ReturnBooks.tsx
+|       |   |           ReturnBooks_Style.tsx
+|       |   |           ReturnDetail.tsx
+|       |   |           ReturnDetail_Style.tsx
+|       |   |           ReturnList.tsx
+|       |   |           ReturnList_Style.tsx
+|       |   |           ReturnQrcode.tsx
+|       |   |           ReturnQrcode_Style.tsx
+|       |   |
+|       |   +---layout
+|       |   |       Layout.tsx
+|       |   |
+|       |   \---Pages
+|       |           CleanupPage.tsx
+|       |           CleanupPage_Style.tsx
+|       |           LoginPage.tsx
+|       |           LoginPage_Style.tsx
+|       |           MainPage.tsx
+|       |           MainPage_Style.tsx
+|       |           ReturnPage.tsx
+|       |           ReturnPage_Style.tsx
+|       |
+|       +---Resources
+|       |   \---Images
+|       |           barcode.png
+|       |           BookImage.jpg
+|       |           bookshelf.png
+|       |           defaultImage.png
+|       |           home.png
+|       |           qrcode.png
+|       |           return.png
+|       |           scanner.png
+|       |
+|       +---store
+|       |       api.ts
+|       |       atoms.ts
+|       |       types.ts
+|       |
+|       \---types
+|               image.d.ts
+|
+\---turtlebot3
+    \---forward1
+        |   package.xml
+        |   setup.cfg
+        |   setup.py
+        |
+        +---forward1
+        |   |   amcl1.py
+        |   |   amcl2.py
+        |   |   forward1_1.py
+        |   |   forward1_2.py
+        |   |   tb3_navigation.py
+        |   |   test1.py
+        |   |   __init__.py
+        |   |
+        |   \---__pycache__
+        |           amcl1.cpython-38.pyc
+        |           amcl2.cpython-38.pyc
+        |           forward1_1.cpython-38.pyc
+        |           forward1_2.cpython-38.pyc
+        |           tb3_navigation.cpython-38.pyc
+        |           test1.cpython-38.pyc
+        |           __init__.cpython-38.pyc
+        |
+        +---launch
+        |   |   load_turtlebot_map.launch.py
+        |   |   turtlebot3_navigation2.launch.py
+        |   |
+        |   \---__pycache__
+        |           turtlebot3_navigation2.launch.cpython-38.pyc
+        |
+        +---params
+        |       nav2_params.yaml
+        |
+        +---resource
+        |       forward1
+        |
+        \---test
+                test_copyright.py
+                test_flake8.py
+                test_pep257.py
+```
