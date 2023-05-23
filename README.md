@@ -99,6 +99,7 @@ IDE
 ### Front-End
 <div>
 	<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
+	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescriptt&logoColor=white" />
 	<img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white" />
 	<img src="https://img.shields.io/badge/Redux-764ABC?style=flat&logo=Redux&logoColor=white" />
     <img src="https://img.shields.io/badge/axios-5A29E4?style=flat&logo=axios&logoColor=white" />
@@ -116,13 +117,10 @@ IDE
 	<img src="https://img.shields.io/badge/postman-FF6C37?style=flat&logo=postman&logoColor=white" />
 </div>
 
-### AI
+### IoT
 <div>
-	<img src="https://img.shields.io/badge/flask-000000?style=flat&logo=flask&logoColor=white"/>
-	<img src="https://img.shields.io/badge/tensorflow-FF6F00?style=flat&logo=tensorflow&logoColor=white"/>
-	<img src="https://img.shields.io/badge/opencv-5C3EE8?style=flat&logo=opencv&logoColor=white"/>
-	<img src="https://img.shields.io/badge/keras-D00000?style=flat&logo=keras&logoColor=white"/>
-
+	<img src="https://img.shields.io/badge/ROS-22314E?style=flat&logo=ros&logoColor=white"/>
+	<img src="https://img.shields.io/badge/Raspberry Pi-A22846?style=flat&logo=raspberrypi&logoColor=white"/>
 </div>
 
 ### TEAM Cooperation
