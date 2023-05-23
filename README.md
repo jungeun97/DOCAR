@@ -88,13 +88,13 @@ IDE
 
 ## 아키텍쳐
 
-<img src = "./docs/아키텍쳐.PNG">
+<img src = "./docs/imgs/architenture.png">
 
 <br>
 
 ## 통신과정
 
-<img src = "./docs/웹소켓_통신.PNG">
+<img src = "./docs/imgs/websocket.png">
 
 ### Front-End
 <div>
