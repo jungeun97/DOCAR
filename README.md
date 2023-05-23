@@ -20,8 +20,17 @@
 
 <br>
 
+## 프로젝트 소개
+```
+로봇의 발전과 이에 따른 시장 구모가 확대가 되어있는 상황에서, 
+다양한 분야로의 활용을 경험해보고자 도서관에 접목시켜 
+책을 정리하여 자율주행카트 개발을 실시함
+```
+
+<br>
+
 ### UCC ➡ [유튜브](https://www.youtube.com/watch?v=XqWZ3UWdW3c)
-<!-- ### 발표자료 ➡ [중간 발표자료](docs/pdf/중간발표.pdf) / [최종 발표자료](docs/pdf/최종발표.pdf)
-### Notion ➡ [노션](https://plume-ostrich-055.notion.site/TEAM-D102-36549e6e23f644688e38d4fb3e0d7e15) -->
+<!-- ### 발표자료 ➡ [중간 발표자료](docs/pdf/중간발표.pdf) / [최종 발표자료](docs/pdf/최종발표.pdf) -->
+### Notion ➡ [노션](https://dent-asiago-e07.notion.site/D101-edc6bd849b91436abe5038a4d9b2465e)
 
 <br>
